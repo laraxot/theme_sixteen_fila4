@@ -167,30 +167,6 @@ return [
 ### Blade Templates
 ```blade
 {{-- Utilizzo diretto --}}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<h1>{{ __('sixteen::pages.dashboard.title') }}</h1>
-<p>{{ __('sixteen::pages.dashboard.description') }}</p>
-
-{{-- Con parametri --}}
-<p>{{ __('sixteen::common.welcome_user', ['name' => $user->name]) }}</p>
-
-{{-- Per pluralizzazione --}}
-<p>{{ trans_choice('sixteen::common.items_count', $count, ['count' => $count]) }}</p>
-<h1>{{ __('pub_theme::pages.dashboard.title') }}</h1>
-<p>{{ __('pub_theme::pages.dashboard.description') }}</p>
-<h1>{{ __('sixteen::pages.dashboard.title') }}</h1>
-<p>{{ __('sixteen::pages.dashboard.description') }}</p>
-
-{{-- Con parametri --}}
-<p>{{ __('sixteen::common.welcome_user', ['name' => $user->name]) }}</p>
-
-{{-- Per pluralizzazione --}}
-<p>{{ trans_choice('pub_theme::common.items_count', $count, ['count' => $count]) }}</p>
-<p>{{ trans_choice('sixteen::common.items_count', $count, ['count' => $count]) }}</p>
-=======
-=======
->>>>>>> 7401ccb (.)
 <h1>{{ __('pub_theme::pages.dashboard.title') }}</h1>
 <p>{{ __('pub_theme::pages.dashboard.description') }}</p>
 
@@ -199,54 +175,22 @@ return [
 
 {{-- Per pluralizzazione --}}
 <p>{{ trans_choice('pub_theme::common.items_count', $count, ['count' => $count]) }}</p>
-<<<<<<< HEAD
->>>>>>> 90b9679 (.)
-=======
->>>>>>> 7401ccb (.)
 ```
 
 ### Componenti Filament
 ```php
 // In Filament Forms
 TextInput::make('email')
-<<<<<<< HEAD
-<<<<<<< HEAD
-    ->label(__('sixteen::components.form.input.email.label'))
-    ->placeholder(__('sixteen::components.form.input.email.placeholder'))
-    ->helperText(__('sixteen::components.form.input.email.help'))
     ->label(__('pub_theme::components.form.input.email.label'))
     ->placeholder(__('pub_theme::components.form.input.email.placeholder'))
     ->helperText(__('pub_theme::components.form.input.email.help'))
-    ->label(__('sixteen::components.form.input.email.label'))
-    ->placeholder(__('sixteen::components.form.input.email.placeholder'))
-    ->helperText(__('sixteen::components.form.input.email.help'))
-=======
-    ->label(__('pub_theme::components.form.input.email.label'))
-    ->placeholder(__('pub_theme::components.form.input.email.placeholder'))
-    ->helperText(__('pub_theme::components.form.input.email.help'))
->>>>>>> 90b9679 (.)
-=======
-    ->label(__('pub_theme::components.form.input.email.label'))
-    ->placeholder(__('pub_theme::components.form.input.email.placeholder'))
-    ->helperText(__('pub_theme::components.form.input.email.help'))
->>>>>>> 7401ccb (.)
     ->required()
     ->email()
     ->rules(['required', 'email']);
 
 // In Filament Tables
 Tables\Columns\TextColumn::make('name')
-<<<<<<< HEAD
-<<<<<<< HEAD
-    ->label(__('sixteen::components.table.columns.name.label'))
     ->label(__('pub_theme::components.table.columns.name.label'))
-    ->label(__('sixteen::components.table.columns.name.label'))
-=======
-    ->label(__('pub_theme::components.table.columns.name.label'))
->>>>>>> 90b9679 (.)
-=======
-    ->label(__('pub_theme::components.table.columns.name.label'))
->>>>>>> 7401ccb (.)
     ->searchable()
     ->sortable();
 ```
@@ -256,27 +200,9 @@ Tables\Columns\TextColumn::make('name')
 // In componenti Livewire
 public function render()
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return view('sixteen::livewire.user-form', [
-        'title' => __('sixteen::pages.users.create.title'),
-        'description' => __('sixteen::pages.users.create.description'),
     return view('pub_theme::livewire.user-form', [
         'title' => __('pub_theme::pages.users.create.title'),
         'description' => __('pub_theme::pages.users.create.description'),
-    return view('sixteen::livewire.user-form', [
-        'title' => __('sixteen::pages.users.create.title'),
-        'description' => __('sixteen::pages.users.create.description'),
-=======
-    return view('pub_theme::livewire.user-form', [
-        'title' => __('pub_theme::pages.users.create.title'),
-        'description' => __('pub_theme::pages.users.create.description'),
->>>>>>> 90b9679 (.)
-=======
-    return view('pub_theme::livewire.user-form', [
-        'title' => __('pub_theme::pages.users.create.title'),
-        'description' => __('pub_theme::pages.users.create.description'),
->>>>>>> 7401ccb (.)
     ]);
 }
 ```
@@ -321,17 +247,7 @@ public function render()
 
 ### Utilizzo
 ```blade
-<<<<<<< HEAD
-<<<<<<< HEAD
-{{ trans_choice('sixteen::common.items_count', $items->count(), ['count' => $items->count()]) }}
 {{ trans_choice('pub_theme::common.items_count', $items->count(), ['count' => $items->count()]) }}
-{{ trans_choice('sixteen::common.items_count', $items->count(), ['count' => $items->count()]) }}
-=======
-{{ trans_choice('pub_theme::common.items_count', $items->count(), ['count' => $items->count()]) }}
->>>>>>> 90b9679 (.)
-=======
-{{ trans_choice('pub_theme::common.items_count', $items->count(), ['count' => $items->count()]) }}
->>>>>>> 7401ccb (.)
 ```
 
 ## Validazione e Messaggi di Errore

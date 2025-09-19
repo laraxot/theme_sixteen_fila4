@@ -6,27 +6,12 @@
     {{-- Header del form --}}
     <div class="text-center">
         <h2 class="text-2xl font-extrabold leading-9 text-gray-800 dark:text-gray-200">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            {{ __('auth.login.title') }}
-        </h2>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
-            {{ __('auth.login.subtitle') }}
-=======
 
->>>>>>> 90b9679 (.)
-=======
-
->>>>>>> 7401ccb (.)
         </p>
     </div>
 
     {{-- Form renderizzato dal widget --}}
-<<<<<<< HEAD
-    <form wire:submit="login" class="space-y-6">
-=======
     <form wire:submit="save" class="space-y-6">
->>>>>>> 7401ccb (.)
         {{ $this->form }}
 
         {{-- Remember Me & Forgot Password --}}
@@ -36,15 +21,7 @@
                     href="{{ url('/' . app()->getLocale() . '/auth/password/email') }}" 
                     class="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
                 >
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    {{ __('auth.login.forgot_password') }}
-=======
 
->>>>>>> 90b9679 (.)
-=======
-
->>>>>>> 7401ccb (.)
                 </a>
             </div>
         </div>
@@ -67,16 +44,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
                 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <span wire:loading.remove>{{ __('auth.login.submit') }}</span>
-                <span wire:loading>{{ __('auth.login.submitting') }}</span>
-=======
 
->>>>>>> 90b9679 (.)
-=======
-
->>>>>>> 7401ccb (.)
             </button>
         </div>
     </form>
@@ -84,28 +52,12 @@
     {{-- Registration Link --}}
     <div class="mt-6 text-center">
         <div class="text-sm leading-5 text-gray-600 dark:text-gray-400 space-x-0.5">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <span>{{ __('auth.login.or') }}</span>
-=======
 
->>>>>>> 90b9679 (.)
-=======
-
->>>>>>> 7401ccb (.)
             <a 
                 href="{{ url('/' . app()->getLocale() . '/auth/register') }}" 
                 class="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
-                {{ __('auth.login.create_account') }}
-=======
 
->>>>>>> 90b9679 (.)
-=======
-
->>>>>>> 7401ccb (.)
             </a>
         </div>
     </div>

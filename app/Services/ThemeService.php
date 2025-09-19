@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Themes\Sixteen\Services;
 
-<<<<<<< HEAD
-=======
 use InvalidArgumentException;
->>>>>>> 7401ccb (.)
 use Themes\Sixteen\Services\MenuBuilder;
 
 /**
@@ -36,39 +33,15 @@ class ThemeService
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * Restituisce il nome del tema.
-     *
-     * @return string
-     */
-    public function getThemeName(): string
-=======
      * Ottiene il nome del tema.
      */
     public function getName(): string
->>>>>>> 90b9679 (.)
-=======
-     * Ottiene il nome del tema.
-     */
-    public function getName(): string
->>>>>>> 7401ccb (.)
     {
         return $this->themeName;
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * Restituisce la versione del tema.
-     *
-     * @return string
-=======
      * Ottiene la versione del tema.
->>>>>>> 90b9679 (.)
-=======
-     * Ottiene la versione del tema.
->>>>>>> 7401ccb (.)
      */
     public function getVersion(): string
     {
@@ -76,80 +49,23 @@ class ThemeService
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * Restituisce la configurazione del tema.
-     *
-     * @return array<string, mixed>
-     */
-    public function getConfig(): array
-=======
      * Ottiene le informazioni del tema.
      */
     public function getInfo(): array
->>>>>>> 90b9679 (.)
-=======
-     * Ottiene le informazioni del tema.
-     */
-    public function getInfo(): array
->>>>>>> 7401ccb (.)
     {
         return [
             'name' => $this->themeName,
             'version' => $this->version,
-<<<<<<< HEAD
-<<<<<<< HEAD
-            'author' => 'Laraxot Team',
-            'description' => 'Modern responsive theme for Laraxot applications',
-            'features' => [
-                'responsive_design',
-                'dark_mode_support',
-                'component_library',
-                'accessibility_compliant',
-            ],
-=======
-=======
->>>>>>> 7401ccb (.)
             'description' => 'Tema Sixteen per SaluteOra - AGID Bootstrap Italia compliant',
             'author' => 'SaluteOra Team',
             'agid_compliant' => true,
             'bootstrap_italia' => true,
             'tailwind_css' => true,
             'accessibility' => 'WCAG 2.1 AA',
-<<<<<<< HEAD
->>>>>>> 90b9679 (.)
-=======
->>>>>>> 7401ccb (.)
         ];
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * Costruisce il menu usando il MenuBuilder.
-     *
-     * @return array<string, mixed>
-     */
-    public function buildMenu(): array
-    {
-        return $this->menuBuilder->build();
-    }
-
-    /**
-     * Inizializza le risorse del tema.
-     *
-     * @return void
-     */
-    public function initialize(): void
-    {
-        // Caricamento delle risorse CSS e JS
-        // Configurazione dei componenti del tema
-        // Setup delle configurazioni specifiche
-    }
-}
-=======
-=======
->>>>>>> 7401ccb (.)
      * Verifica se il tema è attivo.
      */
     public function isActive(): bool
@@ -187,11 +103,7 @@ class ThemeService
             'header' => $this->menuBuilder->getHeader()->toArray(),
             'footer' => $this->menuBuilder->getFooter()->toArray(),
             'footer_bar' => $this->menuBuilder->getFooterBar()->toArray(),
-<<<<<<< HEAD
-            default => throw new \InvalidArgumentException("Unknown menu location: {$location}")
-=======
             default => throw new InvalidArgumentException("Unknown menu location: {$location}")
->>>>>>> 7401ccb (.)
         };
     }
 
@@ -224,9 +136,4 @@ class ThemeService
             'status' => 'in_development'
         ];
     }
-<<<<<<< HEAD
 } 
->>>>>>> 90b9679 (.)
-=======
-} 
->>>>>>> 7401ccb (.)

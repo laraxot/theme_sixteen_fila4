@@ -22,11 +22,7 @@
                 <!-- Teams Dropdown -->
                 @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
                     <div class="ms-3 relative">
-<<<<<<< HEAD
-                        <x-dropdown align="right" width="60">
-=======
                         <x-overlays.dropdown align="right" width="60">
->>>>>>> 7401ccb (.)
                             <x-slot name="trigger">
                                 <span class="inline-flex rounded-md">
                                     <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none focus:bg-gray-50 dark:focus:bg-gray-700 active:bg-gray-50 dark:active:bg-gray-700 transition ease-in-out duration-150">
@@ -47,20 +43,12 @@
                                     </div>
 
                                     <!-- Team Settings -->
-<<<<<<< HEAD
-                                    <x-dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}">
-=======
                                     <x-overlays.dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}">
->>>>>>> 7401ccb (.)
                                         {{ __('Team Settings') }}
                                     </x-dropdown-link>
 
                                     @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
-<<<<<<< HEAD
-                                        <x-dropdown-link href="{{ route('teams.create') }}">
-=======
                                         <x-overlays.dropdown-link href="{{ route('teams.create') }}">
->>>>>>> 7401ccb (.)
                                             {{ __('Create New Team') }}
                                         </x-dropdown-link>
                                     @endcan
@@ -79,21 +67,13 @@
                                     @endif
                                 </div>
                             </x-slot>
-<<<<<<< HEAD
-                        </x-dropdown>
-=======
                         </x-overlays.dropdown>
->>>>>>> 7401ccb (.)
                     </div>
                 @endif
 
                 <!-- Settings Dropdown -->
                 <div class="ms-3 relative">
-<<<<<<< HEAD
-                    <x-dropdown align="right" width="48">
-=======
                     <x-overlays.dropdown align="right" width="48">
->>>>>>> 7401ccb (.)
                         <x-slot name="trigger">
                             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                                 <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
@@ -118,20 +98,12 @@
                                 {{ __('Manage Account') }}
                             </div>
 
-<<<<<<< HEAD
-                            <x-dropdown-link href="{{ route('profile.show') }}">
-=======
                             <x-overlays.dropdown-link href="{{ route('profile.show') }}">
->>>>>>> 7401ccb (.)
                                 {{ __('Profile') }}
                             </x-dropdown-link>
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-<<<<<<< HEAD
-                                <x-dropdown-link href="{{ route('api-tokens.index') }}">
-=======
                                 <x-overlays.dropdown-link href="{{ route('api-tokens.index') }}">
->>>>>>> 7401ccb (.)
                                     {{ __('API Tokens') }}
                                 </x-dropdown-link>
                             @endif
@@ -142,21 +114,13 @@
                             <form method="POST" action="{{ route('logout') }}" x-data>
                                 @csrf
 
-<<<<<<< HEAD
-                                <x-dropdown-link href="{{ route('logout') }}"
-=======
                                 <x-overlays.dropdown-link href="{{ route('logout') }}"
->>>>>>> 7401ccb (.)
                                          @click.prevent="$root.submit();">
                                     {{ __('Log Out') }}
                                 </x-dropdown-link>
                             </form>
                         </x-slot>
-<<<<<<< HEAD
-                    </x-dropdown>
-=======
                     </x-overlays.dropdown>
->>>>>>> 7401ccb (.)
                 </div>
             </div>
 

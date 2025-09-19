@@ -2,26 +2,7 @@
     <div class="h-12 bg-emerald-900 min-h-12 navbar">
         <div class="flex justify-between w-full max-w-screen-xl mx-auto">
             <div class="flex-1 py-1">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <a class="text-sm" href="#">{{-- regione --}}</a>
-            </div>
-            <div class="flex-none">
-                <ul class="px-1 menu menu-horizontal">
-                    {{--  
-                    <li>
-                        @livewire("Modules\UI\Filament\Widgets\DarkModeSwitcherWidget")
-                    </li>
-                    <li>
-                        @livewire("Modules\Lang\Filament\Widgets\LanguageSwitcherWidget")
-                    </li>
-                    --}}
-=======
 
->>>>>>> 90b9679 (.)
-=======
-
->>>>>>> 7401ccb (.)
                     @guest
                         <li class="ml-4">
                             <a class="flex items-center space-x-1" href="{{ route('login') }}">
@@ -136,24 +117,6 @@
                 @php
                 $nav1 = Arr::first($blocks,fn($item)=>$item->slug =='nav1');
                 @endphp
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <ul class="items-center px-1 menu menu-horizontal flex-nowrap">
-                    @if($nav1 && isset($nav1->data['items']) && is_array($nav1->data['items']))
-                        @foreach($nav1->data['items'] as $item)
-                        <li><a href="">{{ $item['label'] ?? '' }}</a></li>
-                        @endforeach
-                    @else
-                        {{-- Menu di default quando non ci sono blocchi di navigazione --}}
-                        <li><a href="">Amministrazione</a></li>
-                        <li><a href="">Novità</a></li>
-                        <li><a href="">Servizi</a></li>
-                        <li><a href="">Vivere il Comune</a></li>
-                    @endif
-                </ul>
-=======
-=======
->>>>>>> 7401ccb (.)
                 @if($nav1!=null)
                 <ul class="items-center px-1 menu menu-horizontal flex-nowrap">
                     @foreach($nav1->data['items'] as $item)
@@ -171,10 +134,6 @@
 
                 </ul>
                 --}}
-<<<<<<< HEAD
->>>>>>> 90b9679 (.)
-=======
->>>>>>> 7401ccb (.)
             </div>
             <div class="flex-none">
                 <ul class="items-center px-1 menu menu-horizontal flex-nowrap">

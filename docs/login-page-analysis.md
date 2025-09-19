@@ -92,45 +92,6 @@ login.blade.php (Layout PA + Branding)
 ```
 
 ### 2. Componenti Sixteen da Utilizzare
-<<<<<<< HEAD
-<<<<<<< HEAD
-- **Layout**: `x-sixteen::blocks.layout.container`
-- **Form**: `x-sixteen::blocks.forms.input`
-- **Button**: `x-sixteen::blocks.buttons.button`
-- **Alert**: `x-sixteen::blocks.alerts.alert`
-- **Card**: `x-sixteen::blocks.cards.card`
-=======
->>>>>>> 90b9679 (.)
-- **Layout**: `x-pub_theme::blocks.layout.container`
-- **Form**: `x-pub_theme::blocks.forms.input`
-- **Button**: `x-pub_theme::blocks.buttons.button`
-- **Alert**: `x-pub_theme::blocks.alerts.alert`
-- **Card**: `x-pub_theme::blocks.cards.card`
-
-### 3. Struttura Proposta
-```blade
-<<<<<<< HEAD
-<x-sixteen::layouts.main>
-    <x-sixteen::blocks.layout.container>
-        <!-- Header con Logo PA -->
-        <x-sixteen::blocks.cards.card>
-            <!-- Form Login con componenti Sixteen -->
-            @livewire(\Modules\User\Http\Livewire\Auth\Login::class)
-        </x-sixteen::blocks.cards.card>
-    </x-sixteen::blocks.layout.container>
-</x-sixteen::layouts.main>
-=======
-<x-pub_theme::layouts.main>
-    <x-pub_theme::blocks.layout.container>
-        <!-- Header con Logo PA -->
-        <x-pub_theme::blocks.cards.card>
-            <!-- Form Login con componenti Sixteen -->
-            @livewire(\Modules\User\Http\Livewire\Auth\Login::class)
-        </x-pub_theme::blocks.cards.card>
-    </x-pub_theme::blocks.layout.container>
-</x-pub_theme::layouts.main>
->>>>>>> 90b9679 (.)
-=======
 - **Layout**: `x-pub_theme::layout.container`
 - **Form**: `x-pub_theme::forms.input`
 - **Button**: `x-pub_theme::buttons.button`
@@ -148,7 +109,6 @@ login.blade.php (Layout PA + Branding)
         </x-pub_theme::cards.card>
     </x-pub_theme::layout.container>
 </x-pub_theme::layouts.main>
->>>>>>> 7401ccb (.)
 ```
 
 ## 🔧 Modifiche Necessarie
@@ -349,12 +309,4 @@ $request->validate([
 **Data Analisi**: Dicembre 2024  
 **Versione**: 1.0  
 **Status**: Analisi Completata  
-<<<<<<< HEAD
-<<<<<<< HEAD
 **Prossimo Step**: Implementazione 
-=======
-**Prossimo Step**: Implementazione 
->>>>>>> 90b9679 (.)
-=======
-**Prossimo Step**: Implementazione 
->>>>>>> 7401ccb (.)

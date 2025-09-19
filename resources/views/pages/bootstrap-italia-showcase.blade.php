@@ -10,17 +10,10 @@ Comprehensive demo and testing page for all implemented components
 @section('content')
 <div class="bootstrap-italia-showcase">
     {{-- Skiplinks for accessibility --}}
-<<<<<<< HEAD
-    <x-skiplinks />
-
-    {{-- Hero Section --}}
-    <x-hero type="centered" size="small">
-=======
     <x-navigation.skiplinks />
 
     {{-- Hero Section --}}
     <x-layout.sections.hero type="centered" size="small">
->>>>>>> 7401ccb (.)
         <x-slot name="content">
             <div class="container text-center">
                 <h1 class="display-4 fw-bold text-primary mb-3">
@@ -45,19 +38,11 @@ Comprehensive demo and testing page for all implemented components
                 </div>
             </div>
         </x-slot>
-<<<<<<< HEAD
-    </x-hero>
-
-    <div class="container my-5">
-        {{-- Navigation Tabs for Categories --}}
-        <x-tab orientation="horizontal" full-width="true">
-=======
     </x-layout.sections.hero>
 
     <div class="container my-5">
         {{-- Navigation Tabs for Categories --}}
         <x-navigation.tab orientation="horizontal" full-width="true">
->>>>>>> 7401ccb (.)
             <x-slot name="tabs">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#core-components" type="button" role="tab">
@@ -104,11 +89,7 @@ Comprehensive demo and testing page for all implemented components
                         <div class="component-demo">
                             <h3 class="mb-3">Hero Component</h3>
                             <div class="demo-container">
-<<<<<<< HEAD
-                                <x-hero type="image" size="small" background-image="https://via.placeholder.com/1200x400/0066cc/ffffff?text=Demo+Hero">
-=======
                                 <x-layout.sections.hero type="image" size="small" background-image="https://via.placeholder.com/1200x400/0066cc/ffffff?text=Demo+Hero">
->>>>>>> 7401ccb (.)
                                     <x-slot name="content">
                                         <div class="container">
                                             <h2 class="text-white">Demo Hero Section</h2>
@@ -116,11 +97,7 @@ Comprehensive demo and testing page for all implemented components
                                             <a href="#" class="btn btn-light">Learn More</a>
                                         </div>
                                     </x-slot>
-<<<<<<< HEAD
-                                </x-hero>
-=======
                                 </x-layout.sections.hero>
->>>>>>> 7401ccb (.)
                             </div>
                         </div>
                     </div>
@@ -153,11 +130,7 @@ Comprehensive demo and testing page for all implemented components
                         <div class="component-demo">
                             <h4 class="mb-3">Accordion Component</h4>
                             <div class="demo-container">
-<<<<<<< HEAD
-                                <x-accordion>
-=======
                                 <x-utilities.ui.accordion>
->>>>>>> 7401ccb (.)
                                     <x-slot name="items">
                                         <div class="accordion-item">
                                             <h2 class="accordion-header">
@@ -184,11 +157,7 @@ Comprehensive demo and testing page for all implemented components
                                             </div>
                                         </div>
                                     </x-slot>
-<<<<<<< HEAD
-                                </x-accordion>
-=======
                                 </x-utilities.ui.accordion>
->>>>>>> 7401ccb (.)
                             </div>
                         </div>
                     </div>
@@ -201,37 +170,21 @@ Comprehensive demo and testing page for all implemented components
                                 <div class="row">
                                     <div class="col-md-4">
                                         <h6>Progress Bars</h6>
-<<<<<<< HEAD
-                                        <x-progress-indicators type="bar" :percentage="75" color="primary" label="Primary Progress" />
-                                        <x-progress-indicators type="bar" :percentage="60" color="success" label="Success Progress" class="mt-2" />
-                                        <x-progress-indicators type="bar" :percentage="40" color="warning" label="Warning Progress" class="mt-2" />
-=======
                                         <x-feedback.progress-indicators type="bar" :percentage="75" color="primary" label="Primary Progress" />
                                         <x-feedback.progress-indicators type="bar" :percentage="60" color="success" label="Success Progress" class="mt-2" />
                                         <x-feedback.progress-indicators type="bar" :percentage="40" color="warning" label="Warning Progress" class="mt-2" />
->>>>>>> 7401ccb (.)
                                     </div>
                                     <div class="col-md-4">
                                         <h6>Spinners</h6>
                                         <div class="d-flex gap-3 align-items-center">
-<<<<<<< HEAD
-                                            <x-progress-indicators type="spinner" size="sm" active="true" />
-                                            <x-progress-indicators type="spinner" size="md" active="true" />
-                                            <x-progress-indicators type="spinner" size="lg" active="true" />
-=======
                                             <x-feedback.progress-indicators type="spinner" size="sm" active="true" />
                                             <x-feedback.progress-indicators type="spinner" size="md" active="true" />
                                             <x-feedback.progress-indicators type="spinner" size="lg" active="true" />
->>>>>>> 7401ccb (.)
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <h6>Donut Progress</h6>
-<<<<<<< HEAD
-                                        <x-progress-indicators type="donut" :percentage="85" label="Completion Rate" />
-=======
                                         <x-feedback.progress-indicators type="donut" :percentage="85" label="Completion Rate" />
->>>>>>> 7401ccb (.)
                                     </div>
                                 </div>
                             </div>
@@ -248,11 +201,7 @@ Comprehensive demo and testing page for all implemented components
                         <div class="component-demo">
                             <h4 class="mb-3">Select Component</h4>
                             <div class="demo-container bg-light p-4 rounded">
-<<<<<<< HEAD
-                                <x-select 
-=======
                                 <x-forms.select 
->>>>>>> 7401ccb (.)
                                     name="demo_select"
                                     label="Choose an Option"
                                     :options="[
@@ -290,11 +239,7 @@ Comprehensive demo and testing page for all implemented components
                         <div class="component-demo">
                             <h4 class="mb-3">Upload Component</h4>
                             <div class="demo-container bg-light p-4 rounded">
-<<<<<<< HEAD
-                                <x-upload 
-=======
                                 <x-forms.upload 
->>>>>>> 7401ccb (.)
                                     name="demo_upload"
                                     label="Upload Files"
                                     accept=".pdf,.doc,.docx"
@@ -310,20 +255,12 @@ Comprehensive demo and testing page for all implemented components
                         <div class="component-demo">
                             <h4 class="mb-3">Toggle Component</h4>
                             <div class="demo-container bg-light p-4 rounded">
-<<<<<<< HEAD
-                                <x-toggle 
-=======
                                 <x-utilities.toggle 
->>>>>>> 7401ccb (.)
                                     name="demo_toggle"
                                     label="Enable notifications"
                                     checked="true"
                                 />
-<<<<<<< HEAD
-                                <x-toggle 
-=======
                                 <x-utilities.toggle 
->>>>>>> 7401ccb (.)
                                     name="demo_toggle_2"
                                     label="Dark mode"
                                     lever-left="true"
@@ -364,11 +301,7 @@ Comprehensive demo and testing page for all implemented components
                             <h4 class="mb-3">Bottom Navigation</h4>
                             <div class="demo-container">
                                 <div style="position: relative; height: 100px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
-<<<<<<< HEAD
-                                    <x-bottom-nav fixed="false">
-=======
                                     <x-navigation.bottom-nav fixed="false">
->>>>>>> 7401ccb (.)
                                         <x-slot name="links">
                                             <a href="#" class="nav-link active">
                                                 <svg class="icon"><use href="#it-home"></use></svg>
@@ -383,11 +316,7 @@ Comprehensive demo and testing page for all implemented components
                                                 <span class="bottom-nav-label">Profile</span>
                                             </a>
                                         </x-slot>
-<<<<<<< HEAD
-                                    </x-bottom-nav>
-=======
                                     </x-navigation.bottom-nav>
->>>>>>> 7401ccb (.)
                                 </div>
                             </div>
                         </div>
@@ -405,11 +334,7 @@ Comprehensive demo and testing page for all implemented components
                             <div class="demo-container">
                                 <div class="row">
                                     <div class="col-md-6">
-<<<<<<< HEAD
-                                        <x-notifiche 
-=======
                                         <x-feedback.notifiche 
->>>>>>> 7401ccb (.)
                                             type="success"
                                             title="Success Notification"
                                             message="This is a success message with icon"
@@ -418,11 +343,7 @@ Comprehensive demo and testing page for all implemented components
                                         />
                                     </div>
                                     <div class="col-md-6">
-<<<<<<< HEAD
-                                        <x-notifiche 
-=======
                                         <x-feedback.notifiche 
->>>>>>> 7401ccb (.)
                                             type="warning"
                                             title="Warning Notification"
                                             message="This is a warning message that requires attention"
@@ -448,11 +369,7 @@ Comprehensive demo and testing page for all implemented components
                             <div class="demo-container bg-light p-4 rounded">
                                 <div class="mb-3">
                                     <label class="form-label">Interactive Rating:</label>
-<<<<<<< HEAD
-                                    <x-rating 
-=======
                                     <x-media.rating 
->>>>>>> 7401ccb (.)
                                         name="demo_rating"
                                         stars="5"
                                         value="3"
@@ -460,11 +377,7 @@ Comprehensive demo and testing page for all implemented components
                                 </div>
                                 <div>
                                     <label class="form-label">Read-only Rating:</label>
-<<<<<<< HEAD
-                                    <x-rating 
-=======
                                     <x-media.rating 
->>>>>>> 7401ccb (.)
                                         stars="5"
                                         value="4"
                                         readonly="true"
@@ -479,11 +392,7 @@ Comprehensive demo and testing page for all implemented components
                         <div class="component-demo">
                             <h4 class="mb-3">Tab Component</h4>
                             <div class="demo-container">
-<<<<<<< HEAD
-                                <x-tab orientation="vertical">
-=======
                                 <x-navigation.tab orientation="vertical">
->>>>>>> 7401ccb (.)
                                     <x-slot name="tabs">
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#vertical-tab1" type="button">
@@ -516,11 +425,7 @@ Comprehensive demo and testing page for all implemented components
     </div>
 
     {{-- Cookiebar Demo --}}
-<<<<<<< HEAD
-    <x-cookiebar />
-=======
     <x-utilities.ui.cookiebar />
->>>>>>> 7401ccb (.)
 </div>
 
 {{-- Component Guide Modal --}}
@@ -558,17 +463,6 @@ Comprehensive demo and testing page for all implemented components
                         <h6>Compliance Status</h6>
                         <div class="mb-2">
                             <small class="text-muted">WCAG 2.1 AA Compliance</small>
-<<<<<<< HEAD
-                            <x-progress-indicators type="bar" :percentage="100" color="success" />
-                        </div>
-                        <div class="mb-2">
-                            <small class="text-muted">Bootstrap Italia Standards</small>
-                            <x-progress-indicators type="bar" :percentage="95" color="success" />
-                        </div>
-                        <div class="mb-2">
-                            <small class="text-muted">Italian PA Requirements</small>
-                            <x-progress-indicators type="bar" :percentage="98" color="success" />
-=======
                             <x-feedback.progress-indicators type="bar" :percentage="100" color="success" />
                         </div>
                         <div class="mb-2">
@@ -578,7 +472,6 @@ Comprehensive demo and testing page for all implemented components
                         <div class="mb-2">
                             <small class="text-muted">Italian PA Requirements</small>
                             <x-feedback.progress-indicators type="bar" :percentage="98" color="success" />
->>>>>>> 7401ccb (.)
                         </div>
                     </div>
                 </div>

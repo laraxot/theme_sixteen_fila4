@@ -313,21 +313,13 @@ Utilizzo:
     action="/users"
     name="user-form"
 >
-<<<<<<< HEAD
-    <x-input 
-=======
     <x-forms.input 
->>>>>>> 7401ccb (.)
         name="name"
         label="Nome"
         required
     />
     
-<<<<<<< HEAD
-    <x-input 
-=======
     <x-forms.input 
->>>>>>> 7401ccb (.)
         name="email"
         type="email"
         label="Email"
@@ -335,15 +327,9 @@ Utilizzo:
     />
     
     <x-slot name="actions">
-<<<<<<< HEAD
-        <x-button type="submit">
-            Salva
-        </x-button>
-=======
         <x-utilities.button type="submit">
             Salva
         </x-utilities.button>
->>>>>>> 7401ccb (.)
     </x-slot>
 </x-form>
 
@@ -354,22 +340,14 @@ Utilizzo:
     x-data="contactForm()"
     @form-submit="handleContactSubmit"
 >
-<<<<<<< HEAD
-    <x-input 
-=======
     <x-forms.input 
->>>>>>> 7401ccb (.)
         name="subject"
         label="Oggetto"
         required
         maxlength="100"
     />
     
-<<<<<<< HEAD
-    <x-textarea 
-=======
     <x-forms.textarea 
->>>>>>> 7401ccb (.)
         name="message"
         label="Messaggio"
         required
@@ -378,35 +356,21 @@ Utilizzo:
     />
     
     <x-slot name="actions">
-<<<<<<< HEAD
-        <x-button 
-=======
         <x-utilities.button 
->>>>>>> 7401ccb (.)
             type="button" 
             variant="secondary"
             @click="resetForm()"
         >
             Annulla
-<<<<<<< HEAD
-        </x-button>
-        
-        <x-button 
-=======
         </x-utilities.button>
         
         <x-utilities.button 
->>>>>>> 7401ccb (.)
             type="submit"
             :disabled="isSubmitting"
         >
             <span x-show="!isSubmitting">Invia</span>
             <span x-show="isSubmitting">Invio in corso...</span>
-<<<<<<< HEAD
-        </x-button>
-=======
         </x-utilities.button>
->>>>>>> 7401ccb (.)
     </x-slot>
 </x-form>
 
@@ -416,11 +380,7 @@ Utilizzo:
     action="/upload"
     enctype="multipart/form-data"
 >
-<<<<<<< HEAD
-    <x-input 
-=======
     <x-forms.input 
->>>>>>> 7401ccb (.)
         name="file"
         type="file"
         label="Carica file"
@@ -429,15 +389,9 @@ Utilizzo:
     />
     
     <x-slot name="actions">
-<<<<<<< HEAD
-        <x-button type="submit">
-            Carica
-        </x-button>
-=======
         <x-utilities.button type="submit">
             Carica
         </x-utilities.button>
->>>>>>> 7401ccb (.)
     </x-slot>
 </x-form>
 
@@ -446,11 +400,7 @@ Utilizzo:
     method="PUT" 
     action="/users/{{ $user->id }}"
 >
-<<<<<<< HEAD
-    <x-input 
-=======
     <x-forms.input 
->>>>>>> 7401ccb (.)
         name="name"
         label="Nome"
         :value="$user->name"
@@ -458,15 +408,9 @@ Utilizzo:
     />
     
     <x-slot name="actions">
-<<<<<<< HEAD
-        <x-button type="submit">
-            Aggiorna
-        </x-button>
-=======
         <x-utilities.button type="submit">
             Aggiorna
         </x-utilities.button>
->>>>>>> 7401ccb (.)
     </x-slot>
 </x-form>
 
