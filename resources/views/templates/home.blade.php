@@ -20,19 +20,33 @@
                     
                     {{-- Quick Actions --}}
                     <div class="flex flex-wrap gap-4">
+<<<<<<< HEAD
                         <x-button 
+=======
+                        <x-utilities.button 
+>>>>>>> 7401ccb (.)
                             href="{{ route('services') }}"
                             variant="primary"
                             size="lg">
                             Servizi Online
+<<<<<<< HEAD
                         </x-button>
                         
                         <x-button 
+=======
+                        </x-utilities.button>
+                        
+                        <x-utilities.button 
+>>>>>>> 7401ccb (.)
                             href="{{ route('news') }}"
                             variant="outline"
                             size="lg">
                             Notizie
+<<<<<<< HEAD
                         </x-button>
+=======
+                        </x-utilities.button>
+>>>>>>> 7401ccb (.)
                     </div>
                 </div>
                 
@@ -59,28 +73,44 @@
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {{-- Service Cards --}}
+<<<<<<< HEAD
                 <x-blocks.cards.service 
+=======
+                <x-cards.service 
+>>>>>>> 7401ccb (.)
                     title="Anagrafe"
                     description="Certificati e documenti anagrafici"
                     icon="heroicon-o-identification"
                     href="{{ route('services.anagrafe') }}"
                     variant="primary" />
                 
+<<<<<<< HEAD
                 <x-blocks.cards.service 
+=======
+                <x-cards.service 
+>>>>>>> 7401ccb (.)
                     title="Tributi"
                     description="Pagamento tasse e imposte"
                     icon="heroicon-o-credit-card"
                     href="{{ route('services.tributi') }}"
                     variant="primary" />
                 
+<<<<<<< HEAD
                 <x-blocks.cards.service 
+=======
+                <x-cards.service 
+>>>>>>> 7401ccb (.)
                     title="SUAP"
                     description="Sportello Unico Attività Produttive"
                     icon="heroicon-o-building-storefront"
                     href="{{ route('services.suap') }}"
                     variant="primary" />
                 
+<<<<<<< HEAD
                 <x-blocks.cards.service 
+=======
+                <x-cards.service 
+>>>>>>> 7401ccb (.)
                     title="Segnalazioni"
                     description="Segnala problemi e disservizi"
                     icon="heroicon-o-chat-bubble-left-ellipsis"
@@ -89,11 +119,19 @@
             </div>
             
             <div class="text-center mt-8">
+<<<<<<< HEAD
                 <x-button 
                     href="{{ route('services') }}"
                     variant="secondary">
                     Tutti i Servizi
                 </x-button>
+=======
+                <x-utilities.button 
+                    href="{{ route('services') }}"
+                    variant="secondary">
+                    Tutti i Servizi
+                </x-utilities.button>
+>>>>>>> 7401ccb (.)
             </div>
         </div>
     </section>
@@ -103,17 +141,29 @@
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center mb-8">
                 <h2 class="text-3xl font-bold text-gray-900">Ultime Notizie</h2>
+<<<<<<< HEAD
                 <x-button 
                     href="{{ route('news') }}"
                     variant="link">
                     Vedi tutte
                 </x-button>
+=======
+                <x-utilities.button 
+                    href="{{ route('news') }}"
+                    variant="link">
+                    Vedi tutte
+                </x-utilities.button>
+>>>>>>> 7401ccb (.)
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {{-- News Cards --}}
                 @foreach($latestNews as $news)
+<<<<<<< HEAD
                     <x-blocks.cards.news-card 
+=======
+                    <x-cards.news-card 
+>>>>>>> 7401ccb (.)
                         :title="$news->title"
                         :href="route('news.show', $news)"
                         :date="$news->published_at"
@@ -131,17 +181,29 @@
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center mb-8">
                 <h2 class="text-3xl font-bold text-gray-900">Prossimi Eventi</h2>
+<<<<<<< HEAD
                 <x-button 
                     href="{{ route('events') }}"
                     variant="link">
                     Calendario completo
                 </x-button>
+=======
+                <x-utilities.button 
+                    href="{{ route('events') }}"
+                    variant="link">
+                    Calendario completo
+                </x-utilities.button>
+>>>>>>> 7401ccb (.)
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {{-- Event Cards --}}
                 @foreach($upcomingEvents as $event)
+<<<<<<< HEAD
                     <x-blocks.cards.event-card 
+=======
+                    <x-cards.event-card 
+>>>>>>> 7401ccb (.)
                         :title="$event->title"
                         :href="route('events.show', $event)"
                         :date="$event->start_date"
@@ -158,25 +220,41 @@
             <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Amministrazione Trasparente</h2>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<<<<<<< HEAD
                 <x-blocks.cards.basic 
+=======
+                <x-cards.basic 
+>>>>>>> 7401ccb (.)
                     title="Albo Pretorio"
                     description="Atti e documenti ufficiali"
                     icon="heroicon-o-document-text"
                     href="{{ route('transparency.albo-pretorio') }}" />
                 
+<<<<<<< HEAD
                 <x-blocks.cards.basic 
+=======
+                <x-cards.basic 
+>>>>>>> 7401ccb (.)
                     title="Bandi di Gara"
                     description="Concorsi e appalti pubblici"
                     icon="heroicon-o-clipboard-document-list"
                     href="{{ route('transparency.bandi') }}" />
                 
+<<<<<<< HEAD
                 <x-blocks.cards.basic 
+=======
+                <x-cards.basic 
+>>>>>>> 7401ccb (.)
                     title="Bilanci"
                     description="Documenti contabili e finanziari"
                     icon="heroicon-o-calculator"
                     href="{{ route('transparency.bilanci') }}" />
                 
+<<<<<<< HEAD
                 <x-blocks.cards.basic 
+=======
+                <x-cards.basic 
+>>>>>>> 7401ccb (.)
                     title="Statistiche"
                     description="Dati e indicatori dell'ente"
                     icon="heroicon-o-chart-bar"

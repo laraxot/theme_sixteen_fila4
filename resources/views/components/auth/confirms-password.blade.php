@@ -15,7 +15,11 @@
 </span>
 
 @once
+<<<<<<< HEAD
 <x-dialog-modal wire:model.live="confirmingPassword">
+=======
+<x-overlays.dialog-modal wire:model.live="confirmingPassword">
+>>>>>>> 7401ccb (.)
     <x-slot name="title">
         {{ $title }}
     </x-slot>
@@ -24,16 +28,25 @@
         {{ $content }}
 
         <div class="mt-4" x-data="{}" x-on:confirming-password.window="setTimeout(() => $refs.confirmable_password.focus(), 250)">
+<<<<<<< HEAD
             <x-input type="password" class="mt-1 block w-3/4" placeholder="{{ __('Password') }}" autocomplete="current-password"
+=======
+            <x-forms.input type="password" class="mt-1 block w-3/4" placeholder="{{ __('Password') }}" autocomplete="current-password"
+>>>>>>> 7401ccb (.)
                         x-ref="confirmable_password"
                         wire:model="confirmablePassword"
                         wire:keydown.enter="confirmPassword" />
 
+<<<<<<< HEAD
             <x-input-error for="confirmable_password" class="mt-2" />
+=======
+            <x-forms.input-error for="confirmable_password" class="mt-2" />
+>>>>>>> 7401ccb (.)
         </div>
     </x-slot>
 
     <x-slot name="footer">
+<<<<<<< HEAD
         <x-secondary-button wire:click="stopConfirmingPassword" wire:loading.attr="disabled">
             {{ __('Cancel') }}
         </x-secondary-button>
@@ -43,4 +56,15 @@
         </x-button>
     </x-slot>
 </x-dialog-modal>
+=======
+        <x-utilities.secondary-button wire:click="stopConfirmingPassword" wire:loading.attr="disabled">
+            {{ __('Cancel') }}
+        </x-utilities.secondary-button>
+
+        <x-utilities.button class="ms-3" dusk="confirm-password-button" wire:click="confirmPassword" wire:loading.attr="disabled">
+            {{ $button }}
+        </x-utilities.button>
+    </x-slot>
+</x-overlays.dialog-modal>
+>>>>>>> 7401ccb (.)
 @endonce

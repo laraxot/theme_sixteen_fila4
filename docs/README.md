@@ -1,5 +1,6 @@
 # Tema Sixteen - Bootstrap Italia per Laravel/Tailwind
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Tema Sixteen - Documentazione Completa
 
 ## Panoramica
@@ -171,6 +172,8 @@ class AdminPanelProvider extends SixteenPanelProvider
                 'Report',
             ]);
 =======
+=======
+>>>>>>> 7401ccb (.)
 
 ## 🎯 Panoramica del Progetto
 
@@ -298,11 +301,15 @@ colors: {
         50: '#FFEBEE',
         500: '#D9364F', // Error red  
         900: '#B71C1C'
+<<<<<<< HEAD
 >>>>>>> 90b9679 (.)
+=======
+>>>>>>> 7401ccb (.)
     }
 }
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ### Custom Components
 ```php
@@ -497,6 +504,8 @@ npm run build -- --analyze
 **Ultimo aggiornamento**: Gennaio 2025  
 **Compatibilità**: Laravel 10+, Filament 3.x, Tailwind CSS 3.x 
 =======
+=======
+>>>>>>> 7401ccb (.)
 ### Tipografia PA Compliant
 ```css
 /* Font system conformi alle linee guida */
@@ -696,5 +705,9 @@ npm run lighthouse
 **Versione**: 2.0.0  
 **Ultimo aggiornamento**: Settembre 1, 2025  
 **Mantenuto da**: Team Bootstrap Italia Migration  
+<<<<<<< HEAD
 **Licenza**: MIT
 >>>>>>> 90b9679 (.)
+=======
+**Licenza**: MIT
+>>>>>>> 7401ccb (.)

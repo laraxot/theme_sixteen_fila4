@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 return [
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Login page
     'Login' => 'Accedi',
     'Accedi ai servizi' => 'Accedi ai servizi',
@@ -56,4 +57,7 @@ return [
 =======
 
 >>>>>>> 90b9679 (.)
+=======
+
+>>>>>>> 7401ccb (.)
 ];

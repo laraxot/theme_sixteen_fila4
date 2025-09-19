@@ -1,10 +1,18 @@
 <div>
     @if (Gate::check('addTeamMember', $team))
+<<<<<<< HEAD
         <x-section-border />
 
         <!-- Add Team Member -->
         <div class="mt-10 sm:mt-0">
             <x-form-section submit="addTeamMember">
+=======
+        <x-layout.sections.section-border />
+
+        <!-- Add Team Member -->
+        <div class="mt-10 sm:mt-0">
+            <x-forms.form-section submit="addTeamMember">
+>>>>>>> 7401ccb (.)
                 <x-slot name="title">
                     {{ __('Add Team Member') }}
                 </x-slot>
@@ -22,16 +30,27 @@
 
                     <!-- Member Email -->
                     <div class="col-span-6 sm:col-span-4">
+<<<<<<< HEAD
                         <x-label for="email" value="{{ __('Email') }}" />
                         <x-input id="email" type="email" class="mt-1 block w-full" wire:model="addTeamMemberForm.email" />
                         <x-input-error for="email" class="mt-2" />
+=======
+                        <x-forms.input-label for="email" value="{{ __('Email') }}" />
+                        <x-forms.input id="email" type="email" class="mt-1 block w-full" wire:model="addTeamMemberForm.email" />
+                        <x-forms.input-error for="email" class="mt-2" />
+>>>>>>> 7401ccb (.)
                     </div>
 
                     <!-- Role -->
                     @if (count($this->roles) > 0)
                         <div class="col-span-6 lg:col-span-4">
+<<<<<<< HEAD
                             <x-label for="role" value="{{ __('Role') }}" />
                             <x-input-error for="role" class="mt-2" />
+=======
+                            <x-forms.input-label for="role" value="{{ __('Role') }}" />
+                            <x-forms.input-error for="role" class="mt-2" />
+>>>>>>> 7401ccb (.)
 
                             <div class="relative z-0 mt-1 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer">
                                 @foreach ($this->roles as $index => $role)
@@ -64,6 +83,7 @@
                 </x-slot>
 
                 <x-slot name="actions">
+<<<<<<< HEAD
                     <x-action-message class="me-3" on="saved">
                         {{ __('Added.') }}
                     </x-action-message>
@@ -73,15 +93,34 @@
                     </x-button>
                 </x-slot>
             </x-form-section>
+=======
+                    <x-feedback.action-message class="me-3" on="saved">
+                        {{ __('Added.') }}
+                    </x-feedback.action-message>
+
+                    <x-utilities.button>
+                        {{ __('Add') }}
+                    </x-utilities.button>
+                </x-slot>
+            </x-forms.form-section>
+>>>>>>> 7401ccb (.)
         </div>
     @endif
 
     @if ($team->teamInvitations->isNotEmpty() && Gate::check('addTeamMember', $team))
+<<<<<<< HEAD
         <x-section-border />
 
         <!-- Team Member Invitations -->
         <div class="mt-10 sm:mt-0">
             <x-action-section>
+=======
+        <x-layout.sections.section-border />
+
+        <!-- Team Member Invitations -->
+        <div class="mt-10 sm:mt-0">
+            <x-layout.sections.action-section>
+>>>>>>> 7401ccb (.)
                 <x-slot name="title">
                     {{ __('Pending Team Invitations') }}
                 </x-slot>
@@ -109,16 +148,28 @@
                         @endforeach
                     </div>
                 </x-slot>
+<<<<<<< HEAD
             </x-action-section>
+=======
+            </x-layout.sections.action-section>
+>>>>>>> 7401ccb (.)
         </div>
     @endif
 
     @if ($team->users->isNotEmpty())
+<<<<<<< HEAD
         <x-section-border />
 
         <!-- Manage Team Members -->
         <div class="mt-10 sm:mt-0">
             <x-action-section>
+=======
+        <x-layout.sections.section-border />
+
+        <!-- Manage Team Members -->
+        <div class="mt-10 sm:mt-0">
+            <x-layout.sections.action-section>
+>>>>>>> 7401ccb (.)
                 <x-slot name="title">
                     {{ __('Team Members') }}
                 </x-slot>
@@ -166,12 +217,20 @@
                         @endforeach
                     </div>
                 </x-slot>
+<<<<<<< HEAD
             </x-action-section>
+=======
+            </x-layout.sections.action-section>
+>>>>>>> 7401ccb (.)
         </div>
     @endif
 
     <!-- Role Management Modal -->
+<<<<<<< HEAD
     <x-dialog-modal wire:model.live="currentlyManagingRole">
+=======
+    <x-overlays.dialog-modal wire:model.live="currentlyManagingRole">
+>>>>>>> 7401ccb (.)
         <x-slot name="title">
             {{ __('Manage Role') }}
         </x-slot>
@@ -206,6 +265,7 @@
         </x-slot>
 
         <x-slot name="footer">
+<<<<<<< HEAD
             <x-secondary-button wire:click="stopManagingRole" wire:loading.attr="disabled">
                 {{ __('Cancel') }}
             </x-secondary-button>
@@ -218,6 +278,20 @@
 
     <!-- Leave Team Confirmation Modal -->
     <x-confirmation-modal wire:model.live="confirmingLeavingTeam">
+=======
+            <x-utilities.secondary-button wire:click="stopManagingRole" wire:loading.attr="disabled">
+                {{ __('Cancel') }}
+            </x-utilities.secondary-button>
+
+            <x-utilities.button class="ms-3" wire:click="updateRole" wire:loading.attr="disabled">
+                {{ __('Save') }}
+            </x-utilities.button>
+        </x-slot>
+    </x-overlays.dialog-modal>
+
+    <!-- Leave Team Confirmation Modal -->
+    <x-overlays.confirmation-modal wire:model.live="confirmingLeavingTeam">
+>>>>>>> 7401ccb (.)
         <x-slot name="title">
             {{ __('Leave Team') }}
         </x-slot>
@@ -227,6 +301,7 @@
         </x-slot>
 
         <x-slot name="footer">
+<<<<<<< HEAD
             <x-secondary-button wire:click="$toggle('confirmingLeavingTeam')" wire:loading.attr="disabled">
                 {{ __('Cancel') }}
             </x-secondary-button>
@@ -239,6 +314,20 @@
 
     <!-- Remove Team Member Confirmation Modal -->
     <x-confirmation-modal wire:model.live="confirmingTeamMemberRemoval">
+=======
+            <x-utilities.secondary-button wire:click="$toggle('confirmingLeavingTeam')" wire:loading.attr="disabled">
+                {{ __('Cancel') }}
+            </x-utilities.secondary-button>
+
+            <x-utilities.danger-button class="ms-3" wire:click="leaveTeam" wire:loading.attr="disabled">
+                {{ __('Leave') }}
+            </x-utilities.danger-button>
+        </x-slot>
+    </x-overlays.confirmation-modal>
+
+    <!-- Remove Team Member Confirmation Modal -->
+    <x-overlays.confirmation-modal wire:model.live="confirmingTeamMemberRemoval">
+>>>>>>> 7401ccb (.)
         <x-slot name="title">
             {{ __('Remove Team Member') }}
         </x-slot>
@@ -248,6 +337,7 @@
         </x-slot>
 
         <x-slot name="footer">
+<<<<<<< HEAD
             <x-secondary-button wire:click="$toggle('confirmingTeamMemberRemoval')" wire:loading.attr="disabled">
                 {{ __('Cancel') }}
             </x-secondary-button>
@@ -257,4 +347,15 @@
             </x-danger-button>
         </x-slot>
     </x-confirmation-modal>
+=======
+            <x-utilities.secondary-button wire:click="$toggle('confirmingTeamMemberRemoval')" wire:loading.attr="disabled">
+                {{ __('Cancel') }}
+            </x-utilities.secondary-button>
+
+            <x-utilities.danger-button class="ms-3" wire:click="removeTeamMember" wire:loading.attr="disabled">
+                {{ __('Remove') }}
+            </x-utilities.danger-button>
+        </x-slot>
+    </x-overlays.confirmation-modal>
+>>>>>>> 7401ccb (.)
 </div>

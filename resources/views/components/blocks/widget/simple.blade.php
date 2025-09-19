@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="widget-simple">
     @if(isset($to) && $to)
         <a href="{{ $to }}" 
@@ -16,4 +17,9 @@
             {{ $label ?? 'Vai' }}
         </button>
     @endif
+=======
+@props(['widget'])
+<div>
+    @livewire($widget, $block->data)
+>>>>>>> 7401ccb (.)
 </div>

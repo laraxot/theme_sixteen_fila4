@@ -28,6 +28,7 @@ new class extends Component
 <x-layouts.app>
     @volt('home')
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="min-h-screen bg-gray-100">
         
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
@@ -50,6 +51,10 @@ new class extends Component
     <div>
         <x-page side="content" slug="home" />
 >>>>>>> 90b9679 (.)
+=======
+    <div>
+        <x-page side="content" slug="home" />
+>>>>>>> 7401ccb (.)
     </div>
     @endvolt
 </x-layouts.app>

@@ -17,30 +17,43 @@
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <x-bootstrap-italia.button 
 =======
                         <x-button 
 >>>>>>> 90b9679 (.)
+=======
+                        <x-utilities.button 
+>>>>>>> 7401ccb (.)
                             variant="outline-primary" 
                             href="/servizi" 
                             class="bg-white text-primary-600 hover:bg-primary-50">
                             Esplora i servizi
 <<<<<<< HEAD
+<<<<<<< HEAD
                         </x-bootstrap-italia.button>
                         <x-bootstrap-italia.button 
 =======
                         </x-button>
                         <x-button 
 >>>>>>> 90b9679 (.)
+=======
+                        </x-utilities.button>
+                        <x-utilities.button 
+>>>>>>> 7401ccb (.)
                             variant="secondary" 
                             href="/contatti"
                             class="bg-primary-700 hover:bg-primary-800 border-primary-700">
                             Contatta l'ufficio
 <<<<<<< HEAD
+<<<<<<< HEAD
                         </x-bootstrap-italia.button>
 =======
                         </x-button>
 >>>>>>> 90b9679 (.)
+=======
+                        </x-utilities.button>
+>>>>>>> 7401ccb (.)
                     </div>
                 </div>
                 <div class="hidden lg:block">
@@ -66,7 +79,11 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {{-- Servizio 1 --}}
+<<<<<<< HEAD
                 <x-blocks.cards.italia 
+=======
+                <x-data-display.card 
+>>>>>>> 7401ccb (.)
                     title="Certificati Anagrafici"
                     subtitle="Richiedi online"
                     hover
@@ -81,10 +98,17 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
                     </div>
+<<<<<<< HEAD
                 </x-blocks.cards.italia>
 
                 {{-- Servizio 2 --}}
                 <x-blocks.cards.italia 
+=======
+                </x-data-display.card>
+
+                {{-- Servizio 2 --}}
+                <x-data-display.card 
+>>>>>>> 7401ccb (.)
                     title="Pagamenti Tributi"
                     subtitle="PagoPA"
                     hover
@@ -99,10 +123,17 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
                     </div>
+<<<<<<< HEAD
                 </x-blocks.cards.italia>
 
                 {{-- Servizio 3 --}}
                 <x-blocks.cards.italia 
+=======
+                </x-data-display.card>
+
+                {{-- Servizio 3 --}}
+                <x-data-display.card 
+>>>>>>> 7401ccb (.)
                     title="Pratiche Edilizie"
                     subtitle="SUAP Online"
                     hover
@@ -117,6 +148,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
                     </div>
+<<<<<<< HEAD
                 </x-blocks.cards.italia>
             </div>
             
@@ -130,6 +162,15 @@
                     Tutti i servizi
                 </x-button>
 >>>>>>> 90b9679 (.)
+=======
+                </x-data-display.card>
+            </div>
+            
+            <div class="text-center mt-10">
+                <x-utilities.button variant="outline-primary" href="/servizi">
+                    Tutti i servizi
+                </x-utilities.button>
+>>>>>>> 7401ccb (.)
             </div>
         </div>
     </section>
@@ -147,6 +188,7 @@
                     </p>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <x-bootstrap-italia.button variant="outline-primary" href="/notizie">
                     Tutte le notizie
                 </x-bootstrap-italia.button>
@@ -155,11 +197,20 @@
                     Tutte le notizie
                 </x-button>
 >>>>>>> 90b9679 (.)
+=======
+                <x-utilities.button variant="outline-primary" href="/notizie">
+                    Tutte le notizie
+                </x-utilities.button>
+>>>>>>> 7401ccb (.)
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {{-- Notizia 1 --}}
+<<<<<<< HEAD
                 <x-blocks.cards.italia 
+=======
+                <x-data-display.card 
+>>>>>>> 7401ccb (.)
                     title="Nuovi orari uffici comunali"
                     image="/images/news-1.jpg"
                     imageAlt="Uffici comunali"
@@ -170,10 +221,17 @@
                     <p class="text-italia-gray-600">
                         A partire da lunedì 22 gennaio entreranno in vigore i nuovi orari di apertura al pubblico degli uffici comunali.
                     </p>
+<<<<<<< HEAD
                 </x-blocks.cards.italia>
 
                 {{-- Notizia 2 --}}
                 <x-blocks.cards.italia 
+=======
+                </x-data-display.card>
+
+                {{-- Notizia 2 --}}
+                <x-data-display.card 
+>>>>>>> 7401ccb (.)
                     title="Raccolta differenziata: nuove modalità"
                     image="/images/news-2.jpg"
                     imageAlt="Raccolta differenziata"
@@ -184,10 +242,17 @@
                     <p class="text-italia-gray-600">
                         Implementate nuove modalità di raccolta differenziata per migliorare la qualità del servizio e l'ambiente.
                     </p>
+<<<<<<< HEAD
                 </x-blocks.cards.italia>
 
                 {{-- Notizia 3 --}}
                 <x-blocks.cards.italia 
+=======
+                </x-data-display.card>
+
+                {{-- Notizia 3 --}}
+                <x-data-display.card 
+>>>>>>> 7401ccb (.)
                     title="Bando per contributi famiglie"
                     image="/images/news-3.jpg"
                     imageAlt="Contributi famiglie"
@@ -198,7 +263,11 @@
                     <p class="text-italia-gray-600">
                         Pubblicato il bando per l'erogazione di contributi economici a sostegno delle famiglie in difficoltà.
                     </p>
+<<<<<<< HEAD
                 </x-blocks.cards.italia>
+=======
+                </x-data-display.card>
+>>>>>>> 7401ccb (.)
             </div>
         </div>
     </section>
@@ -215,30 +284,43 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <x-bootstrap-italia.button 
 =======
                     <x-button 
 >>>>>>> 90b9679 (.)
+=======
+                    <x-utilities.button 
+>>>>>>> 7401ccb (.)
                         variant="outline-primary" 
                         href="/contatti"
                         class="bg-white text-primary-600 hover:bg-primary-50">
                         Contatta gli uffici
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </x-bootstrap-italia.button>
                     <x-bootstrap-italia.button 
 =======
                     </x-button>
                     <x-button 
 >>>>>>> 90b9679 (.)
+=======
+                    </x-utilities.button>
+                    <x-utilities.button 
+>>>>>>> 7401ccb (.)
                         variant="secondary" 
                         href="tel:+390612345678"
                         class="bg-primary-700 hover:bg-primary-800 border-primary-700">
                         Chiama: 06 1234567
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </x-bootstrap-italia.button>
 =======
                     </x-button>
 >>>>>>> 90b9679 (.)
+=======
+                    </x-utilities.button>
+>>>>>>> 7401ccb (.)
                 </div>
             </div>
         </div>

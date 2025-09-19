@@ -3,6 +3,7 @@
         <div class="flex justify-between w-full max-w-screen-xl mx-auto">
             <div class="flex-1 py-1">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <a class="text-sm" href="#">{{-- regione --}}</a>
             </div>
             <div class="flex-none">
@@ -18,6 +19,9 @@
 =======
 
 >>>>>>> 90b9679 (.)
+=======
+
+>>>>>>> 7401ccb (.)
                     @guest
                         <li class="ml-4">
                             <a class="flex items-center space-x-1" href="{{ route('login') }}">
@@ -133,6 +137,7 @@
                 $nav1 = Arr::first($blocks,fn($item)=>$item->slug =='nav1');
                 @endphp
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <ul class="items-center px-1 menu menu-horizontal flex-nowrap">
                     @if($nav1 && isset($nav1->data['items']) && is_array($nav1->data['items']))
                         @foreach($nav1->data['items'] as $item)
@@ -147,6 +152,8 @@
                     @endif
                 </ul>
 =======
+=======
+>>>>>>> 7401ccb (.)
                 @if($nav1!=null)
                 <ul class="items-center px-1 menu menu-horizontal flex-nowrap">
                     @foreach($nav1->data['items'] as $item)
@@ -164,7 +171,10 @@
 
                 </ul>
                 --}}
+<<<<<<< HEAD
 >>>>>>> 90b9679 (.)
+=======
+>>>>>>> 7401ccb (.)
             </div>
             <div class="flex-none">
                 <ul class="items-center px-1 menu menu-horizontal flex-nowrap">

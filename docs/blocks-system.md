@@ -55,7 +55,11 @@ resources/views/components/blocks/
 
 **Esempio di Utilizzo**:
 ```blade
+<<<<<<< HEAD
 <x-blocks.cards.basic
+=======
+<x-cards.basic
+>>>>>>> 7401ccb (.)
     title="Servizio Anagrafe"
     subtitle="Servizi demografici"
     content="Richiesta certificati anagrafici online"
@@ -64,7 +68,11 @@ resources/views/components/blocks/
     link="/servizi/anagrafe"
 />
 
+<<<<<<< HEAD
 <x-blocks.cards.featured
+=======
+<x-cards.featured
+>>>>>>> 7401ccb (.)
     title="Servizio in Evidenza"
     content="Contenuto del servizio principale"
     variant="primary"
@@ -100,7 +108,11 @@ resources/views/components/blocks/
 
 **Esempio di Utilizzo**:
 ```blade
+<<<<<<< HEAD
 <x-blocks.buttons.primary
+=======
+<x-buttons.primary
+>>>>>>> 7401ccb (.)
     text="Accedi al Servizio"
     icon="<svg>...</svg>"
     iconPosition="right"
@@ -110,7 +122,11 @@ resources/views/components/blocks/
     href="/login"
 />
 
+<<<<<<< HEAD
 <x-blocks.buttons.cta
+=======
+<x-buttons.cta
+>>>>>>> 7401ccb (.)
     text="Inizia Ora"
     size="xl"
     color="success"
@@ -160,7 +176,11 @@ public function form(Form $form): Form
 }
 
 // Nel template Blade
+<<<<<<< HEAD
 <x-blocks.cards.{{ $record->card_variant }}
+=======
+<x-cards.{{ $record->card_variant }}
+>>>>>>> 7401ccb (.)
     :title="$record->title"
     :content="$record->content"
     :variant="$record->variant"
@@ -184,7 +204,11 @@ $blockData = [
 
 ```blade
 {{-- Nel template --}}
+<<<<<<< HEAD
 <x-blocks.cards.{{ $blockType }} v-bind="$blockData" />
+=======
+<x-cards.{{ $blockType }} v-bind="$blockData" />
+>>>>>>> 7401ccb (.)
 ```
 
 ## Best Practices
@@ -252,9 +276,15 @@ $testProps = [
 ];
 
 // Deve funzionare con qualsiasi variante
+<<<<<<< HEAD
 <x-blocks.cards.basic v-bind="$testProps" />
 <x-blocks.cards.featured v-bind="$testProps" />  
 <x-blocks.cards.service v-bind="$testProps" />
+=======
+<x-cards.basic v-bind="$testProps" />
+<x-cards.featured v-bind="$testProps" />  
+<x-cards.service v-bind="$testProps" />
+>>>>>>> 7401ccb (.)
 ```
 
 ## Roadmap

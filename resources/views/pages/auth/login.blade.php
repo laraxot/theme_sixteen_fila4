@@ -10,6 +10,7 @@ name('login');
 ?>
 
 <x-layouts.app>
+<<<<<<< HEAD
     <x-slot name="title">
         {{ __('Login') }}
     </x-slot>
@@ -22,4 +23,7 @@ name('login');
 =======
     @livewire(\Modules\User\Filament\Widgets\Auth\LoginWidget::class)
 >>>>>>> 90b9679 (.)
+=======
+  @livewire(\Modules\User\Filament\Widgets\LoginWidget::class)    
+>>>>>>> 7401ccb (.)
 </x-layouts.app>

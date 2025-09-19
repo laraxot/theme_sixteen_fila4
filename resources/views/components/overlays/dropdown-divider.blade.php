@@ -9,6 +9,7 @@
 {{-- 
 Utilizzo:
 
+<<<<<<< HEAD
 <x-dropdown text="Menu">
     <x-dropdown-item href="#">
         Elemento 1
@@ -23,4 +24,20 @@ Utilizzo:
         Azione pericolosa
     </x-dropdown-item>
 </x-dropdown>
+=======
+<x-overlays.dropdown text="Menu">
+    <x-overlays.dropdown-item href="#">
+        Elemento 1
+    </x-overlays.dropdown-item>
+    <x-overlays.dropdown-item href="#">
+        Elemento 2
+    </x-overlays.dropdown-item>
+    
+    <x-overlays.dropdown-divider />
+    
+    <x-overlays.dropdown-item href="#" variant="danger">
+        Azione pericolosa
+    </x-overlays.dropdown-item>
+</x-overlays.dropdown>
+>>>>>>> 7401ccb (.)
 --}}

@@ -125,32 +125,56 @@ $classes = array_merge(
 Utilizzo:
 
 <!-- Link semplice -->
+<<<<<<< HEAD
 <x-dropdown-item href="/profilo">
+=======
+<x-overlays.dropdown-item href="/profilo">
+>>>>>>> 7401ccb (.)
     Il mio profilo
 </x-dropdown-item>
 
 <!-- Link con icona -->
+<<<<<<< HEAD
 <x-dropdown-item href="/settings" icon="heroicon-o-cog-6-tooth">
+=======
+<x-overlays.dropdown-item href="/settings" icon="heroicon-o-cog-6-tooth">
+>>>>>>> 7401ccb (.)
     Impostazioni
 </x-dropdown-item>
 
 <!-- Button con azione JavaScript -->
+<<<<<<< HEAD
 <x-dropdown-item icon="heroicon-o-arrow-right-on-rectangle" variant="danger">
+=======
+<x-overlays.dropdown-item icon="heroicon-o-arrow-right-on-rectangle" variant="danger">
+>>>>>>> 7401ccb (.)
     Logout
 </x-dropdown-item>
 
 <!-- Item disabilitato -->
+<<<<<<< HEAD
 <x-dropdown-item disabled>
+=======
+<x-overlays.dropdown-item disabled>
+>>>>>>> 7401ccb (.)
     Funzione non disponibile
 </x-dropdown-item>
 
 <!-- Item attivo -->
+<<<<<<< HEAD
 <x-dropdown-item href="/dashboard" active>
+=======
+<x-overlays.dropdown-item href="/dashboard" active>
+>>>>>>> 7401ccb (.)
     Dashboard
 </x-dropdown-item>
 
 <!-- Link esterno -->
+<<<<<<< HEAD
 <x-dropdown-item href="https://example.com" target="_blank" icon="heroicon-o-arrow-top-right-on-square">
+=======
+<x-overlays.dropdown-item href="https://example.com" target="_blank" icon="heroicon-o-arrow-top-right-on-square">
+>>>>>>> 7401ccb (.)
     Link esterno
 </x-dropdown-item>
 --}}

@@ -66,6 +66,7 @@
                 </p>
 
                 <div class="flex justify-center space-x-4">
+<<<<<<< HEAD
                     <x-button 
                         href="{{ route('appointments.index') }}"
                         variant="primary">
@@ -77,6 +78,19 @@
                         variant="secondary">
                         Nuova Prenotazione
                     </x-button>
+=======
+                    <x-utilities.button 
+                        href="{{ route('appointments.index') }}"
+                        variant="primary">
+                        Le Mie Prenotazioni
+                    </x-utilities.button>
+                    
+                    <x-utilities.button 
+                        wire:click="restart"
+                        variant="secondary">
+                        Nuova Prenotazione
+                    </x-utilities.button>
+>>>>>>> 7401ccb (.)
                 </div>
             </div>
         @else
@@ -258,18 +272,30 @@
                                         Codice Fiscale della persona
                                     </label>
                                     <div class="flex space-x-2">
+<<<<<<< HEAD
                                         <x-input 
+=======
+                                        <x-forms.input 
+>>>>>>> 7401ccb (.)
                                             type="text"
                                             wire:model="citizenData.fiscal_code"
                                             placeholder="Inserisci codice fiscale"
                                             class="flex-1"
                                             wire:keydown.enter="searchCitizen($event.target.value)" />
+<<<<<<< HEAD
                                         <x-button 
+=======
+                                        <x-utilities.button 
+>>>>>>> 7401ccb (.)
                                             type="button"
                                             wire:click="searchCitizen($citizenData['fiscal_code'] ?? '')"
                                             variant="secondary">
                                             Cerca
+<<<<<<< HEAD
                                         </x-button>
+=======
+                                        </x-utilities.button>
+>>>>>>> 7401ccb (.)
                                     </div>
                                 </div>
 
@@ -313,7 +339,11 @@
                             <label class="block text-sm font-medium text-gray-700 mb-2">
                                 Note aggiuntive (opzionale)
                             </label>
+<<<<<<< HEAD
                             <x-textarea 
+=======
+                            <x-forms.textarea 
+>>>>>>> 7401ccb (.)
                                 wire:model="notes"
                                 placeholder="Eventuali note o informazioni aggiuntive..."
                                 rows="3" />
@@ -323,7 +353,11 @@
                             <label class="block text-sm font-medium text-gray-700 mb-2">
                                 Contatto di emergenza (opzionale)
                             </label>
+<<<<<<< HEAD
                             <x-input 
+=======
+                            <x-forms.input 
+>>>>>>> 7401ccb (.)
                                 type="text"
                                 wire:model="emergencyContact"
                                 placeholder="Nome e telefono di riferimento" />
@@ -399,29 +433,50 @@
 
             {{-- Navigation Buttons --}}
             <div class="flex justify-between">
+<<<<<<< HEAD
                 <x-button 
+=======
+                <x-utilities.button 
+>>>>>>> 7401ccb (.)
                     wire:click="previousStep"
                     variant="secondary"
                     {{ $isFirstStep ? 'disabled' : '' }}>
                     <x-heroicon-o-arrow-left class="w-4 h-4 mr-2" />
                     Indietro
+<<<<<<< HEAD
                 </x-button>
 
                 @if($currentStep < $totalSteps)
                     <x-button 
+=======
+                </x-utilities.button>
+
+                @if($currentStep < $totalSteps)
+                    <x-utilities.button 
+>>>>>>> 7401ccb (.)
                         wire:click="nextStep"
                         variant="primary">
                         Avanti
                         <x-heroicon-o-arrow-right class="w-4 h-4 ml-2" />
+<<<<<<< HEAD
                     </x-button>
                 @else
                     <x-button 
+=======
+                    </x-utilities.button>
+                @else
+                    <x-utilities.button 
+>>>>>>> 7401ccb (.)
                         wire:click="confirmAppointment"
                         variant="primary"
                         wire:loading.attr="disabled">
                         <span wire:loading.remove>Conferma Prenotazione</span>
                         <span wire:loading>Conferma in corso...</span>
+<<<<<<< HEAD
                     </x-button>
+=======
+                    </x-utilities.button>
+>>>>>>> 7401ccb (.)
                 @endif
             </div>
         @endif

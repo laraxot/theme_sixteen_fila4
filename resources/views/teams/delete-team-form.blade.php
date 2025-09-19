@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <x-action-section>
+=======
+<x-layout.sections.action-section>
+>>>>>>> 7401ccb (.)
     <x-slot name="title">
         {{ __('Delete Team') }}
     </x-slot>
@@ -13,6 +17,7 @@
         </div>
 
         <div class="mt-5">
+<<<<<<< HEAD
             <x-danger-button wire:click="$toggle('confirmingTeamDeletion')" wire:loading.attr="disabled">
                 {{ __('Delete Team') }}
             </x-danger-button>
@@ -20,6 +25,15 @@
 
         <!-- Delete Team Confirmation Modal -->
         <x-confirmation-modal wire:model.live="confirmingTeamDeletion">
+=======
+            <x-utilities.danger-button wire:click="$toggle('confirmingTeamDeletion')" wire:loading.attr="disabled">
+                {{ __('Delete Team') }}
+            </x-utilities.danger-button>
+        </div>
+
+        <!-- Delete Team Confirmation Modal -->
+        <x-overlays.confirmation-modal wire:model.live="confirmingTeamDeletion">
+>>>>>>> 7401ccb (.)
             <x-slot name="title">
                 {{ __('Delete Team') }}
             </x-slot>
@@ -29,6 +43,7 @@
             </x-slot>
 
             <x-slot name="footer">
+<<<<<<< HEAD
                 <x-secondary-button wire:click="$toggle('confirmingTeamDeletion')" wire:loading.attr="disabled">
                     {{ __('Cancel') }}
                 </x-secondary-button>
@@ -40,3 +55,16 @@
         </x-confirmation-modal>
     </x-slot>
 </x-action-section>
+=======
+                <x-utilities.secondary-button wire:click="$toggle('confirmingTeamDeletion')" wire:loading.attr="disabled">
+                    {{ __('Cancel') }}
+                </x-utilities.secondary-button>
+
+                <x-utilities.danger-button class="ms-3" wire:click="deleteTeam" wire:loading.attr="disabled">
+                    {{ __('Delete Team') }}
+                </x-utilities.danger-button>
+            </x-slot>
+        </x-overlays.confirmation-modal>
+    </x-slot>
+</x-layout.sections.action-section>
+>>>>>>> 7401ccb (.)

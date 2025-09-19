@@ -9,12 +9,21 @@
         </p>
     </header>
 
+<<<<<<< HEAD
     <x-danger-button
         x-data=""
         x-on:click.prevent="$dispatch('open-modal', 'confirm-user-deletion')"
     >{{ __('Delete Account') }}</x-danger-button>
 
     <x-modal name="confirm-user-deletion" :show="$errors->userDeletion->isNotEmpty()" focusable>
+=======
+    <x-utilities.danger-button
+        x-data=""
+        x-on:click.prevent="$dispatch('open-modal', 'confirm-user-deletion')"
+    >{{ __('Delete Account') }}</x-utilities.danger-button>
+
+    <x-overlays.modal name="confirm-user-deletion" :show="$errors->userDeletion->isNotEmpty()" focusable>
+>>>>>>> 7401ccb (.)
         <form method="post" action="{{ route('profile.destroy') }}" class="p-6">
             @csrf
             @method('delete')
@@ -28,9 +37,15 @@
             </p>
 
             <div class="mt-6">
+<<<<<<< HEAD
                 <x-input-label for="password" value="{{ __('Password') }}" class="sr-only" />
 
                 <x-text-input
+=======
+                <x-forms.input-label for="password" value="{{ __('Password') }}" class="sr-only" />
+
+                <x-forms.text-input
+>>>>>>> 7401ccb (.)
                     id="password"
                     name="password"
                     type="password"
@@ -38,6 +53,7 @@
                     placeholder="{{ __('Password') }}"
                 />
 
+<<<<<<< HEAD
                 <x-input-error :messages="$errors->userDeletion->get('password')" class="mt-2" />
             </div>
 
@@ -52,4 +68,20 @@
             </div>
         </form>
     </x-modal>
+=======
+                <x-forms.input-error :messages="$errors->userDeletion->get('password')" class="mt-2" />
+            </div>
+
+            <div class="mt-6 flex justify-end">
+                <x-utilities.secondary-button x-on:click="$dispatch('close')">
+                    {{ __('Cancel') }}
+                </x-utilities.secondary-button>
+
+                <x-utilities.danger-button class="ms-3">
+                    {{ __('Delete Account') }}
+                </x-utilities.danger-button>
+            </div>
+        </form>
+    </x-overlays.modal>
+>>>>>>> 7401ccb (.)
 </section>

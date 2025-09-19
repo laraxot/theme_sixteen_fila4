@@ -65,28 +65,40 @@ route('pages.view', ['slug' => 'legal-notes'])
             <li>
                 <a href="{{ route('pages.view', ['slug' => 'privacy']) }}">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     {{ __('sixteen::footer.privacy') }}
 =======
                     {{ __('pub_theme::footer.privacy') }}
 >>>>>>> 90b9679 (.)
+=======
+                    {{ __('pub_theme::footer.privacy') }}
+>>>>>>> 7401ccb (.)
                 </a>
             </li>
             <li>
                 <a href="{{ route('pages.view', ['slug' => 'accessibility']) }}">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     {{ __('sixteen::footer.accessibility') }}
 =======
                     {{ __('pub_theme::footer.accessibility') }}
 >>>>>>> 90b9679 (.)
+=======
+                    {{ __('pub_theme::footer.accessibility') }}
+>>>>>>> 7401ccb (.)
                 </a>
             </li>
             <li>
                 <a href="{{ route('pages.view', ['slug' => 'help']) }}">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     {{ __('sixteen::footer.help') }}
 =======
                     {{ __('pub_theme::footer.help') }}
 >>>>>>> 90b9679 (.)
+=======
+                    {{ __('pub_theme::footer.help') }}
+>>>>>>> 7401ccb (.)
                 </a>
             </li>
         </ul>

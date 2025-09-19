@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Themes\Sixteen\Services;
 
+<<<<<<< HEAD
+=======
+use InvalidArgumentException;
+>>>>>>> 7401ccb (.)
 use Themes\Sixteen\Services\MenuBuilder;
 
 /**
@@ -33,6 +37,7 @@ class ThemeService
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Restituisce il nome del tema.
      *
      * @return string
@@ -43,11 +48,17 @@ class ThemeService
      */
     public function getName(): string
 >>>>>>> 90b9679 (.)
+=======
+     * Ottiene il nome del tema.
+     */
+    public function getName(): string
+>>>>>>> 7401ccb (.)
     {
         return $this->themeName;
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Restituisce la versione del tema.
      *
@@ -55,6 +66,9 @@ class ThemeService
 =======
      * Ottiene la versione del tema.
 >>>>>>> 90b9679 (.)
+=======
+     * Ottiene la versione del tema.
+>>>>>>> 7401ccb (.)
      */
     public function getVersion(): string
     {
@@ -62,6 +76,7 @@ class ThemeService
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Restituisce la configurazione del tema.
      *
@@ -73,10 +88,16 @@ class ThemeService
      */
     public function getInfo(): array
 >>>>>>> 90b9679 (.)
+=======
+     * Ottiene le informazioni del tema.
+     */
+    public function getInfo(): array
+>>>>>>> 7401ccb (.)
     {
         return [
             'name' => $this->themeName,
             'version' => $this->version,
+<<<<<<< HEAD
 <<<<<<< HEAD
             'author' => 'Laraxot Team',
             'description' => 'Modern responsive theme for Laraxot applications',
@@ -87,17 +108,23 @@ class ThemeService
                 'accessibility_compliant',
             ],
 =======
+=======
+>>>>>>> 7401ccb (.)
             'description' => 'Tema Sixteen per SaluteOra - AGID Bootstrap Italia compliant',
             'author' => 'SaluteOra Team',
             'agid_compliant' => true,
             'bootstrap_italia' => true,
             'tailwind_css' => true,
             'accessibility' => 'WCAG 2.1 AA',
+<<<<<<< HEAD
 >>>>>>> 90b9679 (.)
+=======
+>>>>>>> 7401ccb (.)
         ];
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Costruisce il menu usando il MenuBuilder.
      *
@@ -121,6 +148,8 @@ class ThemeService
     }
 }
 =======
+=======
+>>>>>>> 7401ccb (.)
      * Verifica se il tema è attivo.
      */
     public function isActive(): bool
@@ -158,7 +187,11 @@ class ThemeService
             'header' => $this->menuBuilder->getHeader()->toArray(),
             'footer' => $this->menuBuilder->getFooter()->toArray(),
             'footer_bar' => $this->menuBuilder->getFooterBar()->toArray(),
+<<<<<<< HEAD
             default => throw new \InvalidArgumentException("Unknown menu location: {$location}")
+=======
+            default => throw new InvalidArgumentException("Unknown menu location: {$location}")
+>>>>>>> 7401ccb (.)
         };
     }
 
@@ -191,5 +224,9 @@ class ThemeService
             'status' => 'in_development'
         ];
     }
+<<<<<<< HEAD
 } 
 >>>>>>> 90b9679 (.)
+=======
+} 
+>>>>>>> 7401ccb (.)

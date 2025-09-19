@@ -10,6 +10,7 @@
         "build:production": "vite build --mode production",
         "preview": "vite preview",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "copy": "cp -r ./resources/dist/* ../../../public_html/themes/Sixteen/"
     },
     "devDependencies": {
@@ -29,6 +30,8 @@
         "vanilla-cookieconsent": "^3.0.1",
         "vite": "^6.0.11"
 =======
+=======
+>>>>>>> 7401ccb (.)
         "copy": "cp -r ./public/* ../../../public_html/themes/Sixteen/",
         "copy:watch": "nodemon --watch ./public --exec 'npm run copy'",
         "lint": "eslint resources/js/**/*.js",
@@ -70,6 +73,9 @@
     "dependencies": {
         "@popperjs/core": "^2.11.8",
         "bootstrap-italia": "^2.16.0"
+<<<<<<< HEAD
 >>>>>>> 90b9679 (.)
+=======
+>>>>>>> 7401ccb (.)
     }
 }

@@ -18,13 +18,21 @@ laravel/Themes/Sixteen/resources/views/components/blocks/forms/login-card-agid.b
 **PROBLEMA**: Sto usando un namespace sbagliato
 ```blade
 <!-- ❌ ERRATO - Namespace sbagliato -->
+<<<<<<< HEAD
 <x-pub_theme::blocks.forms.login-card-agid />
+=======
+<x-pub_theme::forms.login-card-agid />
+>>>>>>> 7401ccb (.)
 ```
 
 **SOLUZIONE**: Usare il namespace corretto
 ```blade
 <!-- ✅ CORRETTO - Namespace corretto -->
+<<<<<<< HEAD
 <x-blocks.forms.login-card-agid />
+=======
+<x-forms.login-card-agid />
+>>>>>>> 7401ccb (.)
 ```
 
 ### 3. **Registrazione Componenti**
@@ -51,6 +59,7 @@ laravel/Themes/Sixteen/resources/views/components/blocks/
 ### 2. **Namespace Corretti**
 ```blade
 <!-- ✅ CORRETTO - Namespace blocks -->
+<<<<<<< HEAD
 <x-blocks.forms.login-card-agid />
 <x-blocks.forms.register-card-agid />
 <x-blocks.forms.password-reset-card-agid />
@@ -62,6 +71,19 @@ laravel/Themes/Sixteen/resources/views/components/blocks/
 <!-- ✅ CORRETTO - Namespace buttons -->
 <x-blocks.buttons.primary />
 <x-blocks.buttons.cta />
+=======
+<x-forms.login-card-agid />
+<x-forms.register-card-agid />
+<x-forms.password-reset-card-agid />
+
+<!-- ✅ CORRETTO - Namespace cards -->
+<x-cards.basic />
+<x-cards.featured />
+
+<!-- ✅ CORRETTO - Namespace buttons -->
+<x-buttons.primary />
+<x-buttons.cta />
+>>>>>>> 7401ccb (.)
 ```
 
 ### 3. **Props Standard Forms**
@@ -101,7 +123,11 @@ name('login');
     </x-slot>
 
     <!-- Login Card AGID-Compliant -->
+<<<<<<< HEAD
     <x-blocks.forms.login-card-agid 
+=======
+    <x-forms.login-card-agid 
+>>>>>>> 7401ccb (.)
         title="Accedi ai servizi digitali"
         subtitle="Utilizza le tue credenziali per accedere all'area riservata dei servizi online"
         livewire-component="\Modules\User\Http\Livewire\Auth\Login"
@@ -331,6 +357,7 @@ Il componente esistente è buono ma può essere migliorato per seguire il sistem
 ### 1. **Namespace Blocks - SEMPRE USARE**
 ```blade
 <!-- ✅ CORRETTO -->
+<<<<<<< HEAD
 <x-blocks.forms.login-card-agid />
 <x-blocks.forms.register-card-agid />
 <x-blocks.forms.password-reset-card-agid />
@@ -344,6 +371,15 @@ Il componente esistente è buono ma può essere migliorato per seguire il sistem
 =======
 <x-pub_theme::blocks.forms.login-card-agid />
 >>>>>>> 90b9679 (.)
+=======
+<x-forms.login-card-agid />
+<x-forms.register-card-agid />
+<x-forms.password-reset-card-agid />
+
+<!-- ❌ ERRATO -->
+<x-pub_theme::forms.login-card-agid />
+<x-pub_theme::forms.login-card-agid />
+>>>>>>> 7401ccb (.)
 ```
 
 ### 2. **Props Uniformi - SEMPRE MANTENERE**
@@ -394,7 +430,11 @@ Il componente esistente è buono ma può essere migliorato per seguire il sistem
 ## 📋 CHECKLIST IMPLEMENTAZIONE
 
 ### ✅ FASE 1: Correzione Namespace
+<<<<<<< HEAD
 - [ ] Usare `<x-blocks.forms.login-card-agid>` invece di `<x-pub_theme::blocks.forms.login-card-agid>`
+=======
+- [ ] Usare `<x-forms.login-card-agid>` invece di `<x-pub_theme::forms.login-card-agid>`
+>>>>>>> 7401ccb (.)
 - [ ] Verificare che il componente esista
 - [ ] Testare che la pagina renderizzi correttamente
 
@@ -458,7 +498,11 @@ touch laravel/Themes/Sixteen/resources/views/components/blocks/forms/password-re
         Accesso - {{ config('app.name') }}
     </x-slot>
 
+<<<<<<< HEAD
     <x-blocks.forms.login-card-agid 
+=======
+    <x-forms.login-card-agid 
+>>>>>>> 7401ccb (.)
         title="Accedi ai servizi digitali"
         subtitle="Utilizza le tue credenziali per accedere all'area riservata dei servizi online"
         livewire-component="\Modules\User\Http\Livewire\Auth\Login"

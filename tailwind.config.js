@@ -7,6 +7,7 @@ import daisyui from 'daisyui'
 import colors from 'tailwindcss/colors';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 module.exports = {
@@ -15,6 +16,10 @@ module.exports = {
 module.exports = {
     presets: [preset],
 >>>>>>> 90b9679 (.)
+=======
+module.exports = {
+    presets: [preset],
+>>>>>>> 7401ccb (.)
     darkMode: 'class',
     theme: {
         extend: {
@@ -72,9 +77,13 @@ module.exports = {
                     900: '#996D00',
                 },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 // Compatibilità con i colori esistenti
 >>>>>>> 90b9679 (.)
+=======
+                // Compatibilità con i colori esistenti
+>>>>>>> 7401ccb (.)
                 primary: {
                     50: '#eff6ff',
                     100: '#dbeafe',
@@ -135,12 +144,15 @@ module.exports = {
 
     content: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         '../../app/Filament/**/*.php',
         '../../resources/views/**/*.blade.php',
         '../../vendor/filament/**/*.blade.php',
 =======
 >>>>>>> 90b9679 (.)
+=======
+>>>>>>> 7401ccb (.)
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
         "./resources/**/*.vue",
@@ -159,6 +171,7 @@ module.exports = {
         "../../storage/framework/views/*.php",
         "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "./node_modules/flowbite/**/*.js",
         "./resources/views/**/*.blade.php",  //----------- e' un tema !!!!
         "../../Themes/**/resources/views/**/*.blade.php",  //----------- e' un tema !!!!
@@ -168,11 +181,16 @@ module.exports = {
         "./resources/views/**/*.blade.php",  //----------- e' un tema !!!!
         "../../Themes/**/resources/views/**/*.blade.php",  //----------- e' un tema !!!!
 =======
+=======
+>>>>>>> 7401ccb (.)
         "../../Themes/**/resources/views/**/*.blade.php",
         
         "./node_modules/flowbite/**/*.js",
         "../../../public_html/vendor/**/*.blade.php",
+<<<<<<< HEAD
 >>>>>>> 90b9679 (.)
+=======
+>>>>>>> 7401ccb (.)
         "../../../public_html/vendor/**/*.blade.php",
     ],
     // Filament preset palette (for compatibility with plugins expecting these keys)
