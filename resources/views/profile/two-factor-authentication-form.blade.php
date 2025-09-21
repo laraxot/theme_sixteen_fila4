@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <x-layout.sections.action-section>
+=======
+<x-action-section>
+>>>>>>> c8b07ab (.)
     <x-slot name="title">
         {{ __('Two Factor Authentication') }}
     </x-slot>
@@ -50,6 +54,7 @@
 
                 @if ($showingConfirmation)
                     <div class="mt-4">
+<<<<<<< HEAD
                         <x-forms.input-label for="code" value="{{ __('Code') }}" />
 
                         <x-forms.input id="code" type="text" name="code" class="block mt-1 w-1/2" inputmode="numeric" autofocus autocomplete="one-time-code"
@@ -57,6 +62,15 @@
                             wire:keydown.enter="confirmTwoFactorAuthentication" />
 
                         <x-forms.input-error for="code" class="mt-2" />
+=======
+                        <x-label for="code" value="{{ __('Code') }}" />
+
+                        <x-input id="code" type="text" name="code" class="block mt-1 w-1/2" inputmode="numeric" autofocus autocomplete="one-time-code"
+                            wire:model="code"
+                            wire:keydown.enter="confirmTwoFactorAuthentication" />
+
+                        <x-input-error for="code" class="mt-2" />
+>>>>>>> c8b07ab (.)
                     </div>
                 @endif
             @endif
@@ -78,6 +92,7 @@
 
         <div class="mt-5">
             @if (! $this->enabled)
+<<<<<<< HEAD
                 <x-auth.confirms-password wire:then="enableTwoFactorAuthentication">
                     <x-utilities.button type="button" wire:loading.attr="disabled">
                         {{ __('Enable') }}
@@ -101,10 +116,36 @@
                         <x-utilities.secondary-button class="me-3">
                             {{ __('Show Recovery Codes') }}
                         </x-utilities.secondary-button>
+=======
+                <x-confirms-password wire:then="enableTwoFactorAuthentication">
+                    <x-button type="button" wire:loading.attr="disabled">
+                        {{ __('Enable') }}
+                    </x-button>
+                </x-confirms-password>
+            @else
+                @if ($showingRecoveryCodes)
+                    <x-confirms-password wire:then="regenerateRecoveryCodes">
+                        <x-secondary-button class="me-3">
+                            {{ __('Regenerate Recovery Codes') }}
+                        </x-secondary-button>
+                    </x-confirms-password>
+                @elseif ($showingConfirmation)
+                    <x-confirms-password wire:then="confirmTwoFactorAuthentication">
+                        <x-button type="button" class="me-3" wire:loading.attr="disabled">
+                            {{ __('Confirm') }}
+                        </x-button>
+                    </x-confirms-password>
+                @else
+                    <x-confirms-password wire:then="showRecoveryCodes">
+                        <x-secondary-button class="me-3">
+                            {{ __('Show Recovery Codes') }}
+                        </x-secondary-button>
+>>>>>>> c8b07ab (.)
                     </x-confirms-password>
                 @endif
 
                 @if ($showingConfirmation)
+<<<<<<< HEAD
                     <x-auth.confirms-password wire:then="disableTwoFactorAuthentication">
                         <x-utilities.secondary-button wire:loading.attr="disabled">
                             {{ __('Cancel') }}
@@ -115,10 +156,26 @@
                         <x-utilities.danger-button wire:loading.attr="disabled">
                             {{ __('Disable') }}
                         </x-utilities.danger-button>
+=======
+                    <x-confirms-password wire:then="disableTwoFactorAuthentication">
+                        <x-secondary-button wire:loading.attr="disabled">
+                            {{ __('Cancel') }}
+                        </x-secondary-button>
+                    </x-confirms-password>
+                @else
+                    <x-confirms-password wire:then="disableTwoFactorAuthentication">
+                        <x-danger-button wire:loading.attr="disabled">
+                            {{ __('Disable') }}
+                        </x-danger-button>
+>>>>>>> c8b07ab (.)
                     </x-confirms-password>
                 @endif
 
             @endif
         </div>
     </x-slot>
+<<<<<<< HEAD
 </x-layout.sections.action-section>
+=======
+</x-action-section>
+>>>>>>> c8b07ab (.)

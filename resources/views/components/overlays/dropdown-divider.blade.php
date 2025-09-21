@@ -9,6 +9,7 @@
 {{-- 
 Utilizzo:
 
+<<<<<<< HEAD
 <x-overlays.dropdown text="Menu">
     <x-overlays.dropdown-item href="#">
         Elemento 1
@@ -23,4 +24,20 @@ Utilizzo:
         Azione pericolosa
     </x-overlays.dropdown-item>
 </x-overlays.dropdown>
+=======
+<x-dropdown text="Menu">
+    <x-dropdown-item href="#">
+        Elemento 1
+    </x-dropdown-item>
+    <x-dropdown-item href="#">
+        Elemento 2
+    </x-dropdown-item>
+    
+    <x-dropdown-divider />
+    
+    <x-dropdown-item href="#" variant="danger">
+        Azione pericolosa
+    </x-dropdown-item>
+</x-dropdown>
+>>>>>>> c8b07ab (.)
 --}}

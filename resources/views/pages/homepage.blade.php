@@ -16,18 +16,70 @@
                         Accedi ai servizi digitali, consulta le informazioni e resta aggiornato su tutte le iniziative del territorio.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
+<<<<<<< HEAD
                         <x-utilities.button 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                        <x-bootstrap-italia.button 
+=======
+                        <x-button 
+>>>>>>> a12f125f4a (.)
+=======
+                        <x-bootstrap-italia.button 
+>>>>>>> b93ef594b4 (.)
+=======
+                        <x-bootstrap-italia.button 
+>>>>>>> origin/develop
+>>>>>>> c8b07ab (.)
                             variant="outline-primary" 
                             href="/servizi" 
                             class="bg-white text-primary-600 hover:bg-primary-50">
                             Esplora i servizi
+<<<<<<< HEAD
                         </x-utilities.button>
                         <x-utilities.button 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                        </x-bootstrap-italia.button>
+                        <x-bootstrap-italia.button 
+=======
+                        </x-button>
+                        <x-button 
+>>>>>>> a12f125f4a (.)
+=======
+                        </x-bootstrap-italia.button>
+                        <x-bootstrap-italia.button 
+>>>>>>> b93ef594b4 (.)
+=======
+                        </x-bootstrap-italia.button>
+                        <x-bootstrap-italia.button 
+>>>>>>> origin/develop
+>>>>>>> c8b07ab (.)
                             variant="secondary" 
                             href="/contatti"
                             class="bg-primary-700 hover:bg-primary-800 border-primary-700">
                             Contatta l'ufficio
+<<<<<<< HEAD
                         </x-utilities.button>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                        </x-bootstrap-italia.button>
+=======
+                        </x-button>
+>>>>>>> a12f125f4a (.)
+=======
+                        </x-bootstrap-italia.button>
+>>>>>>> b93ef594b4 (.)
+=======
+                        </x-bootstrap-italia.button>
+>>>>>>> origin/develop
+>>>>>>> c8b07ab (.)
                     </div>
                 </div>
                 <div class="hidden lg:block">
@@ -53,7 +105,11 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {{-- Servizio 1 --}}
+<<<<<<< HEAD
                 <x-data-display.card 
+=======
+                <x-blocks.cards.italia 
+>>>>>>> c8b07ab (.)
                     title="Certificati Anagrafici"
                     subtitle="Richiedi online"
                     hover
@@ -68,10 +124,17 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
                     </div>
+<<<<<<< HEAD
                 </x-data-display.card>
 
                 {{-- Servizio 2 --}}
                 <x-data-display.card 
+=======
+                </x-blocks.cards.italia>
+
+                {{-- Servizio 2 --}}
+                <x-blocks.cards.italia 
+>>>>>>> c8b07ab (.)
                     title="Pagamenti Tributi"
                     subtitle="PagoPA"
                     hover
@@ -86,10 +149,17 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
                     </div>
+<<<<<<< HEAD
                 </x-data-display.card>
 
                 {{-- Servizio 3 --}}
                 <x-data-display.card 
+=======
+                </x-blocks.cards.italia>
+
+                {{-- Servizio 3 --}}
+                <x-blocks.cards.italia 
+>>>>>>> c8b07ab (.)
                     title="Pratiche Edilizie"
                     subtitle="SUAP Online"
                     hover
@@ -104,6 +174,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
                     </div>
+<<<<<<< HEAD
                 </x-data-display.card>
             </div>
             
@@ -111,6 +182,33 @@
                 <x-utilities.button variant="outline-primary" href="/servizi">
                     Tutti i servizi
                 </x-utilities.button>
+=======
+                </x-blocks.cards.italia>
+            </div>
+            
+            <div class="text-center mt-10">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <x-bootstrap-italia.button variant="outline-primary" href="/servizi">
+                    Tutti i servizi
+                </x-bootstrap-italia.button>
+=======
+                <x-button variant="outline-primary" href="/servizi">
+                    Tutti i servizi
+                </x-button>
+>>>>>>> a12f125f4a (.)
+=======
+                <x-bootstrap-italia.button variant="outline-primary" href="/servizi">
+                    Tutti i servizi
+                </x-bootstrap-italia.button>
+>>>>>>> b93ef594b4 (.)
+=======
+                <x-bootstrap-italia.button variant="outline-primary" href="/servizi">
+                    Tutti i servizi
+                </x-bootstrap-italia.button>
+>>>>>>> origin/develop
+>>>>>>> c8b07ab (.)
             </div>
         </div>
     </section>
@@ -127,14 +225,42 @@
                         Resta aggiornato su eventi e iniziative del territorio
                     </p>
                 </div>
+<<<<<<< HEAD
                 <x-utilities.button variant="outline-primary" href="/notizie">
                     Tutte le notizie
                 </x-utilities.button>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <x-bootstrap-italia.button variant="outline-primary" href="/notizie">
+                    Tutte le notizie
+                </x-bootstrap-italia.button>
+=======
+                <x-button variant="outline-primary" href="/notizie">
+                    Tutte le notizie
+                </x-button>
+>>>>>>> a12f125f4a (.)
+=======
+                <x-bootstrap-italia.button variant="outline-primary" href="/notizie">
+                    Tutte le notizie
+                </x-bootstrap-italia.button>
+>>>>>>> b93ef594b4 (.)
+=======
+                <x-bootstrap-italia.button variant="outline-primary" href="/notizie">
+                    Tutte le notizie
+                </x-bootstrap-italia.button>
+>>>>>>> origin/develop
+>>>>>>> c8b07ab (.)
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {{-- Notizia 1 --}}
+<<<<<<< HEAD
                 <x-data-display.card 
+=======
+                <x-blocks.cards.italia 
+>>>>>>> c8b07ab (.)
                     title="Nuovi orari uffici comunali"
                     image="/images/news-1.jpg"
                     imageAlt="Uffici comunali"
@@ -145,10 +271,17 @@
                     <p class="text-italia-gray-600">
                         A partire da lunedì 22 gennaio entreranno in vigore i nuovi orari di apertura al pubblico degli uffici comunali.
                     </p>
+<<<<<<< HEAD
                 </x-data-display.card>
 
                 {{-- Notizia 2 --}}
                 <x-data-display.card 
+=======
+                </x-blocks.cards.italia>
+
+                {{-- Notizia 2 --}}
+                <x-blocks.cards.italia 
+>>>>>>> c8b07ab (.)
                     title="Raccolta differenziata: nuove modalità"
                     image="/images/news-2.jpg"
                     imageAlt="Raccolta differenziata"
@@ -159,10 +292,17 @@
                     <p class="text-italia-gray-600">
                         Implementate nuove modalità di raccolta differenziata per migliorare la qualità del servizio e l'ambiente.
                     </p>
+<<<<<<< HEAD
                 </x-data-display.card>
 
                 {{-- Notizia 3 --}}
                 <x-data-display.card 
+=======
+                </x-blocks.cards.italia>
+
+                {{-- Notizia 3 --}}
+                <x-blocks.cards.italia 
+>>>>>>> c8b07ab (.)
                     title="Bando per contributi famiglie"
                     image="/images/news-3.jpg"
                     imageAlt="Contributi famiglie"
@@ -173,7 +313,11 @@
                     <p class="text-italia-gray-600">
                         Pubblicato il bando per l'erogazione di contributi economici a sostegno delle famiglie in difficoltà.
                     </p>
+<<<<<<< HEAD
                 </x-data-display.card>
+=======
+                </x-blocks.cards.italia>
+>>>>>>> c8b07ab (.)
             </div>
         </div>
     </section>
@@ -189,21 +333,87 @@
                     I nostri uffici sono a tua disposizione per fornirti supporto e assistenza
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
                     <x-utilities.button 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    <x-bootstrap-italia.button 
+=======
+                    <x-button 
+>>>>>>> a12f125f4a (.)
+=======
+                    <x-bootstrap-italia.button 
+>>>>>>> b93ef594b4 (.)
+=======
+                    <x-bootstrap-italia.button 
+>>>>>>> origin/develop
+>>>>>>> c8b07ab (.)
                         variant="outline-primary" 
                         href="/contatti"
                         class="bg-white text-primary-600 hover:bg-primary-50">
                         Contatta gli uffici
+<<<<<<< HEAD
                     </x-utilities.button>
                     <x-utilities.button 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    </x-bootstrap-italia.button>
+                    <x-bootstrap-italia.button 
+=======
+                    </x-button>
+                    <x-button 
+>>>>>>> a12f125f4a (.)
+=======
+                    </x-bootstrap-italia.button>
+                    <x-bootstrap-italia.button 
+>>>>>>> b93ef594b4 (.)
+=======
+                    </x-bootstrap-italia.button>
+                    <x-bootstrap-italia.button 
+>>>>>>> origin/develop
+>>>>>>> c8b07ab (.)
                         variant="secondary" 
                         href="tel:+390612345678"
                         class="bg-primary-700 hover:bg-primary-800 border-primary-700">
                         Chiama: 06 1234567
+<<<<<<< HEAD
                     </x-utilities.button>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    </x-bootstrap-italia.button>
+=======
+                    </x-button>
+>>>>>>> a12f125f4a (.)
+=======
+                    </x-bootstrap-italia.button>
+>>>>>>> b93ef594b4 (.)
+=======
+                    </x-bootstrap-italia.button>
+>>>>>>> origin/develop
+>>>>>>> c8b07ab (.)
                 </div>
             </div>
         </div>
     </section>
 
+<<<<<<< HEAD
 </x-layouts.main>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+</x-layouts.main>
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+</x-layouts.main>
+>>>>>>> origin/develop
+>>>>>>> c8b07ab (.)

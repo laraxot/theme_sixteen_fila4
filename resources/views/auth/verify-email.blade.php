@@ -1,7 +1,13 @@
 <x-guest-layout>
+<<<<<<< HEAD
     <x-auth.authentication-card>
         <x-slot name="logo">
             <x-filament-panels::logo />
+=======
+    <x-authentication-card>
+        <x-slot name="logo">
+            <x-authentication-card-logo />
+>>>>>>> c8b07ab (.)
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
@@ -19,9 +25,15 @@
                 @csrf
 
                 <div>
+<<<<<<< HEAD
                     <x-utilities.button type="submit">
                         {{ __('Resend Verification Email') }}
                     </x-utilities.button>
+=======
+                    <x-button type="submit">
+                        {{ __('Resend Verification Email') }}
+                    </x-button>
+>>>>>>> c8b07ab (.)
                 </div>
             </form>
 
@@ -41,5 +53,9 @@
                 </form>
             </div>
         </div>
+<<<<<<< HEAD
     </x-auth.authentication-card>
+=======
+    </x-authentication-card>
+>>>>>>> c8b07ab (.)
 </x-guest-layout>

@@ -160,7 +160,11 @@ $labelClasses = [
 Utilizzo:
 
 <!-- Textarea base -->
+<<<<<<< HEAD
 <x-forms.textarea 
+=======
+<x-textarea 
+>>>>>>> c8b07ab (.)
     name="message"
     label="Messaggio"
     placeholder="Inserisci il tuo messaggio..."
@@ -168,7 +172,11 @@ Utilizzo:
 />
 
 <!-- Textarea con validazione -->
+<<<<<<< HEAD
 <x-forms.textarea 
+=======
+<x-textarea 
+>>>>>>> c8b07ab (.)
     name="description"
     label="Descrizione"
     placeholder="Descrivi il prodotto..."
@@ -177,7 +185,11 @@ Utilizzo:
 />
 
 <!-- Textarea con contatore caratteri -->
+<<<<<<< HEAD
 <x-forms.textarea 
+=======
+<x-textarea 
+>>>>>>> c8b07ab (.)
     name="comment"
     label="Commento"
     placeholder="Lascia un commento..."
@@ -186,7 +198,11 @@ Utilizzo:
 />
 
 <!-- Textarea con autosize -->
+<<<<<<< HEAD
 <x-forms.textarea 
+=======
+<x-textarea 
+>>>>>>> c8b07ab (.)
     name="content"
     label="Contenuto"
     placeholder="Inizia a scrivere..."
@@ -195,7 +211,11 @@ Utilizzo:
 />
 
 <!-- Textarea con descrizione -->
+<<<<<<< HEAD
 <x-forms.textarea 
+=======
+<x-textarea 
+>>>>>>> c8b07ab (.)
     name="feedback"
     label="Feedback"
     description="Condividi la tua opinione sui nostri servizi"
@@ -204,7 +224,11 @@ Utilizzo:
 />
 
 <!-- Textarea disabilitato -->
+<<<<<<< HEAD
 <x-forms.textarea 
+=======
+<x-textarea 
+>>>>>>> c8b07ab (.)
     name="disabled"
     label="Campo disabilitato"
     value="Questo campo non può essere modificato"
@@ -213,7 +237,11 @@ Utilizzo:
 />
 
 <!-- Textarea readonly -->
+<<<<<<< HEAD
 <x-forms.textarea 
+=======
+<x-textarea 
+>>>>>>> c8b07ab (.)
     name="readonly"
     label="Campo solo lettura"
     value="Questo contenuto è di sola lettura"
@@ -222,7 +250,11 @@ Utilizzo:
 />
 
 <!-- Textarea con variante success -->
+<<<<<<< HEAD
 <x-forms.textarea 
+=======
+<x-textarea 
+>>>>>>> c8b07ab (.)
     name="valid"
     label="Campo valido"
     value="Contenuto corretto"
@@ -231,7 +263,11 @@ Utilizzo:
 />
 
 <!-- Textarea con variante danger -->
+<<<<<<< HEAD
 <x-forms.textarea 
+=======
+<x-textarea 
+>>>>>>> c8b07ab (.)
     name="invalid"
     label="Campo non valido"
     value="Contenuto con errori"
@@ -241,21 +277,33 @@ Utilizzo:
 />
 
 <!-- Textarea con resize personalizzato -->
+<<<<<<< HEAD
 <x-forms.textarea 
+=======
+<x-textarea 
+>>>>>>> c8b07ab (.)
     name="resize-none"
     label="Non ridimensionabile"
     resize="none"
     rows="3"
 />
 
+<<<<<<< HEAD
 <x-forms.textarea 
+=======
+<x-textarea 
+>>>>>>> c8b07ab (.)
     name="resize-both"
     label="Ridimensionabile in entrambe le direzioni"
     resize="both"
     rows="3"
 />
 
+<<<<<<< HEAD
 <x-forms.textarea 
+=======
+<x-textarea 
+>>>>>>> c8b07ab (.)
     name="resize-horizontal"
     label="Ridimensionabile orizzontalmente"
     resize="horizontal"
@@ -263,14 +311,22 @@ Utilizzo:
 />
 
 <!-- Textarea con dimensioni -->
+<<<<<<< HEAD
 <x-forms.textarea 
+=======
+<x-textarea 
+>>>>>>> c8b07ab (.)
     name="small"
     label="Piccolo"
     size="sm"
     rows="2"
 />
 
+<<<<<<< HEAD
 <x-forms.textarea 
+=======
+<x-textarea 
+>>>>>>> c8b07ab (.)
     name="large"
     label="Grande"
     size="lg"
@@ -278,7 +334,11 @@ Utilizzo:
 />
 
 <!-- Textarea per form di contatto -->
+<<<<<<< HEAD
 <x-forms.textarea 
+=======
+<x-textarea 
+>>>>>>> c8b07ab (.)
     name="contact_message"
     label="Messaggio"
     placeholder="Descrivi la tua richiesta..."
@@ -289,7 +349,11 @@ Utilizzo:
 />
 
 <!-- Textarea per recensioni -->
+<<<<<<< HEAD
 <x-forms.textarea 
+=======
+<x-textarea 
+>>>>>>> c8b07ab (.)
     name="review"
     label="Recensione"
     placeholder="Condividi la tua esperienza..."

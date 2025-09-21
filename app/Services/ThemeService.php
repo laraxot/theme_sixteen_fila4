@@ -4,16 +4,32 @@ declare(strict_types=1);
 
 namespace Themes\Sixteen\Services;
 
+<<<<<<< HEAD
 use InvalidArgumentException;
 use Themes\Sixteen\Services\MenuBuilder;
 
+=======
+<<<<<<< HEAD
+use Themes\Sixteen\Services\MenuBuilder;
+
+=======
+>>>>>>> origin/develop
+>>>>>>> c8b07ab (.)
 /**
  * Servizio per la gestione del tema Sixteen.
  * 
  * Questo servizio fornisce metodi per la gestione
  * delle configurazioni e funzionalità del tema.
+<<<<<<< HEAD
  * 
  * Enhanced version integrating with the new Menu Builder System
+=======
+<<<<<<< HEAD
+ * 
+ * Enhanced version integrating with the new Menu Builder System
+=======
+>>>>>>> origin/develop
+>>>>>>> c8b07ab (.)
  */
 class ThemeService
 {
@@ -27,21 +43,73 @@ class ThemeService
      */
     protected string $version = '1.0.0';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c8b07ab (.)
     public function __construct(
         protected MenuBuilder $menuBuilder
     ) {
     }
 
     /**
+<<<<<<< HEAD
      * Ottiene il nome del tema.
      */
     public function getName(): string
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+     * Restituisce il nome del tema.
+     *
+     * @return string
+     */
+    public function getThemeName(): string
+=======
+     * Ottiene il nome del tema.
+     */
+    public function getName(): string
+>>>>>>> a12f125f4a (.)
+=======
+     * Restituisce il nome del tema.
+     *
+     * @return string
+     */
+    public function getThemeName(): string
+>>>>>>> b93ef594b4 (.)
+=======
+    /**
+     * Ottiene il nome del tema.
+     */
+    public function getName(): string
+>>>>>>> origin/develop
+>>>>>>> c8b07ab (.)
     {
         return $this->themeName;
     }
 
     /**
+<<<<<<< HEAD
      * Ottiene la versione del tema.
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+     * Restituisce la versione del tema.
+     *
+     * @return string
+=======
+     * Ottiene la versione del tema.
+>>>>>>> a12f125f4a (.)
+=======
+     * Restituisce la versione del tema.
+     *
+     * @return string
+>>>>>>> b93ef594b4 (.)
+=======
+     * Ottiene la versione del tema.
+>>>>>>> origin/develop
+>>>>>>> c8b07ab (.)
      */
     public function getVersion(): string
     {
@@ -49,23 +117,80 @@ class ThemeService
     }
 
     /**
+<<<<<<< HEAD
      * Ottiene le informazioni del tema.
      */
     public function getInfo(): array
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+     * Restituisce la configurazione del tema.
+     *
+     * @return array<string, mixed>
+     */
+    public function getConfig(): array
+=======
+     * Ottiene le informazioni del tema.
+     */
+    public function getInfo(): array
+>>>>>>> a12f125f4a (.)
+=======
+     * Restituisce la configurazione del tema.
+     *
+     * @return array<string, mixed>
+     */
+    public function getConfig(): array
+>>>>>>> b93ef594b4 (.)
+=======
+     * Ottiene le informazioni del tema.
+     */
+    public function getInfo(): array
+>>>>>>> origin/develop
+>>>>>>> c8b07ab (.)
     {
         return [
             'name' => $this->themeName,
             'version' => $this->version,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b93ef594b4 (.)
+            'author' => 'Laraxot Team',
+            'description' => 'Modern responsive theme for Laraxot applications',
+            'features' => [
+                'responsive_design',
+                'dark_mode_support',
+                'component_library',
+                'accessibility_compliant',
+            ],
+<<<<<<< HEAD
+=======
+>>>>>>> c8b07ab (.)
             'description' => 'Tema Sixteen per SaluteOra - AGID Bootstrap Italia compliant',
             'author' => 'SaluteOra Team',
             'agid_compliant' => true,
             'bootstrap_italia' => true,
             'tailwind_css' => true,
             'accessibility' => 'WCAG 2.1 AA',
+<<<<<<< HEAD
+=======
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+            'description' => 'Tema Sixteen per SaluteOra',
+            'author' => 'SaluteOra Team',
+>>>>>>> origin/develop
+>>>>>>> c8b07ab (.)
         ];
     }
 
     /**
+<<<<<<< HEAD
      * Verifica se il tema è attivo.
      */
     public function isActive(): bool
@@ -84,6 +209,57 @@ class ThemeService
 
         return config('sixteen.' . $key, $default);
     }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+     * Costruisce il menu usando il MenuBuilder.
+     *
+     * @return array<string, mixed>
+     */
+    public function buildMenu(): array
+    {
+        return $this->menuBuilder->build();
+    }
+
+    /**
+     * Inizializza le risorse del tema.
+     *
+     * @return void
+     */
+    public function initialize(): void
+    {
+        // Caricamento delle risorse CSS e JS
+        // Configurazione dei componenti del tema
+        // Setup delle configurazioni specifiche
+    }
+}
+=======
+     * Verifica se il tema è attivo.
+=======
+     * Costruisce il menu usando il MenuBuilder.
+     *
+     * @return array<string, mixed>
+>>>>>>> b93ef594b4 (.)
+     */
+    public function buildMenu(): array
+    {
+        return $this->menuBuilder->build();
+    }
+
+    /**
+     * Inizializza le risorse del tema.
+     *
+     * @return void
+     */
+    public function initialize(): void
+    {
+        // Caricamento delle risorse CSS e JS
+        // Configurazione dei componenti del tema
+        // Setup delle configurazioni specifiche
+    }
+<<<<<<< HEAD
+>>>>>>> c8b07ab (.)
 
     /**
      * Ottiene il Menu Builder per accesso diretto ai menu
@@ -103,7 +279,11 @@ class ThemeService
             'header' => $this->menuBuilder->getHeader()->toArray(),
             'footer' => $this->menuBuilder->getFooter()->toArray(),
             'footer_bar' => $this->menuBuilder->getFooterBar()->toArray(),
+<<<<<<< HEAD
             default => throw new InvalidArgumentException("Unknown menu location: {$location}")
+=======
+            default => throw new \InvalidArgumentException("Unknown menu location: {$location}")
+>>>>>>> c8b07ab (.)
         };
     }
 
@@ -136,4 +316,33 @@ class ThemeService
             'status' => 'in_development'
         ];
     }
+<<<<<<< HEAD
 } 
+=======
+} 
+>>>>>>> a12f125f4a (.)
+=======
+}
+>>>>>>> b93ef594b4 (.)
+=======
+     * Verifica se il tema è attivo.
+     */
+    public function isActive(): bool
+    {
+        return config('app.theme') === 'sixteen';
+    }
+
+    /**
+     * Ottiene le configurazioni del tema.
+     */
+    public function getConfig(string $key = null, mixed $default = null): mixed
+    {
+        if ($key === null) {
+            return config('sixteen');
+        }
+
+        return config('sixteen.' . $key, $default);
+    }
+} 
+>>>>>>> origin/develop
+>>>>>>> c8b07ab (.)

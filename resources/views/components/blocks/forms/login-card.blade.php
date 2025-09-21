@@ -26,7 +26,11 @@
     <!-- Body Card -->
     <div class="px-6 py-8">
         <!-- Livewire Login Component -->
+<<<<<<< HEAD
         {{-- @livewire($livewireComponent) --}}
+=======
+        @livewire($livewireComponent)
+>>>>>>> c8b07ab (.)
     </div>
     
     <!-- Footer Card con Assistenza -->
