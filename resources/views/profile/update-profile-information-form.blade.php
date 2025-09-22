@@ -1,8 +1,4 @@
 <x-form-section submit="updateProfileInformation">
-<<<<<<< HEAD
-<x-form-section submit="updateProfileInformation">
-=======
->>>>>>> bdc7dd6 (.)
     <x-slot name="title">
         {{ __('Profile Information') }}
     </x-slot>
@@ -29,10 +25,6 @@
                             " />
 
                 <x-label for="photo" value="{{ __('Photo') }}" />
-<<<<<<< HEAD
-                <x-label for="photo" value="{{ __('Photo') }}" />
-=======
->>>>>>> bdc7dd6 (.)
 
                 <!-- Current Profile Photo -->
                 <div class="mt-2" x-show="! photoPreview">
@@ -65,12 +57,6 @@
             <x-label for="name" value="{{ __('Name') }}" />
             <x-input id="name" type="text" class="mt-1 block w-full" wire:model="state.name" required autocomplete="name" />
             <x-input-error for="name" class="mt-2" />
-<<<<<<< HEAD
-            <x-label for="name" value="{{ __('Name') }}" />
-            <x-input id="name" type="text" class="mt-1 block w-full" wire:model="state.name" required autocomplete="name" />
-            <x-input-error for="name" class="mt-2" />
-=======
->>>>>>> bdc7dd6 (.)
         </div>
 
         <!-- Email -->
@@ -78,12 +64,6 @@
             <x-label for="email" value="{{ __('Email') }}" />
             <x-input id="email" type="email" class="mt-1 block w-full" wire:model="state.email" required autocomplete="username" />
             <x-input-error for="email" class="mt-2" />
-<<<<<<< HEAD
-            <x-label for="email" value="{{ __('Email') }}" />
-            <x-input id="email" type="email" class="mt-1 block w-full" wire:model="state.email" required autocomplete="username" />
-            <x-input-error for="email" class="mt-2" />
-=======
->>>>>>> bdc7dd6 (.)
 
             @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::emailVerification()) && ! $this->user->hasVerifiedEmail())
                 <p class="text-sm mt-2 dark:text-white">
