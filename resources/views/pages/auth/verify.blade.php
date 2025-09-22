@@ -34,15 +34,8 @@ new class extends Component
 
         <div class="sm:mx-auto sm:w-full sm:max-w-md">
             <x-ui.link href="{{ route('home') }}">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <x-utilities.logo class="w-auto h-10 mx-auto text-gray-700 fill-current dark:text-gray-100" />
-=======
                 <x-ui.logo class="w-auto h-10 mx-auto text-gray-700 fill-current dark:text-gray-100" />
->>>>>>> c8b07ab (.)
-=======
                 <x-ui.logo class="w-auto h-10 mx-auto text-gray-700 fill-current dark:text-gray-100" />
->>>>>>> 0eb3291 (.)
             </x-ui.link>
 
             <h2 class="mt-6 text-2xl font-extrabold leading-9 text-center text-gray-700 dark:text-gray-200">

@@ -3,20 +3,6 @@
 declare(strict_types=1);
 
 return [
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-];
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
-=======
->>>>>>> 0eb3291 (.)
     // Login page
     'Login' => 'Accedi',
     'Accedi ai servizi' => 'Accedi ai servizi',
@@ -56,10 +42,6 @@ return [
     'Successo' => 'Successo',
     'Avviso' => 'Avviso',
     'Informazione' => 'Informazione',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0eb3291 (.)
     
     // Dark mode and UI controls
     'dark_mode_toggle' => 'Cambia modalità scura',
@@ -70,17 +52,4 @@ return [
     'menu' => 'Menu',
     'close' => 'Chiudi',
     'open' => 'Apri',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 ];
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-];
->>>>>>> origin/develop
->>>>>>> c8b07ab (.)
-=======
->>>>>>> 0eb3291 (.)

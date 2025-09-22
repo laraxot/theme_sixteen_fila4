@@ -125,80 +125,38 @@ $classes = array_merge(
 Utilizzo:
 
 <!-- Link semplice -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-<x-overlays.dropdown-item href="/profilo">
-=======
 <x-dropdown-item href="/profilo">
->>>>>>> c8b07ab (.)
-=======
 <x-dropdown-item href="/profilo">
->>>>>>> 0eb3291 (.)
     Il mio profilo
 </x-dropdown-item>
 
 <!-- Link con icona -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-<x-overlays.dropdown-item href="/settings" icon="heroicon-o-cog-6-tooth">
-=======
 <x-dropdown-item href="/settings" icon="heroicon-o-cog-6-tooth">
->>>>>>> c8b07ab (.)
-=======
 <x-dropdown-item href="/settings" icon="heroicon-o-cog-6-tooth">
->>>>>>> 0eb3291 (.)
     Impostazioni
 </x-dropdown-item>
 
 <!-- Button con azione JavaScript -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-<x-overlays.dropdown-item icon="heroicon-o-arrow-right-on-rectangle" variant="danger">
-=======
 <x-dropdown-item icon="heroicon-o-arrow-right-on-rectangle" variant="danger">
->>>>>>> c8b07ab (.)
-=======
 <x-dropdown-item icon="heroicon-o-arrow-right-on-rectangle" variant="danger">
->>>>>>> 0eb3291 (.)
     Logout
 </x-dropdown-item>
 
 <!-- Item disabilitato -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-<x-overlays.dropdown-item disabled>
-=======
 <x-dropdown-item disabled>
->>>>>>> c8b07ab (.)
-=======
 <x-dropdown-item disabled>
->>>>>>> 0eb3291 (.)
     Funzione non disponibile
 </x-dropdown-item>
 
 <!-- Item attivo -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-<x-overlays.dropdown-item href="/dashboard" active>
-=======
 <x-dropdown-item href="/dashboard" active>
->>>>>>> c8b07ab (.)
-=======
 <x-dropdown-item href="/dashboard" active>
->>>>>>> 0eb3291 (.)
     Dashboard
 </x-dropdown-item>
 
 <!-- Link esterno -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-<x-overlays.dropdown-item href="https://example.com" target="_blank" icon="heroicon-o-arrow-top-right-on-square">
-=======
 <x-dropdown-item href="https://example.com" target="_blank" icon="heroicon-o-arrow-top-right-on-square">
->>>>>>> c8b07ab (.)
-=======
 <x-dropdown-item href="https://example.com" target="_blank" icon="heroicon-o-arrow-top-right-on-square">
->>>>>>> 0eb3291 (.)
     Link esterno
 </x-dropdown-item>
 --}}

@@ -12,15 +12,7 @@ class RedirectToDashboard
     /**
      * Handle an incoming request.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param Closure(Request):Response $next
-=======
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
->>>>>>> c8b07ab (.)
-=======
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
->>>>>>> 0eb3291 (.)
      */
     public function handle(Request $request, Closure $next): Response
     {

@@ -22,15 +22,8 @@
                 <!-- Teams Dropdown -->
                 @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
                     <div class="ms-3 relative">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        <x-overlays.dropdown align="right" width="60">
-=======
                         <x-dropdown align="right" width="60">
->>>>>>> c8b07ab (.)
-=======
                         <x-dropdown align="right" width="60">
->>>>>>> 0eb3291 (.)
                             <x-slot name="trigger">
                                 <span class="inline-flex rounded-md">
                                     <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none focus:bg-gray-50 dark:focus:bg-gray-700 active:bg-gray-50 dark:active:bg-gray-700 transition ease-in-out duration-150">
@@ -51,28 +44,14 @@
                                     </div>
 
                                     <!-- Team Settings -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                    <x-overlays.dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}">
-=======
                                     <x-dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}">
->>>>>>> c8b07ab (.)
-=======
                                     <x-dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}">
->>>>>>> 0eb3291 (.)
                                         {{ __('Team Settings') }}
                                     </x-dropdown-link>
 
                                     @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                        <x-overlays.dropdown-link href="{{ route('teams.create') }}">
-=======
                                         <x-dropdown-link href="{{ route('teams.create') }}">
->>>>>>> c8b07ab (.)
-=======
                                         <x-dropdown-link href="{{ route('teams.create') }}">
->>>>>>> 0eb3291 (.)
                                             {{ __('Create New Team') }}
                                         </x-dropdown-link>
                                     @endcan
@@ -91,29 +70,15 @@
                                     @endif
                                 </div>
                             </x-slot>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        </x-overlays.dropdown>
-=======
                         </x-dropdown>
->>>>>>> c8b07ab (.)
-=======
                         </x-dropdown>
->>>>>>> 0eb3291 (.)
                     </div>
                 @endif
 
                 <!-- Settings Dropdown -->
                 <div class="ms-3 relative">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <x-overlays.dropdown align="right" width="48">
-=======
                     <x-dropdown align="right" width="48">
->>>>>>> c8b07ab (.)
-=======
                     <x-dropdown align="right" width="48">
->>>>>>> 0eb3291 (.)
                         <x-slot name="trigger">
                             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                                 <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
@@ -138,28 +103,14 @@
                                 {{ __('Manage Account') }}
                             </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                            <x-overlays.dropdown-link href="{{ route('profile.show') }}">
-=======
                             <x-dropdown-link href="{{ route('profile.show') }}">
->>>>>>> c8b07ab (.)
-=======
                             <x-dropdown-link href="{{ route('profile.show') }}">
->>>>>>> 0eb3291 (.)
                                 {{ __('Profile') }}
                             </x-dropdown-link>
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                <x-overlays.dropdown-link href="{{ route('api-tokens.index') }}">
-=======
                                 <x-dropdown-link href="{{ route('api-tokens.index') }}">
->>>>>>> c8b07ab (.)
-=======
                                 <x-dropdown-link href="{{ route('api-tokens.index') }}">
->>>>>>> 0eb3291 (.)
                                     {{ __('API Tokens') }}
                                 </x-dropdown-link>
                             @endif
@@ -170,29 +121,15 @@
                             <form method="POST" action="{{ route('logout') }}" x-data>
                                 @csrf
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                <x-overlays.dropdown-link href="{{ route('logout') }}"
-=======
                                 <x-dropdown-link href="{{ route('logout') }}"
->>>>>>> c8b07ab (.)
-=======
                                 <x-dropdown-link href="{{ route('logout') }}"
->>>>>>> 0eb3291 (.)
                                          @click.prevent="$root.submit();">
                                     {{ __('Log Out') }}
                                 </x-dropdown-link>
                             </form>
                         </x-slot>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    </x-overlays.dropdown>
-=======
                     </x-dropdown>
->>>>>>> c8b07ab (.)
-=======
                     </x-dropdown>
->>>>>>> 0eb3291 (.)
                 </div>
             </div>
 

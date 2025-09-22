@@ -5,23 +5,6 @@ declare(strict_types=1);
 return [
     'login' => [
         'title' => 'Service Access',
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> c8b07ab (.)
-=======
->>>>>>> 0eb3291 (.)
         'description' => 'Enter your credentials to access :service',
         'no_account' => 'Don\'t have an account?',
         'create_account' => 'Register',
@@ -36,23 +19,6 @@ return [
         'remember_me' => 'Remember me',
         'forgot_password' => 'Forgot your password?',
         'submit' => 'Login',
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> c8b07ab (.)
-=======
->>>>>>> 0eb3291 (.)
         'help' => 'Need help?',
     ],
     'register' => [
@@ -147,21 +113,4 @@ return [
         'validation_error' => 'Validation error',
         'general_error' => 'An error occurred. Please try again later.',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-]; 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-]; 
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-]; 
->>>>>>> origin/develop
->>>>>>> c8b07ab (.)
-=======
->>>>>>> 0eb3291 (.)
+];

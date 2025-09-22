@@ -6,49 +6,22 @@
     {{-- Header del form --}}
     <div class="text-center">
         <h2 class="text-2xl font-extrabold leading-9 text-gray-800 dark:text-gray-200">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> b93ef594b4 (.)
-=======
 >>>>>>> origin/develop
-=======
->>>>>>> 0eb3291 (.)
             {{ __('auth.login.title') }}
         </h2>
         <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
             {{ __('auth.login.subtitle') }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 >>>>>>> a12f125f4a (.)
-=======
 >>>>>>> b93ef594b4 (.)
-=======
 >>>>>>> origin/develop
->>>>>>> c8b07ab (.)
-=======
->>>>>>> 0eb3291 (.)
         </p>
     </div>
 
     {{-- Form renderizzato dal widget --}}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <form wire:submit="save" class="space-y-6">
-=======
     <form wire:submit="login" class="space-y-6">
->>>>>>> c8b07ab (.)
-=======
     <form wire:submit="login" class="space-y-6">
->>>>>>> 0eb3291 (.)
         {{ $this->form }}
 
         {{-- Remember Me & Forgot Password --}}
@@ -58,27 +31,13 @@
                     href="{{ url('/' . app()->getLocale() . '/auth/password/email') }}" 
                     class="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
                 >
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    {{ __('auth.login.forgot_password') }}
-=======
 
 >>>>>>> a12f125f4a (.)
-=======
                     {{ __('auth.login.forgot_password') }}
 >>>>>>> b93ef594b4 (.)
-=======
                     {{ __('auth.login.forgot_password') }}
 >>>>>>> origin/develop
->>>>>>> c8b07ab (.)
-=======
                     {{ __('auth.login.forgot_password') }}
->>>>>>> 0eb3291 (.)
                 </a>
             </div>
         </div>
@@ -101,31 +60,16 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
                 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <span wire:loading.remove>{{ __('auth.login.submit') }}</span>
-                <span wire:loading>{{ __('auth.login.submitting') }}</span>
-=======
 
 >>>>>>> a12f125f4a (.)
-=======
                 <span wire:loading.remove>{{ __('auth.login.submit') }}</span>
                 <span wire:loading>{{ __('auth.login.submitting') }}</span>
 >>>>>>> b93ef594b4 (.)
-=======
                 <span wire:loading.remove>{{ __('auth.login.submit') }}</span>
                 <span wire:loading>{{ __('auth.login.submitting') }}</span>
 >>>>>>> origin/develop
->>>>>>> c8b07ab (.)
-=======
                 <span wire:loading.remove>{{ __('auth.login.submit') }}</span>
                 <span wire:loading>{{ __('auth.login.submitting') }}</span>
->>>>>>> 0eb3291 (.)
             </button>
         </div>
     </form>
@@ -133,52 +77,24 @@
     {{-- Registration Link --}}
     <div class="mt-6 text-center">
         <div class="text-sm leading-5 text-gray-600 dark:text-gray-400 space-x-0.5">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <span>{{ __('auth.login.or') }}</span>
-=======
 
 >>>>>>> a12f125f4a (.)
-=======
             <span>{{ __('auth.login.or') }}</span>
 >>>>>>> b93ef594b4 (.)
-=======
             <span>{{ __('auth.login.or') }}</span>
 >>>>>>> origin/develop
->>>>>>> c8b07ab (.)
-=======
             <span>{{ __('auth.login.or') }}</span>
->>>>>>> 0eb3291 (.)
             <a 
                 href="{{ url('/' . app()->getLocale() . '/auth/register') }}" 
                 class="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                {{ __('auth.login.create_account') }}
-=======
 
 >>>>>>> a12f125f4a (.)
-=======
                 {{ __('auth.login.create_account') }}
 >>>>>>> b93ef594b4 (.)
-=======
                 {{ __('auth.login.create_account') }}
 >>>>>>> origin/develop
->>>>>>> c8b07ab (.)
-=======
                 {{ __('auth.login.create_account') }}
->>>>>>> 0eb3291 (.)
             </a>
         </div>
     </div>

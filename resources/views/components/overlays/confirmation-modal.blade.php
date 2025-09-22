@@ -1,14 +1,7 @@
 @props(['id' => null, 'maxWidth' => null])
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<x-overlays.modal :id="$id" :maxWidth="$maxWidth" {{ $attributes }}>
-=======
 <x-modal :id="$id" :maxWidth="$maxWidth" {{ $attributes }}>
->>>>>>> c8b07ab (.)
-=======
 <x-modal :id="$id" :maxWidth="$maxWidth" {{ $attributes }}>
->>>>>>> 0eb3291 (.)
     <div class="bg-white dark:bg-gray-800 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
         <div class="sm:flex sm:items-start">
             <div class="mx-auto shrink-0 flex items-center justify-center size-12 rounded-full bg-red-100 sm:mx-0 sm:size-10">
@@ -32,12 +25,5 @@
     <div class="flex flex-row justify-end px-6 py-4 bg-gray-100 dark:bg-gray-800 text-end">
         {{ $footer }}
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-</x-overlays.modal>
-=======
 </x-modal>
->>>>>>> c8b07ab (.)
-=======
 </x-modal>
->>>>>>> 0eb3291 (.)

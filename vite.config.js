@@ -11,19 +11,7 @@ import laravel, { refreshPaths } from 'laravel-vite-plugin'
 export default defineConfig({
     build: {
         //outDir: '../../../public_html/build/ewall',
-<<<<<<< HEAD
-<<<<<<< HEAD
         outDir: './public',
-=======
-<<<<<<< HEAD
-        outDir: './public',
-=======
-        outDir: './resources/dist',
->>>>>>> origin/develop
->>>>>>> c8b07ab (.)
-=======
-        outDir: './public',
->>>>>>> 0eb3291 (.)
         emptyOutDir: false,
         manifest: 'manifest.json',
         //rollupOptions: {

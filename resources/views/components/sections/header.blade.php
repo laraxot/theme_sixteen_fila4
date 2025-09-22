@@ -2,17 +2,7 @@
     <div class="h-12 bg-emerald-900 min-h-12 navbar">
         <div class="flex justify-between w-full max-w-screen-xl mx-auto">
             <div class="flex-1 py-1">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> b93ef594b4 (.)
-=======
->>>>>>> 0eb3291 (.)
                 <a class="text-sm" href="#">{{-- regione --}}</a>
             </div>
             <div class="flex-none">
@@ -25,14 +15,9 @@
                         @livewire("Modules\Lang\Filament\Widgets\LanguageSwitcherWidget")
                     </li>
                     --}}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 >>>>>>> a12f125f4a (.)
-=======
 >>>>>>> b93ef594b4 (.)
-=======
                 <a class="text-sm" href="#">Nome della Regione</a>
             </div>
             <div class="flex-none">
@@ -49,9 +34,6 @@
 						</details>
 					</li> --}}
 >>>>>>> origin/develop
->>>>>>> c8b07ab (.)
-=======
->>>>>>> 0eb3291 (.)
                     @guest
                         <li class="ml-4">
                             <a class="flex items-center space-x-1" href="{{ route('login') }}">
@@ -127,16 +109,6 @@
         <div class="flex justify-between w-full max-w-screen-xl mx-auto">
             <div class="flex-1">
                 <a href="" class="flex items-center py-2 space-x-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/develop
->>>>>>> c8b07ab (.)
-=======
->>>>>>> 0eb3291 (.)
                     {{--  
                     <x-heroicon-o-shield-check class="stroke-1 size-16" />
                     --}}
@@ -145,21 +117,12 @@
                     <div class="text-start">
                         <div class="text-2xl font-bold">{{ $_theme->metatag('title') }}</div>
                         <div class="text-sm">{{ $_theme->metatag('subtitle') }}</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
                     <x-heroicon-o-shield-check class="stroke-1 size-16" />
                     <div class="text-start">
                         <div class="text-2xl font-bold">Il mio Comune</div>
                         <div class="text-sm">Un comune da vivere</div>
 >>>>>>> 029971d (.)
 >>>>>>> origin/develop
->>>>>>> c8b07ab (.)
-=======
->>>>>>> 0eb3291 (.)
                     </div>
                 </a>
             </div>
@@ -188,32 +151,9 @@
     <div class="hidden h-12 overflow-auto min-h-12 navbar md:flex">
         <div class="flex justify-between w-full max-w-screen-xl mx-auto space-x-12">
             <div class="flex-1 ">
-<<<<<<< HEAD
-<<<<<<< HEAD
                 @php
                 $nav1 = Arr::first($blocks,fn($item)=>$item->slug =='nav1');
                 @endphp
-                @if($nav1!=null)
-                <ul class="items-center px-1 menu menu-horizontal flex-nowrap">
-                    @foreach($nav1->data['items'] as $item)
-                    <li><a href="">{{ $item['label'] }}</a></li>
-                    @endforeach
-                </ul>
-                @endif
-
-                {{--  dddx(get_defined_vars()) 
-=======
-<<<<<<< HEAD
-                @php
-                $nav1 = Arr::first($blocks,fn($item)=>$item->slug =='nav1');
-                @endphp
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                @php
-                $nav1 = Arr::first($blocks,fn($item)=>$item->slug =='nav1');
-                @endphp
->>>>>>> 0eb3291 (.)
                 <ul class="items-center px-1 menu menu-horizontal flex-nowrap">
                     @if($nav1 && isset($nav1->data['items']) && is_array($nav1->data['items']))
                         @foreach($nav1->data['items'] as $item)
@@ -227,10 +167,7 @@
                         <li><a href="">Vivere il Comune</a></li>
                     @endif
                 </ul>
-<<<<<<< HEAD
-=======
                 @if($nav1!=null)
-=======
 >>>>>>> b93ef594b4 (.)
                 <ul class="items-center px-1 menu menu-horizontal flex-nowrap">
                     @if($nav1 && isset($nav1->data['items']) && is_array($nav1->data['items']))
@@ -245,40 +182,16 @@
                         <li><a href="">Vivere il Comune</a></li>
                     @endif
                 </ul>
-<<<<<<< HEAD
-                @endif
-
-                {{--  dddx(get_defined_vars()) 
-=======
-<<<<<<< HEAD
-                {{--  dddx(get_defined_vars()) --}}
-=======
 >>>>>>> 029971d (.)
 >>>>>>> origin/develop
->>>>>>> c8b07ab (.)
                 <ul class="items-center px-1 menu menu-horizontal flex-nowrap">
                     <li><a href="">Amministrazione</a></li>
                     <li><a href="">Novità</a></li>
                     <li><a href="">Servizi</a></li>
                     <li><a href="">Vivere il Comune</a></li>
-<<<<<<< HEAD
-
-                </ul>
-                --}}
-=======
-<<<<<<< HEAD
-
-                </ul>
-                --}}
->>>>>>> a12f125f4a (.)
-=======
 >>>>>>> b93ef594b4 (.)
-=======
                 </ul>
 >>>>>>> origin/develop
->>>>>>> c8b07ab (.)
-=======
->>>>>>> 0eb3291 (.)
             </div>
             <div class="flex-none">
                 <ul class="items-center px-1 menu menu-horizontal flex-nowrap">

@@ -4,14 +4,8 @@ declare(strict_types=1);
 
 namespace Themes\Sixteen\Http\Controllers;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use InvalidArgumentException;
 use Exception;
-=======
->>>>>>> c8b07ab (.)
-=======
->>>>>>> 0eb3291 (.)
 use Illuminate\Http\{Request, RedirectResponse, Response};
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\{Auth, Log, Session};
@@ -43,28 +37,12 @@ class SpidAuthController extends Controller
             // Valida il provider
             $providers = $this->spidService->getProviders();
             if (!isset($providers[$provider])) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 throw new InvalidArgumentException("Provider SPID '{$provider}' non supportato");
-=======
-                throw new \InvalidArgumentException("Provider SPID '{$provider}' non supportato");
->>>>>>> c8b07ab (.)
-=======
-                throw new \InvalidArgumentException("Provider SPID '{$provider}' non supportato");
->>>>>>> 0eb3291 (.)
             }
 
             // Valida il livello SPID
             if (!in_array($level, [1, 2, 3])) {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 throw new InvalidArgumentException("Livello SPID non valido: {$level}");
-=======
-                throw new \InvalidArgumentException("Livello SPID non valido: {$level}");
->>>>>>> c8b07ab (.)
-=======
-                throw new \InvalidArgumentException("Livello SPID non valido: {$level}");
->>>>>>> 0eb3291 (.)
             }
 
             Log::info('SPID login initiated', [
@@ -78,15 +56,7 @@ class SpidAuthController extends Controller
             
             return redirect()->to($loginUrl);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         } catch (Exception $e) {
-=======
-        } catch (\Exception $e) {
->>>>>>> c8b07ab (.)
-=======
-        } catch (\Exception $e) {
->>>>>>> 0eb3291 (.)
             Log::error('SPID login error', [
                 'provider' => $provider,
                 'error' => $e->getMessage(),
@@ -132,15 +102,7 @@ class SpidAuthController extends Controller
             return redirect()->to($returnUrl)
                 ->with('success', 'Autenticazione SPID completata con successo.');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         } catch (Exception $e) {
-=======
-        } catch (\Exception $e) {
->>>>>>> c8b07ab (.)
-=======
-        } catch (\Exception $e) {
->>>>>>> 0eb3291 (.)
             Log::error('SPID callback error', [
                 'error' => $e->getMessage(),
                 'request_data' => $request->all(),
@@ -206,15 +168,7 @@ class SpidAuthController extends Controller
             return redirect()->route('home')
                 ->with('success', 'Logout effettuato con successo.');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         } catch (Exception $e) {
-=======
-        } catch (\Exception $e) {
->>>>>>> c8b07ab (.)
-=======
-        } catch (\Exception $e) {
->>>>>>> 0eb3291 (.)
             Log::error('SPID logout error', [
                 'error' => $e->getMessage(),
                 'user_id' => Auth::id(),
@@ -265,15 +219,7 @@ class SpidAuthController extends Controller
             return response($sloResponse)
                 ->header('Content-Type', 'text/xml');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         } catch (Exception $e) {
-=======
-        } catch (\Exception $e) {
->>>>>>> c8b07ab (.)
-=======
-        } catch (\Exception $e) {
->>>>>>> 0eb3291 (.)
             Log::error('SPID SLO error', [
                 'error' => $e->getMessage(),
                 'trace' => $e->getTraceAsString(),
@@ -299,15 +245,7 @@ class SpidAuthController extends Controller
                 ->header('Content-Type', 'application/samlmetadata+xml')
                 ->header('Content-Disposition', 'inline; filename="metadata.xml"');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         } catch (Exception $e) {
-=======
-        } catch (\Exception $e) {
->>>>>>> c8b07ab (.)
-=======
-        } catch (\Exception $e) {
->>>>>>> 0eb3291 (.)
             Log::error('SPID metadata generation error', [
                 'error' => $e->getMessage(),
                 'trace' => $e->getTraceAsString(),
@@ -325,15 +263,7 @@ class SpidAuthController extends Controller
         $fiscalCode = $attributes['fiscal_code'];
         
         if (empty($fiscalCode)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             throw new Exception('Codice fiscale mancante nei dati SPID');
-=======
-            throw new \Exception('Codice fiscale mancante nei dati SPID');
->>>>>>> c8b07ab (.)
-=======
-            throw new \Exception('Codice fiscale mancante nei dati SPID');
->>>>>>> 0eb3291 (.)
         }
 
         // Cerca utente per codice fiscale

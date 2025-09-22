@@ -66,29 +66,15 @@
                                         <p class="text-gray-600 mb-4">{{ $action['description'] }}</p>
                                     @endif
                                     
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                    <x-utilities.button 
-=======
                                     <x-button 
->>>>>>> c8b07ab (.)
-=======
                                     <x-button 
->>>>>>> 0eb3291 (.)
                                         href="{{ $action['url'] }}"
                                         variant="primary"
                                         size="md"
                                         class="w-full">
                                         {{ $action['button_text'] ?? 'Accedi' }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                    </x-utilities.button>
-=======
                                     </x-button>
->>>>>>> c8b07ab (.)
-=======
                                     </x-button>
->>>>>>> 0eb3291 (.)
                                 </div>
                             @endforeach
                         </div>
@@ -226,31 +212,12 @@
                 <p class="text-gray-600 mb-6">Il tuo feedback ci aiuta a migliorare</p>
                 
                 <div class="flex justify-center space-x-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <x-utilities.button 
-=======
                     <x-button 
->>>>>>> c8b07ab (.)
-=======
                     <x-button 
->>>>>>> 0eb3291 (.)
                         href="#"
                         variant="primary"
                         @click="$dispatch('open-modal', { id: 'feedback-modal' })">
                         Lascia un feedback
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    </x-utilities.button>
-                    
-                    <x-utilities.button 
-                        href="{{ route('contact') }}"
-                        variant="secondary">
-                        Segnala un problema
-                    </x-utilities.button>
-=======
-=======
->>>>>>> 0eb3291 (.)
                     </x-button>
                     
                     <x-button 
@@ -258,10 +225,6 @@
                         variant="secondary">
                         Segnala un problema
                     </x-button>
-<<<<<<< HEAD
->>>>>>> c8b07ab (.)
-=======
->>>>>>> 0eb3291 (.)
                 </div>
             </div>
         </div>
@@ -270,15 +233,8 @@
 
 @section('modals')
     {{-- Feedback Modal --}}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <x-overlays.modal id="feedback-modal" title="Valuta il Servizio">
-=======
     <x-modal id="feedback-modal" title="Valuta il Servizio">
->>>>>>> c8b07ab (.)
-=======
     <x-modal id="feedback-modal" title="Valuta il Servizio">
->>>>>>> 0eb3291 (.)
         <form action="{{ route('services.feedback', $service) }}" method="POST">
             @csrf
             
@@ -311,34 +267,12 @@
             </div>
             
             <div class="mt-6 flex justify-end space-x-3">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <x-utilities.button 
-=======
                 <x-button 
->>>>>>> c8b07ab (.)
-=======
                 <x-button 
->>>>>>> 0eb3291 (.)
                     type="button" 
                     variant="secondary"
                     @click="$dispatch('close-modal', { id: 'feedback-modal' })">
                     Annulla
-<<<<<<< HEAD
-<<<<<<< HEAD
-                </x-utilities.button>
-                
-                <x-utilities.button 
-                    type="submit" 
-                    variant="primary">
-                    Invia Feedback
-                </x-utilities.button>
-            </div>
-        </form>
-    </x-overlays.modal>
-=======
-=======
->>>>>>> 0eb3291 (.)
                 </x-button>
                 
                 <x-button 
@@ -349,8 +283,4 @@
             </div>
         </form>
     </x-modal>
-<<<<<<< HEAD
->>>>>>> c8b07ab (.)
-=======
->>>>>>> 0eb3291 (.)
 @endsection
