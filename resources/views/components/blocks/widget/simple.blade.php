@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 @props(['widget'])
 <div>
     @livewire($widget, $block->data)
 =======
+=======
+>>>>>>> 0eb3291 (.)
 <div class="widget-simple">
     @if(isset($to) && $to)
         <a href="{{ $to }}" 
@@ -21,5 +24,8 @@
             {{ $label ?? 'Vai' }}
         </button>
     @endif
+<<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
 </div>

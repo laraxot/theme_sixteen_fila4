@@ -314,20 +314,28 @@ Utilizzo:
     name="user-form"
 >
 <<<<<<< HEAD
+<<<<<<< HEAD
     <x-forms.input 
 =======
     <x-input 
 >>>>>>> c8b07ab (.)
+=======
+    <x-input 
+>>>>>>> 0eb3291 (.)
         name="name"
         label="Nome"
         required
     />
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     <x-forms.input 
 =======
     <x-input 
 >>>>>>> c8b07ab (.)
+=======
+    <x-input 
+>>>>>>> 0eb3291 (.)
         name="email"
         type="email"
         label="Email"
@@ -335,6 +343,7 @@ Utilizzo:
     />
     
     <x-slot name="actions">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <x-utilities.button type="submit">
             Salva
@@ -344,6 +353,11 @@ Utilizzo:
             Salva
         </x-button>
 >>>>>>> c8b07ab (.)
+=======
+        <x-button type="submit">
+            Salva
+        </x-button>
+>>>>>>> 0eb3291 (.)
     </x-slot>
 </x-form>
 
@@ -355,10 +369,14 @@ Utilizzo:
     @form-submit="handleContactSubmit"
 >
 <<<<<<< HEAD
+<<<<<<< HEAD
     <x-forms.input 
 =======
     <x-input 
 >>>>>>> c8b07ab (.)
+=======
+    <x-input 
+>>>>>>> 0eb3291 (.)
         name="subject"
         label="Oggetto"
         required
@@ -366,10 +384,14 @@ Utilizzo:
     />
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     <x-forms.textarea 
 =======
     <x-textarea 
 >>>>>>> c8b07ab (.)
+=======
+    <x-textarea 
+>>>>>>> 0eb3291 (.)
         name="message"
         label="Messaggio"
         required
@@ -379,16 +401,21 @@ Utilizzo:
     
     <x-slot name="actions">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <x-utilities.button 
 =======
         <x-button 
 >>>>>>> c8b07ab (.)
+=======
+        <x-button 
+>>>>>>> 0eb3291 (.)
             type="button" 
             variant="secondary"
             @click="resetForm()"
         >
             Annulla
 <<<<<<< HEAD
+<<<<<<< HEAD
         </x-utilities.button>
         
         <x-utilities.button 
@@ -397,16 +424,25 @@ Utilizzo:
         
         <x-button 
 >>>>>>> c8b07ab (.)
+=======
+        </x-button>
+        
+        <x-button 
+>>>>>>> 0eb3291 (.)
             type="submit"
             :disabled="isSubmitting"
         >
             <span x-show="!isSubmitting">Invia</span>
             <span x-show="isSubmitting">Invio in corso...</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </x-utilities.button>
 =======
         </x-button>
 >>>>>>> c8b07ab (.)
+=======
+        </x-button>
+>>>>>>> 0eb3291 (.)
     </x-slot>
 </x-form>
 
@@ -417,10 +453,14 @@ Utilizzo:
     enctype="multipart/form-data"
 >
 <<<<<<< HEAD
+<<<<<<< HEAD
     <x-forms.input 
 =======
     <x-input 
 >>>>>>> c8b07ab (.)
+=======
+    <x-input 
+>>>>>>> 0eb3291 (.)
         name="file"
         type="file"
         label="Carica file"
@@ -430,6 +470,7 @@ Utilizzo:
     
     <x-slot name="actions">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <x-utilities.button type="submit">
             Carica
         </x-utilities.button>
@@ -438,6 +479,11 @@ Utilizzo:
             Carica
         </x-button>
 >>>>>>> c8b07ab (.)
+=======
+        <x-button type="submit">
+            Carica
+        </x-button>
+>>>>>>> 0eb3291 (.)
     </x-slot>
 </x-form>
 
@@ -447,10 +493,14 @@ Utilizzo:
     action="/users/{{ $user->id }}"
 >
 <<<<<<< HEAD
+<<<<<<< HEAD
     <x-forms.input 
 =======
     <x-input 
 >>>>>>> c8b07ab (.)
+=======
+    <x-input 
+>>>>>>> 0eb3291 (.)
         name="name"
         label="Nome"
         :value="$user->name"
@@ -458,6 +508,7 @@ Utilizzo:
     />
     
     <x-slot name="actions">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <x-utilities.button type="submit">
             Aggiorna
@@ -467,6 +518,11 @@ Utilizzo:
             Aggiorna
         </x-button>
 >>>>>>> c8b07ab (.)
+=======
+        <x-button type="submit">
+            Aggiorna
+        </x-button>
+>>>>>>> 0eb3291 (.)
     </x-slot>
 </x-form>
 

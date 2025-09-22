@@ -3,10 +3,13 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Themes\Sixteen\Services\SpidAuthService;
 use Themes\Sixteen\Services\CieAuthService;
 =======
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
 use Illuminate\Support\Facades\Route;
 use Themes\Sixteen\Http\Controllers\{SpidAuthController, CieAuthController};
 
@@ -26,31 +29,42 @@ Route::prefix('auth/spid')
     ->middleware(['web'])
     ->group(function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> c8b07ab (.)
+=======
+        
+>>>>>>> 0eb3291 (.)
         // Login con provider SPID specifico
         Route::get('login/{provider}', [SpidAuthController::class, 'login'])
             ->name('login')
             ->where('provider', '[a-z]+');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         // Callback dal provider SPID
         Route::post('callback', [SpidAuthController::class, 'callback'])
             ->name('callback');
 
 =======
+=======
+>>>>>>> 0eb3291 (.)
         
         // Callback dal provider SPID
         Route::post('callback', [SpidAuthController::class, 'callback'])
             ->name('callback');
         
+<<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
         // Logout SPID
         Route::match(['get', 'post'], 'logout', [SpidAuthController::class, 'logout'])
             ->name('logout')
             ->middleware(['auth']);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         // Single Logout (SLO) dal provider
@@ -58,12 +72,17 @@ Route::prefix('auth/spid')
             ->name('slo');
 
 =======
+=======
+>>>>>>> 0eb3291 (.)
         
         // Single Logout (SLO) dal provider
         Route::post('slo', [SpidAuthController::class, 'singleLogout'])
             ->name('slo');
         
+<<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
         // Metadata SAML del Service Provider
         Route::get('metadata', [SpidAuthController::class, 'metadata'])
             ->name('metadata');
@@ -75,6 +94,7 @@ Route::prefix('auth/cie')
     ->middleware(['web'])
     ->group(function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         // Login CIE web
         Route::get('login', [CieAuthController::class, 'login'])
@@ -89,6 +109,8 @@ Route::prefix('auth/cie')
             ->name('callback');
 
 =======
+=======
+>>>>>>> 0eb3291 (.)
         
         // Login CIE web
         Route::get('login', [CieAuthController::class, 'login'])
@@ -102,20 +124,28 @@ Route::prefix('auth/cie')
         Route::match(['get', 'post'], 'callback', [CieAuthController::class, 'callback'])
             ->name('callback');
         
+<<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
         // Logout CIE
         Route::match(['get', 'post'], 'logout', [CieAuthController::class, 'logout'])
             ->name('logout')
             ->middleware(['auth']);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> c8b07ab (.)
+=======
+        
+>>>>>>> 0eb3291 (.)
         // Refresh token CIE
         Route::post('refresh', [CieAuthController::class, 'refresh'])
             ->name('refresh')
             ->middleware(['auth']);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         // Status autenticazione CIE
@@ -123,12 +153,17 @@ Route::prefix('auth/cie')
             ->name('status');
 
 =======
+=======
+>>>>>>> 0eb3291 (.)
         
         // Status autenticazione CIE
         Route::get('status', [CieAuthController::class, 'status'])
             ->name('status');
         
+<<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
         // Debug endpoint (solo in sviluppo)
         Route::get('debug', [CieAuthController::class, 'debug'])
             ->name('debug')
@@ -141,6 +176,7 @@ Route::prefix('sixteen/auth')
     ->middleware(['web'])
     ->group(function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         // Selezione provider di autenticazione
         Route::view('select-provider', 'pub_theme::auth.select-provider')
@@ -152,6 +188,8 @@ Route::prefix('sixteen/auth')
             $cieService = app(CieAuthService::class);
 
 =======
+=======
+>>>>>>> 0eb3291 (.)
         
         // Selezione provider di autenticazione
         Route::view('select-provider', 'pub_theme::auth.select-provider')
@@ -162,7 +200,10 @@ Route::prefix('sixteen/auth')
             $spidService = app(\Themes\Sixteen\Services\SpidAuthService::class);
             $cieService = app(\Themes\Sixteen\Services\CieAuthService::class);
             
+<<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
             return response()->json([
                 'spid' => [
                     'authenticated' => $spidService->isAuthenticated(),
@@ -176,6 +217,7 @@ Route::prefix('sixteen/auth')
             ]);
         })->name('digital-identity.status');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         // Logout universale (SPID o CIE)
         Route::post('digital-identity/logout', function () {
@@ -191,6 +233,8 @@ Route::prefix('sixteen/auth')
             }
 
 =======
+=======
+>>>>>>> 0eb3291 (.)
         
         // Logout universale (SPID o CIE)
         Route::post('digital-identity/logout', function () {
@@ -205,22 +249,31 @@ Route::prefix('sixteen/auth')
                 return redirect()->route('cie.logout');
             }
             
+<<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
             // Fallback logout standard
             auth()->logout();
             request()->session()->invalidate();
             request()->session()->regenerateToken();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             return redirect()->route('home')
                 ->with('success', 'Logout effettuato con successo.');
 
 =======
+=======
+>>>>>>> 0eb3291 (.)
             
             return redirect()->route('home')
                 ->with('success', 'Logout effettuato con successo.');
                 
+<<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
         })->name('digital-identity.logout')->middleware(['auth']);
     });
 
@@ -231,6 +284,7 @@ if (app()->environment(['local', 'development', 'testing'])) {
         ->middleware(['web'])
         ->group(function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             // Test page per SPID
             Route::view('spid', 'pub_theme::test.spid-test')
@@ -241,6 +295,8 @@ if (app()->environment(['local', 'development', 'testing'])) {
                 ->name('cie');
 
 =======
+=======
+>>>>>>> 0eb3291 (.)
             
             // Test page per SPID
             Route::view('spid', 'pub_theme::test.spid-test')
@@ -250,7 +306,10 @@ if (app()->environment(['local', 'development', 'testing'])) {
             Route::view('cie', 'pub_theme::test.cie-test')
                 ->name('cie');
             
+<<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
             // Simulate SPID response (per testing)
             Route::post('spid/simulate', function () {
                 $attributes = [
@@ -263,6 +322,7 @@ if (app()->environment(['local', 'development', 'testing'])) {
                     'auth_level' => 2,
                 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 session(['spid.test_attributes' => $attributes]);
 
@@ -272,6 +332,8 @@ if (app()->environment(['local', 'development', 'testing'])) {
             })->name('spid.simulate');
 
 =======
+=======
+>>>>>>> 0eb3291 (.)
                 
                 session(['spid.test_attributes' => $attributes]);
                 
@@ -280,7 +342,10 @@ if (app()->environment(['local', 'development', 'testing'])) {
                     
             })->name('spid.simulate');
             
+<<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
             // Simulate CIE response (per testing)
             Route::post('cie/simulate', function () {
                 $attributes = [
@@ -293,6 +358,7 @@ if (app()->environment(['local', 'development', 'testing'])) {
                     'email_verified' => true,
                 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 session(['cie.test_attributes' => $attributes]);
 
@@ -303,6 +369,8 @@ if (app()->environment(['local', 'development', 'testing'])) {
         });
 }
 =======
+=======
+>>>>>>> 0eb3291 (.)
                 
                 session(['cie.test_attributes' => $attributes]);
                 
@@ -311,5 +379,9 @@ if (app()->environment(['local', 'development', 'testing'])) {
                     
             })->name('cie.simulate');
         });
+<<<<<<< HEAD
 }
 >>>>>>> c8b07ab (.)
+=======
+}
+>>>>>>> 0eb3291 (.)

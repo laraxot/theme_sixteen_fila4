@@ -7,6 +7,7 @@
     <div class="text-center">
         <h2 class="text-2xl font-extrabold leading-9 text-gray-800 dark:text-gray-200">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -16,10 +17,13 @@
 >>>>>>> b93ef594b4 (.)
 =======
 >>>>>>> origin/develop
+=======
+>>>>>>> 0eb3291 (.)
             {{ __('auth.login.title') }}
         </h2>
         <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
             {{ __('auth.login.subtitle') }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -30,15 +34,21 @@
 =======
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
         </p>
     </div>
 
     {{-- Form renderizzato dal widget --}}
 <<<<<<< HEAD
+<<<<<<< HEAD
     <form wire:submit="save" class="space-y-6">
 =======
     <form wire:submit="login" class="space-y-6">
 >>>>>>> c8b07ab (.)
+=======
+    <form wire:submit="login" class="space-y-6">
+>>>>>>> 0eb3291 (.)
         {{ $this->form }}
 
         {{-- Remember Me & Forgot Password --}}
@@ -49,6 +59,7 @@
                     class="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -65,6 +76,9 @@
                     {{ __('auth.login.forgot_password') }}
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+                    {{ __('auth.login.forgot_password') }}
+>>>>>>> 0eb3291 (.)
                 </a>
             </div>
         </div>
@@ -88,6 +102,7 @@
                 </svg>
                 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -107,6 +122,10 @@
                 <span wire:loading>{{ __('auth.login.submitting') }}</span>
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+                <span wire:loading.remove>{{ __('auth.login.submit') }}</span>
+                <span wire:loading>{{ __('auth.login.submitting') }}</span>
+>>>>>>> 0eb3291 (.)
             </button>
         </div>
     </form>
@@ -115,6 +134,7 @@
     <div class="mt-6 text-center">
         <div class="text-sm leading-5 text-gray-600 dark:text-gray-400 space-x-0.5">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -131,11 +151,15 @@
             <span>{{ __('auth.login.or') }}</span>
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+            <span>{{ __('auth.login.or') }}</span>
+>>>>>>> 0eb3291 (.)
             <a 
                 href="{{ url('/' . app()->getLocale() . '/auth/register') }}" 
                 class="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -152,6 +176,9 @@
                 {{ __('auth.login.create_account') }}
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+                {{ __('auth.login.create_account') }}
+>>>>>>> 0eb3291 (.)
             </a>
         </div>
     </div>

@@ -35,10 +35,14 @@ name('login2');
                 <!-- Institution Logo -->
                 <div class="flex justify-center mb-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <x-utilities.logo 
 =======
                     <x-pub_theme::ui.logo 
 >>>>>>> c8b07ab (.)
+=======
+                    <x-pub_theme::ui.logo 
+>>>>>>> 0eb3291 (.)
                         class="h-16 w-auto text-blue-600" 
                         alt="{{ config('app.institution_name', 'Logo Istituzionale') }}"
                     />

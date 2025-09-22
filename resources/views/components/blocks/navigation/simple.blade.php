@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
 {{--
 /**
  * Simple Navigation Component - Theme Sixteen
@@ -68,8 +71,11 @@
     </div>
 </nav>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <div>simple navigation</div>
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)

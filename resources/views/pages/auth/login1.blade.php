@@ -36,10 +36,14 @@
     <x-slot name="header">
         {{-- Header Slim (Ente + Link Istituzionali) --}}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <x-layout.sections.header-slim 
 =======
         <x-pub_theme::blocks.navigation.header-slim 
 >>>>>>> c8b07ab (.)
+=======
+        <x-pub_theme::blocks.navigation.header-slim 
+>>>>>>> 0eb3291 (.)
             :enteName="config('app.name', 'Ente Pubblico')"
             :enteUrl="route('home')"
             :showLinks="true"
@@ -47,10 +51,14 @@
 
         {{-- Header Main (Logo + Nome Ente + Tagline) --}}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <x-layout.sections.header-main 
 =======
         <x-pub_theme::blocks.navigation.header-main 
 >>>>>>> c8b07ab (.)
+=======
+        <x-pub_theme::blocks.navigation.header-main 
+>>>>>>> 0eb3291 (.)
             :logoSrc="asset('themes/Sixteen/images/logo-pa.svg')"
             :enteName="config('app.name', 'Ente Pubblico')"
             :serviceTagline="config('app.tagline', 'Servizi digitali per i cittadini')"
@@ -59,10 +67,14 @@
 
         {{-- Breadcrumb Navigation Semantica --}}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <x-navigation.breadcrumb 
 =======
         <x-pub_theme::blocks.navigation.breadcrumb 
 >>>>>>> c8b07ab (.)
+=======
+        <x-pub_theme::blocks.navigation.breadcrumb 
+>>>>>>> 0eb3291 (.)
             :items="[
                 ['url' => route('home'), 'text' => 'Home'],
                 ['text' => 'Accesso al sistema']
@@ -183,10 +195,14 @@
     {{-- Footer Istituzionale AGID-Compliant --}}
     <x-slot name="footer">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <x-footer.institutional 
 =======
         <x-pub_theme::blocks.navigation.footer-institutional 
 >>>>>>> c8b07ab (.)
+=======
+        <x-pub_theme::blocks.navigation.footer-institutional 
+>>>>>>> 0eb3291 (.)
             :enteName="config('app.name', 'Ente Pubblico')"
             :enteDescription="config('app.tagline', 'Servizi digitali per i cittadini')"
             :logoSrc="asset('themes/Sixteen/images/logo-white.svg')"

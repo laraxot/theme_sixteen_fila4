@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Themes\Sixteen\Services;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use InvalidArgumentException;
 use Themes\Sixteen\Services\MenuBuilder;
 
@@ -15,11 +16,16 @@ use Themes\Sixteen\Services\MenuBuilder;
 =======
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+use Themes\Sixteen\Services\MenuBuilder;
+
+>>>>>>> 0eb3291 (.)
 /**
  * Servizio per la gestione del tema Sixteen.
  * 
  * Questo servizio fornisce metodi per la gestione
  * delle configurazioni e funzionalità del tema.
+<<<<<<< HEAD
 <<<<<<< HEAD
  * 
  * Enhanced version integrating with the new Menu Builder System
@@ -30,6 +36,10 @@ use Themes\Sixteen\Services\MenuBuilder;
 =======
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+ * 
+ * Enhanced version integrating with the new Menu Builder System
+>>>>>>> 0eb3291 (.)
  */
 class ThemeService
 {
@@ -44,9 +54,12 @@ class ThemeService
     protected string $version = '1.0.0';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
     public function __construct(
         protected MenuBuilder $menuBuilder
     ) {
@@ -54,17 +67,21 @@ class ThemeService
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Ottiene il nome del tema.
      */
     public function getName(): string
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 0eb3291 (.)
      * Restituisce il nome del tema.
      *
      * @return string
      */
     public function getThemeName(): string
+<<<<<<< HEAD
 =======
      * Ottiene il nome del tema.
      */
@@ -84,12 +101,15 @@ class ThemeService
     public function getName(): string
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
     {
         return $this->themeName;
     }
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Ottiene la versione del tema.
 =======
 <<<<<<< HEAD
@@ -110,6 +130,11 @@ class ThemeService
      * Ottiene la versione del tema.
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+     * Restituisce la versione del tema.
+     *
+     * @return string
+>>>>>>> 0eb3291 (.)
      */
     public function getVersion(): string
     {
@@ -118,6 +143,7 @@ class ThemeService
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Ottiene le informazioni del tema.
      */
     public function getInfo(): array
@@ -125,11 +151,14 @@ class ThemeService
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 0eb3291 (.)
      * Restituisce la configurazione del tema.
      *
      * @return array<string, mixed>
      */
     public function getConfig(): array
+<<<<<<< HEAD
 =======
      * Ottiene le informazioni del tema.
      */
@@ -148,10 +177,13 @@ class ThemeService
     public function getInfo(): array
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
     {
         return [
             'name' => $this->themeName,
             'version' => $this->version,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -159,6 +191,8 @@ class ThemeService
 <<<<<<< HEAD
 =======
 >>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> 0eb3291 (.)
             'author' => 'Laraxot Team',
             'description' => 'Modern responsive theme for Laraxot applications',
             'features' => [
@@ -167,6 +201,7 @@ class ThemeService
                 'component_library',
                 'accessibility_compliant',
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> c8b07ab (.)
@@ -186,10 +221,13 @@ class ThemeService
             'author' => 'SaluteOra Team',
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
         ];
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * Verifica se il tema è attivo.
      */
@@ -213,6 +251,8 @@ class ThemeService
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 0eb3291 (.)
      * Costruisce il menu usando il MenuBuilder.
      *
      * @return array<string, mixed>
@@ -234,6 +274,7 @@ class ThemeService
         // Setup delle configurazioni specifiche
     }
 }
+<<<<<<< HEAD
 =======
      * Verifica se il tema è attivo.
 =======
@@ -346,3 +387,5 @@ class ThemeService
 } 
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 return [
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ];
 =======
@@ -14,6 +15,8 @@ return [
 >>>>>>> b93ef594b4 (.)
 =======
 >>>>>>> origin/develop
+=======
+>>>>>>> 0eb3291 (.)
     // Login page
     'Login' => 'Accedi',
     'Accedi ai servizi' => 'Accedi ai servizi',
@@ -54,6 +57,9 @@ return [
     'Avviso' => 'Avviso',
     'Informazione' => 'Informazione',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0eb3291 (.)
     
     // Dark mode and UI controls
     'dark_mode_toggle' => 'Cambia modalità scura',
@@ -65,6 +71,7 @@ return [
     'close' => 'Chiudi',
     'open' => 'Apri',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ];
@@ -75,3 +82,5 @@ return [
 ];
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)

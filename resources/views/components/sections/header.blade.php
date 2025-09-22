@@ -3,6 +3,7 @@
         <div class="flex justify-between w-full max-w-screen-xl mx-auto">
             <div class="flex-1 py-1">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,6 +11,8 @@
 <<<<<<< HEAD
 =======
 >>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> 0eb3291 (.)
                 <a class="text-sm" href="#">{{-- regione --}}</a>
             </div>
             <div class="flex-none">
@@ -22,6 +25,7 @@
                         @livewire("Modules\Lang\Filament\Widgets\LanguageSwitcherWidget")
                     </li>
                     --}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -46,6 +50,8 @@
 					</li> --}}
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
                     @guest
                         <li class="ml-4">
                             <a class="flex items-center space-x-1" href="{{ route('login') }}">
@@ -122,12 +128,15 @@
             <div class="flex-1">
                 <a href="" class="flex items-center py-2 space-x-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
                     {{--  
                     <x-heroicon-o-shield-check class="stroke-1 size-16" />
                     --}}
@@ -136,6 +145,7 @@
                     <div class="text-start">
                         <div class="text-2xl font-bold">{{ $_theme->metatag('title') }}</div>
                         <div class="text-sm">{{ $_theme->metatag('subtitle') }}</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -148,6 +158,8 @@
 >>>>>>> 029971d (.)
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
                     </div>
                 </a>
             </div>
@@ -177,6 +189,7 @@
         <div class="flex justify-between w-full max-w-screen-xl mx-auto space-x-12">
             <div class="flex-1 ">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 @php
                 $nav1 = Arr::first($blocks,fn($item)=>$item->slug =='nav1');
                 @endphp
@@ -196,6 +209,11 @@
                 @endphp
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+                @php
+                $nav1 = Arr::first($blocks,fn($item)=>$item->slug =='nav1');
+                @endphp
+>>>>>>> 0eb3291 (.)
                 <ul class="items-center px-1 menu menu-horizontal flex-nowrap">
                     @if($nav1 && isset($nav1->data['items']) && is_array($nav1->data['items']))
                         @foreach($nav1->data['items'] as $item)
@@ -209,6 +227,7 @@
                         <li><a href="">Vivere il Comune</a></li>
                     @endif
                 </ul>
+<<<<<<< HEAD
 =======
                 @if($nav1!=null)
 =======
@@ -258,6 +277,8 @@
                 </ul>
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
             </div>
             <div class="flex-none">
                 <ul class="items-center px-1 menu menu-horizontal flex-nowrap">

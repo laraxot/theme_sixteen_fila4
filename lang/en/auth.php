@@ -6,6 +6,7 @@ return [
     'login' => [
         'title' => 'Service Access',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -19,6 +20,8 @@ return [
 =======
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
         'description' => 'Enter your credentials to access :service',
         'no_account' => 'Don\'t have an account?',
         'create_account' => 'Register',
@@ -34,6 +37,7 @@ return [
         'forgot_password' => 'Forgot your password?',
         'submit' => 'Login',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -47,6 +51,8 @@ return [
 =======
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
         'help' => 'Need help?',
     ],
     'register' => [
@@ -142,6 +148,7 @@ return [
         'general_error' => 'An error occurred. Please try again later.',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 ]; 
 =======
 <<<<<<< HEAD
@@ -156,3 +163,5 @@ return [
 ]; 
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)

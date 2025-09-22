@@ -1,6 +1,7 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 // import preset from './../../vendor/filament/support/tailwind.config.preset';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import preset from "./vendor/filament/support/tailwind.config.preset";
 =======
 <<<<<<< HEAD
@@ -8,11 +9,15 @@ import preset from "./vendor/filament/support/tailwind.config.preset";
 =======
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+import preset from "./vendor/filament/support/tailwind.config.preset";
+>>>>>>> 0eb3291 (.)
 import forms from '@tailwindcss/forms'
 import typography from '@tailwindcss/typography'
 import daisyui from 'daisyui'
 import colors from 'tailwindcss/colors';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = {
     presets: [preset],
@@ -20,10 +25,13 @@ module.exports = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 0eb3291 (.)
 
 
 module.exports = {
      presets: [preset],
+<<<<<<< HEAD
 =======
 module.exports = {
     presets: [preset],
@@ -40,6 +48,8 @@ module.exports = {
     // presets: [preset],
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
     darkMode: 'class',
     theme: {
         extend: {
@@ -97,6 +107,7 @@ module.exports = {
                     900: '#996D00',
                 },
 <<<<<<< HEAD
+<<<<<<< HEAD
                 // Compatibilità con i colori esistenti
 =======
 <<<<<<< HEAD
@@ -111,6 +122,8 @@ module.exports = {
                 // Manteniamo compatibilità con i colori esistenti
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
                 primary: {
                     50: '#eff6ff',
                     100: '#dbeafe',
@@ -171,6 +184,7 @@ module.exports = {
 
     content: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -179,10 +193,13 @@ module.exports = {
 >>>>>>> b93ef594b4 (.)
 =======
 >>>>>>> origin/develop
+=======
+>>>>>>> 0eb3291 (.)
 
         '../../app/Filament/**/*.php',
         '../../resources/views/**/*.blade.php',
         '../../vendor/filament/**/*.blade.php',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -190,6 +207,8 @@ module.exports = {
 =======
 >>>>>>> b93ef594b4 (.)
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
         "./resources/**/*.vue",
@@ -204,14 +223,18 @@ module.exports = {
         "../../resources/views/**/*.blade.php",
         "../../vendor/filament/**/*.blade.php",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
         "../../Modules/**/Filament/**/*.php",
         "../../Modules/**/resources/views/**/*.blade.php",
         "../../storage/framework/views/*.php",
         "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
+<<<<<<< HEAD
 <<<<<<< HEAD
         "../../Themes/**/resources/views/**/*.blade.php",
         
@@ -259,6 +282,19 @@ module.exports = {
     ],
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+        "./node_modules/flowbite/**/*.js",
+        "./resources/views/**/*.blade.php",  //----------- e' un tema !!!!
+        "../../Themes/**/resources/views/**/*.blade.php",  //----------- e' un tema !!!!
+        "../../../public_html/vendor/**/*.blade.php",
+        "../../Themes/**/resources/views/**/*.blade.php",
+        "./node_modules/flowbite/**/*.js",
+        "./resources/views/**/*.blade.php",  //----------- e' un tema !!!!
+        "../../Themes/**/resources/views/**/*.blade.php",  //----------- e' un tema !!!!
+        "../../../public_html/vendor/**/*.blade.php",
+    ],
+    // Filament preset palette (for compatibility with plugins expecting these keys)
+>>>>>>> 0eb3291 (.)
     colors: {
         custom: {
             50: 'rgba(var(--c-50), <alpha-value>)',
@@ -356,6 +392,7 @@ module.exports = {
         forms,
         typography,
 <<<<<<< HEAD
+<<<<<<< HEAD
         daisyui,
         require("flowbite/plugin"),
 =======
@@ -366,6 +403,10 @@ module.exports = {
         daisyui
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+        daisyui,
+        require("flowbite/plugin"),
+>>>>>>> 0eb3291 (.)
     ],
     daisyui: {
         themes: ['light', 'dark'],

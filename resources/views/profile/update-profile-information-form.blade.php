@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <x-forms.form-section submit="updateProfileInformation">
 =======
 <x-form-section submit="updateProfileInformation">
 >>>>>>> c8b07ab (.)
+=======
+<x-form-section submit="updateProfileInformation">
+>>>>>>> 0eb3291 (.)
     <x-slot name="title">
         {{ __('Profile Information') }}
     </x-slot>
@@ -29,10 +33,14 @@
                             " />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <x-forms.input-label for="photo" value="{{ __('Photo') }}" />
 =======
                 <x-label for="photo" value="{{ __('Photo') }}" />
 >>>>>>> c8b07ab (.)
+=======
+                <x-label for="photo" value="{{ __('Photo') }}" />
+>>>>>>> 0eb3291 (.)
 
                 <!-- Current Profile Photo -->
                 <div class="mt-2" x-show="! photoPreview">
@@ -47,6 +55,7 @@
                 </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <x-utilities.secondary-button class="mt-2 me-2" type="button" x-on:click.prevent="$refs.photo.click()">
                     {{ __('Select A New Photo') }}
                 </x-utilities.secondary-button>
@@ -59,6 +68,8 @@
 
                 <x-forms.input-error for="photo" class="mt-2" />
 =======
+=======
+>>>>>>> 0eb3291 (.)
                 <x-secondary-button class="mt-2 me-2" type="button" x-on:click.prevent="$refs.photo.click()">
                     {{ __('Select A New Photo') }}
                 </x-secondary-button>
@@ -70,12 +81,16 @@
                 @endif
 
                 <x-input-error for="photo" class="mt-2" />
+<<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
             </div>
         @endif
 
         <!-- Name -->
         <div class="col-span-6 sm:col-span-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <x-forms.input-label for="name" value="{{ __('Name') }}" />
             <x-forms.input id="name" type="text" class="mt-1 block w-full" wire:model="state.name" required autocomplete="name" />
@@ -85,10 +100,16 @@
             <x-input id="name" type="text" class="mt-1 block w-full" wire:model="state.name" required autocomplete="name" />
             <x-input-error for="name" class="mt-2" />
 >>>>>>> c8b07ab (.)
+=======
+            <x-label for="name" value="{{ __('Name') }}" />
+            <x-input id="name" type="text" class="mt-1 block w-full" wire:model="state.name" required autocomplete="name" />
+            <x-input-error for="name" class="mt-2" />
+>>>>>>> 0eb3291 (.)
         </div>
 
         <!-- Email -->
         <div class="col-span-6 sm:col-span-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <x-forms.input-label for="email" value="{{ __('Email') }}" />
             <x-forms.input id="email" type="email" class="mt-1 block w-full" wire:model="state.email" required autocomplete="username" />
@@ -98,6 +119,11 @@
             <x-input id="email" type="email" class="mt-1 block w-full" wire:model="state.email" required autocomplete="username" />
             <x-input-error for="email" class="mt-2" />
 >>>>>>> c8b07ab (.)
+=======
+            <x-label for="email" value="{{ __('Email') }}" />
+            <x-input id="email" type="email" class="mt-1 block w-full" wire:model="state.email" required autocomplete="username" />
+            <x-input-error for="email" class="mt-2" />
+>>>>>>> 0eb3291 (.)
 
             @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::emailVerification()) && ! $this->user->hasVerifiedEmail())
                 <p class="text-sm mt-2 dark:text-white">
@@ -119,6 +145,7 @@
 
     <x-slot name="actions">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <x-feedback.action-message class="me-3" on="saved">
             {{ __('Saved.') }}
         </x-feedback.action-message>
@@ -129,6 +156,8 @@
     </x-slot>
 </x-forms.form-section>
 =======
+=======
+>>>>>>> 0eb3291 (.)
         <x-action-message class="me-3" on="saved">
             {{ __('Saved.') }}
         </x-action-message>
@@ -138,4 +167,7 @@
         </x-button>
     </x-slot>
 </x-form-section>
+<<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)

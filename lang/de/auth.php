@@ -25,6 +25,7 @@ return [
     'login' => [
         'title' => 'Anmelden',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -38,12 +39,15 @@ return [
 =======
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
         'email' => 'E-Mail',
         'password' => 'Passwort',
         'remember_me' => 'Angemeldet bleiben',
         'forgot_password' => 'Passwort vergessen?',
         'submit' => 'Anmelden',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -57,6 +61,8 @@ return [
 =======
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
         'or' => 'oder',
         'create_account' => 'ein neues Konto erstellen',
         'link' => 'Anmelden',
@@ -155,6 +161,7 @@ return [
         'general_error' => 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 ]; 
 =======
 <<<<<<< HEAD
@@ -169,3 +176,5 @@ return [
 ]; 
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)

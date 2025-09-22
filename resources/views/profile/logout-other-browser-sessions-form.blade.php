@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <x-layout.sections.action-section>
 =======
 <x-action-section>
 >>>>>>> c8b07ab (.)
+=======
+<x-action-section>
+>>>>>>> 0eb3291 (.)
     <x-slot name="title">
         {{ __('Browser Sessions') }}
     </x-slot>
@@ -57,6 +61,7 @@
 
         <div class="flex items-center mt-5">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <x-utilities.button wire:click="confirmLogout" wire:loading.attr="disabled">
                 {{ __('Log Out Other Browser Sessions') }}
             </x-utilities.button>
@@ -69,6 +74,8 @@
         <!-- Log Out Other Devices Confirmation Modal -->
         <x-overlays.dialog-modal wire:model.live="confirmingLogout">
 =======
+=======
+>>>>>>> 0eb3291 (.)
             <x-button wire:click="confirmLogout" wire:loading.attr="disabled">
                 {{ __('Log Out Other Browser Sessions') }}
             </x-button>
@@ -80,7 +87,10 @@
 
         <!-- Log Out Other Devices Confirmation Modal -->
         <x-dialog-modal wire:model.live="confirmingLogout">
+<<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
             <x-slot name="title">
                 {{ __('Log Out Other Browser Sessions') }}
             </x-slot>
@@ -90,10 +100,14 @@
 
                 <div class="mt-4" x-data="{}" x-on:confirming-logout-other-browser-sessions.window="setTimeout(() => $refs.password.focus(), 250)">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <x-forms.input type="password" class="mt-1 block w-3/4"
 =======
                     <x-input type="password" class="mt-1 block w-3/4"
 >>>>>>> c8b07ab (.)
+=======
+                    <x-input type="password" class="mt-1 block w-3/4"
+>>>>>>> 0eb3291 (.)
                                 autocomplete="current-password"
                                 placeholder="{{ __('Password') }}"
                                 x-ref="password"
@@ -101,14 +115,19 @@
                                 wire:keydown.enter="logoutOtherBrowserSessions" />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <x-forms.input-error for="password" class="mt-2" />
 =======
                     <x-input-error for="password" class="mt-2" />
 >>>>>>> c8b07ab (.)
+=======
+                    <x-input-error for="password" class="mt-2" />
+>>>>>>> 0eb3291 (.)
                 </div>
             </x-slot>
 
             <x-slot name="footer">
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <x-utilities.secondary-button wire:click="$toggle('confirmingLogout')" wire:loading.attr="disabled">
                     {{ __('Cancel') }}
@@ -124,6 +143,8 @@
     </x-slot>
 </x-layout.sections.action-section>
 =======
+=======
+>>>>>>> 0eb3291 (.)
                 <x-secondary-button wire:click="$toggle('confirmingLogout')" wire:loading.attr="disabled">
                     {{ __('Cancel') }}
                 </x-secondary-button>
@@ -137,4 +158,7 @@
         </x-dialog-modal>
     </x-slot>
 </x-action-section>
+<<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)

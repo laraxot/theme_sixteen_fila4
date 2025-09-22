@@ -10,6 +10,7 @@
     </header>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <x-utilities.danger-button
         x-data=""
         x-on:click.prevent="$dispatch('open-modal', 'confirm-user-deletion')"
@@ -17,13 +18,18 @@
 
     <x-overlays.modal name="confirm-user-deletion" :show="$errors->userDeletion->isNotEmpty()" focusable>
 =======
+=======
+>>>>>>> 0eb3291 (.)
     <x-danger-button
         x-data=""
         x-on:click.prevent="$dispatch('open-modal', 'confirm-user-deletion')"
     >{{ __('Delete Account') }}</x-danger-button>
 
     <x-modal name="confirm-user-deletion" :show="$errors->userDeletion->isNotEmpty()" focusable>
+<<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
         <form method="post" action="{{ route('profile.destroy') }}" class="p-6">
             @csrf
             @method('delete')
@@ -38,6 +44,7 @@
 
             <div class="mt-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <x-forms.input-label for="password" value="{{ __('Password') }}" class="sr-only" />
 
                 <x-forms.text-input
@@ -46,6 +53,11 @@
 
                 <x-text-input
 >>>>>>> c8b07ab (.)
+=======
+                <x-input-label for="password" value="{{ __('Password') }}" class="sr-only" />
+
+                <x-text-input
+>>>>>>> 0eb3291 (.)
                     id="password"
                     name="password"
                     type="password"
@@ -53,6 +65,7 @@
                     placeholder="{{ __('Password') }}"
                 />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <x-forms.input-error :messages="$errors->userDeletion->get('password')" class="mt-2" />
             </div>
@@ -69,6 +82,8 @@
         </form>
     </x-overlays.modal>
 =======
+=======
+>>>>>>> 0eb3291 (.)
                 <x-input-error :messages="$errors->userDeletion->get('password')" class="mt-2" />
             </div>
 
@@ -83,5 +98,8 @@
             </div>
         </form>
     </x-modal>
+<<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
 </section>

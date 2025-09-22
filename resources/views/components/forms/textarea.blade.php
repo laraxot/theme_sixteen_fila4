@@ -161,10 +161,14 @@ Utilizzo:
 
 <!-- Textarea base -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <x-forms.textarea 
 =======
 <x-textarea 
 >>>>>>> c8b07ab (.)
+=======
+<x-textarea 
+>>>>>>> 0eb3291 (.)
     name="message"
     label="Messaggio"
     placeholder="Inserisci il tuo messaggio..."
@@ -173,10 +177,14 @@ Utilizzo:
 
 <!-- Textarea con validazione -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <x-forms.textarea 
 =======
 <x-textarea 
 >>>>>>> c8b07ab (.)
+=======
+<x-textarea 
+>>>>>>> 0eb3291 (.)
     name="description"
     label="Descrizione"
     placeholder="Descrivi il prodotto..."
@@ -186,10 +194,14 @@ Utilizzo:
 
 <!-- Textarea con contatore caratteri -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <x-forms.textarea 
 =======
 <x-textarea 
 >>>>>>> c8b07ab (.)
+=======
+<x-textarea 
+>>>>>>> 0eb3291 (.)
     name="comment"
     label="Commento"
     placeholder="Lascia un commento..."
@@ -199,10 +211,14 @@ Utilizzo:
 
 <!-- Textarea con autosize -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <x-forms.textarea 
 =======
 <x-textarea 
 >>>>>>> c8b07ab (.)
+=======
+<x-textarea 
+>>>>>>> 0eb3291 (.)
     name="content"
     label="Contenuto"
     placeholder="Inizia a scrivere..."
@@ -212,10 +228,14 @@ Utilizzo:
 
 <!-- Textarea con descrizione -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <x-forms.textarea 
 =======
 <x-textarea 
 >>>>>>> c8b07ab (.)
+=======
+<x-textarea 
+>>>>>>> 0eb3291 (.)
     name="feedback"
     label="Feedback"
     description="Condividi la tua opinione sui nostri servizi"
@@ -225,10 +245,14 @@ Utilizzo:
 
 <!-- Textarea disabilitato -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <x-forms.textarea 
 =======
 <x-textarea 
 >>>>>>> c8b07ab (.)
+=======
+<x-textarea 
+>>>>>>> 0eb3291 (.)
     name="disabled"
     label="Campo disabilitato"
     value="Questo campo non può essere modificato"
@@ -238,10 +262,14 @@ Utilizzo:
 
 <!-- Textarea readonly -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <x-forms.textarea 
 =======
 <x-textarea 
 >>>>>>> c8b07ab (.)
+=======
+<x-textarea 
+>>>>>>> 0eb3291 (.)
     name="readonly"
     label="Campo solo lettura"
     value="Questo contenuto è di sola lettura"
@@ -251,10 +279,14 @@ Utilizzo:
 
 <!-- Textarea con variante success -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <x-forms.textarea 
 =======
 <x-textarea 
 >>>>>>> c8b07ab (.)
+=======
+<x-textarea 
+>>>>>>> 0eb3291 (.)
     name="valid"
     label="Campo valido"
     value="Contenuto corretto"
@@ -264,10 +296,14 @@ Utilizzo:
 
 <!-- Textarea con variante danger -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <x-forms.textarea 
 =======
 <x-textarea 
 >>>>>>> c8b07ab (.)
+=======
+<x-textarea 
+>>>>>>> 0eb3291 (.)
     name="invalid"
     label="Campo non valido"
     value="Contenuto con errori"
@@ -278,10 +314,14 @@ Utilizzo:
 
 <!-- Textarea con resize personalizzato -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <x-forms.textarea 
 =======
 <x-textarea 
 >>>>>>> c8b07ab (.)
+=======
+<x-textarea 
+>>>>>>> 0eb3291 (.)
     name="resize-none"
     label="Non ridimensionabile"
     resize="none"
@@ -289,10 +329,14 @@ Utilizzo:
 />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <x-forms.textarea 
 =======
 <x-textarea 
 >>>>>>> c8b07ab (.)
+=======
+<x-textarea 
+>>>>>>> 0eb3291 (.)
     name="resize-both"
     label="Ridimensionabile in entrambe le direzioni"
     resize="both"
@@ -300,10 +344,14 @@ Utilizzo:
 />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <x-forms.textarea 
 =======
 <x-textarea 
 >>>>>>> c8b07ab (.)
+=======
+<x-textarea 
+>>>>>>> 0eb3291 (.)
     name="resize-horizontal"
     label="Ridimensionabile orizzontalmente"
     resize="horizontal"
@@ -312,10 +360,14 @@ Utilizzo:
 
 <!-- Textarea con dimensioni -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <x-forms.textarea 
 =======
 <x-textarea 
 >>>>>>> c8b07ab (.)
+=======
+<x-textarea 
+>>>>>>> 0eb3291 (.)
     name="small"
     label="Piccolo"
     size="sm"
@@ -323,10 +375,14 @@ Utilizzo:
 />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <x-forms.textarea 
 =======
 <x-textarea 
 >>>>>>> c8b07ab (.)
+=======
+<x-textarea 
+>>>>>>> 0eb3291 (.)
     name="large"
     label="Grande"
     size="lg"
@@ -335,10 +391,14 @@ Utilizzo:
 
 <!-- Textarea per form di contatto -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <x-forms.textarea 
 =======
 <x-textarea 
 >>>>>>> c8b07ab (.)
+=======
+<x-textarea 
+>>>>>>> 0eb3291 (.)
     name="contact_message"
     label="Messaggio"
     placeholder="Descrivi la tua richiesta..."
@@ -350,10 +410,14 @@ Utilizzo:
 
 <!-- Textarea per recensioni -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <x-forms.textarea 
 =======
 <x-textarea 
 >>>>>>> c8b07ab (.)
+=======
+<x-textarea 
+>>>>>>> 0eb3291 (.)
     name="review"
     label="Recensione"
     placeholder="Condividi la tua esperienza..."

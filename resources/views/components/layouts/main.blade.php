@@ -34,6 +34,7 @@
 		@filamentScripts
         @vite(['resources/js/app.js'], 'themes/Sixteen')
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -41,6 +42,8 @@
 <<<<<<< HEAD
 =======
 >>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> 0eb3291 (.)
         
         {{-- Dark Mode Toggle Script --}}
         <script>
@@ -64,6 +67,7 @@
             });
         </script>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> a12f125f4a (.)
@@ -72,6 +76,8 @@
 =======
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
         <link rel="stylesheet" type="text/css" href="{{asset("vendor/cookie-consent/css/cookie-consent.css")}}">
     </body>
 </html>

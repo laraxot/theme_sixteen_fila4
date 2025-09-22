@@ -41,14 +41,18 @@ docs/cache/
 # Git-specific
 .git-blame-ignore-revs
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
 
 # Standard ignores (auto)
 *.old
 *.old1
 *.bakcup
+<<<<<<< HEAD
 <<<<<<< HEAD
 *.backup.*
 =======
@@ -64,3 +68,7 @@ docs/cache/
 =======
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+*.backup
+*.backup.*
+>>>>>>> 0eb3291 (.)

@@ -210,10 +210,14 @@
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <x-utilities.logo class="h-8 w-auto text-white" />
 =======
                     <x-pub_theme::ui.logo class="h-8 w-auto text-white" />
 >>>>>>> c8b07ab (.)
+=======
+                    <x-pub_theme::ui.logo class="h-8 w-auto text-white" />
+>>>>>>> 0eb3291 (.)
                     <div>
                         <h1 class="text-lg font-semibold">{{ config('app.name', 'Nome Ente') }}</h1>
                         <p class="text-sm opacity-90">{{ config('app.tagline', 'Servizi digitali per i cittadini') }}</p>
@@ -263,10 +267,14 @@
                 <div>
                     <div class="flex items-center space-x-3 mb-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <x-utilities.logo class="h-10 w-auto text-white" />
 =======
                         <x-pub_theme::ui.logo class="h-10 w-auto text-white" />
 >>>>>>> c8b07ab (.)
+=======
+                        <x-pub_theme::ui.logo class="h-10 w-auto text-white" />
+>>>>>>> 0eb3291 (.)
                         <div>
                             <h3 class="text-lg font-semibold">{{ config('app.name', 'Nome Ente') }}</h3>
                             <p class="text-sm opacity-80">{{ config('app.tagline', 'Servizi digitali') }}</p>

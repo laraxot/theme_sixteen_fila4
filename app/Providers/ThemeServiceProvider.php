@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Themes\Sixteen\Providers;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Themes\Sixteen\Services\SpidAuthService;
 use Themes\Sixteen\Services\CieAuthService;
 use Modules\Xot\Providers\XotBaseThemeServiceProvider;
@@ -15,12 +16,16 @@ use Modules\Xot\Providers\XotBaseThemeServiceProvider;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/develop
+=======
+use Modules\Xot\Providers\XotBaseThemeServiceProvider;
+>>>>>>> 0eb3291 (.)
 
 /**
  * Service Provider per il tema Sixteen.
  * 
  * Questo provider gestisce la registrazione e configurazione
  * del tema Sixteen nell'applicazione Laravel.
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> c8b07ab (.)
@@ -57,6 +62,8 @@ use Themes\Sixteen\Filters\{HrefMenuFilter, ActiveMenuFilter, GateMenuFilter};
 =======
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
  * 
  * IMPORTANTE: Il tema Sixteen usa il namespace 'pub_theme' per le viste,
  * non 'sixteen', per essere compatibile con il sistema di temi.
@@ -75,6 +82,7 @@ class ThemeServiceProvider extends XotBaseThemeServiceProvider
     {
         parent::boot();
         
+<<<<<<< HEAD
 <<<<<<< HEAD
         // Core theme loading
         $this->loadCoreThemeResources();
@@ -96,14 +104,19 @@ class ThemeServiceProvider extends XotBaseThemeServiceProvider
 >>>>>>> b93ef594b4 (.)
 =======
 >>>>>>> origin/develop
+=======
+>>>>>>> 0eb3291 (.)
         // Caricamento specifico per pub_theme namespace
         // IMPORTANTE: pub_theme è il namespace standard per i temi
         $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'pub_theme');
         $this->loadTranslationsFrom(__DIR__ . '/../../lang', 'pub_theme');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/develop
+=======
+>>>>>>> 0eb3291 (.)
         
         // Caricamento delle configurazioni del tema
         $this->loadConfigFrom(__DIR__ . '/../../config', 'sixteen');
@@ -119,6 +132,7 @@ class ThemeServiceProvider extends XotBaseThemeServiceProvider
         ], 'sixteen-config');
         
         // Registrazione Layout Shortcuts AGID
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         // Core theme loading
@@ -157,6 +171,8 @@ class ThemeServiceProvider extends XotBaseThemeServiceProvider
 =======
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
         $this->registerLayoutShortcuts();
     }
 
@@ -168,12 +184,15 @@ class ThemeServiceProvider extends XotBaseThemeServiceProvider
         parent::register();
         
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/develop
+=======
+>>>>>>> 0eb3291 (.)
         // Registrazione dei servizi del tema
         $this->app->singleton('sixteen.theme', function ($app) {
             return new \Themes\Sixteen\Services\ThemeService();
@@ -182,6 +201,7 @@ class ThemeServiceProvider extends XotBaseThemeServiceProvider
 
     /**
      * Registra i layout shortcuts AGID per il tema.
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> c8b07ab (.)
@@ -377,12 +397,15 @@ class ThemeServiceProvider extends XotBaseThemeServiceProvider
 =======
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
      */
     protected function registerLayoutShortcuts(): void
     {
         // Registrazione dei layout shortcuts per facilitare l'uso
         $this->app['view']->addNamespace('layouts', __DIR__ . '/../../resources/views/layouts');
         
+<<<<<<< HEAD
 <<<<<<< HEAD
         // Enhanced composer per layout AGID-compliant
         $this->app['view']->composer('layouts.guest-agid', function ($view) {
@@ -400,12 +423,15 @@ class ThemeServiceProvider extends XotBaseThemeServiceProvider
 <<<<<<< HEAD
 =======
 >>>>>>> origin/develop
+=======
+>>>>>>> 0eb3291 (.)
         // Alias per layout AGID-compliant
         $this->app['view']->composer('layouts.guest-agid', function ($view) {
             $view->with([
                 'theme_name' => 'Sixteen',
                 'agid_compliant' => true,
                 'accessibility_level' => 'WCAG 2.1 AA'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         // Enhanced composer per layout AGID-compliant
@@ -426,6 +452,8 @@ class ThemeServiceProvider extends XotBaseThemeServiceProvider
 =======
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
             ]);
         });
     }
@@ -443,6 +471,7 @@ class ThemeServiceProvider extends XotBaseThemeServiceProvider
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
@@ -451,3 +480,6 @@ class ThemeServiceProvider extends XotBaseThemeServiceProvider
 } 
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+}
+>>>>>>> 0eb3291 (.)

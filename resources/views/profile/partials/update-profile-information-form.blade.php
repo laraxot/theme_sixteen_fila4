@@ -19,6 +19,7 @@
 
         <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <x-forms.input-label for="name" :value="__('Name')" />
             <x-forms.text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
             <x-forms.input-error class="mt-2" :messages="$errors->get('name')" />
@@ -29,6 +30,8 @@
             <x-forms.text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username" />
             <x-forms.input-error class="mt-2" :messages="$errors->get('email')" />
 =======
+=======
+>>>>>>> 0eb3291 (.)
             <x-input-label for="name" :value="__('Name')" />
             <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
@@ -38,7 +41,10 @@
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />
+<<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
 
             @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
                 <div>
@@ -61,10 +67,14 @@
 
         <div class="flex items-center gap-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <x-utilities.primary-button>{{ __('Save') }}</x-primary-button>
 =======
             <x-primary-button>{{ __('Save') }}</x-primary-button>
 >>>>>>> c8b07ab (.)
+=======
+            <x-primary-button>{{ __('Save') }}</x-primary-button>
+>>>>>>> 0eb3291 (.)
 
             @if (session('status') === 'profile-updated')
                 <p

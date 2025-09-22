@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <x-forms.form-section submit="updateTeamName">
 =======
 <x-form-section submit="updateTeamName">
 >>>>>>> c8b07ab (.)
+=======
+<x-form-section submit="updateTeamName">
+>>>>>>> 0eb3291 (.)
     <x-slot name="title">
         {{ __('Team Name') }}
     </x-slot>
@@ -15,10 +19,14 @@
         <!-- Team Owner Information -->
         <div class="col-span-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <x-forms.input-label value="{{ __('Team Owner') }}" />
 =======
             <x-label value="{{ __('Team Owner') }}" />
 >>>>>>> c8b07ab (.)
+=======
+            <x-label value="{{ __('Team Owner') }}" />
+>>>>>>> 0eb3291 (.)
 
             <div class="flex items-center mt-2">
                 <img class="size-12 rounded-full object-cover" src="{{ $team->owner->profile_photo_url }}" alt="{{ $team->owner->name }}">
@@ -33,6 +41,7 @@
         <!-- Team Name -->
         <div class="col-span-6 sm:col-span-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <x-forms.input-label for="name" value="{{ __('Team Name') }}" />
 
             <x-forms.input id="name"
@@ -41,21 +50,31 @@
 
             <x-input id="name"
 >>>>>>> c8b07ab (.)
+=======
+            <x-label for="name" value="{{ __('Team Name') }}" />
+
+            <x-input id="name"
+>>>>>>> 0eb3291 (.)
                         type="text"
                         class="mt-1 block w-full"
                         wire:model="state.name"
                         :disabled="! Gate::check('update', $team)" />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             <x-forms.input-error for="name" class="mt-2" />
 =======
             <x-input-error for="name" class="mt-2" />
 >>>>>>> c8b07ab (.)
+=======
+            <x-input-error for="name" class="mt-2" />
+>>>>>>> 0eb3291 (.)
         </div>
     </x-slot>
 
     @if (Gate::check('update', $team))
         <x-slot name="actions">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <x-feedback.action-message class="me-3" on="saved">
                 {{ __('Saved.') }}
@@ -68,6 +87,8 @@
     @endif
 </x-forms.form-section>
 =======
+=======
+>>>>>>> 0eb3291 (.)
             <x-action-message class="me-3" on="saved">
                 {{ __('Saved.') }}
             </x-action-message>
@@ -78,4 +99,7 @@
         </x-slot>
     @endif
 </x-form-section>
+<<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)

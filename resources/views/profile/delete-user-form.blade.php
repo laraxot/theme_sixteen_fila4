@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <x-layout.sections.action-section>
 =======
 <x-action-section>
 >>>>>>> c8b07ab (.)
+=======
+<x-action-section>
+>>>>>>> 0eb3291 (.)
     <x-slot name="title">
         {{ __('Delete Account') }}
     </x-slot>
@@ -18,6 +22,7 @@
 
         <div class="mt-5">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <x-utilities.danger-button wire:click="confirmUserDeletion" wire:loading.attr="disabled">
                 {{ __('Delete Account') }}
             </x-utilities.danger-button>
@@ -26,6 +31,8 @@
         <!-- Delete User Confirmation Modal -->
         <x-overlays.dialog-modal wire:model.live="confirmingUserDeletion">
 =======
+=======
+>>>>>>> 0eb3291 (.)
             <x-danger-button wire:click="confirmUserDeletion" wire:loading.attr="disabled">
                 {{ __('Delete Account') }}
             </x-danger-button>
@@ -33,7 +40,10 @@
 
         <!-- Delete User Confirmation Modal -->
         <x-dialog-modal wire:model.live="confirmingUserDeletion">
+<<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
             <x-slot name="title">
                 {{ __('Delete Account') }}
             </x-slot>
@@ -43,10 +53,14 @@
 
                 <div class="mt-4" x-data="{}" x-on:confirming-delete-user.window="setTimeout(() => $refs.password.focus(), 250)">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <x-forms.input type="password" class="mt-1 block w-3/4"
 =======
                     <x-input type="password" class="mt-1 block w-3/4"
 >>>>>>> c8b07ab (.)
+=======
+                    <x-input type="password" class="mt-1 block w-3/4"
+>>>>>>> 0eb3291 (.)
                                 autocomplete="current-password"
                                 placeholder="{{ __('Password') }}"
                                 x-ref="password"
@@ -54,14 +68,19 @@
                                 wire:keydown.enter="deleteUser" />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <x-forms.input-error for="password" class="mt-2" />
 =======
                     <x-input-error for="password" class="mt-2" />
 >>>>>>> c8b07ab (.)
+=======
+                    <x-input-error for="password" class="mt-2" />
+>>>>>>> 0eb3291 (.)
                 </div>
             </x-slot>
 
             <x-slot name="footer">
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <x-utilities.secondary-button wire:click="$toggle('confirmingUserDeletion')" wire:loading.attr="disabled">
                     {{ __('Cancel') }}
@@ -75,6 +94,8 @@
     </x-slot>
 </x-layout.sections.action-section>
 =======
+=======
+>>>>>>> 0eb3291 (.)
                 <x-secondary-button wire:click="$toggle('confirmingUserDeletion')" wire:loading.attr="disabled">
                     {{ __('Cancel') }}
                 </x-secondary-button>
@@ -86,4 +107,7 @@
         </x-dialog-modal>
     </x-slot>
 </x-action-section>
+<<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)

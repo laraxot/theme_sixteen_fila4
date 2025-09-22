@@ -13,10 +13,14 @@
 
             @if (Gate::check('delete', $team) && ! $team->personal_team)
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <x-layout.sections.section-border />
 =======
                 <x-section-border />
 >>>>>>> c8b07ab (.)
+=======
+                <x-section-border />
+>>>>>>> 0eb3291 (.)
 
                 <div class="mt-10 sm:mt-0">
                     @livewire('teams.delete-team-form', ['team' => $team])
