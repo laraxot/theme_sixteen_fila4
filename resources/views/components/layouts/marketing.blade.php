@@ -1,4 +1,5 @@
 <x-layouts.main>
+<<<<<<< HEAD
 >>>>>>> origin/develop
     {{--  
     <x-ui.marketing.header />
@@ -14,6 +15,8 @@
     <x-section slug="footer"/>
 >>>>>>> b93ef594b4 (.)
 >>>>>>> origin/develop
+=======
+>>>>>>> bdc7dd6 (.)
    <x-section slug="header"/>
     {{ $slot }}
     <x-section slug="footer"/>

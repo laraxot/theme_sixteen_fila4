@@ -14,11 +14,15 @@ name('login');
         {{ __('Login') }}
     </x-slot>
 
+<<<<<<< HEAD
 >>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> bdc7dd6 (.)
     <!-- Beautiful Login Page Section -->
     <section class="login-page-bg flex items-center justify-center p-4">
         @livewire(\Modules\User\Filament\Widgets\Auth\LoginWidget::class)
     </section>
+<<<<<<< HEAD
     @livewire(\Modules\User\Filament\Widgets\Auth\LoginWidget::class)
 >>>>>>> a12f125f4a (.)
 >>>>>>> b93ef594b4 (.)
@@ -108,4 +112,6 @@ name('login');
     </section>
 >>>>>>> 029971d (.)
 >>>>>>> origin/develop
+=======
+>>>>>>> bdc7dd6 (.)
 </x-layouts.app>

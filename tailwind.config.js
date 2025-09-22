@@ -1,10 +1,19 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
+<<<<<<< HEAD
+=======
+// import preset from './../../vendor/filament/support/tailwind.config.preset';
+>>>>>>> bdc7dd6 (.)
 import preset from "./vendor/filament/support/tailwind.config.preset";
 import forms from '@tailwindcss/forms'
 import typography from '@tailwindcss/typography'
 import daisyui from 'daisyui'
 import colors from 'tailwindcss/colors';
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> bdc7dd6 (.)
 module.exports = {
      presets: [preset],
     darkMode: 'class',
@@ -122,6 +131,10 @@ module.exports = {
     },
 
     content: [
+<<<<<<< HEAD
+=======
+
+>>>>>>> bdc7dd6 (.)
         '../../app/Filament/**/*.php',
         '../../resources/views/**/*.blade.php',
         '../../vendor/filament/**/*.blade.php',
@@ -134,6 +147,10 @@ module.exports = {
         "./resources/views/filament/**/*.blade.php",
         "./app/Filament/**/*.php",
         "./vendor/filament/**/*.blade.php",
+<<<<<<< HEAD
+=======
+        
+>>>>>>> bdc7dd6 (.)
         "../../app/Filament/**/*.php",
         "../../resources/views/**/*.blade.php",
         "../../vendor/filament/**/*.blade.php",
@@ -141,6 +158,7 @@ module.exports = {
         "../../Modules/**/resources/views/**/*.blade.php",
         "../../storage/framework/views/*.php",
         "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
+<<<<<<< HEAD
         "../../Themes/**/resources/views/**/*.blade.php",
         "./node_modules/flowbite/**/*.js",
         "../../../public_html/vendor/**/*.blade.php",
@@ -163,6 +181,8 @@ module.exports = {
         "./resources/views/**/*.blade.php",  //----------- e' un tema !!!!
         "../../Themes/**/resources/views/**/*.blade.php",  //----------- e' un tema !!!!
         "../../../public_html/vendor/**/*.blade.php",
+=======
+>>>>>>> bdc7dd6 (.)
         "./node_modules/flowbite/**/*.js",
         "./resources/views/**/*.blade.php",  //----------- e' un tema !!!!
         "../../Themes/**/resources/views/**/*.blade.php",  //----------- e' un tema !!!!

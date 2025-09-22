@@ -2,7 +2,10 @@
     <div class="h-12 bg-emerald-900 min-h-12 navbar">
         <div class="flex justify-between w-full max-w-screen-xl mx-auto">
             <div class="flex-1 py-1">
+<<<<<<< HEAD
 >>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> bdc7dd6 (.)
                 <a class="text-sm" href="#">{{-- regione --}}</a>
             </div>
             <div class="flex-none">
@@ -15,6 +18,7 @@
                         @livewire("Modules\Lang\Filament\Widgets\LanguageSwitcherWidget")
                     </li>
                     --}}
+<<<<<<< HEAD
 
 >>>>>>> a12f125f4a (.)
 >>>>>>> b93ef594b4 (.)
@@ -34,6 +38,8 @@
 						</details>
 					</li> --}}
 >>>>>>> origin/develop
+=======
+>>>>>>> bdc7dd6 (.)
                     @guest
                         <li class="ml-4">
                             <a class="flex items-center space-x-1" href="{{ route('login') }}">
@@ -117,12 +123,15 @@
                     <div class="text-start">
                         <div class="text-2xl font-bold">{{ $_theme->metatag('title') }}</div>
                         <div class="text-sm">{{ $_theme->metatag('subtitle') }}</div>
+<<<<<<< HEAD
                     <x-heroicon-o-shield-check class="stroke-1 size-16" />
                     <div class="text-start">
                         <div class="text-2xl font-bold">Il mio Comune</div>
                         <div class="text-sm">Un comune da vivere</div>
 >>>>>>> 029971d (.)
 >>>>>>> origin/develop
+=======
+>>>>>>> bdc7dd6 (.)
                     </div>
                 </a>
             </div>
@@ -167,6 +176,7 @@
                         <li><a href="">Vivere il Comune</a></li>
                     @endif
                 </ul>
+<<<<<<< HEAD
                 @if($nav1!=null)
 >>>>>>> b93ef594b4 (.)
                 <ul class="items-center px-1 menu menu-horizontal flex-nowrap">
@@ -192,6 +202,8 @@
 >>>>>>> b93ef594b4 (.)
                 </ul>
 >>>>>>> origin/develop
+=======
+>>>>>>> bdc7dd6 (.)
             </div>
             <div class="flex-none">
                 <ul class="items-center px-1 menu menu-horizontal flex-nowrap">

@@ -140,6 +140,10 @@ php artisan cache:clear
 # Test di rendering
 php artisan tinker
 >>> view('pub_theme::blocks.alerts.alert', ['variant' => 'info', 'dismissible' => true])->render()
+<<<<<<< HEAD
+=======
+>>> view('sixteen::blocks.alerts.alert', ['variant' => 'info', 'dismissible' => true])->render()
+>>>>>>> bdc7dd6 (.)
 ```
 
 ### 2. Verifica Dipendenze
@@ -184,6 +188,7 @@ Ho aggiornato la documentazione con esempi corretti:
 
 ```blade
 {{-- Esempio corretto per Alert --}}
+<<<<<<< HEAD
 <x-pub_theme::alerts.alert variant="info" dismissible="true">
     Messaggio informativo
 </x-pub_theme::alerts.alert>
@@ -197,6 +202,22 @@ Ho aggiornato la documentazione con esempi corretti:
 <x-pub_theme::utilities.badge variant="primary" dismissible="true">
     Badge con pulsante di chiusura
 </x-pub_theme::utilities.badge>
+=======
+<x-pub_theme::blocks.alerts.alert variant="info" dismissible="true">
+<x-sixteen::blocks.alerts.alert variant="info" dismissible="true">
+    Messaggio informativo
+</x-sixteen::blocks.alerts.alert>
+
+{{-- Esempio corretto per Toast --}}
+<x-sixteen::blocks.alerts.toast variant="success" position="top-right">
+    Operazione completata con successo
+</x-sixteen::blocks.alerts.toast>
+
+{{-- Esempio corretto per Badge --}}
+<x-sixteen::blocks.utilities.badge variant="primary" dismissible="true">
+    Badge con pulsante di chiusura
+</x-sixteen::blocks.utilities.badge>
+>>>>>>> bdc7dd6 (.)
 ```
 
 ## 🚨 Errori Comuni da Evitare
@@ -318,4 +339,8 @@ grep -r "x-heroicon-s-" laravel/Themes/Sixteen/resources/views/
 **Stato**: Errore Icone Risolto  
 **Regola Critica**: ✅ Implementata  
 **Documentazione**: ✅ Aggiornata  
+<<<<<<< HEAD
 **Testing**: ✅ Completato 
+=======
+**Testing**: ✅ Completato 
+>>>>>>> bdc7dd6 (.)
