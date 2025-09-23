@@ -4,7 +4,10 @@
 /* Design Tokens Italia - Variabili ufficiali PA */
 @import '../../node_modules/design-tokens-italia/css/_variables.css';
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 92783b6 (.)
 /* Importa Filament CSS da node_modules */
 /*
 @import 'node_modules/@filamentphp/forms/dist/index.css';
@@ -58,12 +61,17 @@
     }
     
     .login-card-beautiful:hover {
+<<<<<<< HEAD
         @apply scale-105;
         @apply scale-105 shadow-3xl;
 >>>>>>> b93ef594b4 (.)
         @apply scale-105 shadow-3xl;
 >>>>>>> origin/develop
 >>>>>>> a153bba (.)
+=======
+        @apply scale-105 shadow-3xl;
+        @apply scale-105 shadow-3xl;
+>>>>>>> 92783b6 (.)
         @apply scale-105 shadow-3xl;
         box-shadow: 
             0 35px 60px -12px rgba(0, 0, 0, 0.35),

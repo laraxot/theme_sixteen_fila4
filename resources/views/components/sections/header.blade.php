@@ -112,12 +112,15 @@
                     <div class="text-start">
                         <div class="text-2xl font-bold">{{ $_theme->metatag('title') }}</div>
                         <div class="text-sm">{{ $_theme->metatag('subtitle') }}</div>
+<<<<<<< HEAD
                     <x-heroicon-o-shield-check class="stroke-1 size-16" />
                     <div class="text-start">
                         <div class="text-2xl font-bold">Il mio Comune</div>
                         <div class="text-sm">Un comune da vivere</div>
 >>>>>>> 029971d (.)
 >>>>>>> origin/develop
+=======
+>>>>>>> 92783b6 (.)
                     </div>
                 </a>
             </div>
@@ -162,8 +165,11 @@
                         <li><a href="">Vivere il Comune</a></li>
                     @endif
                 </ul>
+<<<<<<< HEAD
                 @if($nav1!=null)
 >>>>>>> a153bba (.)
+=======
+>>>>>>> 92783b6 (.)
                 <ul class="items-center px-1 menu menu-horizontal flex-nowrap">
                     @if($nav1 && isset($nav1->data['items']) && is_array($nav1->data['items']))
                         @foreach($nav1->data['items'] as $item)
@@ -177,16 +183,22 @@
                         <li><a href="">Vivere il Comune</a></li>
                     @endif
                 </ul>
+<<<<<<< HEAD
 >>>>>>> origin/develop
 >>>>>>> a153bba (.)
+=======
+>>>>>>> 92783b6 (.)
                 <ul class="items-center px-1 menu menu-horizontal flex-nowrap">
                     <li><a href="">Amministrazione</a></li>
                     <li><a href="">Novità</a></li>
                     <li><a href="">Servizi</a></li>
                     <li><a href="">Vivere il Comune</a></li>
                 </ul>
+<<<<<<< HEAD
 >>>>>>> origin/develop
 >>>>>>> a153bba (.)
+=======
+>>>>>>> 92783b6 (.)
             </div>
             <div class="flex-none">
                 <ul class="items-center px-1 menu menu-horizontal flex-nowrap">

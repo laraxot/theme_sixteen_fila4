@@ -9,6 +9,7 @@
         "build:analyze": "vite build --mode analyze",
         "build:production": "vite build --mode production",
         "preview": "vite preview",
+<<<<<<< HEAD
         "copy": "cp -r ./public/* ../../../public_html/themes/Sixteen/",
         "copy:watch": "nodemon --watch ./public --exec 'npm run copy'",
         "lint": "eslint resources/js/**/*.js",
@@ -51,6 +52,8 @@
         "@popperjs/core": "^2.11.8",
         "bootstrap-italia": "^2.16.0",
         "preview": "vite preview",
+=======
+>>>>>>> 92783b6 (.)
         "copy": "cp -r ./resources/dist/* ../../../public_html/themes/Sixteen/"
     },
     "devDependencies": {

@@ -15,7 +15,10 @@
 
     {{-- Form renderizzato dal widget --}}
     <form wire:submit="login" class="space-y-6">
+<<<<<<< HEAD
     <form wire:submit="login" class="space-y-6">
+=======
+>>>>>>> 92783b6 (.)
         {{ $this->form }}
 
         {{-- Remember Me & Forgot Password --}}
@@ -26,6 +29,11 @@
                     class="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
                 >
                     {{ __('auth.login.forgot_password') }}
+<<<<<<< HEAD
+=======
+                    {{ __('auth.login.forgot_password') }}
+                    {{ __('auth.login.forgot_password') }}
+>>>>>>> 92783b6 (.)
                 </a>
             </div>
         </div>
@@ -50,6 +58,13 @@
                 
                 <span wire:loading.remove>{{ __('auth.login.submit') }}</span>
                 <span wire:loading>{{ __('auth.login.submitting') }}</span>
+<<<<<<< HEAD
+=======
+                <span wire:loading.remove>{{ __('auth.login.submit') }}</span>
+                <span wire:loading>{{ __('auth.login.submitting') }}</span>
+                <span wire:loading.remove>{{ __('auth.login.submit') }}</span>
+                <span wire:loading>{{ __('auth.login.submitting') }}</span>
+>>>>>>> 92783b6 (.)
             </button>
         </div>
     </form>
@@ -58,11 +73,21 @@
     <div class="mt-6 text-center">
         <div class="text-sm leading-5 text-gray-600 dark:text-gray-400 space-x-0.5">
             <span>{{ __('auth.login.or') }}</span>
+<<<<<<< HEAD
+=======
+            <span>{{ __('auth.login.or') }}</span>
+            <span>{{ __('auth.login.or') }}</span>
+>>>>>>> 92783b6 (.)
             <a 
                 href="{{ url('/' . app()->getLocale() . '/auth/register') }}" 
                 class="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
             >
                 {{ __('auth.login.create_account') }}
+<<<<<<< HEAD
+=======
+                {{ __('auth.login.create_account') }}
+                {{ __('auth.login.create_account') }}
+>>>>>>> 92783b6 (.)
             </a>
         </div>
     </div>
