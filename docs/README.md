@@ -149,26 +149,50 @@ darkMode: 'class', // Abilitazione dark mode
 </x-sixteen::button.danger>
 ```
 
-## Integrazione con Filament
+## Integrazione con Filament 4.x e Design System AGID
+
+### Configurazione Stili Filament 4.x
+
+Il tema Sixteen è completamente compatibile con Filament 4.x e conforme al design system AGID:
+
+- **[Configurazione Stili Filament 4.x](filament-4x-styles-configuration.md)** - Guida completa alla configurazione
+- **[Integrazione AGID Completa](agid-filament-4x-integration.md)** - Conformità design system italiano
+- **[Guida Comandi di Build](build-commands-guide.md)** - Comandi NPM e Composer per il tema
+- **[Regole Critiche](critical-rules.md)** - Regole fondamentali per l'integrazione
+- **[Configurazione Vite](vite-configuration-rules.md)** - Regole per la configurazione Vite
+
+### Design System AGID
+- **Colori ufficiali**: Utilizzo dei colori primari AGID (#0066CC, #00B373, #D9364F, #F5A623)
+- **Bootstrap Italia**: Integrazione completa del framework CSS ufficiale
+- **Accessibilità**: Conformità alle linee guida AGID per l'accessibilità
+- **Riferimento**: [Design System AGID](https://italia.github.io/design-comuni-pagine-statiche/)
 
 ### Admin Panel Provider
 ```php
+use Modules\Xot\Providers\Filament\XotBaseMainPanelProvider;
 use Filament\Panel;
-use Themes\Sixteen\Providers\SixteenPanelProvider;
 
-class AdminPanelProvider extends SixteenPanelProvider
+class AdminPanelProvider extends XotBaseMainPanelProvider
 {
     public function panel(Panel $panel): Panel
     {
         return $panel
-            ->defaultTheme('sixteen')
-            ->brandName('Nome Applicazione')
-            ->favicon(asset('images/favicon.ico'))
-            ->navigationGroups([
-                'Gestione Utenti',
-                'Configurazione',
-                'Report',
-            ]);
+            ->default()
+            ->id('admin')
+            ->path('admin')
+            ->login()
+            ->colors([
+                'primary' => '#0066CC', // Italia Blue
+                'success' => '#00B373', // Italia Green
+                'warning' => '#FFB400', // Italia Yellow
+                'danger' => '#D9364F',  // Italia Red
+            ])
+            ->font('Inter')
+            ->favicon(asset('themes/Sixteen/favicon.ico'))
+            ->brandName('TechPlanner')
+            ->brandLogo(asset('themes/Sixteen/logo.svg'))
+            ->brandLogoHeight('2rem')
+            ->viteTheme('themes/Sixteen');
     }
 }
 ```
@@ -194,6 +218,13 @@ Section::make('Dati Personali')
 - Navigazione da tastiera completa
 - Testo alternativo per immagini
 - Struttura semantica corretta
+
+### Componenti di Accessibilità
+- **[Componenti di Accessibilità](accessibility-components.md)** - Contrast toggle, font size controls, skip links
+- **Alto contrasto**: Toggle per attivare/disattivare l'alto contrasto
+- **Controlli font**: Regolazione della dimensione del testo
+- **Skip links**: Navigazione rapida per screen reader
+- **Dichiarazione accessibilità**: Conformità WCAG 2.1 AA
 
 ### Screen Reader Support
 ```blade
@@ -292,16 +323,83 @@ public function test_form_has_proper_labels()
 
 ## Deployment
 
-### Build Process
+### Build Process per Filament 4.x
+
+Il tema Sixteen richiede una configurazione specifica per Filament 4.x. Per una guida completa, consultare la **[Guida Comandi di Build](build-commands-guide.md)**.
+
+#### Comandi Essenziali
+
 ```bash
-# Installazione dipendenze
+# Nella cartella del tema Sixteen
+cd laravel/Themes/Sixteen
+
+# Installazione dipendenze NPM
 npm install
+
+# Installazione dipendenze Composer (se necessario)
+composer install
+
+# Build per sviluppo
+npm run dev
 
 # Build per produzione
 npm run build
 
-# Build con ottimizzazioni
-npm run build -- --minify
+# Build con analisi
+npm run build:analyze
+
+# Build per produzione ottimizzato
+npm run build:production
+
+# Pubblicazione asset compilati
+npm run copy
+```
+
+#### Workflow Completo
+
+1. **Preparazione**: `npm install` + `composer install`
+2. **Build**: `npm run build`
+3. **Pubblicazione**: `npm run copy`
+4. **Verifica**: Controllare che gli asset siano stati copiati correttamente
+
+### Configurazione Vite per Filament 4.x
+
+Il tema utilizza una configurazione Vite ottimizzata per Filament 4.x:
+
+```javascript
+// vite.config.js
+export default defineConfig({
+    build: {
+        outDir: './public',
+        emptyOutDir: false,
+        manifest: 'manifest.json',
+    },
+    plugins: [
+        laravel({
+            publicDirectory: '../../../public_html/',
+            input: [
+                __dirname + '/resources/css/app.css',
+                __dirname + '/resources/js/app.js',
+            ],
+            refresh: [
+                ...refreshPaths,
+                'app/Livewire/**',
+            ],
+        }),
+    ],
+});
+```
+
+### Direttiva @vite Corretta
+
+**IMPORTANTE**: Utilizzare sempre il secondo parametro per il tema:
+
+```blade
+{{-- ✅ CORRETTO - Con tema specificato --}}
+@vite(['resources/css/app.css', 'resources/js/app.js'], 'themes/Sixteen')
+
+{{-- ❌ ERRATO - Senza tema specificato --}}
+@vite(['resources/css/app.css', 'resources/js/app.js'])
 ```
 
 ### Configurazione Server
@@ -364,4 +462,4 @@ npm run build -- --analyze
 
 **Versione**: 1.0.0  
 **Ultimo aggiornamento**: Gennaio 2025  
-**Compatibilità**: Laravel 10+, Filament 3.x, Tailwind CSS 3.x 
+**Compatibilità**: Laravel 10+, Filament 4.x, Tailwind CSS 3.x, Vite 6.x 

@@ -268,14 +268,12 @@ Comprehensive demo and testing page for all implemented components
                         <div class="component-demo">
                             <h4 class="mb-3">Toggle Component</h4>
                             <div class="demo-container bg-light p-4 rounded">
-                                <x-toggle 
-                                <x-toggle 
+                                <x-pub_theme::ui.toggle 
                                     name="demo_toggle"
                                     label="Enable notifications"
                                     checked="true"
                                 />
-                                <x-toggle 
-                                <x-toggle 
+                                <x-pub_theme::ui.toggle 
                                     name="demo_toggle_2"
                                     label="Dark mode"
                                     lever-left="true"
@@ -351,8 +349,7 @@ Comprehensive demo and testing page for all implemented components
                             <div class="demo-container">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <x-notifiche 
-                                        <x-notifiche 
+                                        <x-pub_theme::ui.notifiche 
                                             type="success"
                                             title="Success Notification"
                                             message="This is a success message with icon"
@@ -361,8 +358,7 @@ Comprehensive demo and testing page for all implemented components
                                         />
                                     </div>
                                     <div class="col-md-6">
-                                        <x-notifiche 
-                                        <x-notifiche 
+                                        <x-pub_theme::ui.notifiche 
                                             type="warning"
                                             title="Warning Notification"
                                             message="This is a warning message that requires attention"
@@ -447,8 +443,7 @@ Comprehensive demo and testing page for all implemented components
     </div>
 
     {{-- Cookiebar Demo --}}
-    <x-cookiebar />
-    <x-cookiebar />
+    <x-pub_theme::ui.cookiebar />
 </div>
 
 {{-- Component Guide Modal --}}
