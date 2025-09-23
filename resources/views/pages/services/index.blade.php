@@ -66,7 +66,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 {{-- SUAP --}}
-                <x-pub_theme::agid.service-card
+                <x-pub_theme::blocks.services.service-card
                     title="SUAP - Sportello Unico"
                     description="Presenta pratiche edilizie, richieste di permessi e consulta lo stato delle procedure online"
                     icon="heroicon-o-building-office"
@@ -78,7 +78,7 @@
                 />
 
                 {{-- Anagrafe --}}
-                <x-pub_theme::agid.service-card
+                <x-pub_theme::blocks.services.service-card
                     title="Certificati Anagrafici"
                     description="Richiedi e scarica certificati di nascita, residenza e stato di famiglia direttamente online"
                     icon="heroicon-o-document-text"
@@ -149,7 +149,7 @@
                     <h3 class="text-2xl font-semibold text-gray-900">Anagrafe e Stato Civile</h3>
                 </div>
                 
-                <x-pub_theme::agid.services-grid 
+                <x-pub_theme::blocks.services.services-grid 
                     :services="[
                         ['title' => 'Certificati Anagrafici', 'description' => 'Richiedi e scarica certificati online', 'category' => 'anagrafe', 'status' => 'active', 'requiresAuth' => true],
                         ['title' => 'Iscrizione Anagrafica', 'description' => 'Iscrizione e variazione residenza', 'category' => 'anagrafe', 'status' => 'active', 'requiresAuth' => true],
@@ -167,7 +167,7 @@
                     <h3 class="text-2xl font-semibold text-gray-900">Tributi e Imposte</h3>
                 </div>
                 
-                <x-pub_theme::agid.services-grid 
+                <x-pub_theme::blocks.services.services-grid 
                     :services="[
                         ['title' => 'Pagamento TASI', 'description' => 'Pagamento tassa sui servizi indivisibili', 'category' => 'tributi', 'status' => 'active'],
                         ['title' => 'Pagamento IMU', 'description' => 'Pagamento imposta municipale propria', 'category' => 'tributi', 'status' => 'active'],
@@ -217,7 +217,9 @@
             {{-- Ambiente e Verde --}}
             <div id="ambiente">
                 <div class="flex items-center mb-8">
+                    {{--  
                     <x-heroicon-o-leaf class="w-8 h-8 text-primary-600 mr-3" />
+                    --}}}
                     <h3 class="text-2xl font-semibold text-gray-900">Ambiente e Verde</h3>
                 </div>
                 
