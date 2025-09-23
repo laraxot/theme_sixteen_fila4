@@ -42,7 +42,7 @@ Comprehensive demo and testing page for all implemented components
 
     <div class="container my-5">
         {{-- Navigation Tabs for Categories --}}
-        <x-tab orientation="horizontal" full-width="true">
+        <x-pub_theme::ui.tab orientation="horizontal" full-width="true">
             <x-slot name="tabs">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#core-components" type="button" role="tab">
@@ -89,8 +89,8 @@ Comprehensive demo and testing page for all implemented components
                         <div class="component-demo">
                             <h3 class="mb-3">Hero Component</h3>
                             <div class="demo-container">
-                                <x-hero type="image" size="small" background-image="https://via.placeholder.com/1200x400/0066cc/ffffff?text=Demo+Hero">
-                                <x-hero type="image" size="small" background-image="https://via.placeholder.com/1200x400/0066cc/ffffff?text=Demo+Hero">
+                                <x-pub_theme::ui.hero type="image" size="small" background-image="https://via.placeholder.com/1200x400/0066cc/ffffff?text=Demo+Hero">
+                                <x-pub_theme::ui.hero type="image" size="small" background-image="https://via.placeholder.com/1200x400/0066cc/ffffff?text=Demo+Hero">
                                     <x-slot name="content">
                                         <div class="container">
                                             <h2 class="text-white">Demo Hero Section</h2>
@@ -132,8 +132,7 @@ Comprehensive demo and testing page for all implemented components
                         <div class="component-demo">
                             <h4 class="mb-3">Accordion Component</h4>
                             <div class="demo-container">
-                                <x-accordion>
-                                <x-accordion>
+                                <x-pub_theme::ui.accordion>
                                     <x-slot name="items">
                                         <div class="accordion-item">
                                             <h2 class="accordion-header">
@@ -314,8 +313,7 @@ Comprehensive demo and testing page for all implemented components
                             <h4 class="mb-3">Bottom Navigation</h4>
                             <div class="demo-container">
                                 <div style="position: relative; height: 100px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
-                                    <x-bottom-nav fixed="false">
-                                    <x-bottom-nav fixed="false">
+                                    <x-pub_theme::navigation.bottom-nav fixed="false">
                                         <x-slot name="links">
                                             <a href="#" class="nav-link active">
                                                 <svg class="icon"><use href="#it-home"></use></svg>
@@ -409,8 +407,8 @@ Comprehensive demo and testing page for all implemented components
                         <div class="component-demo">
                             <h4 class="mb-3">Tab Component</h4>
                             <div class="demo-container">
-                                <x-tab orientation="vertical">
-                                <x-tab orientation="vertical">
+                                <x-pub_theme::ui.tab orientation="vertical">
+                                <x-pub_theme::ui.tab orientation="vertical">
                                     <x-slot name="tabs">
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#vertical-tab1" type="button">
