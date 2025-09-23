@@ -1,7 +1,10 @@
 {
     "name": "laraxot/theme_sixteen_fila3",
     "description": "Sixteen theme for Laraxot projects (AGID-compliant, Tailwind-based)",
+<<<<<<< HEAD
     "description": "",
+=======
+>>>>>>> a153bba (.)
     "keywords": [
         "laraxot",
         "laravel",
@@ -12,6 +15,7 @@
     ],
     "homepage": "https://github.com/laraxot/theme_sixteen_fila3",
     "license": "MIT",
+<<<<<<< HEAD
     "authors": [{
         "name": "Marco Xot",
         "email": "marco.sottana@gmail.com",
@@ -19,6 +23,8 @@
     }],
     "require": {
     },
+=======
+>>>>>>> a153bba (.)
     "authors": [
         {
             "name": "Marco Xot",
@@ -26,21 +32,29 @@
             "role": "Developer"
         }
     ],
-    "require": {},
+    "require": {
+        "filament/filament": "^3.4",
+        "filament/tables": "^3.4",
+        "filament/forms": "^3.4"
+    },
     "extra": {
         "laravel": {
             "providers": [
                 "Themes\\Sixteen\\Providers\\ThemeServiceProvider"
             ],
             "aliases": {}
+<<<<<<< HEAD
             "aliases": {
 
             }
+=======
+>>>>>>> a153bba (.)
         }
     },
     "autoload": {
         "psr-4": {
             "Themes\\Sixteen\\": ""
+<<<<<<< HEAD
 
         }
     },
@@ -48,6 +62,12 @@
         "psr-4": {
 
         }
+=======
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {}
+>>>>>>> a153bba (.)
     },
     "config": {
         "sort-packages": true,
