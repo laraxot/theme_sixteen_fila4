@@ -32,29 +32,15 @@ class ThemeService
     }
 
     /**
-<<<<<<< HEAD
-     * Restituisce il nome del tema.
-     *
-     * @return string
-     */
-    public function getThemeName(): string
-=======
      * Ottiene il nome del tema.
      */
     public function getName(): string
->>>>>>> a153bba (.)
     {
         return $this->themeName;
     }
 
     /**
-<<<<<<< HEAD
-     * Restituisce la versione del tema.
-     *
-     * @return string
-=======
      * Ottiene la versione del tema.
->>>>>>> a153bba (.)
      */
     public function getVersion(): string
     {
@@ -62,38 +48,19 @@ class ThemeService
     }
 
     /**
-<<<<<<< HEAD
-     * Restituisce la configurazione del tema.
-     *
-     * @return array<string, mixed>
-     */
-    public function getConfig(): array
-=======
      * Ottiene le informazioni del tema.
      */
     public function getInfo(): array
->>>>>>> a153bba (.)
     {
         return [
             'name' => $this->themeName,
             'version' => $this->version,
-<<<<<<< HEAD
-            'author' => 'Laraxot Team',
-            'description' => 'Modern responsive theme for Laraxot applications',
-            'features' => [
-                'responsive_design',
-                'dark_mode_support',
-                'component_library',
-                'accessibility_compliant',
-            ],
-=======
             'description' => 'Tema Sixteen per SaluteOra - AGID Bootstrap Italia compliant',
             'author' => 'SaluteOra Team',
             'agid_compliant' => true,
             'bootstrap_italia' => true,
             'tailwind_css' => true,
             'accessibility' => 'WCAG 2.1 AA',
->>>>>>> a153bba (.)
         ];
     }
 
@@ -118,8 +85,6 @@ class ThemeService
         // Configurazione dei componenti del tema
         // Setup delle configurazioni specifiche
     }
-<<<<<<< HEAD
-=======
 
     /**
      * Ottiene il Menu Builder per accesso diretto ai menu
@@ -192,5 +157,4 @@ class ThemeService
 
         return config('sixteen.' . $key, $default);
     }
->>>>>>> a153bba (.)
 }

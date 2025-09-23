@@ -174,51 +174,28 @@ Comprehensive demo and testing page for all implemented components
                                 <div class="row">
                                     <div class="col-md-4">
                                         <h6>Progress Bars</h6>
-<<<<<<< HEAD
-                                        <x-pub_theme::feedback.progress-indicators type="bar" :percentage="75" color="primary" label="Primary Progress" />
-                                        <x-pub_theme::feedback.progress-indicators type="bar" :percentage="60" color="success" label="Success Progress" class="mt-2" />
-                                        <x-pub_theme::feedback.progress-indicators type="bar" :percentage="40" color="warning" label="Warning Progress" class="mt-2" />
-                                        <x-pub_theme::feedback.progress-indicators type="bar" :percentage="75" color="primary" label="Primary Progress" />
-                                        <x-pub_theme::feedback.progress-indicators type="bar" :percentage="60" color="success" label="Success Progress" class="mt-2" />
-                                        <x-pub_theme::feedback.progress-indicators type="bar" :percentage="40" color="warning" label="Warning Progress" class="mt-2" />
-=======
                                         <x-progress-indicators type="bar" :percentage="75" color="primary" label="Primary Progress" />
                                         <x-progress-indicators type="bar" :percentage="60" color="success" label="Success Progress" class="mt-2" />
                                         <x-progress-indicators type="bar" :percentage="40" color="warning" label="Warning Progress" class="mt-2" />
                                         <x-progress-indicators type="bar" :percentage="75" color="primary" label="Primary Progress" />
                                         <x-progress-indicators type="bar" :percentage="60" color="success" label="Success Progress" class="mt-2" />
                                         <x-progress-indicators type="bar" :percentage="40" color="warning" label="Warning Progress" class="mt-2" />
->>>>>>> a153bba (.)
                                     </div>
                                     <div class="col-md-4">
                                         <h6>Spinners</h6>
                                         <div class="d-flex gap-3 align-items-center">
-<<<<<<< HEAD
-                                            <x-pub_theme::feedback.progress-indicators type="spinner" size="sm" active="true" />
-                                            <x-pub_theme::feedback.progress-indicators type="spinner" size="md" active="true" />
-                                            <x-pub_theme::feedback.progress-indicators type="spinner" size="lg" active="true" />
-                                            <x-pub_theme::feedback.progress-indicators type="spinner" size="sm" active="true" />
-                                            <x-pub_theme::feedback.progress-indicators type="spinner" size="md" active="true" />
-                                            <x-pub_theme::feedback.progress-indicators type="spinner" size="lg" active="true" />
-=======
                                             <x-progress-indicators type="spinner" size="sm" active="true" />
                                             <x-progress-indicators type="spinner" size="md" active="true" />
                                             <x-progress-indicators type="spinner" size="lg" active="true" />
                                             <x-progress-indicators type="spinner" size="sm" active="true" />
                                             <x-progress-indicators type="spinner" size="md" active="true" />
                                             <x-progress-indicators type="spinner" size="lg" active="true" />
->>>>>>> a153bba (.)
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <h6>Donut Progress</h6>
-<<<<<<< HEAD
-                                        <x-pub_theme::feedback.progress-indicators type="donut" :percentage="85" label="Completion Rate" />
-                                        <x-pub_theme::feedback.progress-indicators type="donut" :percentage="85" label="Completion Rate" />
-=======
                                         <x-progress-indicators type="donut" :percentage="85" label="Completion Rate" />
                                         <x-progress-indicators type="donut" :percentage="85" label="Completion Rate" />
->>>>>>> a153bba (.)
                                     </div>
                                 </div>
                             </div>
@@ -274,13 +251,8 @@ Comprehensive demo and testing page for all implemented components
                         <div class="component-demo">
                             <h4 class="mb-3">Upload Component</h4>
                             <div class="demo-container bg-light p-4 rounded">
-<<<<<<< HEAD
-                                <x-pub_theme::forms.upload 
-                                <x-pub_theme::forms.upload 
-=======
                                 <x-upload 
                                 <x-upload 
->>>>>>> a153bba (.)
                                     name="demo_upload"
                                     label="Upload Files"
                                     accept=".pdf,.doc,.docx"
