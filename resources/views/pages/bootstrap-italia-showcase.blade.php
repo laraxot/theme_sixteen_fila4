@@ -13,7 +13,7 @@ Comprehensive demo and testing page for all implemented components
     <x-pub_theme::navigation.skiplinks />
 
     {{-- Hero Section --}}
-    <x-hero type="centered" size="small">
+    <x-pub_theme::ui.hero type="centered" size="small">
         <x-slot name="content">
             <div class="container text-center">
                 <h1 class="display-4 fw-bold text-primary mb-3">
