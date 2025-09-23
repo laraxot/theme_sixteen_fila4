@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Themes\Sixteen\Filters;
 
+use Exception;
 use Illuminate\Support\Facades\Route;
 use Themes\Sixteen\Contracts\MenuFilterInterface;
 
@@ -34,8 +35,8 @@ class HrefMenuFilter implements MenuFilterInterface
                         return false;
                     }
                 }
-            } catch (\Exception $e) {
-            } catch (\Exception $e) {
+            } catch (Exception $e) {
+            } catch (Exception $e) {
                 if (app()->environment('local', 'development')) {
                     $item['url'] = '#';
                     $item['title'] = "Error with route '{$route}': " . $e->getMessage();

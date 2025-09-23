@@ -169,11 +169,8 @@ if (app()->environment(['local', 'development', 'testing'])) {
                     
             })->name('spid.simulate');
             
-<<<<<<< HEAD
 =======
 >>>>>>> 0eb3291 (.)
-=======
->>>>>>> 92783b6 (.)
             // Simulate CIE response (per testing)
             Route::post('cie/simulate', function () {
                 $attributes = [

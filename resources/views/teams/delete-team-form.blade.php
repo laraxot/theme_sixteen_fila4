@@ -1,8 +1,5 @@
 <x-action-section>
-<<<<<<< HEAD
 <x-action-section>
-=======
->>>>>>> 92783b6 (.)
     <x-slot name="title">
         {{ __('Delete Team') }}
     </x-slot>

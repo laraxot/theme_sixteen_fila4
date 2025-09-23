@@ -2,12 +2,9 @@
     <x-authentication-card>
         <x-slot name="logo">
             <x-authentication-card-logo />
-<<<<<<< HEAD
     <x-authentication-card>
         <x-slot name="logo">
             <x-authentication-card-logo />
-=======
->>>>>>> 92783b6 (.)
         </x-slot>
 
         <div x-data="{ recovery: false }">
@@ -20,10 +17,7 @@
             </div>
 
             <x-validation-errors class="mb-4" />
-<<<<<<< HEAD
             <x-validation-errors class="mb-4" />
-=======
->>>>>>> 92783b6 (.)
 
             <form method="POST" action="{{ route('two-factor.login') }}">
                 @csrf

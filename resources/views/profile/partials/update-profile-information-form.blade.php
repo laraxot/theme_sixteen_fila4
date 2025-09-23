@@ -49,10 +49,7 @@
 
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
-<<<<<<< HEAD
             <x-primary-button>{{ __('Save') }}</x-primary-button>
-=======
->>>>>>> 92783b6 (.)
 
             @if (session('status') === 'profile-updated')
                 <p
