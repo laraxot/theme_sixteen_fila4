@@ -3,8 +3,10 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\Route;
-use Themes\Sixteen\Http\Controllers\{SpidAuthController, CieAuthController};
-use Themes\Sixteen\Services\{SpidAuthService, CieAuthService};
+use Themes\Sixteen\Http\Controllers\CieAuthController;
+use Themes\Sixteen\Http\Controllers\SpidAuthController;
+use Themes\Sixteen\Services\CieAuthService;
+use Themes\Sixteen\Services\SpidAuthService;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +23,7 @@ Route::prefix('auth/spid')
     ->name('spid.')
     ->middleware(['web'])
     ->group(function () {
-        
+
         // Login con provider SPID specifico
         Route::get('login/{provider}', [SpidAuthController::class, 'login'])
             ->name('login')
@@ -29,7 +31,7 @@ Route::prefix('auth/spid')
         // Callback dal provider SPID
         Route::post('callback', [SpidAuthController::class, 'callback'])
             ->name('callback');
-        
+
         // Logout SPID
         Route::match(['get', 'post'], 'logout', [SpidAuthController::class, 'logout'])
             ->name('logout')
@@ -37,13 +39,13 @@ Route::prefix('auth/spid')
         // Single Logout (SLO) dal provider
         Route::post('slo', [SpidAuthController::class, 'singleLogout'])
             ->name('slo');
-        
+
         // Metadata SAML del Service Provider
         Route::get('metadata', [SpidAuthController::class, 'metadata'])
             ->name('metadata');
     });
 
-// CIE Authentication Routes  
+// CIE Authentication Routes
 Route::prefix('auth/cie')
     ->name('cie.')
     ->middleware(['web'])
@@ -51,20 +53,20 @@ Route::prefix('auth/cie')
         // Login CIE web
         Route::get('login', [CieAuthController::class, 'login'])
             ->name('login');
-        
+
         // Login CIE mobile (app CieID)
         Route::get('mobile', [CieAuthController::class, 'mobileLogin'])
             ->name('mobile');
-        
+
         // Callback OAuth2 da CIE
         Route::match(['get', 'post'], 'callback', [CieAuthController::class, 'callback'])
             ->name('callback');
-        
+
         // Logout CIE
         Route::match(['get', 'post'], 'logout', [CieAuthController::class, 'logout'])
             ->name('logout')
             ->middleware(['auth']);
-        
+
         // Refresh token CIE
         Route::post('refresh', [CieAuthController::class, 'refresh'])
             ->name('refresh')
@@ -72,7 +74,7 @@ Route::prefix('auth/cie')
         // Status autenticazione CIE
         Route::get('status', [CieAuthController::class, 'status'])
             ->name('status');
-        
+
         // Debug endpoint (solo in sviluppo)
         Route::get('debug', [CieAuthController::class, 'debug'])
             ->name('debug')
@@ -87,12 +89,12 @@ Route::prefix('sixteen/auth')
         // Selezione provider di autenticazione
         Route::view('select-provider', 'pub_theme::auth.select-provider')
             ->name('select-provider');
-        
+
         // Status generale autenticazione digitale
         Route::get('digital-identity/status', function () {
             $spidService = app(SpidAuthService::class);
             $cieService = app(CieAuthService::class);
-            
+
             return response()->json([
                 'spid' => [
                     'authenticated' => $spidService->isAuthenticated(),
@@ -109,23 +111,23 @@ Route::prefix('sixteen/auth')
         Route::post('digital-identity/logout', function () {
             $spidService = app(SpidAuthService::class);
             $cieService = app(CieAuthService::class);
-            
+
             if ($spidService->isAuthenticated()) {
                 return redirect()->route('spid.logout');
             }
-            
+
             if ($cieService->isAuthenticated()) {
                 return redirect()->route('cie.logout');
             }
-            
+
             // Fallback logout standard
             auth()->logout();
             request()->session()->invalidate();
             request()->session()->regenerateToken();
-            
+
             return redirect()->route('home')
                 ->with('success', 'Logout effettuato con successo.');
-                
+
         })->name('digital-identity.logout')->middleware(['auth']);
     });
 
@@ -138,42 +140,29 @@ if (app()->environment(['local', 'development', 'testing'])) {
             // Test page per SPID
             Route::view('spid', 'pub_theme::test.spid-test')
                 ->name('spid');
-            
-            // Test page per CIE  
+
+            // Test page per CIE
             Route::view('cie', 'pub_theme::test.cie-test')
                 ->name('cie');
-            
+
             // Simulate SPID response (per testing)
             Route::post('spid/simulate', function () {
                 $attributes = [
                     'spid_code' => 'TEST123456',
                     'name' => 'Mario',
-                    'surname' => 'Rossi', 
+                    'surname' => 'Rossi',
                     'fiscal_code' => 'RSSMRA80A01H501U',
                     'email' => 'mario.rossi@example.com',
                     'provider' => 'test',
                     'auth_level' => 2,
                 ];
                 session(['spid.test_attributes' => $attributes]);
-                
+
                 return redirect()->route('spid.callback')
                     ->with('success', 'Simulazione SPID attiva');
-                    
+
             })->name('spid.simulate');
-<<<<<<< HEAD
-=======
-            
-                
-                session(['spid.test_attributes' => $attributes]);
-                
-                return redirect()->route('spid.callback')
-                    ->with('success', 'Simulazione SPID attiva');
-                    
-            })->name('spid.simulate');
-            
-=======
->>>>>>> 0eb3291 (.)
->>>>>>> a3dca9d (.)
+
             // Simulate CIE response (per testing)
             Route::post('cie/simulate', function () {
                 $attributes = [
@@ -185,12 +174,12 @@ if (app()->environment(['local', 'development', 'testing'])) {
                     'auth_method' => 'web',
                     'email_verified' => true,
                 ];
-                
+
                 session(['cie.test_attributes' => $attributes]);
-                
+
                 return redirect()->route('cie.callback')
                     ->with('success', 'Simulazione CIE attiva');
-                    
+
             })->name('cie.simulate');
         });
 }

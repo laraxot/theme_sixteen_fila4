@@ -190,109 +190,53 @@ Usage Examples:
 
 2. Active spinner with different sizes:
 <x-pub_theme::progress-indicators 
-<<<<<<< HEAD
-=======
-<x-pub_theme::progress-indicators />
-
-2. Active spinner with different sizes:
-<x-pub_theme::progress-indicators 
-=======
->>>>>>> a3dca9d (.)
     type="spinner" 
     size="sm" 
     :active="true" 
     label="Caricamento piccolo..." />
 
 <x-pub_theme::progress-indicators 
-<<<<<<< HEAD
-=======
-<x-pub_theme::progress-indicators 
-=======
-<x-pub_theme::progress-indicators 
->>>>>>> a3dca9d (.)
     type="spinner" 
     size="lg" 
     :active="true" />
 
 <x-pub_theme::progress-indicators 
-<<<<<<< HEAD
-=======
-<x-pub_theme::progress-indicators 
-=======
-<x-pub_theme::progress-indicators 
->>>>>>> a3dca9d (.)
     type="spinner" 
     size="xl" 
     :active="true" />
 
 3. Double spinner:
 <x-pub_theme::progress-indicators 
-<<<<<<< HEAD
-=======
-<x-pub_theme::progress-indicators 
-=======
-<x-pub_theme::progress-indicators 
->>>>>>> a3dca9d (.)
     type="spinner" 
     :double="true" 
     :active="true" />
 
 4. Donut progress indicator:
 <x-pub_theme::progress-indicators 
-<<<<<<< HEAD
-=======
-<x-pub_theme::progress-indicators 
-=======
-<x-pub_theme::progress-indicators 
->>>>>>> a3dca9d (.)
     type="donut" 
     :value="0.75" 
     label="Avanzamento operazione" />
 
 5. Basic progress bar:
 <x-pub_theme::progress-indicators 
-<<<<<<< HEAD
-=======
-<x-pub_theme::progress-indicators 
-=======
-<x-pub_theme::progress-indicators 
->>>>>>> a3dca9d (.)
     type="bar" 
     :value="0.5" 
     :show-label="true" />
 
 6. Colored progress bars:
 <x-pub_theme::progress-indicators 
-<<<<<<< HEAD
-=======
-<x-pub_theme::progress-indicators 
-=======
-<x-pub_theme::progress-indicators 
->>>>>>> a3dca9d (.)
     type="bar" 
     :value="0.25" 
     color="success" 
     :show-label="true" />
 
 <x-pub_theme::progress-indicators 
-<<<<<<< HEAD
-=======
-<x-pub_theme::progress-indicators 
-=======
-<x-pub_theme::progress-indicators 
->>>>>>> a3dca9d (.)
     type="bar" 
     :value="0.75" 
     color="warning" 
     :show-label="true" />
 
 <x-pub_theme::progress-indicators 
-<<<<<<< HEAD
-=======
-<x-pub_theme::progress-indicators 
-=======
-<x-pub_theme::progress-indicators 
->>>>>>> a3dca9d (.)
     type="bar" 
     :value="0.9" 
     color="danger" 
@@ -300,12 +244,6 @@ Usage Examples:
 
 7. Striped and animated progress bar:
 <x-pub_theme::progress-indicators 
-<<<<<<< HEAD
-=======
-<x-pub_theme::progress-indicators 
-=======
-<x-pub_theme::progress-indicators 
->>>>>>> a3dca9d (.)
     type="bar" 
     :value="0.4" 
     :striped="true" 
@@ -313,12 +251,6 @@ Usage Examples:
 
 8. Indeterminate progress bar:
 <x-pub_theme::progress-indicators 
-<<<<<<< HEAD
-=======
-<x-pub_theme::progress-indicators 
-=======
-<x-pub_theme::progress-indicators 
->>>>>>> a3dca9d (.)
     type="bar" 
     :indeterminate="true" 
     :striped="true" 
@@ -327,12 +259,6 @@ Usage Examples:
 
 9. Progress button:
 <x-pub_theme::progress-indicators 
-<<<<<<< HEAD
-=======
-<x-pub_theme::progress-indicators 
-=======
-<x-pub_theme::progress-indicators 
->>>>>>> a3dca9d (.)
     type="bar" 
     :value="0.65" 
     button-text="Caricamento" />
@@ -343,12 +269,6 @@ Usage Examples:
 <div class="mb-3">
     <label class="form-label">Upload file</label>
     <x-pub_theme::progress-indicators 
-<<<<<<< HEAD
-=======
-    <x-pub_theme::progress-indicators 
-=======
-    <x-pub_theme::progress-indicators 
->>>>>>> a3dca9d (.)
         type="bar" 
         :value="0.3" 
         color="primary" 
@@ -358,12 +278,6 @@ Usage Examples:
 
 <!-- Form submission -->
 <x-pub_theme::progress-indicators 
-<<<<<<< HEAD
-=======
-<x-pub_theme::progress-indicators 
-=======
-<x-pub_theme::progress-indicators 
->>>>>>> a3dca9d (.)
     type="spinner" 
     size="sm" 
     :active="true" 
@@ -373,12 +287,6 @@ Usage Examples:
 <!-- Data processing -->
 <div class="text-center py-4">
     <x-pub_theme::progress-indicators 
-<<<<<<< HEAD
-=======
-    <x-pub_theme::progress-indicators 
-=======
-    <x-pub_theme::progress-indicators 
->>>>>>> a3dca9d (.)
         type="donut" 
         :value="0.85" 
         label="Elaborazione dati" />
@@ -388,12 +296,6 @@ Usage Examples:
 11. Dynamic progress with Alpine.js:
 <div x-data="{ progress: 0.2 }">
     <x-pub_theme::progress-indicators 
-<<<<<<< HEAD
-=======
-    <x-pub_theme::progress-indicators 
-=======
-    <x-pub_theme::progress-indicators 
->>>>>>> a3dca9d (.)
         type="bar" 
         x-bind:data-value="progress" 
         :show-label="true" />
@@ -413,12 +315,6 @@ Usage Examples:
     <div class="col-md-4">
         <h6>CPU Usage</h6>
         <x-pub_theme::progress-indicators 
-<<<<<<< HEAD
-=======
-        <x-pub_theme::progress-indicators 
-=======
-        <x-pub_theme::progress-indicators 
->>>>>>> a3dca9d (.)
             type="bar" 
             :value="0.45" 
             color="success" 
@@ -427,12 +323,6 @@ Usage Examples:
     <div class="col-md-4">
         <h6>Memory Usage</h6>
         <x-pub_theme::progress-indicators 
-<<<<<<< HEAD
-=======
-        <x-pub_theme::progress-indicators 
-=======
-        <x-pub_theme::progress-indicators 
->>>>>>> a3dca9d (.)
             type="bar" 
             :value="0.72" 
             color="warning" 
@@ -441,12 +331,6 @@ Usage Examples:
     <div class="col-md-4">
         <h6>Disk Usage</h6>
         <x-pub_theme::progress-indicators 
-<<<<<<< HEAD
-=======
-        <x-pub_theme::progress-indicators 
-=======
-        <x-pub_theme::progress-indicators 
->>>>>>> a3dca9d (.)
             type="bar" 
             :value="0.89" 
             color="danger" 
