@@ -160,6 +160,20 @@ if (app()->environment(['local', 'development', 'testing'])) {
                     ->with('success', 'Simulazione SPID attiva');
                     
             })->name('spid.simulate');
+<<<<<<< HEAD
+=======
+            
+                
+                session(['spid.test_attributes' => $attributes]);
+                
+                return redirect()->route('spid.callback')
+                    ->with('success', 'Simulazione SPID attiva');
+                    
+            })->name('spid.simulate');
+            
+=======
+>>>>>>> 0eb3291 (.)
+>>>>>>> a3dca9d (.)
             // Simulate CIE response (per testing)
             Route::post('cie/simulate', function () {
                 $attributes = [

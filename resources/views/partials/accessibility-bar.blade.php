@@ -42,6 +42,14 @@
                         </span>
                     @endif
                     <x-pub_theme::accessibility.font-size />
+<<<<<<< HEAD
+=======
+                            {{ __('pub_theme::accessibility.font_size') }}:
+                        </span>
+                    @endif
+                    <x-pub_theme::components.accessibility.font-size />
+=======
+>>>>>>> a3dca9d (.)
                 </div>
 
                 {{-- Link accessibilità --}}
@@ -52,6 +60,16 @@
                         :aria-label="__('pub_theme::accessibility.accessibility_statement')"
                     >
                         {{ __('pub_theme::accessibility.accessibility_statement') }}
+<<<<<<< HEAD
+=======
+                        :aria-label="__('pub_theme::accessibility.accessibility_statement')"
+                    >
+                        {{ __('pub_theme::accessibility.accessibility_statement') }}
+=======
+                        :aria-label="__('pub_theme::accessibility.accessibility_statement')"
+                    >
+                        {{ __('pub_theme::accessibility.accessibility_statement') }}
+>>>>>>> a3dca9d (.)
                     </a>
                     
                     <a
@@ -60,6 +78,16 @@
                         :aria-label="__('pub_theme::accessibility.privacy_policy')"
                     >
                         {{ __('pub_theme::accessibility.privacy_policy') }}
+<<<<<<< HEAD
+=======
+                        :aria-label="__('pub_theme::accessibility.privacy_policy')"
+                    >
+                        {{ __('pub_theme::accessibility.privacy_policy') }}
+=======
+                        :aria-label="__('pub_theme::accessibility.privacy_policy')"
+                    >
+                        {{ __('pub_theme::accessibility.privacy_policy') }}
+>>>>>>> a3dca9d (.)
                     </a>
                 </div>
             </div>
@@ -69,6 +97,12 @@
                 @click="$el.parentElement.parentElement.style.display = 'none'"
                 class="p-1 text-gray-400 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
                 :aria-label="__('pub_theme::accessibility.close_accessibility_bar')"
+<<<<<<< HEAD
+=======
+                :aria-label="__('pub_theme::accessibility.close_accessibility_bar')"
+=======
+                :aria-label="__('pub_theme::accessibility.close_accessibility_bar')"
+>>>>>>> a3dca9d (.)
             >
                 <x-filament::icon name="heroicon-o-x-mark" class="w-4 h-4" />
             </button>
@@ -78,6 +112,12 @@
 
 {{-- Skiplinks --}}
 <x-pub_theme::accessibility.skiplinks />
+<<<<<<< HEAD
+=======
+<x-pub_theme::components.accessibility.skiplinks />
+=======
+<x-pub_theme::accessibility.skiplinks />
+>>>>>>> a3dca9d (.)
 
 {{-- Script per preferenze sistema --}}
 <script>
