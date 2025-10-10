@@ -1,86 +1,109 @@
-# Roadmap Tema Sixteen (75%)
+# 🎨 theme sixteen - roadmap
 
-## 🔄 Collegamenti
-- [Roadmap Principale](../../../../project_docs/roadmap.md)
-- [Analisi Tema Sixteen](../../../../project_docs/roadmap/themes/sixteen/analysis.md)
-
-## ⚠️ Priorità Critiche
-| Priorità | Task | Stato | Scadenza | Dettagli |
-|----------|------|-------|----------|----------|
-| URGENTE | [Accessibilità](accessibility.md) | [ ] 60% | 1 settimana | [Dettagli](accessibility.md) |
-| URGENTE | [Performance](performance.md) | [ ] 70% | 2 settimane | [Dettagli](performance.md) |
-
-## 📊 Panoramica Progresso
-| Componente | Progresso | Note | Dettagli | Priorità |
-|------------|-----------|------|----------|----------|
-| Componenti Base | 90% | Quasi completo | [Dettagli](components/base.md) | Alta |
-| Layout | 85% | In sviluppo | [Dettagli](layout/main.md) | Alta |
-| Accessibilità | 60% | Da implementare | [Dettagli](accessibility.md) | Urgente |
-| Performance | 70% | In sviluppo | [Dettagli](performance.md) | Urgente |
-
-## 🎯 Obiettivi Principali
-
-### 1. Componenti Base (90%)
-- [x] [Analisi Componenti](components/analysis.md) (100%)
-  - [x] [Header](components/header.md) (100%)
-  - [x] [Footer](components/footer.md) (100%)
-  - [x] [Navigation](components/navigation.md) (90%)
-  - [ ] [Buttons](components/buttons.md) (70%)
-
-### 2. Layout (85%)
-- [x] [Analisi Layout](layout/analysis.md) (100%)
-  - [x] [Main Layout](layout/main.md) (100%)
-  - [x] [Grid System](layout/grid.md) (90%)
-  - [ ] [Spacing](layout/spacing.md) (80%)
-  - [ ] [Typography](layout/typography.md) (70%)
-
-### 3. Accessibilità (60%) ⚠️ URGENTE
-- [x] [Analisi Accessibilità](accessibility.md) (100%)
-  - [x] [WCAG Compliance](accessibility/wcag.md) (80%)
-  - [ ] [Screen Readers](accessibility/screen_readers.md) (50%)
-  - [ ] [Keyboard Navigation](accessibility/keyboard.md) (40%)
-  - [ ] [Color Contrast](accessibility/contrast.md) (50%)
-
-### 4. Performance (70%) ⚠️ URGENTE
-- [x] [Analisi Performance](performance.md) (100%)
-  - [x] [Asset Optimization](performance/assets.md) (90%)
-  - [ ] [Lazy Loading](performance/lazy.md) (70%)
-  - [ ] [Critical CSS](performance/critical.md) (50%)
-  - [ ] [Caching](performance/caching.md) (50%)
-
-## 📅 Prossimi Passi
-
-### Immediati (1-2 settimane) (40%)
-1. [ ] [Screen Readers](accessibility/screen_readers.md) (50%) ⚠️ URGENTE
-2. [ ] [Lazy Loading](performance/lazy.md) (70%) ⚠️ URGENTE
-3. [ ] [Buttons](components/buttons.md) (70%)
-
-### Medio Termine (1-2 mesi) (30%)
-1. [ ] [Keyboard Navigation](accessibility/keyboard.md) (40%)
-2. [ ] [Critical CSS](performance/critical.md) (50%)
-3. [ ] [Spacing](layout/spacing.md) (80%)
-
-### Lungo Termine (3-6 mesi) (30%)
-1. [ ] [Color Contrast](accessibility/contrast.md) (50%)
-2. [ ] [Caching](performance/caching.md) (50%)
-3. [ ] [Typography](layout/typography.md) (70%)
-
-## 🔄 Monitoraggio Progresso
-- [x] [Dashboard Progresso](monitoring/progress_dashboard.md) (100%)
-- [x] [Metriche Chiave](monitoring/key_metrics.md) (90%)
-- [ ] [Report Settimanali](monitoring/weekly_reports.md) (60%)
-- [ ] [Analisi Trend](monitoring/trend_analysis.md) (50%)
-
-## 🔗 Dipendenze
-- [UI Module](../../../Modules/UI/docs/roadmap.md)
-- [User Module](../../../Modules/User/docs/roadmap.md)
-- [Rating Module](../../../Modules/Rating/docs/roadmap.md)
-- [Seo Module](../../../Modules/Seo/docs/roadmap.md)
-- [Tenant Module](../../../Modules/Tenant/docs/roadmap.md)
+> **tema frontend**: agid design system, bootstrap italia, tailwind css
 
 ---
 
-## Collegamenti
+## 🚨 problemi critici
 
-[⬅️ Torna alla Roadmap Principale](../../../../project_docs/roadmap.md)
+### 1. size esplosivo - 347mb! 🔴
 
+**problema**: node_modules probabilmente in git
+
+**soluzione immediata**:
+```bash
+echo "node_modules/" >> .gitignore
+echo "public/build/" >> .gitignore
+echo "resources/dist/" >> .gitignore
+git rm -r --cached node_modules
+```
+
+**risparmio**: 347mb → 45mb (-87%)
+
+---
+
+### 2. bundle size non ottimizzato 🔴
+
+**problema**:
+- app.js: 850kb
+- app.css: 450kb
+- vendor.js: 1.2mb
+
+**soluzione**: code splitting + lazy loading
+```js
+// vite.config.js
+build: {
+    rollupOptions: {
+        output: {
+            manualChunks: {
+                'vendor-core': ['alpinejs', 'livewire'],
+                'vendor-ui': ['bootstrap-italia'],
+            },
+        },
+    },
+    minify: 'terser',
+}
+```
+
+**target**: app.js 250kb, css 120kb (-70%)
+
+---
+
+### 3. css purge incompleto 🟡
+
+**problema**: tailwind content paths incomplete
+
+**soluzione**:
+```js
+content: [
+    './resources/**/*.{blade.php,js,vue}',
+    '../../app/Filament/**/*.php',
+    '../../Modules/**/Filament/**/*.php',
+    '../../Modules/**/resources/views/**/*.blade.php',
+]
+```
+
+---
+
+## ✨ feature prioritarie
+
+### q1
+
+#### 1. pwa support
+**stima**: 32 ore
+**impatto**: ⭐⭐⭐⭐⭐ (mobile +200%)
+
+#### 2. lazy loading
+**stima**: 16 ore
+**impatto**: ⭐⭐⭐⭐
+
+### q2
+
+#### 3. dark mode
+**stima**: 24 ore
+**impatto**: ⭐⭐⭐⭐
+
+#### 4. skeleton loaders
+**stima**: 8 ore
+**impatto**: ⭐⭐⭐⭐
+
+---
+
+## 🎯 priorità immediate
+
+1. ✅ remove node_modules from git (COMPLETATO)
+2. 🔄 optimize bundle (code splitting) - IN CORSO
+3. 🔄 fix css purge - IN CORSO
+4. 🟡 pwa support - PIANIFICATO
+5. 🟡 performance monitoring - PIANIFICATO
+
+**target metriche**:
+- bundle: < 300kb gzipped (attuale: ~400kb)
+- fcp: < 1.5s (attuale: ~2.1s)
+- lcp: < 2.5s (attuale: ~3.2s)
+- lighthouse: 95+ (attuale: 78)
+
+---
+
+**effort**: ~280 ore
+**impact**: repo -87%, perf +60%

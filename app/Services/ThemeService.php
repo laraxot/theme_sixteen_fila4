@@ -54,8 +54,8 @@ class ThemeService
         return [
             'name' => $this->themeName,
             'version' => $this->version,
-            'description' => 'Tema Sixteen per SaluteOra - AGID Bootstrap Italia compliant',
-            'author' => 'SaluteOra Team',
+            'description' => 'Tema Sixteen per <nome progetto> - AGID Bootstrap Italia compliant',
+            'author' => '<nome progetto> Team',
             'agid_compliant' => true,
             'bootstrap_italia' => true,
             'tailwind_css' => true,

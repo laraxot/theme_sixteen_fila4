@@ -1,37 +1,205 @@
-<?php
+{{-- 
+    Elenco Segnalazioni - Homepage
+    Replica Design Comuni con Tailwind CSS
+--}}
 
-use function Laravel\Folio\{middleware, name};
-use function Livewire\Volt\{state, rules};
+@extends('layouts.app')
 
-//name('home');
-//middleware(['redirect-to-dashboard']);
-
-?>
-
-<x-layouts.marketing>
-
-    {{--
-    @volt('home')
-        <div class="relative flex flex-col items-center justify-center w-full h-auto overflow-hidden" x-cloak>
-
-            <svg class="absolute top-0 left-0 w-7/12 -ml-40 -translate-x-1/2 fill-current opacity-10 dark:opacity-5 text-slate-400" viewBox="0 0 978 615" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M978 216.141C656.885 277.452 321.116 341.682 0 402.993c39.425-4.071 128.449-11.563 167.843-15.912l6.661 22.46c59.138 174.752 275.144 254.906 438.792 172.235 48.902-72.088 119.911-180.018 171.073-255.946L978 216.141ZM611.485 405.155c-19.059 27.934-46.278 66.955-65.782 94.576-98.453 40.793-230.472-11.793-268.175-111.202-1.096-2.89-1.702-5.965-3.379-11.972l382.99-38.6c-16.875 24.845-31.224 46.049-45.654 67.198Z"/><path d="m262.704 306.481 1.336-28.817c.25-1.784.572-3.562.951-5.323 17.455-81.121 65.161-136.563 144.708-159.63 81.813-23.725 157.283-5.079 211.302 61.02 6.466 7.912 23.695 33.305 23.695 33.305s107.788-20.295 102.487-22.242C710.939 81.362 569.507-31.34 398.149 8.04 221.871 48.55 144.282 217.1 160.797 331.317c23.221-5.568 78.863-19.192 101.907-24.836Z"/><path d="M890.991 458.296c-57.168 2.205-69.605 14.641-71.809 71.809-2.205-57.168-14.641-69.604-71.809-71.809 57.168-2.204 69.604-14.641 71.809-71.809 2.204 57.169 14.641 69.605 71.809 71.809Z"/><path d="M890.991 458.296c-57.168 2.205-69.605 14.641-71.809 71.809-2.205-57.168-14.641-69.604-71.809-71.809 57.168-2.204 69.604-14.641 71.809-71.809 2.204 57.169 14.641 69.605 71.809 71.809Z"/><path d="M952.832 409.766c-21.048.812-25.626 5.39-26.438 26.438-.811-21.048-5.39-25.626-26.437-26.438 21.047-.811 25.626-5.39 26.437-26.437.812 21.047 5.39 25.626 26.438 26.437Z"/></svg>
-            <svg class="absolute top-0 right-0 w-7/12 -mr-40 translate-x-1/2 fill-current opacity-10 dark:opacity-5 text-slate-400" viewBox="0 0 978 615" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M978 216.141C656.885 277.452 321.116 341.682 0 402.993c39.425-4.071 128.449-11.563 167.843-15.912l6.661 22.46c59.138 174.752 275.144 254.906 438.792 172.235 48.902-72.088 119.911-180.018 171.073-255.946L978 216.141ZM611.485 405.155c-19.059 27.934-46.278 66.955-65.782 94.576-98.453 40.793-230.472-11.793-268.175-111.202-1.096-2.89-1.702-5.965-3.379-11.972l382.99-38.6c-16.875 24.845-31.224 46.049-45.654 67.198Z"/><path d="m262.704 306.481 1.336-28.817c.25-1.784.572-3.562.951-5.323 17.455-81.121 65.161-136.563 144.708-159.63 81.813-23.725 157.283-5.079 211.302 61.02 6.466 7.912 23.695 33.305 23.695 33.305s107.788-20.295 102.487-22.242C710.939 81.362 569.507-31.34 398.149 8.04 221.871 48.55 144.282 217.1 160.797 331.317c23.221-5.568 78.863-19.192 101.907-24.836Z"/><path d="M890.991 458.296c-57.168 2.205-69.605 14.641-71.809 71.809-2.205-57.168-14.641-69.604-71.809-71.809 57.168-2.204 69.604-14.641 71.809-71.809 2.204 57.169 14.641 69.605 71.809 71.809Z"/><path d="M890.991 458.296c-57.168 2.205-69.605 14.641-71.809 71.809-2.205-57.168-14.641-69.604-71.809-71.809 57.168-2.204 69.604-14.641 71.809-71.809 2.204 57.169 14.641 69.605 71.809 71.809Z"/><path d="M952.832 409.766c-21.048.812-25.626 5.39-26.438 26.438-.811-21.048-5.39-25.626-26.437-26.438 21.047-.811 25.626-5.39 26.437-26.437.812 21.047 5.39 25.626 26.438 26.437Z"/></svg>
-
-            <div class="flex items-center w-full max-w-6xl px-8 pt-12 pb-20 mx-auto">
-                <div class="container relative max-w-4xl mx-auto mt-20 text-center sm:mt-24 lg:mt-32">
-                    <div style="background-image:linear-gradient(160deg,#e66735,#e335e2 50%,#73f7f8, #a729ed)" class="inline-block w-auto p-0.5 shadow rounded-full animate-gradient">
-                        <p class="w-auto h-full px-3 bg-slate-50 dark:bg-neutral-900 dark:text-white py-1.5 font-medium text-sm tracking-widest uppercase  rounded-full text-slate-800/90 group-hover:text-white/100">Welcome to Genesis</p>
+@section('content')
+<div class="min-h-screen bg-gray-50">
+    {{-- Header Verde PA --}}
+    <header class="bg-primary-500 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+                        <span class="text-primary-500 font-bold text-xl">FC</span>
                     </div>
-                    <h1 class="mt-5 text-4xl font-light leading-tight tracking-tight text-center dark:text-white text-slate-800 sm:text-5xl md:text-8xl">The Beginning of Your<br> Next Great Idea.</h1>
-                    <p class="w-full max-w-2xl mx-auto mt-8 text-lg dark:text-white/60 text-slate-500">The ultimate application starter kit with built-in features like Authentication, User Dashboards, Edit Profiles, UI Components, and much more! </p>
-                    <div class="flex items-center justify-center w-full max-w-sm px-5 mx-auto mt-8 space-x-5">
-                        <x-ui.button type="secondary" tag="a" href="https://github.com/thedevdojo/genesis" target="_blank">View the Docs</x-ui.button>
-                        <x-ui.button type="primary" tag="a" href="https://github.com/thedevdojo/genesis" target="_blank">View Github Repo</x-ui.button>
+                    <div>
+                        <h1 class="text-2xl font-bold">Il mio Comune</h1>
+                        <p class="text-sm text-primary-100">Segnalazioni e servizi</p>
                     </div>
                 </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#" class="hover:text-primary-100 transition">Amministrazione</a>
+                    <a href="#" class="hover:text-primary-100 transition">Novità</a>
+                    <a href="#" class="hover:text-primary-100 transition">Servizi</a>
+                    <a href="#" class="hover:text-primary-100 transition">Vivere il Comune</a>
+                </nav>
             </div>
-
         </div>
-    @endvolt
-    --}}
-</x-layouts.marketing>
+    </header>
+
+    {{-- Breadcrumb --}}
+    <div class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <nav class="flex text-sm text-gray-600">
+                <a href="/" class="hover:text-primary-500">Home</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">Elenco segnalazioni</span>
+            </nav>
+        </div>
+    </div>
+
+    {{-- Main Content --}}
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {{-- Title --}}
+        <div class="mb-6">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Elenco segnalazioni</h1>
+            <p class="text-gray-600">Aiuto utenti: 17 segnalazioni sono risultate 12 segnalazioni</p>
+        </div>
+
+        {{-- Layout: Sidebar + Map --}}
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            {{-- Sidebar Filtri --}}
+            <aside class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                    <h2 class="text-lg font-semibold text-gray-900 mb-4">CATEGORIA</h2>
+                    
+                    <div class="space-y-3">
+                        {{-- Categoria 1 --}}
+                        <label class="flex items-start space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+                            <input type="checkbox" class="mt-1 h-4 w-4 text-primary-500 border-gray-300 rounded focus:ring-primary-500">
+                            <div class="flex-1">
+                                <span class="text-sm font-medium text-gray-900">Acqua, allagamenti, problemi idrici</span>
+                                <span class="text-xs text-gray-500 block">(251)</span>
+                            </div>
+                        </label>
+
+                        {{-- Categoria 2 --}}
+                        <label class="flex items-start space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+                            <input type="checkbox" class="mt-1 h-4 w-4 text-primary-500 border-gray-300 rounded focus:ring-primary-500">
+                            <div class="flex-1">
+                                <span class="text-sm font-medium text-gray-900">Ambiente, inquinamento, protezione ambientale</span>
+                                <span class="text-xs text-gray-500 block">(114)</span>
+                            </div>
+                        </label>
+
+                        {{-- Categoria 3 --}}
+                        <label class="flex items-start space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+                            <input type="checkbox" class="mt-1 h-4 w-4 text-primary-500 border-gray-300 rounded focus:ring-primary-500">
+                            <div class="flex-1">
+                                <span class="text-sm font-medium text-gray-900">Arredo urbano</span>
+                                <span class="text-xs text-gray-500 block">(7)</span>
+                            </div>
+                        </label>
+
+                        {{-- Categoria 4 --}}
+                        <label class="flex items-start space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+                            <input type="checkbox" class="mt-1 h-4 w-4 text-primary-500 border-gray-300 rounded focus:ring-primary-500">
+                            <div class="flex-1">
+                                <span class="text-sm font-medium text-gray-900">Dissestazione, divalizzazione, animali randagi</span>
+                                <span class="text-xs text-gray-500 block">(208)</span>
+                            </div>
+                        </label>
+
+                        {{-- Categoria 5 --}}
+                        <label class="flex items-start space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+                            <input type="checkbox" class="mt-1 h-4 w-4 text-primary-500 border-gray-300 rounded focus:ring-primary-500">
+                            <div class="flex-1">
+                                <span class="text-sm font-medium text-gray-900">Igiene urbana, rifiuti, pulizia e decoro</span>
+                                <span class="text-xs text-gray-500 block">(321)</span>
+                            </div>
+                        </label>
+
+                        {{-- Categoria 6 --}}
+                        <label class="flex items-start space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+                            <input type="checkbox" class="mt-1 h-4 w-4 text-primary-500 border-gray-300 rounded focus:ring-primary-500">
+                            <div class="flex-1">
+                                <span class="text-sm font-medium text-gray-900">Manutenzione immobili, edifici pubblici, scuole, barriere architettoniche, cimiteri</span>
+                                <span class="text-xs text-gray-500 block">(360)</span>
+                            </div>
+                        </label>
+
+                        {{-- Categoria 7 --}}
+                        <label class="flex items-start space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+                            <input type="checkbox" class="mt-1 h-4 w-4 text-primary-500 border-gray-300 rounded focus:ring-primary-500">
+                            <div class="flex-1">
+                                <span class="text-sm font-medium text-gray-900">Ordine pubblico, disturbo della quiete</span>
+                                <span class="text-xs text-gray-500 block">(302)</span>
+                            </div>
+                        </label>
+
+                        {{-- Categoria 8 --}}
+                        <label class="flex items-start space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+                            <input type="checkbox" class="mt-1 h-4 w-4 text-primary-500 border-gray-300 rounded focus:ring-primary-500">
+                            <div class="flex-1">
+                                <span class="text-sm font-medium text-gray-900">Parchi e verde pubblico</span>
+                                <span class="text-xs text-gray-500 block">(302)</span>
+                            </div>
+                        </label>
+
+                        {{-- Categoria 9 --}}
+                        <label class="flex items-start space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+                            <input type="checkbox" class="mt-1 h-4 w-4 text-primary-500 border-gray-300 rounded focus:ring-primary-500">
+                            <div class="flex-1">
+                                <span class="text-sm font-medium text-gray-900">Servizi del comune</span>
+                                <span class="text-xs text-gray-500 block">(302)</span>
+                            </div>
+                        </label>
+
+                        {{-- Categoria 10 --}}
+                        <label class="flex items-start space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+                            <input type="checkbox" class="mt-1 h-4 w-4 text-primary-500 border-gray-300 rounded focus:ring-primary-500">
+                            <div class="flex-1">
+                                <span class="text-sm font-medium text-gray-900">Sicurezza, degrado urbano e sociale</span>
+                                <span class="text-xs text-gray-500 block">(302)</span>
+                            </div>
+                        </label>
+
+                        {{-- Categoria 11 --}}
+                        <label class="flex items-start space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+                            <input type="checkbox" class="mt-1 h-4 w-4 text-primary-500 border-gray-300 rounded focus:ring-primary-500">
+                            <div class="flex-1">
+                                <span class="text-sm font-medium text-gray-900">Strade, marciapiedi, segnaletica e viabilità</span>
+                                <span class="text-xs text-gray-500 block">(802)</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    {{-- Risultati Button --}}
+                    <button class="w-full mt-6 bg-primary-500 text-white py-2 px-4 rounded-lg hover:bg-primary-600 transition font-medium">
+                        642 Risultati
+                    </button>
+                </div>
+            </aside>
+
+            {{-- Map + List Area --}}
+            <div class="lg:col-span-3">
+                {{-- Toggle Buttons --}}
+                <div class="flex space-x-2 mb-4">
+                    <button class="flex-1 bg-white border-2 border-primary-500 text-primary-500 py-2 px-4 rounded-lg font-medium hover:bg-primary-50 transition">
+                        Mappa
+                    </button>
+                    <button class="flex-1 bg-white border border-gray-300 text-gray-700 py-2 px-4 rounded-lg font-medium hover:bg-gray-50 transition">
+                        Elenco
+                    </button>
+                </div>
+
+                {{-- Map Container --}}
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                    <div id="map" class="w-full h-[600px]"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@push('scripts')
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+    // Initialize map
+    const map = L.map('map').setView([43.7696, 11.2558], 13); // Firenze
+
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Add sample marker
+    const marker = L.marker([43.7696, 11.2558]).addTo(map);
+    marker.bindPopup('<b>Segnalazione</b><br>Esempio segnalazione').openPopup();
+</script>
+@endpush
+@endsection
