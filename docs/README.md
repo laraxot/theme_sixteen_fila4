@@ -76,6 +76,7 @@ Themes/Sixteen/
 │   ├── agid-bootstrap-italia-gap-analysis.md  # Gap analysis AGID
 │   ├── bootstrap-italia-compliance-analysis.md # Stato compliance
 │   ├── components-status.md        # Stato componenti
+│   ├── filament-4-login-widget-implementation.md # ✅ Login Widget Guide
 │   └── index.md                    # Indice documentazione
 ├── resources/views/components/
 │   └── bootstrap-italia/           # 🎨 Componenti AGID

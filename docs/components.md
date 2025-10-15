@@ -482,13 +482,83 @@ Stato vuoto per liste o contenuti.
 ```
 
 ### Badge
-Badge per etichette e stati.
+Badge per etichette e stati, basato su Bootstrap Italia.
+
+#### Badge Base
+Badge generico con varianti di colore:
 
 ```blade
-<x-pub_theme::badge.success>Attivo</x-pub_theme::badge.success>
-<x-pub_theme::badge.warning>In Attesa</x-pub_theme::badge.warning>
-<x-pub_theme::badge.error>Errore</x-pub_theme::badge.error>
-<x-pub_theme::badge.info>Info</x-pub_theme::badge.info>
+<x-pub_theme::badge>Default</x-pub_theme::badge>
+<x-pub_theme::badge variant="primary">Primary</x-pub_theme::badge>
+<x-pub_theme::badge variant="secondary">Secondary</x-pub_theme::badge>
+<x-pub_theme::badge variant="success">Success</x-pub_theme::badge>
+<x-pub_theme::badge variant="danger">Danger</x-pub_theme::badge>
+<x-pub_theme::badge variant="warning">Warning</x-pub_theme::badge>
+<x-pub_theme::badge variant="info">Info</x-pub_theme::badge>
+```
+
+**Proprietà:**
+- `variant`: Variante di colore (primary, secondary, success, danger, warning, info, light, dark)
+- `pill`: Rende il badge arrotondato (boolean)
+- `as-link`: Trasforma il badge in un link (boolean)
+- `href`: URL del link quando `as-link` è true
+- `sr-text`: Testo per screen reader
+
+#### Badge Status (Ticket)
+Badge specializzato per visualizzare lo stato dei ticket, integrato con `TicketStatusEnum`:
+
+```blade
+<x-pub_theme::badge.status :status="$ticket->status" />
+```
+
+Il componente supporta automaticamente tutti gli stati definiti in `Modules\Fixcity\Enums\TicketStatusEnum`:
+- `draft`: Bozza (grigio)
+- `pending`: In attesa (giallo)
+- `assigned`: Assegnato (blu)
+- `in_review`: In revisione (blu)
+- `in_progress`: In corso (arancione)
+- `on_hold`: In pausa (rosso)
+- `approved`: Approvato (verde)
+- `rejected`: Rifiutato (rosso)
+- `resolved`: Risolto (verde)
+- `closed`: Chiuso (grigio)
+- `reopened`: Riaperto (rosa)
+- `open`: Aperto (giallo)
+
+Le traduzioni sono gestite automaticamente tramite `fixcity::ticket.fields.status.options.*`
+
+#### Badge Priority (Ticket)
+Badge specializzato per visualizzare la priorità dei ticket, integrato con `TicketPriorityEnum`:
+
+```blade
+<x-pub_theme::badge.priority :priority="$ticket->priority" />
+```
+
+Il componente supporta automaticamente tutti i livelli di priorità definiti in `Modules\Fixcity\Enums\TicketPriorityEnum`:
+- `low`: Bassa (info/blu)
+- `medium`: Media (giallo)
+- `high`: Alta (arancione)
+- `critical`: Critica (rosso)
+- `urgent`: Urgente (rosso intenso)
+
+Le traduzioni sono gestite automaticamente tramite `fixcity::ticket.fields.priority.options.*`
+
+#### Esempio Completo
+Utilizzo dei badge nel contesto di una card ticket:
+
+```blade
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{ $ticket->name }}</h5>
+        
+        <div class="mb-3">
+            <x-pub_theme::badge.status :status="$ticket->status" />
+            <x-pub_theme::badge.priority :priority="$ticket->priority" />
+        </div>
+        
+        <p class="card-text">{{ $ticket->content }}</p>
+    </div>
+</div>
 ```
 
 ## Customizzazione

@@ -79,7 +79,7 @@ new class extends \Livewire\Volt\Component {
         return count($this->getFilteredTickets());
     }
 }
-<x-sixteen::layouts.app>
+<x-pub_theme::layouts.app>
     <div class="min-h-screen bg-gray-50">
         <!-- Header Comunale -->
         <header class="bg-gradient-to-r from-blue-800 to-blue-900 text-white">
@@ -304,5 +304,5 @@ new class extends \Livewire\Volt\Component {
             </div>
         </main>
     </div>
-</x-sixteen::layouts.app>
+</x-pub_theme::layouts.app>
 @endvolt
