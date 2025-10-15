@@ -31,8 +31,8 @@
 
             {{-- Status and Priority Badges --}}
             <div class="mb-3">
-                <x-sixteen::badge.status :status="$ticket->status" />
-                <x-sixteen::badge.priority :priority="$ticket->priority" />
+                <x-pub_theme::badge.status :status="$ticket->status" />
+                <x-pub_theme::badge.priority :priority="$ticket->priority" />
             </div>
 
             {{-- Description --}}

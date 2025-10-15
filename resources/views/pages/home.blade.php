@@ -5,7 +5,7 @@ use function Laravel\Folio\name;
 name('home');
 ?>
 
-<x-sixteen::layouts.app>
+<x-pub_theme::layouts.app>
     <div class="min-h-screen bg-gray-50">
         <!-- Header Comunale -->
         <header class="bg-gradient-to-r from-blue-800 to-blue-900 text-white">
@@ -144,4 +144,4 @@ name('home');
             </div>
         </main>
     </div>
-</x-sixteen::layouts.app>
+</x-pub_theme::layouts.app>
