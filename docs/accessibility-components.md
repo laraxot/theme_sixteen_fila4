@@ -76,7 +76,164 @@ Componente per la gestione del consenso ai cookie conforme al GDPR.
 - Accessibilità completa con ARIA attributes
 - Conformità AGID design system
 
-### 4. Contrast Toggle
+### 4. Hero Component
+
+Componente hero per sezioni principali delle pagine.
+
+**Percorso**: `resources/views/components/ui/hero.blade.php`
+
+**Utilizzo**:
+```blade
+<x-pub_theme::ui.hero type="centered" size="small">
+    <x-slot name="content">
+        <h1>Titolo principale</h1>
+        <p>Descrizione della sezione</p>
+    </x-slot>
+</x-pub_theme::ui.hero>
+```
+
+**Caratteristiche**:
+- Supporto per diversi tipi (centered, image, video)
+- Dimensioni flessibili (small, medium, large)
+- Immagini di sfondo personalizzabili
+- Accessibilità completa con ARIA attributes
+- Conformità AGID design system
+
+### 5. Tab Component
+
+Componente per la navigazione a tab.
+
+**Percorso**: `resources/views/components/ui/tab.blade.php`
+
+**Utilizzo**:
+```blade
+<x-pub_theme::ui.tab orientation="horizontal" full-width="true">
+    <x-slot name="tabs">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab">
+                Tab 1
+            </button>
+        </li>
+    </x-slot>
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab1" role="tabpanel">
+            Contenuto tab 1
+        </div>
+    </div>
+</x-pub_theme::ui.tab>
+```
+
+**Caratteristiche**:
+- Supporto per orientamento orizzontale e verticale
+- Navigazione da tastiera completa
+- Accessibilità completa con ARIA attributes
+- Conformità AGID design system
+
+### 6. Accordion Component
+
+Componente accordion per contenuti espandibili.
+
+**Percorso**: `resources/views/components/ui/accordion.blade.php`
+
+**Utilizzo**:
+```blade
+<x-pub_theme::ui.accordion>
+    <x-slot name="items">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                    Item 1
+                </button>
+            </h2>
+            <div id="collapse1" class="accordion-collapse collapse show">
+                <div class="accordion-body">
+                    Contenuto item 1
+                </div>
+            </div>
+        </div>
+    </x-slot>
+</x-pub_theme::ui.accordion>
+```
+
+**Caratteristiche**:
+- Supporto per contenuti espandibili
+- Navigazione da tastiera completa
+- Accessibilità completa con ARIA attributes
+- Conformità AGID design system
+
+### 7. Bottom Navigation Component
+
+Componente per la navigazione in fondo alla pagina.
+
+**Percorso**: `resources/views/components/navigation/bottom-nav.blade.php`
+
+**Utilizzo**:
+```blade
+<x-pub_theme::navigation.bottom-nav fixed="false">
+    <x-slot name="links">
+        <a href="#" class="nav-link active">
+            <svg class="icon"><use href="#it-home"></use></svg>
+            <span class="bottom-nav-label">Home</span>
+        </a>
+    </x-slot>
+</x-pub_theme::navigation.bottom-nav>
+```
+
+**Caratteristiche**:
+- Navigazione mobile-friendly
+- Supporto per icone e etichette
+- Posizionamento fisso o relativo
+- Accessibilità completa con ARIA attributes
+- Conformità AGID design system
+
+### 8. AGID Service Card Component
+
+Componente per la visualizzazione di card di servizi conformi al design system AGID.
+
+**Percorso**: `resources/views/components/agid/service-card.blade.php`
+
+**Utilizzo**:
+```blade
+<x-pub_theme::agid.service-card
+    title="Nome Servizio"
+    description="Descrizione del servizio"
+    icon="it-settings"
+    url="/servizio"
+    category="Categoria"
+/>
+```
+
+**Caratteristiche**:
+- Design conforme al design system AGID
+- Supporto per icone e categorie
+- Link ai servizi
+- Accessibilità completa con ARIA attributes
+- Conformità AGID design system
+
+### 9. AGID Services Grid Component
+
+Componente per la visualizzazione di una griglia di servizi conformi al design system AGID.
+
+**Percorso**: `resources/views/components/agid/services-grid.blade.php`
+
+**Utilizzo**:
+```blade
+<x-pub_theme::agid.services-grid
+    :services="$services"
+    :columns="3"
+    :show-filters="true"
+    :show-search="true"
+/>
+```
+
+**Caratteristiche**:
+- Griglia responsive per servizi
+- Filtri e ricerca integrata
+- Design conforme al design system AGID
+- Accessibilità completa con ARIA attributes
+- Conformità AGID design system
+
+### 10. Contrast Toggle
 
 Componente per il controllo del contrasto dell'interfaccia.
 
