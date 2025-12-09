@@ -22,10 +22,6 @@ Questo comando si occupa di copiare e generare tutti gli asset necessari, risolv
 ---
 
 ## Collegamenti
-<<<<<<< HEAD
 - [Guida risoluzione errore Vite nella root](../../../../project_docs/modules/cms.md)
-=======
-- [Guida risoluzione errore Vite nella root](../../../docs/modules/cms.md)
->>>>>>> c8b07ab (.)
 
 Vedi anche la sezione "Gestione temi e asset" nella documentazione di root del progetto.
