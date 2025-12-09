@@ -15,6 +15,7 @@
 
         <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <x-forms.input-label for="update_password_current_password" :value="__('Current Password')" />
             <x-forms.text-input id="update_password_current_password" name="current_password" type="password" class="mt-1 block w-full" autocomplete="current-password" />
             <x-forms.input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" />
@@ -35,6 +36,8 @@
         <div class="flex items-center gap-4">
             <x-utilities.primary-button>{{ __('Save') }}</x-primary-button>
 =======
+=======
+>>>>>>> 0eb3291 (.)
             <x-input-label for="update_password_current_password" :value="__('Current Password')" />
             <x-text-input id="update_password_current_password" name="current_password" type="password" class="mt-1 block w-full" autocomplete="current-password" />
             <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" />
@@ -54,7 +57,10 @@
 
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
+<<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
 
             @if (session('status') === 'password-updated')
                 <p
