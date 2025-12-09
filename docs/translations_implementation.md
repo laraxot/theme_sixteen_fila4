@@ -10,13 +10,6 @@ Il tema Sixteen include un sistema completo di traduzioni per l'autenticazione i
 ## ⚠️ **CORREZIONE CRITICA - Namespace**
 
 **IMPORTANTE**: Il tema Sixteen usa il namespace `pub_theme::` per le traduzioni, NON `pub_theme::`.
-<<<<<<< HEAD
-<<<<<<< HEAD
-**IMPORTANTE**: Il tema Sixteen usa il namespace `pub_theme::` per le traduzioni, NON `sixteen::`.
-=======
->>>>>>> 90b9679 (.)
-=======
->>>>>>> 7401ccb (.)
 
 ### Namespace Corretto
 ```php
@@ -27,14 +20,6 @@ __('pub_theme::auth.failed')
 // ERRATO
 __('pub_theme::auth.login.title')
 __('pub_theme::auth.failed')
-<<<<<<< HEAD
-<<<<<<< HEAD
-__('sixteen::auth.login.title')
-__('sixteen::auth.failed')
-=======
->>>>>>> 90b9679 (.)
-=======
->>>>>>> 7401ccb (.)
 ```
 
 ## Struttura delle Traduzioni
@@ -296,13 +281,6 @@ $this->addError('email', __('pub_theme::auth.failed'));
 ### 5. Namespace
 - **SEMPRE** usare `pub_theme::` per i temi
 - **NON** usare nomi specifici del tema (es. `pub_theme::`)
-<<<<<<< HEAD
-<<<<<<< HEAD
-- **NON** usare nomi specifici del tema (es. `sixteen::`)
-=======
->>>>>>> 90b9679 (.)
-=======
->>>>>>> 7401ccb (.)
 - Verificare sempre la documentazione prima di implementare
 
 ## Manutenzione
@@ -336,13 +314,6 @@ Il sistema di traduzioni del tema Sixteen è completo e copre tutti gli aspetti 
 - ✅ **Best practices**: Struttura gerarchica e parametri
 - ✅ **Manutenibilità**: Documentazione completa
 - ✅ **Namespace corretto**: `pub_theme::` invece di `pub_theme::`
-<<<<<<< HEAD
-<<<<<<< HEAD
-- ✅ **Namespace corretto**: `pub_theme::` invece di `sixteen::`
-=======
->>>>>>> 90b9679 (.)
-=======
->>>>>>> 7401ccb (.)
 
 ---
 
@@ -350,12 +321,4 @@ Il sistema di traduzioni del tema Sixteen è completo e copre tutti gli aspetti 
 *Tema: Sixteen*
 *Stato: Traduzioni complete implementate + Namespace corretto*
 *Lingue: IT, EN, DE*
-<<<<<<< HEAD
-<<<<<<< HEAD
 *Namespace: pub_theme::* 
-=======
-*Namespace: pub_theme::* 
->>>>>>> 90b9679 (.)
-=======
-*Namespace: pub_theme::* 
->>>>>>> 7401ccb (.)
