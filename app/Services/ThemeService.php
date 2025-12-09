@@ -4,8 +4,13 @@ declare(strict_types=1);
 
 namespace Themes\Sixteen\Services;
 
+<<<<<<< HEAD
 use InvalidArgumentException;
 use Themes\Sixteen\Services\MenuBuilder;
+=======
+use Themes\Sixteen\Services\MenuBuilder;
+
+>>>>>>> 92783b6 (.)
 /**
  * Servizio per la gestione del tema Sixteen.
  * 
@@ -32,15 +37,29 @@ class ThemeService
     }
 
     /**
+<<<<<<< HEAD
      * Ottiene il nome del tema.
      */
     public function getName(): string
+=======
+     * Restituisce il nome del tema.
+     *
+     * @return string
+     */
+    public function getThemeName(): string
+>>>>>>> 92783b6 (.)
     {
         return $this->themeName;
     }
 
     /**
+<<<<<<< HEAD
      * Ottiene la versione del tema.
+=======
+     * Restituisce la versione del tema.
+     *
+     * @return string
+>>>>>>> 92783b6 (.)
      */
     public function getVersion(): string
     {
@@ -48,19 +67,38 @@ class ThemeService
     }
 
     /**
+<<<<<<< HEAD
      * Ottiene le informazioni del tema.
      */
     public function getInfo(): array
+=======
+     * Restituisce la configurazione del tema.
+     *
+     * @return array<string, mixed>
+     */
+    public function getConfig(): array
+>>>>>>> 92783b6 (.)
     {
         return [
             'name' => $this->themeName,
             'version' => $this->version,
+<<<<<<< HEAD
             'description' => 'Tema Sixteen per SaluteOra - AGID Bootstrap Italia compliant',
             'author' => 'SaluteOra Team',
             'agid_compliant' => true,
             'bootstrap_italia' => true,
             'tailwind_css' => true,
             'accessibility' => 'WCAG 2.1 AA',
+=======
+            'author' => 'Laraxot Team',
+            'description' => 'Modern responsive theme for Laraxot applications',
+            'features' => [
+                'responsive_design',
+                'dark_mode_support',
+                'component_library',
+                'accessibility_compliant',
+            ],
+>>>>>>> 92783b6 (.)
         ];
     }
 
@@ -85,6 +123,7 @@ class ThemeService
         // Configurazione dei componenti del tema
         // Setup delle configurazioni specifiche
     }
+<<<<<<< HEAD
 
     /**
      * Ottiene il Menu Builder per accesso diretto ai menu
@@ -157,4 +196,6 @@ class ThemeService
 
         return config('sixteen.' . $key, $default);
     }
+=======
+>>>>>>> 92783b6 (.)
 }
