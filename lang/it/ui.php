@@ -52,4 +52,8 @@ return [
     'menu' => 'Menu',
     'close' => 'Chiudi',
     'open' => 'Apri',
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> bdc7dd6 (.)
