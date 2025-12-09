@@ -11,6 +11,7 @@
                 @livewire('profile.update-profile-information-form')
 
                 <x-section-border />
+                <x-section-border />
             @endif
 
             @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::updatePasswords()))
@@ -18,6 +19,7 @@
                     @livewire('profile.update-password-form')
                 </div>
 
+                <x-section-border />
                 <x-section-border />
             @endif
 
@@ -27,6 +29,7 @@
                 </div>
 
                 <x-section-border />
+                <x-section-border />
             @endif
 
             <div class="mt-10 sm:mt-0">
@@ -34,6 +37,7 @@
             </div>
 
             @if (Laravel\Jetstream\Jetstream::hasAccountDeletionFeatures())
+                <x-section-border />
                 <x-section-border />
 
                 <div class="mt-10 sm:mt-0">

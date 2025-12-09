@@ -510,4 +510,7 @@ php artisan translation:preload --theme=sixteen
 
 **Versione**: 1.0.0  
 **Ultimo aggiornamento**: Gennaio 2025  
+<<<<<<< HEAD
 **Compatibilità**: Laravel 10+, Filament 3.x, Tailwind CSS 3.x 
+=======
+>>>>>>> a153bba (.)

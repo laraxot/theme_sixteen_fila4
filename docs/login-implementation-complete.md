@@ -274,4 +274,7 @@ $request->validate([
 **Data Implementazione**: Dicembre 2024  
 **Versione**: 1.0  
 **Status**: Fase 1 Completata ✅  
+<<<<<<< HEAD
 **Prossimo Step**: Fase 2 - Semplificazione View Livewire 
+=======
+>>>>>>> a153bba (.)

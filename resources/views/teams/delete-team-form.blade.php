@@ -1,4 +1,5 @@
 <x-action-section>
+<x-action-section>
     <x-slot name="title">
         {{ __('Delete Team') }}
     </x-slot>
