@@ -149,3 +149,76 @@
         </div>
     </div>
 </header>
+
+{{-- JavaScript for mobile menu and dropdowns --}}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu functionality
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+
+            // Toggle icons
+            if (menuIconOpen && menuIconClose) {
+                menuIconOpen.classList.toggle('hidden');
+                menuIconClose.classList.toggle('hidden');
+            }
+        });
+    }
+
+    // User dropdown functionality
+    const dropdownButton = document.getElementById('dropdownDefaultButton');
+    const dropdown = document.getElementById('dropdown');
+
+    if (dropdownButton && dropdown) {
+        dropdownButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            const isExpanded = dropdownButton.getAttribute('aria-expanded') === 'true';
+
+            dropdownButton.setAttribute('aria-expanded', !isExpanded);
+            dropdown.classList.toggle('hidden');
+
+            // Rotate arrow
+            const arrow = dropdownButton.querySelector('svg:last-child');
+            if (arrow) {
+                arrow.classList.toggle('rotate-180');
+            }
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!dropdownButton.contains(event.target) && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+                dropdownButton.setAttribute('aria-expanded', 'false');
+
+                const arrow = dropdownButton.querySelector('svg:last-child');
+                if (arrow) {
+                    arrow.classList.remove('rotate-180');
+                }
+            }
+        });
+
+        // Close dropdown with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && !dropdown.classList.contains('hidden')) {
+                dropdown.classList.add('hidden');
+                dropdownButton.setAttribute('aria-expanded', 'false');
+                dropdownButton.focus();
+
+                const arrow = dropdownButton.querySelector('svg:last-child');
+                if (arrow) {
+                    arrow.classList.remove('rotate-180');
+                }
+            }
+        });
+    }
+});
+</script>
