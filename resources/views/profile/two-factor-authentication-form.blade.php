@@ -1,8 +1,5 @@
 <x-action-section>
-<<<<<<< HEAD
 <x-action-section>
-=======
->>>>>>> 92783b6 (.)
     <x-slot name="title">
         {{ __('Two Factor Authentication') }}
     </x-slot>
@@ -126,7 +123,4 @@
         </div>
     </x-slot>
 </x-action-section>
-<<<<<<< HEAD
 </x-action-section>
-=======
->>>>>>> 92783b6 (.)

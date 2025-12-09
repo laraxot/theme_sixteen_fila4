@@ -31,12 +31,9 @@
                 <x-input-label for="password" value="{{ __('Password') }}" class="sr-only" />
 
                 <x-text-input
-<<<<<<< HEAD
                 <x-input-label for="password" value="{{ __('Password') }}" class="sr-only" />
 
                 <x-text-input
-=======
->>>>>>> 92783b6 (.)
                     id="password"
                     name="password"
                     type="password"
