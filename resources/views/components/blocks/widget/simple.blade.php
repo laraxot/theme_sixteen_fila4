@@ -16,4 +16,8 @@
             {{ $label ?? 'Vai' }}
         </button>
     @endif
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> bdc7dd6 (.)

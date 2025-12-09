@@ -11,6 +11,7 @@
         "build:filament": "vite build --mode filament",
         "build:filament:dev": "vite build --mode filament --watch",
         "preview": "vite preview",
+<<<<<<< HEAD
         "copy": "cp -r ./public/* ../../../public_html/themes/Sixteen/",
         "copy:filament": "cp -r ./public/* ../../../public_html/themes/Sixteen/ && cp -r ./resources/dist/* ../../../public_html/themes/Sixteen/",
         "copy:watch": "nodemon --watch ./public --exec 'npm run copy'",
@@ -58,6 +59,8 @@
         "@tailwindcss/postcss": "^4.1.13",
         "bootstrap-italia": "^2.16.0"
         "preview": "vite preview",
+=======
+>>>>>>> bdc7dd6 (.)
         "copy": "cp -r ./resources/dist/* ../../../public_html/themes/Sixteen/"
     },
     "devDependencies": {

@@ -23,7 +23,10 @@
                 @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
                     <div class="ms-3 relative">
                         <x-dropdown align="right" width="60">
+<<<<<<< HEAD
                         <x-dropdown align="right" width="60">
+=======
+>>>>>>> bdc7dd6 (.)
                             <x-slot name="trigger">
                                 <span class="inline-flex rounded-md">
                                     <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none focus:bg-gray-50 dark:focus:bg-gray-700 active:bg-gray-50 dark:active:bg-gray-700 transition ease-in-out duration-150">
@@ -45,13 +48,19 @@
 
                                     <!-- Team Settings -->
                                     <x-dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}">
+<<<<<<< HEAD
                                     <x-dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}">
+=======
+>>>>>>> bdc7dd6 (.)
                                         {{ __('Team Settings') }}
                                     </x-dropdown-link>
 
                                     @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
                                         <x-dropdown-link href="{{ route('teams.create') }}">
+<<<<<<< HEAD
                                         <x-dropdown-link href="{{ route('teams.create') }}">
+=======
+>>>>>>> bdc7dd6 (.)
                                             {{ __('Create New Team') }}
                                         </x-dropdown-link>
                                     @endcan
@@ -71,14 +80,20 @@
                                 </div>
                             </x-slot>
                         </x-dropdown>
+<<<<<<< HEAD
                         </x-dropdown>
+=======
+>>>>>>> bdc7dd6 (.)
                     </div>
                 @endif
 
                 <!-- Settings Dropdown -->
                 <div class="ms-3 relative">
                     <x-dropdown align="right" width="48">
+<<<<<<< HEAD
                     <x-dropdown align="right" width="48">
+=======
+>>>>>>> bdc7dd6 (.)
                         <x-slot name="trigger">
                             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                                 <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
@@ -104,13 +119,19 @@
                             </div>
 
                             <x-dropdown-link href="{{ route('profile.show') }}">
+<<<<<<< HEAD
                             <x-dropdown-link href="{{ route('profile.show') }}">
+=======
+>>>>>>> bdc7dd6 (.)
                                 {{ __('Profile') }}
                             </x-dropdown-link>
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                 <x-dropdown-link href="{{ route('api-tokens.index') }}">
+<<<<<<< HEAD
                                 <x-dropdown-link href="{{ route('api-tokens.index') }}">
+=======
+>>>>>>> bdc7dd6 (.)
                                     {{ __('API Tokens') }}
                                 </x-dropdown-link>
                             @endif
@@ -122,14 +143,20 @@
                                 @csrf
 
                                 <x-dropdown-link href="{{ route('logout') }}"
+<<<<<<< HEAD
                                 <x-dropdown-link href="{{ route('logout') }}"
+=======
+>>>>>>> bdc7dd6 (.)
                                          @click.prevent="$root.submit();">
                                     {{ __('Log Out') }}
                                 </x-dropdown-link>
                             </form>
                         </x-slot>
                     </x-dropdown>
+<<<<<<< HEAD
                     </x-dropdown>
+=======
+>>>>>>> bdc7dd6 (.)
                 </div>
             </div>
 

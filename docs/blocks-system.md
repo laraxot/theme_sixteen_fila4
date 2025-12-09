@@ -55,7 +55,10 @@ resources/views/components/blocks/
 
 **Esempio di Utilizzo**:
 ```blade
+<<<<<<< HEAD
 <x-cards.basic
+=======
+>>>>>>> bdc7dd6 (.)
 <x-blocks.cards.basic
     title="Servizio Anagrafe"
     subtitle="Servizi demografici"
@@ -65,7 +68,10 @@ resources/views/components/blocks/
     link="/servizi/anagrafe"
 />
 
+<<<<<<< HEAD
 <x-cards.featured
+=======
+>>>>>>> bdc7dd6 (.)
 <x-blocks.cards.featured
     title="Servizio in Evidenza"
     content="Contenuto del servizio principale"
@@ -102,7 +108,10 @@ resources/views/components/blocks/
 
 **Esempio di Utilizzo**:
 ```blade
+<<<<<<< HEAD
 <x-buttons.primary
+=======
+>>>>>>> bdc7dd6 (.)
 <x-blocks.buttons.primary
     text="Accedi al Servizio"
     icon="<svg>...</svg>"
@@ -113,7 +122,10 @@ resources/views/components/blocks/
     href="/login"
 />
 
+<<<<<<< HEAD
 <x-buttons.cta
+=======
+>>>>>>> bdc7dd6 (.)
 <x-blocks.buttons.cta
     text="Inizia Ora"
     size="xl"
@@ -164,7 +176,10 @@ public function form(Form $form): Form
 }
 
 // Nel template Blade
+<<<<<<< HEAD
 <x-cards.{{ $record->card_variant }}
+=======
+>>>>>>> bdc7dd6 (.)
 <x-blocks.cards.{{ $record->card_variant }}
     :title="$record->title"
     :content="$record->content"
@@ -189,7 +204,10 @@ $blockData = [
 
 ```blade
 {{-- Nel template --}}
+<<<<<<< HEAD
 <x-cards.{{ $blockType }} v-bind="$blockData" />
+=======
+>>>>>>> bdc7dd6 (.)
 <x-blocks.cards.{{ $blockType }} v-bind="$blockData" />
 ```
 
@@ -258,9 +276,12 @@ $testProps = [
 ];
 
 // Deve funzionare con qualsiasi variante
+<<<<<<< HEAD
 <x-cards.basic v-bind="$testProps" />
 <x-cards.featured v-bind="$testProps" />  
 <x-cards.service v-bind="$testProps" />
+=======
+>>>>>>> bdc7dd6 (.)
 <x-blocks.cards.basic v-bind="$testProps" />
 <x-blocks.cards.featured v-bind="$testProps" />  
 <x-blocks.cards.service v-bind="$testProps" />

@@ -180,14 +180,22 @@ return [
     {{-- Header Istituzionale AGID-Compliant --}}
     <x-slot name="header">
         {{-- Header Slim (Ente + Link Istituzionali) --}}
+<<<<<<< HEAD
         <x-pub_theme::navigation.header-slim 
+=======
+        <x-pub_theme::blocks.navigation.header-slim 
+>>>>>>> bdc7dd6 (.)
             :enteName="config('app.name', __('config.app.default_ente'))"
             :enteUrl="route('home')"
             :showLinks="true"
         />
 
         {{-- Header Main (Logo + Nome Ente + Tagline) --}}
+<<<<<<< HEAD
         <x-pub_theme::navigation.header-main 
+=======
+        <x-pub_theme::blocks.navigation.header-main 
+>>>>>>> bdc7dd6 (.)
             :logoSrc="asset('themes/Sixteen/images/logo-pa.svg')"
             :enteName="config('app.name', __('config.app.default_ente'))"
             :serviceTagline="config('app.tagline', __('config.app.default_tagline'))"
@@ -195,7 +203,11 @@ return [
         />
 
         {{-- Breadcrumb Navigation Semantica --}}
+<<<<<<< HEAD
         <x-pub_theme::navigation.breadcrumb 
+=======
+        <x-pub_theme::blocks.navigation.breadcrumb 
+>>>>>>> bdc7dd6 (.)
             :items="[
                 ['url' => route('home'), 'title' => __('auth.login.breadcrumb_home')],
                 ['title' => __('auth.login.breadcrumb_login')]
@@ -313,7 +325,11 @@ return [
 
     {{-- Footer Istituzionale AGID-Compliant --}}
     <x-slot name="footer">
+<<<<<<< HEAD
         <x-pub_theme::navigation.footer-institutional 
+=======
+        <x-pub_theme::blocks.navigation.footer-institutional 
+>>>>>>> bdc7dd6 (.)
             :enteName="config('app.name', __('config.app.default_ente'))"
             :enteDescription="config('app.tagline', __('config.app.default_tagline'))"
             :logoSrc="asset('themes/Sixteen/images/logo-white.svg')"
