@@ -2,13 +2,10 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-=======
 use Themes\Sixteen\Filters\HrefMenuFilter;
 use Themes\Sixteen\Filters\ActiveMenuFilter;
 use Themes\Sixteen\Filters\GateMenuFilter;
 
->>>>>>> 7401ccb (.)
 return [
     /*
     |--------------------------------------------------------------------------
@@ -391,15 +388,9 @@ return [
     |
     */
     'menu_filters' => [
-<<<<<<< HEAD
-        \Themes\Sixteen\Filters\HrefMenuFilter::class,
-        \Themes\Sixteen\Filters\ActiveMenuFilter::class,
-        \Themes\Sixteen\Filters\GateMenuFilter::class,
-=======
         HrefMenuFilter::class,
         ActiveMenuFilter::class,
         GateMenuFilter::class,
->>>>>>> 7401ccb (.)
     ],
 
     /*
@@ -485,8 +476,4 @@ return [
         'show_component_info' => env('SIXTEEN_DEBUG_COMPONENTS', false),
         'log_menu_build' => env('SIXTEEN_LOG_MENU', false),
     ],
-<<<<<<< HEAD
 ];
-=======
-];
->>>>>>> 7401ccb (.)
