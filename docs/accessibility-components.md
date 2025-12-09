@@ -194,7 +194,7 @@ Componente per la visualizzazione di card di servizi conformi al design system A
 
 **Utilizzo**:
 ```blade
-<x-pub_theme::agid.service-card
+<x-ui.service-card
     title="Nome Servizio"
     description="Descrizione del servizio"
     icon="it-settings"
@@ -218,7 +218,7 @@ Componente per la visualizzazione di una griglia di servizi conformi al design s
 
 **Utilizzo**:
 ```blade
-<x-pub_theme::agid.services-grid
+<x-ui.services-grid
     :services="$services"
     :columns="3"
     :show-filters="true"

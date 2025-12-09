@@ -308,18 +308,24 @@ function showDynamicNotification(type, title, message, timeout = 5000) {
     
     const notificationId = 'notification-' + Date.now();
     const notification = document.createElement('div');
+    notification.className = 'alert alert-' + type + ' alert-dismissible fade show position-fixed top-0 end-0 m-3 z-3';
+    notification.id = notificationId;
+    notification.setAttribute('role', 'alert');
+    notification.setAttribute('aria-live', 'polite');
+    
     notification.innerHTML = `
-        <x-notifiche 
-            type="${type}"
-            title="${title || ''}"
-            message="${message || ''}"
-            position="fixed"
-            :timeout="${timeout}"
-            id="${notificationId}"
-        />
+        <div class="d-flex align-items-start">
+            <div class="flex-grow-1">
+                ${title ? '<h5 class="alert-heading mb-2">' + title + '</h5>' : ''}
+                ${message ? '<p class="mb-0">' + message + '</p>' : ''}
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Chiudi notifica">
+                <svg class="icon icon-sm"><use href="#it-close"></use></svg>
+            </button>
+        </div>
     `;
     
-    container.appendChild(notification.firstElementChild);
+    container.appendChild(notification);
 }
 
 function createNotificationContainer() {

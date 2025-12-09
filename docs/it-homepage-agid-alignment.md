@@ -107,3 +107,4 @@ npm run copy
 - Scrivere test di snapshot visuali/HTML minimi per header e nav.
 
 
+

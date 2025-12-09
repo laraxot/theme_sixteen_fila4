@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Themes\Sixteen\Services;
 
-use InvalidArgumentException;
 use Themes\Sixteen\Services\MenuBuilder;
 /**
  * Servizio per la gestione del tema Sixteen.
@@ -104,7 +103,7 @@ class ThemeService
             'header' => $this->menuBuilder->getHeader()->toArray(),
             'footer' => $this->menuBuilder->getFooter()->toArray(),
             'footer_bar' => $this->menuBuilder->getFooterBar()->toArray(),
-            default => throw new InvalidArgumentException("Unknown menu location: {$location}")
+            default => throw new \InvalidArgumentException("Unknown menu location: {$location}")
         };
     }
 
