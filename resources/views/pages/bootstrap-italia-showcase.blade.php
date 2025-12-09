@@ -173,28 +173,28 @@ Comprehensive demo and testing page for all implemented components
                                 <div class="row">
                                     <div class="col-md-4">
                                         <h6>Progress Bars</h6>
-                                        <x-feedback.progress-indicators type="bar" :percentage="75" color="primary" label="Primary Progress" />
-                                        <x-feedback.progress-indicators type="bar" :percentage="60" color="success" label="Success Progress" class="mt-2" />
-                                        <x-feedback.progress-indicators type="bar" :percentage="40" color="warning" label="Warning Progress" class="mt-2" />
-                                        <x-feedback.progress-indicators type="bar" :percentage="75" color="primary" label="Primary Progress" />
-                                        <x-feedback.progress-indicators type="bar" :percentage="60" color="success" label="Success Progress" class="mt-2" />
-                                        <x-feedback.progress-indicators type="bar" :percentage="40" color="warning" label="Warning Progress" class="mt-2" />
+                                        <x-progress-indicators type="bar" :percentage="75" color="primary" label="Primary Progress" />
+                                        <x-progress-indicators type="bar" :percentage="60" color="success" label="Success Progress" class="mt-2" />
+                                        <x-progress-indicators type="bar" :percentage="40" color="warning" label="Warning Progress" class="mt-2" />
+                                        <x-progress-indicators type="bar" :percentage="75" color="primary" label="Primary Progress" />
+                                        <x-progress-indicators type="bar" :percentage="60" color="success" label="Success Progress" class="mt-2" />
+                                        <x-progress-indicators type="bar" :percentage="40" color="warning" label="Warning Progress" class="mt-2" />
                                     </div>
                                     <div class="col-md-4">
                                         <h6>Spinners</h6>
                                         <div class="d-flex gap-3 align-items-center">
-                                            <x-feedback.progress-indicators type="spinner" size="sm" active="true" />
-                                            <x-feedback.progress-indicators type="spinner" size="md" active="true" />
-                                            <x-feedback.progress-indicators type="spinner" size="lg" active="true" />
-                                            <x-feedback.progress-indicators type="spinner" size="sm" active="true" />
-                                            <x-feedback.progress-indicators type="spinner" size="md" active="true" />
-                                            <x-feedback.progress-indicators type="spinner" size="lg" active="true" />
+                                            <x-progress-indicators type="spinner" size="sm" active="true" />
+                                            <x-progress-indicators type="spinner" size="md" active="true" />
+                                            <x-progress-indicators type="spinner" size="lg" active="true" />
+                                            <x-progress-indicators type="spinner" size="sm" active="true" />
+                                            <x-progress-indicators type="spinner" size="md" active="true" />
+                                            <x-progress-indicators type="spinner" size="lg" active="true" />
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <h6>Donut Progress</h6>
-                                        <x-feedback.progress-indicators type="donut" :percentage="85" label="Completion Rate" />
-                                        <x-feedback.progress-indicators type="donut" :percentage="85" label="Completion Rate" />
+                                        <x-progress-indicators type="donut" :percentage="85" label="Completion Rate" />
+                                        <x-progress-indicators type="donut" :percentage="85" label="Completion Rate" />
                                     </div>
                                 </div>
                             </div>
@@ -250,8 +250,8 @@ Comprehensive demo and testing page for all implemented components
                         <div class="component-demo">
                             <h4 class="mb-3">Upload Component</h4>
                             <div class="demo-container bg-light p-4 rounded">
-                                <x-forms.upload 
-                                <x-forms.upload 
+                                <x-upload 
+                                <x-upload 
                                     name="demo_upload"
                                     label="Upload Files"
                                     accept=".pdf,.doc,.docx"
@@ -382,8 +382,8 @@ Comprehensive demo and testing page for all implemented components
                             <div class="demo-container bg-light p-4 rounded">
                                 <div class="mb-3">
                                     <label class="form-label">Interactive Rating:</label>
-                                    <x-media.rating 
-                                    <x-media.rating 
+                                    <x-rating 
+                                    <x-rating 
                                         name="demo_rating"
                                         stars="5"
                                         value="3"
@@ -391,8 +391,8 @@ Comprehensive demo and testing page for all implemented components
                                 </div>
                                 <div>
                                     <label class="form-label">Read-only Rating:</label>
-                                    <x-media.rating 
-                                    <x-media.rating 
+                                    <x-rating 
+                                    <x-rating 
                                         stars="5"
                                         value="4"
                                         readonly="true"
@@ -479,15 +479,15 @@ Comprehensive demo and testing page for all implemented components
                         <h6>Compliance Status</h6>
                         <div class="mb-2">
                             <small class="text-muted">WCAG 2.1 AA Compliance</small>
-                            <x-feedback.progress-indicators type="bar" :percentage="100" color="success" />
+                            <x-pub_theme::feedback.progress-indicators type="bar" :percentage="100" color="success" />
                         </div>
                         <div class="mb-2">
                             <small class="text-muted">Bootstrap Italia Standards</small>
-                            <x-feedback.progress-indicators type="bar" :percentage="95" color="success" />
+                            <x-pub_theme::feedback.progress-indicators type="bar" :percentage="95" color="success" />
                         </div>
                         <div class="mb-2">
                             <small class="text-muted">Italian PA Requirements</small>
-                            <x-feedback.progress-indicators type="bar" :percentage="98" color="success" />
+                            <x-pub_theme::feedback.progress-indicators type="bar" :percentage="98" color="success" />
                         </div>
                     </div>
                 </div>

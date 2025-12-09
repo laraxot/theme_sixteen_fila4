@@ -45,19 +45,18 @@ export default {
             },
             colors: {
                 // Colori AGID ufficiali (Agenzia per l'Italia Digitale)
-                // PRIMARY = VERDE PA (come Design Comuni)
                 primary: {
-                    50: '#e6f7f0',
-                    100: '#b3e6d1',
-                    200: '#80d5b2',
-                    300: '#4dc493',
-                    400: '#1ab374',
-                    500: '#00814A', // Primary GREEN PA (Design Comuni)
-                    600: '#006b3d',
-                    700: '#005530',
-                    800: '#003f23',
-                    900: '#002916',
-                    DEFAULT: '#00814A',
+                    50: '#e6f2ff',
+                    100: '#b3d9ff',
+                    200: '#80bfff',
+                    300: '#4da6ff',
+                    400: '#1a8cff',
+                    500: '#0066CC', // Primary blue AGID
+                    600: '#0052a3',
+                    700: '#003d7a',
+                    800: '#002952',
+                    900: '#001429',
+                    DEFAULT: '#0066CC',
                 },
                 success: {
                     50: '#e6f7f0',
@@ -345,7 +344,7 @@ export default {
         themes: [
             {
                 light: {
-                    primary: '#00814A', // Verde PA (Design Comuni)
+                    primary: '#0066CC',
                     secondary: '#6B7280',
                     accent: '#F5A623',
                     neutral: '#374151',
@@ -358,7 +357,7 @@ export default {
                     error: '#D9364F',
                 },
                 dark: {
-                    primary: '#00814A', // Verde PA (Design Comuni)
+                    primary: '#0066CC',
                     secondary: '#9CA3AF',
                     accent: '#F5A623',
                     neutral: '#D1D5DB',

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Themes\Sixteen\Services;
 
+use InvalidArgumentException;
 use Themes\Sixteen\Services\MenuBuilder;
 /**
  * Servizio per la gestione del tema Sixteen.
@@ -54,8 +55,8 @@ class ThemeService
         return [
             'name' => $this->themeName,
             'version' => $this->version,
-            'description' => 'Tema Sixteen per <nome progetto> - AGID Bootstrap Italia compliant',
-            'author' => '<nome progetto> Team',
+            'description' => 'Tema Sixteen per SaluteOra - AGID Bootstrap Italia compliant',
+            'author' => 'SaluteOra Team',
             'agid_compliant' => true,
             'bootstrap_italia' => true,
             'tailwind_css' => true,
@@ -103,7 +104,7 @@ class ThemeService
             'header' => $this->menuBuilder->getHeader()->toArray(),
             'footer' => $this->menuBuilder->getFooter()->toArray(),
             'footer_bar' => $this->menuBuilder->getFooterBar()->toArray(),
-            default => throw new \InvalidArgumentException("Unknown menu location: {$location}")
+            default => throw new InvalidArgumentException("Unknown menu location: {$location}")
         };
     }
 

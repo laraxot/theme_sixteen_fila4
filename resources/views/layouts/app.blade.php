@@ -14,14 +14,11 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'], 'themes/Sixteen')
 
-        <!-- Filament Styles -->
-        @filamentStyles
-        
         <!-- Styles -->
         @livewireStyles
     </head>
     <body class="font-sans antialiased">
-        <x-layout.sections.banner />
+        <x-banner />
 
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
             @livewire('navigation-menu')
@@ -44,8 +41,5 @@
         @stack('modals')
 
         @livewireScripts
-        
-        <!-- Filament Scripts -->
-        @filamentScripts
     </body>
 </html>

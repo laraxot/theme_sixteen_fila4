@@ -89,7 +89,7 @@
                 />
 
                 {{-- Tributi --}}
-                <x-ui.service-card
+                <x-pub_theme::agid.service-card
                     title="Pagamento Tributi"
                     description="Paga tasse, multe e tributi comunali in modo sicuro con il sistema PagoPA"
                     icon="heroicon-o-currency-euro"
@@ -99,7 +99,7 @@
                 />
 
                 {{-- Segnalazioni --}}
-                <x-ui.service-card
+                <x-pub_theme::agid.service-card
                     title="Segnalazioni"
                     description="Segnala guasti, disservizi o problematiche sul territorio comunale"
                     icon="heroicon-o-exclamation-triangle"
@@ -109,7 +109,7 @@
                 />
 
                 {{-- Prenotazioni --}}
-                <x-ui.service-card
+                <x-pub_theme::agid.service-card
                     title="Prenotazione Appuntamenti"
                     description="Prenota online appuntamenti con gli uffici comunali senza code né attese"
                     icon="heroicon-o-calendar"
@@ -119,7 +119,7 @@
                 />
 
                 {{-- Sociali --}}
-                <x-ui.service-card
+                <x-pub_theme::agid.service-card
                     title="Servizi Sociali"
                     description="Accedi ai servizi sociali, richiedi contributi e supporto per le famiglie"
                     icon="heroicon-o-heart"
@@ -185,7 +185,7 @@
                     <h3 class="text-2xl font-semibold text-gray-900">Urbanistica e Edilizia</h3>
                 </div>
                 
-                <x-ui.services-grid 
+                <x-pub_theme::agid.services-grid 
                     :services="[
                         ['title' => 'SUAP Online', 'description' => 'Sportello Unico Attività Produttive', 'category' => 'urbanistica', 'status' => 'active', 'requiresAuth' => true],
                         ['title' => 'Permessi di Costruire', 'description' => 'Richiesta permessi edilizi', 'category' => 'urbanistica', 'status' => 'active', 'requiresAuth' => true],
@@ -203,7 +203,7 @@
                     <h3 class="text-2xl font-semibold text-gray-900">Servizi Sociali</h3>
                 </div>
                 
-                <x-ui.services-grid 
+                <x-pub_theme::agid.services-grid 
                     :services="[
                         ['title' => 'Asili Nido', 'description' => 'Iscrizione e informazioni asili nido', 'category' => 'sociale', 'status' => 'active', 'requiresAuth' => true],
                         ['title' => 'Contributi Famiglie', 'description' => 'Richiesta contributi economici', 'category' => 'sociale', 'status' => 'active', 'requiresAuth' => true],
@@ -223,7 +223,7 @@
                     <h3 class="text-2xl font-semibold text-gray-900">Ambiente e Verde</h3>
                 </div>
                 
-                <x-ui.services-grid 
+                <x-pub_theme::agid.services-grid 
                     :services="[
                         ['title' => 'Raccolta Differenziata', 'description' => 'Informazioni e calendario raccolta', 'category' => 'ambiente', 'status' => 'active'],
                         ['title' => 'Segnalazione Rifiuti', 'description' => 'Segnala abbandono rifiuti', 'category' => 'ambiente', 'status' => 'active'],
@@ -327,3 +327,4 @@
         </div>
     </section>
 
+</x-layouts.main>

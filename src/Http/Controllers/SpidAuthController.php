@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Themes\Sixteen\Http\Controllers;
 
+use InvalidArgumentException;
+use Exception;
 use Illuminate\Http\{Request, RedirectResponse, Response};
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\{Auth, Log, Session};
@@ -35,12 +37,12 @@ class SpidAuthController extends Controller
             // Valida il provider
             $providers = $this->spidService->getProviders();
             if (!isset($providers[$provider])) {
-                throw new \InvalidArgumentException("Provider SPID '{$provider}' non supportato");
+                throw new InvalidArgumentException("Provider SPID '{$provider}' non supportato");
             }
 
             // Valida il livello SPID
             if (!in_array($level, [1, 2, 3])) {
-                throw new \InvalidArgumentException("Livello SPID non valido: {$level}");
+                throw new InvalidArgumentException("Livello SPID non valido: {$level}");
             }
 
             Log::info('SPID login initiated', [
@@ -54,7 +56,7 @@ class SpidAuthController extends Controller
             
             return redirect()->to($loginUrl);
 
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             Log::error('SPID login error', [
                 'provider' => $provider,
                 'error' => $e->getMessage(),
@@ -100,7 +102,7 @@ class SpidAuthController extends Controller
             return redirect()->to($returnUrl)
                 ->with('success', 'Autenticazione SPID completata con successo.');
 
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             Log::error('SPID callback error', [
                 'error' => $e->getMessage(),
                 'request_data' => $request->all(),
@@ -166,7 +168,7 @@ class SpidAuthController extends Controller
             return redirect()->route('home')
                 ->with('success', 'Logout effettuato con successo.');
 
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             Log::error('SPID logout error', [
                 'error' => $e->getMessage(),
                 'user_id' => Auth::id(),
@@ -217,7 +219,7 @@ class SpidAuthController extends Controller
             return response($sloResponse)
                 ->header('Content-Type', 'text/xml');
 
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             Log::error('SPID SLO error', [
                 'error' => $e->getMessage(),
                 'trace' => $e->getTraceAsString(),
@@ -243,7 +245,7 @@ class SpidAuthController extends Controller
                 ->header('Content-Type', 'application/samlmetadata+xml')
                 ->header('Content-Disposition', 'inline; filename="metadata.xml"');
 
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             Log::error('SPID metadata generation error', [
                 'error' => $e->getMessage(),
                 'trace' => $e->getTraceAsString(),
@@ -261,7 +263,7 @@ class SpidAuthController extends Controller
         $fiscalCode = $attributes['fiscal_code'];
         
         if (empty($fiscalCode)) {
-            throw new \Exception('Codice fiscale mancante nei dati SPID');
+            throw new Exception('Codice fiscale mancante nei dati SPID');
         }
 
         // Cerca utente per codice fiscale

@@ -180,18 +180,18 @@ class ThemeServiceProvider extends XotBaseThemeServiceProvider
     protected function registerAuthServices(): void
     {
         // Register SPID Auth Service
-        $this->app->singleton(\Themes\Sixteen\Services\SpidAuthService::class, function ($app) {
-            return new \Themes\Sixteen\Services\SpidAuthService();
+        $this->app->singleton(SpidAuthService::class, function ($app) {
+            return new SpidAuthService();
         });
         
         // Register CIE Auth Service  
-        $this->app->singleton(\Themes\Sixteen\Services\CieAuthService::class, function ($app) {
-            return new \Themes\Sixteen\Services\CieAuthService();
+        $this->app->singleton(CieAuthService::class, function ($app) {
+            return new CieAuthService();
         });
         
         // Aliases for easier access
-        $this->app->alias(\Themes\Sixteen\Services\SpidAuthService::class, 'sixteen.spid');
-        $this->app->alias(\Themes\Sixteen\Services\CieAuthService::class, 'sixteen.cie');
+        $this->app->alias(SpidAuthService::class, 'sixteen.spid');
+        $this->app->alias(CieAuthService::class, 'sixteen.cie');
     }
 
     /**

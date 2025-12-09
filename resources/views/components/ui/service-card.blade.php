@@ -409,7 +409,7 @@ document.addEventListener('DOMContentLoaded', function() {
 Usage Examples:
 
 1. Basic service card:
-<x-ui.service-card
+<x-pub_theme::agid.service-card
     title="Servizio Anagrafe"
     description="Gestione anagrafe cittadini e servizi demografici"
     icon="it-user"
@@ -418,7 +418,7 @@ Usage Examples:
 />
 
 2. Featured service card:
-<x-ui.service-card
+<x-pub_theme::agid.service-card
     title="Servizio Tributi"
     description="Pagamento tasse e tributi comunali"
     icon="it-credit-card"
@@ -428,7 +428,7 @@ Usage Examples:
 />
 
 3. Service card with image:
-<x-ui.service-card
+<x-pub_theme::agid.service-card
     title="Servizio Cultura"
     description="Eventi culturali e biblioteca comunale"
     icon="it-book"
@@ -438,7 +438,7 @@ Usage Examples:
 />
 
 4. Service card with different status:
-<x-ui.service-card
+<x-pub_theme::agid.service-card
     title="Servizio in Manutenzione"
     description="Servizio temporaneamente non disponibile"
     icon="it-tool"
@@ -448,7 +448,7 @@ Usage Examples:
 />
 
 5. Service card with custom color:
-<x-ui.service-card
+<x-pub_theme::agid.service-card
     title="Servizio Ambiente"
     description="Gestione rifiuti e ambiente"
     icon="it-leaf"
@@ -458,7 +458,7 @@ Usage Examples:
 />
 
 6. Service card with custom content:
-<x-ui.service-card
+<x-pub_theme::agid.service-card
     title="Servizio Personalizzato"
     description="Descrizione del servizio"
     icon="it-settings"
@@ -472,7 +472,7 @@ Usage Examples:
             <li>Funzionalità 2</li>
         </ul>
     </div>
-</x-ui.service-card>
+</x-pub_theme::agid.service-card>
 
 7. Service card with custom event handling:
 <script>

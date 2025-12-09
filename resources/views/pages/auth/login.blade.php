@@ -1,18 +1,39 @@
+<?php
+
+declare(strict_types=1);
+
+use function Laravel\Folio\{middleware, name};
+
+middleware(['guest']);
+name('login');
+
+?>
+
 <x-layouts.app>
     <x-slot name="title">
         {{ __('Login') }}
     </x-slot>
 
-    <!-- AGID Login Section -->
-    <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-primary-100 dark:from-gray-900 dark:to-gray-800 py-12 px-4 sm:px-6 lg:px-8">
-        <div class="w-full max-w-md">
-            {{-- Logo/Brand Header --}}
-            
-
-            {{-- Login Widget Filament 4 --}}
-            <div class="bg-white dark:bg-gray-800 shadow-xl rounded-lg overflow-hidden">
-                @livewire(\Modules\User\Filament\Widgets\Auth\LoginWidget::class)
+    <!-- Beautiful Login Page Section -->
+    <section class="login-page-bg flex items-center justify-center p-4">
+        <div class="fade-in-up w-full max-w-md">
+            <!-- Floating Header -->
+            <div class="text-center mb-8">
+                <div class="login-icon mx-auto mb-6 fade-in-scale">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                    </svg>
+                </div>
+                <h1 class="text-4xl font-bold text-white mb-4 drop-shadow-lg">
+                    {{ __('Accedi ai servizi') }}
+                </h1>
+                <p class="text-white/90 text-lg drop-shadow">
+                    {{ __('Utilizza le tue credenziali per accedere alla piattaforma') }}
+                </p>
             </div>
+            --}}
+            <!-- Login Widget -->
+            @livewire(\Modules\User\Filament\Widgets\Auth\LoginWidget::class)
 
             <!-- Beautiful Registration CTA -->
             @if (Route::has('register'))
@@ -28,8 +49,8 @@
                     </a>
                 </div>
             @endif
-
-            {{-- Alternative Access Methods (Currently Commented Out)
+            {{--  
+            <!-- Beautiful Alternative Access Methods -->
             <div class="mt-8 space-y-4 fade-in-up">
                 <div class="relative">
                     <div class="absolute inset-0 flex items-center">

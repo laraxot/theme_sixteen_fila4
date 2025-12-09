@@ -121,7 +121,7 @@
                     data-category="{{ Str::slug($service['category'] ?? '') }}"
                     data-title="{{ Str::slug($service['title'] ?? '') }}"
                 >
-                    <x-ui.service-card
+                    <x-pub_theme::agid.service-card
                         :title="$service['title'] ?? ''"
                         :description="$service['description'] ?? ''"
                         :icon="$service['icon'] ?? 'it-settings'"
@@ -461,13 +461,13 @@ document.addEventListener('DOMContentLoaded', function() {
 Usage Examples:
 
 1. Basic services grid:
-<x-ui.services-grid
+<x-pub_theme::agid.services-grid
     :services="$services"
     :columns="3"
 />
 
 2. Services grid with search and filters:
-<x-ui.services-grid
+<x-pub_theme::agid.services-grid
     :services="$services"
     :columns="3"
     :show-search="true"
@@ -475,21 +475,21 @@ Usage Examples:
 />
 
 3. List layout:
-<x-ui.services-grid
+<x-pub_theme::agid.services-grid
     :services="$services"
     :columns="1"
     layout="list"
 />
 
 4. Masonry layout:
-<x-ui.services-grid
+<x-pub_theme::agid.services-grid
     :services="$services"
     :columns="3"
     layout="masonry"
 />
 
 5. With pagination:
-<x-ui.services-grid
+<x-pub_theme::agid.services-grid
     :services="$services"
     :columns="3"
     :show-pagination="true"
@@ -497,7 +497,7 @@ Usage Examples:
 />
 
 6. Custom styling:
-<x-ui.services-grid
+<x-pub_theme::agid.services-grid
     :services="$services"
     :columns="4"
     class="custom-services-grid"
