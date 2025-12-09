@@ -5,14 +5,40 @@ declare(strict_types=1);
 return [
     'login' => [
         'title' => 'Accesso ai servizi',
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> c8b07ab (.)
         'description' => 'Inserisci le tue credenziali per accedere a :service',
         'no_account' => 'Non hai un account?',
         'create_account' => 'Registrati',
         'remember' => 'Ricordami',
         'forgot_password' => 'Password dimenticata?',
         'submit' => 'Accedi',
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> c8b07ab (.)
         'help' => 'Hai bisogno di aiuto?',
         'email' => 'Indirizzo email',
         'password' => 'Password',
@@ -116,4 +142,18 @@ return [
         'validation_error' => 'Errore di validazione',
         'general_error' => 'Si è verificato un errore. Riprova più tardi.',
     ],
+<<<<<<< HEAD
 ];
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+];
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+];
+>>>>>>> origin/develop
+>>>>>>> c8b07ab (.)
