@@ -1,8 +1,4 @@
 <x-form-section submit="updatePassword">
-<<<<<<< HEAD
-<x-form-section submit="updatePassword">
-=======
->>>>>>> bdc7dd6 (.)
     <x-slot name="title">
         {{ __('Update Password') }}
     </x-slot>

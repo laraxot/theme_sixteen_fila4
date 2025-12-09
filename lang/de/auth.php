@@ -128,8 +128,4 @@ return [
         'validation_error' => 'Validierungsfehler',
         'general_error' => 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.',
     ],
-<<<<<<< HEAD
-];
-=======
 ]; 
->>>>>>> bdc7dd6 (.)
