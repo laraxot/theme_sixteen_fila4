@@ -1,8 +1,4 @@
 <x-form-section submit="createTeam">
-<<<<<<< HEAD
-<x-form-section submit="createTeam">
-=======
->>>>>>> bdc7dd6 (.)
     <x-slot name="title">
         {{ __('Team Details') }}
     </x-slot>
@@ -14,10 +10,6 @@
     <x-slot name="form">
         <div class="col-span-6">
             <x-label value="{{ __('Team Owner') }}" />
-<<<<<<< HEAD
-            <x-label value="{{ __('Team Owner') }}" />
-=======
->>>>>>> bdc7dd6 (.)
 
             <div class="flex items-center mt-2">
                 <img class="size-12 rounded-full object-cover" src="{{ $this->user->profile_photo_url }}" alt="{{ $this->user->name }}">
@@ -33,12 +25,6 @@
             <x-label for="name" value="{{ __('Team Name') }}" />
             <x-input id="name" type="text" class="mt-1 block w-full" wire:model="state.name" autofocus />
             <x-input-error for="name" class="mt-2" />
-<<<<<<< HEAD
-            <x-label for="name" value="{{ __('Team Name') }}" />
-            <x-input id="name" type="text" class="mt-1 block w-full" wire:model="state.name" autofocus />
-            <x-input-error for="name" class="mt-2" />
-=======
->>>>>>> bdc7dd6 (.)
         </div>
     </x-slot>
 

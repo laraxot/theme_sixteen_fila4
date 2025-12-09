@@ -25,18 +25,6 @@
 
 ```blade
 <!-- ✅ CORRETTO - Nome generico -->
-<<<<<<< HEAD
-<x-pub_theme::forms.login-card />
-<x-pub_theme::navigation.header-main />
-<x-pub_theme::navigation.footer />
-<x-pub_theme::forms.contact-form />
-
-<!-- ❌ ERRATO - Nome con suffisso AGID ridondante -->
-<x-pub_theme::forms.login-card-agid />
-<x-pub_theme::navigation.header-main-agid />
-<x-pub_theme::navigation.footer-agid />
-<x-pub_theme::forms.contact-form-agid />
-=======
 <x-pub_theme::blocks.forms.login-card />
 <x-pub_theme::blocks.navigation.header-main />
 <x-pub_theme::blocks.navigation.footer />
@@ -47,7 +35,6 @@
 <x-pub_theme::blocks.navigation.header-main-agid />
 <x-pub_theme::blocks.navigation.footer-agid />
 <x-pub_theme::blocks.forms.contact-form-agid />
->>>>>>> bdc7dd6 (.)
 ```
 
 ### 📁 Struttura Directory Corretta
@@ -97,11 +84,7 @@ Tema Sixteen = AGID-Compliant per Default
 ```blade
 <!-- ✅ CORRETTO -->
 <x-layouts.guest>
-<<<<<<< HEAD
-    <x-pub_theme::forms.login-card 
-=======
     <x-pub_theme::blocks.forms.login-card 
->>>>>>> bdc7dd6 (.)
         title="Accedi ai servizi digitali"
         subtitle="Utilizza le tue credenziali per accedere all'area riservata"
         livewire-component="\Modules\User\Http\Livewire\Auth\Login"
@@ -110,11 +93,7 @@ Tema Sixteen = AGID-Compliant per Default
 
 <!-- ❌ ERRATO -->
 <x-layouts.guest-agid>
-<<<<<<< HEAD
-    <x-pub_theme::forms.login-card-agid 
-=======
     <x-pub_theme::blocks.forms.login-card-agid 
->>>>>>> bdc7dd6 (.)
         title="Accedi ai servizi digitali"
         subtitle="Utilizza le tue credenziali per accedere all'area riservata"
         livewire-component="\Modules\User\Http\Livewire\Auth\Login"
@@ -127,22 +106,14 @@ Tema Sixteen = AGID-Compliant per Default
 ```blade
 <!-- ✅ CORRETTO -->
 <x-layouts.app>
-<<<<<<< HEAD
-    <x-pub_theme::navigation.breadcrumb 
-=======
     <x-pub_theme::blocks.navigation.breadcrumb 
->>>>>>> bdc7dd6 (.)
         :items="[
             ['url' => route('home'), 'text' => 'Home'],
             ['text' => 'Contatti']
         ]"
     />
     
-<<<<<<< HEAD
-    <x-pub_theme::forms.contact-form />
-=======
     <x-pub_theme::blocks.forms.contact-form />
->>>>>>> bdc7dd6 (.)
 </x-layouts.app>
 ```
 
@@ -150,21 +121,12 @@ Tema Sixteen = AGID-Compliant per Default
 
 ```blade
 <!-- ✅ CORRETTO -->
-<<<<<<< HEAD
-<x-pub_theme::navigation.header-slim />
-<x-pub_theme::navigation.header-main />
-
-<!-- ❌ ERRATO -->
-<x-pub_theme::navigation.header-slim-agid />
-<x-pub_theme::navigation.header-main-agid />
-=======
 <x-pub_theme::blocks.navigation.header-slim />
 <x-pub_theme::blocks.navigation.header-main />
 
 <!-- ❌ ERRATO -->
 <x-pub_theme::blocks.navigation.header-slim-agid />
 <x-pub_theme::blocks.navigation.header-main-agid />
->>>>>>> bdc7dd6 (.)
 ```
 
 ## 🔧 Regole di Refactoring
@@ -192,17 +154,10 @@ Se trovi componenti con naming errato:
 
 ```blade
 <!-- ❌ ERRATO -->
-<<<<<<< HEAD
-<x-pub_theme::forms.login-card-agid />
-
-<!-- ✅ CORRETTO -->
-<x-pub_theme::forms.login-card />
-=======
 <x-pub_theme::blocks.forms.login-card-agid />
 
 <!-- ✅ CORRETTO -->
 <x-pub_theme::blocks.forms.login-card />
->>>>>>> bdc7dd6 (.)
 ```
 
 ### Errore 2: Layout con Suffisso AGID
@@ -245,11 +200,7 @@ Quando si cambia il naming, aggiornare:
 
 **Utilizzo**:
 ```blade
-<<<<<<< HEAD
-<x-pub_theme::forms.login-card 
-=======
 <x-pub_theme::blocks.forms.login-card 
->>>>>>> bdc7dd6 (.)
     title="Titolo"
     subtitle="Sottotitolo"
     livewire-component="ComponenteLivewire"
