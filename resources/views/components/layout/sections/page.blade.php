@@ -1,4 +1,4 @@
-{{-- TechPlanner Homepage Component --}}
+{{-- <nome progetto> Homepage Component --}}
 @props([
     'side' => 'content', 
     'slug' => '',
@@ -10,7 +10,7 @@
     <header class="bg-white shadow">
         <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
             <h1 class="text-3xl font-bold text-gray-900">
-                TechPlanner
+                <nome progetto>
             </h1>
         </div>
     </header>
@@ -22,7 +22,7 @@
                 <div class="border-4 border-dashed border-gray-200 rounded-lg p-8">
                     <div class="text-center">
                         <h2 class="text-2xl font-semibold text-gray-900 mb-4">
-                            Benvenuto in TechPlanner
+                            Benvenuto in <nome progetto>
                         </h2>
                         <p class="text-gray-600 mb-8">
                             Sistema di gestione tecnica e pianificazione avanzata
@@ -57,7 +57,7 @@
 
                         {{-- System Info --}}
                         <div class="mt-8 text-sm text-gray-500">
-                            <p>Tema: {{ config('app.name', 'TechPlanner') }} | Versione: {{ app()->version() }}</p>
+                            <p>Tema: {{ config('app.name', '<nome progetto>') }} | Versione: {{ app()->version() }}</p>
                             <p>Lingua: {{ app()->getLocale() }} | Ambiente: {{ app()->environment() }}</p>
                         </div>
                     </div>

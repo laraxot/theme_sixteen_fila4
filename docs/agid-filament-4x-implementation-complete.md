@@ -339,8 +339,9 @@ public function panel(Panel $panel): Panel
 ---
 
 **Status:** ✅ **IMPLEMENTAZIONE COMPLETATA E TESTATA**
-**Data:** 24 Settembre 2025
-**Versione:** 2.0.0 AGID + Filament 4.x
-**Compatibilità:** Laravel 11+, Filament 4.x, Tailwind CSS 4.x, Vite 7.x
+**Data:** 27 Gennaio 2025
+**Versione:** 2.1.0 AGID + Filament 4.x
+**Compatibilità:** Laravel 12+, Filament 4.x, Tailwind CSS 4.x, Vite 7.x
+**PHPStan:** ✅ 0 errori
 
 Il tema Sixteen è ora completamente compatibile con il Design System AGID e Filament 4.x, pronto per l'utilizzo in produzione per siti web di enti pubblici italiani.

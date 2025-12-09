@@ -257,7 +257,7 @@ class AdminPanelProvider extends XotBaseMainPanelProvider
             ])
             ->font('Inter')
             ->favicon(asset('themes/Sixteen/favicon.ico'))
-            ->brandName('TechPlanner')
+            ->brandName('<nome progetto>')
             ->brandLogo(asset('themes/Sixteen/logo.svg'))
             ->brandLogoHeight('2rem')
             ->viteTheme('themes/Sixteen');
