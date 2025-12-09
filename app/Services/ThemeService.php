@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Themes\Sixteen\Services;
 
+use InvalidArgumentException;
 use Themes\Sixteen\Services\MenuBuilder;
-
 /**
  * Servizio per la gestione del tema Sixteen.
  * 
@@ -32,19 +32,29 @@ class ThemeService
     }
 
     /**
+<<<<<<< HEAD
      * Restituisce il nome del tema.
      *
      * @return string
      */
     public function getThemeName(): string
+=======
+     * Ottiene il nome del tema.
+     */
+    public function getName(): string
+>>>>>>> a153bba (.)
     {
         return $this->themeName;
     }
 
     /**
+<<<<<<< HEAD
      * Restituisce la versione del tema.
      *
      * @return string
+=======
+     * Ottiene la versione del tema.
+>>>>>>> a153bba (.)
      */
     public function getVersion(): string
     {
@@ -52,15 +62,22 @@ class ThemeService
     }
 
     /**
+<<<<<<< HEAD
      * Restituisce la configurazione del tema.
      *
      * @return array<string, mixed>
      */
     public function getConfig(): array
+=======
+     * Ottiene le informazioni del tema.
+     */
+    public function getInfo(): array
+>>>>>>> a153bba (.)
     {
         return [
             'name' => $this->themeName,
             'version' => $this->version,
+<<<<<<< HEAD
             'author' => 'Laraxot Team',
             'description' => 'Modern responsive theme for Laraxot applications',
             'features' => [
@@ -69,6 +86,14 @@ class ThemeService
                 'component_library',
                 'accessibility_compliant',
             ],
+=======
+            'description' => 'Tema Sixteen per SaluteOra - AGID Bootstrap Italia compliant',
+            'author' => 'SaluteOra Team',
+            'agid_compliant' => true,
+            'bootstrap_italia' => true,
+            'tailwind_css' => true,
+            'accessibility' => 'WCAG 2.1 AA',
+>>>>>>> a153bba (.)
         ];
     }
 
@@ -93,4 +118,79 @@ class ThemeService
         // Configurazione dei componenti del tema
         // Setup delle configurazioni specifiche
     }
+<<<<<<< HEAD
+=======
+
+    /**
+     * Ottiene il Menu Builder per accesso diretto ai menu
+     */
+    public function getMenuBuilder(): MenuBuilder
+    {
+        return $this->menuBuilder;
+    }
+
+    /**
+     * Ottiene i menu compilati per una location specifica
+     */
+    public function getMenu(string $location): array
+    {
+        return match ($location) {
+            'slim_header' => $this->menuBuilder->getSlimHeader()->toArray(),
+            'header' => $this->menuBuilder->getHeader()->toArray(),
+            'footer' => $this->menuBuilder->getFooter()->toArray(),
+            'footer_bar' => $this->menuBuilder->getFooterBar()->toArray(),
+            default => throw new InvalidArgumentException("Unknown menu location: {$location}")
+        };
+    }
+
+    /**
+     * Verifica la compliance AGID del tema
+     */
+    public function checkAgidCompliance(): array
+    {
+        return [
+            'bootstrap_italia' => true,
+            'wcag_2_1_aa' => $this->getConfig('accessibility.screen_reader_content', true),
+            'skip_links' => $this->getConfig('accessibility.skip_links', true),
+            'keyboard_navigation' => $this->getConfig('accessibility.keyboard_navigation', true),
+            'cookiebar' => $this->getConfig('layout.cookiebar', true),
+            'breadcrumbs' => $this->getConfig('layout.breadcrumbs.enabled', true),
+        ];
+    }
+
+    /**
+     * Ottiene statistiche sui componenti implementati
+     */
+    public function getComponentStats(): array
+    {
+        // Questa sarà espansa con il progress del tema
+        return [
+            'total_agid_components' => 54,
+            'implemented' => 26,
+            'compliance_percentage' => 48,
+            'critical_missing' => ['dropdown', 'pagination', 'spid_integration'],
+            'status' => 'in_development'
+        ];
+    }
+
+    /**
+     * Verifica se il tema è attivo.
+     */
+    public function isActive(): bool
+    {
+        return config('app.theme') === 'sixteen';
+    }
+
+    /**
+     * Ottiene le configurazioni del tema.
+     */
+    public function getConfig(string $key = null, mixed $default = null): mixed
+    {
+        if ($key === null) {
+            return config('sixteen');
+        }
+
+        return config('sixteen.' . $key, $default);
+    }
+>>>>>>> a153bba (.)
 }

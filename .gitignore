@@ -45,5 +45,12 @@ docs/cache/
 *.old
 *.old1
 *.bakcup
+<<<<<<< HEAD
+=======
+*.backup.*
+*.backup
+*.backup
+*.backup.*
+>>>>>>> a153bba (.)
 *.backup
 *.backup.*

@@ -25,11 +25,16 @@
                         <x-label for="email" value="{{ __('Email') }}" />
                         <x-input id="email" type="email" class="mt-1 block w-full" wire:model="addTeamMemberForm.email" />
                         <x-input-error for="email" class="mt-2" />
+                        <x-label for="email" value="{{ __('Email') }}" />
+                        <x-input id="email" type="email" class="mt-1 block w-full" wire:model="addTeamMemberForm.email" />
+                        <x-input-error for="email" class="mt-2" />
                     </div>
 
                     <!-- Role -->
                     @if (count($this->roles) > 0)
                         <div class="col-span-6 lg:col-span-4">
+                            <x-label for="role" value="{{ __('Role') }}" />
+                            <x-input-error for="role" class="mt-2" />
                             <x-label for="role" value="{{ __('Role') }}" />
                             <x-input-error for="role" class="mt-2" />
 
@@ -110,6 +115,7 @@
                     </div>
                 </x-slot>
             </x-action-section>
+            </x-action-section>
         </div>
     @endif
 
@@ -167,10 +173,12 @@
                     </div>
                 </x-slot>
             </x-action-section>
+            </x-action-section>
         </div>
     @endif
 
     <!-- Role Management Modal -->
+    <x-dialog-modal wire:model.live="currentlyManagingRole">
     <x-dialog-modal wire:model.live="currentlyManagingRole">
         <x-slot name="title">
             {{ __('Manage Role') }}

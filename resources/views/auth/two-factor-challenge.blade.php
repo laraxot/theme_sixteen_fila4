@@ -2,6 +2,9 @@
     <x-authentication-card>
         <x-slot name="logo">
             <x-authentication-card-logo />
+    <x-authentication-card>
+        <x-slot name="logo">
+            <x-authentication-card-logo />
         </x-slot>
 
         <div x-data="{ recovery: false }">
@@ -13,6 +16,7 @@
                 {{ __('Please confirm access to your account by entering one of your emergency recovery codes.') }}
             </div>
 
+            <x-validation-errors class="mb-4" />
             <x-validation-errors class="mb-4" />
 
             <form method="POST" action="{{ route('two-factor.login') }}">
