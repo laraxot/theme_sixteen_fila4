@@ -141,9 +141,12 @@ php artisan cache:clear
 php artisan tinker
 >>> view('pub_theme::blocks.alerts.alert', ['variant' => 'info', 'dismissible' => true])->render()
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>> view('sixteen::blocks.alerts.alert', ['variant' => 'info', 'dismissible' => true])->render()
 =======
 >>>>>>> 90b9679 (.)
+=======
+>>>>>>> 7401ccb (.)
 ```
 
 ### 2. Verifica Dipendenze
@@ -188,6 +191,7 @@ Ho aggiornato la documentazione con esempi corretti:
 
 ```blade
 {{-- Esempio corretto per Alert --}}
+<<<<<<< HEAD
 <x-pub_theme::blocks.alerts.alert variant="info" dismissible="true">
 <<<<<<< HEAD
 <x-sixteen::blocks.alerts.alert variant="info" dismissible="true">
@@ -217,6 +221,21 @@ Ho aggiornato la documentazione con esempi corretti:
     Badge con pulsante di chiusura
 </x-pub_theme::blocks.utilities.badge>
 >>>>>>> 90b9679 (.)
+=======
+<x-pub_theme::alerts.alert variant="info" dismissible="true">
+    Messaggio informativo
+</x-pub_theme::alerts.alert>
+
+{{-- Esempio corretto per Toast --}}
+<x-pub_theme::alerts.toast variant="success" position="top-right">
+    Operazione completata con successo
+</x-pub_theme::alerts.toast>
+
+{{-- Esempio corretto per Badge --}}
+<x-pub_theme::utilities.badge variant="primary" dismissible="true">
+    Badge con pulsante di chiusura
+</x-pub_theme::utilities.badge>
+>>>>>>> 7401ccb (.)
 ```
 
 ## 🚨 Errori Comuni da Evitare
@@ -339,7 +358,11 @@ grep -r "x-heroicon-s-" laravel/Themes/Sixteen/resources/views/
 **Regola Critica**: ✅ Implementata  
 **Documentazione**: ✅ Aggiornata  
 <<<<<<< HEAD
+<<<<<<< HEAD
 **Testing**: ✅ Completato 
 =======
 **Testing**: ✅ Completato 
 >>>>>>> 90b9679 (.)
+=======
+**Testing**: ✅ Completato 
+>>>>>>> 7401ccb (.)

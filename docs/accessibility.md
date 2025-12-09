@@ -73,9 +73,12 @@ Il tema Sixteen è progettato per garantire **accessibilità completa** seguendo
 <button aria-label="Chiudi finestra" aria-describedby="close-help">
     <x-pub_theme::icon.x />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <x-sixteen::icon.x />
 =======
 >>>>>>> 90b9679 (.)
+=======
+>>>>>>> 7401ccb (.)
 </button>
 ```
 
@@ -217,7 +220,11 @@ axe.run((err, results) => {
 **Standard**: WCAG 2.1 AA, Legge Stanca, Linee Guida AGID 
 # Accessibilità del Tema Sixteen
 <<<<<<< HEAD
+<<<<<<< HEAD
  
 =======
  
 >>>>>>> 90b9679 (.)
+=======
+ 
+>>>>>>> 7401ccb (.)
