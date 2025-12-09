@@ -33,6 +33,7 @@
             "providers": [
                 "Themes\\Sixteen\\Providers\\ThemeServiceProvider"
             ],
+<<<<<<< HEAD
             "aliases": {}
         }
     },
@@ -43,6 +44,23 @@
     },
     "autoload-dev": {
         "psr-4": {}
+=======
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Themes\\Sixteen\\": ""
+
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+
+        }
+>>>>>>> c8b07ab (.)
     },
     "config": {
         "sort-packages": true,
