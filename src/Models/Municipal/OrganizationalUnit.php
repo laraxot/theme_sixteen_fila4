@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Themes\Sixteen\Models\Municipal;
 
-use Illuminate\Support\Collection;
 use Illuminate\Database\Eloquent\{Model, SoftDeletes, Factories\HasFactory};
 use Illuminate\Database\Eloquent\Relations\{HasMany, BelongsTo, MorphMany, BelongsToMany};
 use Illuminate\Database\Eloquent\Casts\Attribute;
@@ -368,7 +367,7 @@ class OrganizationalUnit extends Model
     /**
      * Ottiene tutti gli antenati
      */
-    public function getAncestors(): Collection
+    public function getAncestors(): \Illuminate\Support\Collection
     {
         $ancestors = collect();
         $current = $this->parent;
@@ -384,7 +383,7 @@ class OrganizationalUnit extends Model
     /**
      * Ottiene tutti i discendenti (recursivo)
      */
-    public function getAllDescendants(): Collection
+    public function getAllDescendants(): \Illuminate\Support\Collection
     {
         $descendants = collect();
 
