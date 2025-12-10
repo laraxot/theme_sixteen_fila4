@@ -34,9 +34,12 @@
                     <x-label for="terms">
                         <div class="flex items-center">
                             <x-checkbox name="terms" id="terms" required />
+<<<<<<< HEAD
                     <x-label for="terms">
                         <div class="flex items-center">
                             <x-checkbox name="terms" id="terms" required />
+=======
+>>>>>>> bdc7dd6 (.)
 
                             <div class="ms-2">
                                 {!! __('I agree to the :terms_of_service and :privacy_policy', [

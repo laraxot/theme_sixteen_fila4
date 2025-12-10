@@ -2,9 +2,12 @@
     <x-authentication-card>
         <x-slot name="logo">
             <x-authentication-card-logo />
+<<<<<<< HEAD
     <x-authentication-card>
         <x-slot name="logo">
             <x-authentication-card-logo />
+=======
+>>>>>>> bdc7dd6 (.)
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
@@ -25,9 +28,12 @@
                     <x-button type="submit">
                         {{ __('Resend Verification Email') }}
                     </x-button>
+<<<<<<< HEAD
                     <x-button type="submit">
                         {{ __('Resend Verification Email') }}
                     </x-button>
+=======
+>>>>>>> bdc7dd6 (.)
                 </div>
             </form>
 
@@ -48,5 +54,8 @@
             </div>
         </div>
     </x-authentication-card>
+<<<<<<< HEAD
     </x-authentication-card>
+=======
+>>>>>>> bdc7dd6 (.)
 </x-guest-layout>
