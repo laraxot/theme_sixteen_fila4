@@ -2,16 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Themes\Sixteen\Filters\HrefMenuFilter;
-use Themes\Sixteen\Filters\ActiveMenuFilter;
-use Themes\Sixteen\Filters\GateMenuFilter;
-
-=======
->>>>>>> c8b07ab (.)
-=======
->>>>>>> 0eb3291 (.)
 return [
     /*
     |--------------------------------------------------------------------------
@@ -394,21 +384,9 @@ return [
     |
     */
     'menu_filters' => [
-<<<<<<< HEAD
-<<<<<<< HEAD
-        HrefMenuFilter::class,
-        ActiveMenuFilter::class,
-        GateMenuFilter::class,
-=======
         \Themes\Sixteen\Filters\HrefMenuFilter::class,
         \Themes\Sixteen\Filters\ActiveMenuFilter::class,
         \Themes\Sixteen\Filters\GateMenuFilter::class,
->>>>>>> c8b07ab (.)
-=======
-        \Themes\Sixteen\Filters\HrefMenuFilter::class,
-        \Themes\Sixteen\Filters\ActiveMenuFilter::class,
-        \Themes\Sixteen\Filters\GateMenuFilter::class,
->>>>>>> 0eb3291 (.)
     ],
 
     /*
@@ -494,12 +472,4 @@ return [
         'show_component_info' => env('SIXTEEN_DEBUG_COMPONENTS', false),
         'log_menu_build' => env('SIXTEEN_LOG_MENU', false),
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
 ];
-=======
-];
->>>>>>> c8b07ab (.)
-=======
-];
->>>>>>> 0eb3291 (.)
