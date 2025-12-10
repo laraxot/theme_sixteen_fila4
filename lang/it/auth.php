@@ -6,6 +6,7 @@ return [
     'login' => [
         'title' => 'Accesso ai servizi',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -19,6 +20,8 @@ return [
 =======
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
         'description' => 'Inserisci le tue credenziali per accedere a :service',
         'no_account' => 'Non hai un account?',
         'create_account' => 'Registrati',
@@ -26,6 +29,7 @@ return [
         'forgot_password' => 'Password dimenticata?',
         'submit' => 'Accedi',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -39,6 +43,8 @@ return [
 =======
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
         'help' => 'Hai bisogno di aiuto?',
         'email' => 'Indirizzo email',
         'password' => 'Password',
@@ -143,6 +149,7 @@ return [
         'general_error' => 'Si è verificato un errore. Riprova più tardi.',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 =======
 <<<<<<< HEAD
@@ -157,3 +164,5 @@ return [
 ];
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
