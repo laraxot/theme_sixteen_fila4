@@ -13,11 +13,7 @@ Comprehensive demo and testing page for all implemented components
     <x-pub_theme::navigation.skiplinks />
 
     {{-- Hero Section --}}
-<<<<<<< HEAD
     <x-pub_theme::ui.hero type="centered" size="small">
-=======
-    <x-hero type="centered" size="small">
->>>>>>> a3dca9d (.)
         <x-slot name="content">
             <div class="container text-center">
                 <h1 class="display-4 fw-bold text-primary mb-3">
@@ -46,11 +42,7 @@ Comprehensive demo and testing page for all implemented components
 
     <div class="container my-5">
         {{-- Navigation Tabs for Categories --}}
-<<<<<<< HEAD
         <x-pub_theme::ui.tab orientation="horizontal" full-width="true">
-=======
-        <x-tab orientation="horizontal" full-width="true">
->>>>>>> a3dca9d (.)
             <x-slot name="tabs">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#core-components" type="button" role="tab">
@@ -97,13 +89,8 @@ Comprehensive demo and testing page for all implemented components
                         <div class="component-demo">
                             <h3 class="mb-3">Hero Component</h3>
                             <div class="demo-container">
-<<<<<<< HEAD
                                 <x-pub_theme::ui.hero type="image" size="small" background-image="https://via.placeholder.com/1200x400/0066cc/ffffff?text=Demo+Hero">
                                 <x-pub_theme::ui.hero type="image" size="small" background-image="https://via.placeholder.com/1200x400/0066cc/ffffff?text=Demo+Hero">
-=======
-                                <x-hero type="image" size="small" background-image="https://via.placeholder.com/1200x400/0066cc/ffffff?text=Demo+Hero">
-                                <x-hero type="image" size="small" background-image="https://via.placeholder.com/1200x400/0066cc/ffffff?text=Demo+Hero">
->>>>>>> a3dca9d (.)
                                     <x-slot name="content">
                                         <div class="container">
                                             <h2 class="text-white">Demo Hero Section</h2>
@@ -145,12 +132,7 @@ Comprehensive demo and testing page for all implemented components
                         <div class="component-demo">
                             <h4 class="mb-3">Accordion Component</h4>
                             <div class="demo-container">
-<<<<<<< HEAD
                                 <x-pub_theme::ui.accordion>
-=======
-                                <x-accordion>
-                                <x-accordion>
->>>>>>> a3dca9d (.)
                                     <x-slot name="items">
                                         <div class="accordion-item">
                                             <h2 class="accordion-header">
@@ -285,22 +267,12 @@ Comprehensive demo and testing page for all implemented components
                         <div class="component-demo">
                             <h4 class="mb-3">Toggle Component</h4>
                             <div class="demo-container bg-light p-4 rounded">
-<<<<<<< HEAD
                                 <x-pub_theme::ui.toggle 
-=======
-                                <x-toggle 
-                                <x-toggle 
->>>>>>> a3dca9d (.)
                                     name="demo_toggle"
                                     label="Enable notifications"
                                     checked="true"
                                 />
-<<<<<<< HEAD
                                 <x-pub_theme::ui.toggle 
-=======
-                                <x-toggle 
-                                <x-toggle 
->>>>>>> a3dca9d (.)
                                     name="demo_toggle_2"
                                     label="Dark mode"
                                     lever-left="true"
@@ -341,12 +313,7 @@ Comprehensive demo and testing page for all implemented components
                             <h4 class="mb-3">Bottom Navigation</h4>
                             <div class="demo-container">
                                 <div style="position: relative; height: 100px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
-<<<<<<< HEAD
                                     <x-pub_theme::navigation.bottom-nav fixed="false">
-=======
-                                    <x-bottom-nav fixed="false">
-                                    <x-bottom-nav fixed="false">
->>>>>>> a3dca9d (.)
                                         <x-slot name="links">
                                             <a href="#" class="nav-link active">
                                                 <svg class="icon"><use href="#it-home"></use></svg>
@@ -380,12 +347,7 @@ Comprehensive demo and testing page for all implemented components
                             <div class="demo-container">
                                 <div class="row">
                                     <div class="col-md-6">
-<<<<<<< HEAD
                                         <x-pub_theme::ui.notifiche 
-=======
-                                        <x-notifiche 
-                                        <x-notifiche 
->>>>>>> a3dca9d (.)
                                             type="success"
                                             title="Success Notification"
                                             message="This is a success message with icon"
@@ -394,12 +356,7 @@ Comprehensive demo and testing page for all implemented components
                                         />
                                     </div>
                                     <div class="col-md-6">
-<<<<<<< HEAD
                                         <x-pub_theme::ui.notifiche 
-=======
-                                        <x-notifiche 
-                                        <x-notifiche 
->>>>>>> a3dca9d (.)
                                             type="warning"
                                             title="Warning Notification"
                                             message="This is a warning message that requires attention"
@@ -450,13 +407,8 @@ Comprehensive demo and testing page for all implemented components
                         <div class="component-demo">
                             <h4 class="mb-3">Tab Component</h4>
                             <div class="demo-container">
-<<<<<<< HEAD
                                 <x-pub_theme::ui.tab orientation="vertical">
                                 <x-pub_theme::ui.tab orientation="vertical">
-=======
-                                <x-tab orientation="vertical">
-                                <x-tab orientation="vertical">
->>>>>>> a3dca9d (.)
                                     <x-slot name="tabs">
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#vertical-tab1" type="button">
@@ -489,12 +441,7 @@ Comprehensive demo and testing page for all implemented components
     </div>
 
     {{-- Cookiebar Demo --}}
-<<<<<<< HEAD
     <x-pub_theme::ui.cookiebar />
-=======
-    <x-cookiebar />
-    <x-cookiebar />
->>>>>>> a3dca9d (.)
 </div>
 
 {{-- Component Guide Modal --}}
