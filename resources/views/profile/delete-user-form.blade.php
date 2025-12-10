@@ -1,8 +1,4 @@
 <x-action-section>
-<<<<<<< HEAD
-<x-action-section>
-=======
->>>>>>> bdc7dd6 (.)
     <x-slot name="title">
         {{ __('Delete Account') }}
     </x-slot>
@@ -33,10 +29,6 @@
 
                 <div class="mt-4" x-data="{}" x-on:confirming-delete-user.window="setTimeout(() => $refs.password.focus(), 250)">
                     <x-input type="password" class="mt-1 block w-3/4"
-<<<<<<< HEAD
-                    <x-input type="password" class="mt-1 block w-3/4"
-=======
->>>>>>> bdc7dd6 (.)
                                 autocomplete="current-password"
                                 placeholder="{{ __('Password') }}"
                                 x-ref="password"
@@ -44,10 +36,6 @@
                                 wire:keydown.enter="deleteUser" />
 
                     <x-input-error for="password" class="mt-2" />
-<<<<<<< HEAD
-                    <x-input-error for="password" class="mt-2" />
-=======
->>>>>>> bdc7dd6 (.)
                 </div>
             </x-slot>
 
