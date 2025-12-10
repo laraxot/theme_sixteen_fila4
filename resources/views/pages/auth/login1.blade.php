@@ -36,7 +36,10 @@
     <x-slot name="header">
         {{-- Header Slim (Ente + Link Istituzionali) --}}
         <x-pub_theme::blocks.navigation.header-slim 
+<<<<<<< HEAD
         <x-pub_theme::blocks.navigation.header-slim 
+=======
+>>>>>>> 92783b6 (.)
             :enteName="config('app.name', 'Ente Pubblico')"
             :enteUrl="route('home')"
             :showLinks="true"
@@ -44,7 +47,10 @@
 
         {{-- Header Main (Logo + Nome Ente + Tagline) --}}
         <x-pub_theme::blocks.navigation.header-main 
+<<<<<<< HEAD
         <x-pub_theme::blocks.navigation.header-main 
+=======
+>>>>>>> 92783b6 (.)
             :logoSrc="asset('themes/Sixteen/images/logo-pa.svg')"
             :enteName="config('app.name', 'Ente Pubblico')"
             :serviceTagline="config('app.tagline', 'Servizi digitali per i cittadini')"
@@ -53,7 +59,10 @@
 
         {{-- Breadcrumb Navigation Semantica --}}
         <x-pub_theme::blocks.navigation.breadcrumb 
+<<<<<<< HEAD
         <x-pub_theme::blocks.navigation.breadcrumb 
+=======
+>>>>>>> 92783b6 (.)
             :items="[
                 ['url' => route('home'), 'text' => 'Home'],
                 ['text' => 'Accesso al sistema']
@@ -174,7 +183,10 @@
     {{-- Footer Istituzionale AGID-Compliant --}}
     <x-slot name="footer">
         <x-pub_theme::blocks.navigation.footer-institutional 
+<<<<<<< HEAD
         <x-pub_theme::blocks.navigation.footer-institutional 
+=======
+>>>>>>> 92783b6 (.)
             :enteName="config('app.name', 'Ente Pubblico')"
             :enteDescription="config('app.tagline', 'Servizi digitali per i cittadini')"
             :logoSrc="asset('themes/Sixteen/images/logo-white.svg')"

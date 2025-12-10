@@ -115,4 +115,8 @@ return [
         'validation_error' => 'Validation error',
         'general_error' => 'An error occurred. Please try again later.',
     ],
+<<<<<<< HEAD
 ];
+=======
+]; 
+>>>>>>> 92783b6 (.)
