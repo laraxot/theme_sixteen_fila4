@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Themes\Sixteen\Http\Controllers;
 
-<<<<<<< HEAD
-=======
 use Exception;
->>>>>>> 7401ccb (.)
 use Illuminate\Http\{Request, RedirectResponse, JsonResponse};
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\{Auth, Log, Session};
@@ -45,11 +42,7 @@ class CieAuthController extends Controller
             
             return redirect()->to($loginUrl);
 
-<<<<<<< HEAD
-        } catch (\Exception $e) {
-=======
         } catch (Exception $e) {
->>>>>>> 7401ccb (.)
             Log::error('CIE login error', [
                 'method' => 'web',
                 'error' => $e->getMessage(),
@@ -90,11 +83,7 @@ class CieAuthController extends Controller
             // Redirect diretto per browser
             return redirect()->to($mobileUrl);
 
-<<<<<<< HEAD
-        } catch (\Exception $e) {
-=======
         } catch (Exception $e) {
->>>>>>> 7401ccb (.)
             Log::error('CIE mobile login error', [
                 'method' => 'mobile',
                 'error' => $e->getMessage(),
@@ -148,11 +137,7 @@ class CieAuthController extends Controller
             return redirect()->to($returnUrl)
                 ->with('success', 'Autenticazione CIE completata con successo.');
 
-<<<<<<< HEAD
-        } catch (\Exception $e) {
-=======
         } catch (Exception $e) {
->>>>>>> 7401ccb (.)
             Log::error('CIE callback error', [
                 'error' => $e->getMessage(),
                 'request_data' => $request->all(),
@@ -202,11 +187,7 @@ class CieAuthController extends Controller
             return redirect()->to($returnUrl)
                 ->with('success', 'Logout effettuato con successo.');
 
-<<<<<<< HEAD
-        } catch (\Exception $e) {
-=======
         } catch (Exception $e) {
->>>>>>> 7401ccb (.)
             Log::error('CIE logout error', [
                 'error' => $e->getMessage(),
                 'user_id' => Auth::id(),
@@ -257,11 +238,7 @@ class CieAuthController extends Controller
                 'token_type' => $tokenData['token_type'] ?? 'Bearer',
             ]);
 
-<<<<<<< HEAD
-        } catch (\Exception $e) {
-=======
         } catch (Exception $e) {
->>>>>>> 7401ccb (.)
             Log::error('CIE token refresh error', [
                 'error' => $e->getMessage(),
                 'user_id' => Auth::id(),
@@ -297,11 +274,7 @@ class CieAuthController extends Controller
                 'config_status' => $this->cieService->isConfigured(),
             ]);
 
-<<<<<<< HEAD
-        } catch (\Exception $e) {
-=======
         } catch (Exception $e) {
->>>>>>> 7401ccb (.)
             Log::error('CIE status check error', [
                 'error' => $e->getMessage(),
                 'trace' => $e->getTraceAsString(),
@@ -348,11 +321,7 @@ class CieAuthController extends Controller
         $fiscalCode = $attributes['fiscal_code'];
         
         if (empty($fiscalCode)) {
-<<<<<<< HEAD
-            throw new \Exception('Codice fiscale mancante nei dati CIE');
-=======
             throw new Exception('Codice fiscale mancante nei dati CIE');
->>>>>>> 7401ccb (.)
         }
 
         // Cerca utente per codice fiscale
