@@ -36,12 +36,14 @@
     <x-slot name="header">
         {{-- Header Slim (Ente + Link Istituzionali) --}}
         <x-pub_theme::blocks.navigation.header-slim 
+        <x-pub_theme::blocks.navigation.header-slim 
             :enteName="config('app.name', 'Ente Pubblico')"
             :enteUrl="route('home')"
             :showLinks="true"
         />
 
         {{-- Header Main (Logo + Nome Ente + Tagline) --}}
+        <x-pub_theme::blocks.navigation.header-main 
         <x-pub_theme::blocks.navigation.header-main 
             :logoSrc="asset('themes/Sixteen/images/logo-pa.svg')"
             :enteName="config('app.name', 'Ente Pubblico')"
@@ -50,6 +52,7 @@
         />
 
         {{-- Breadcrumb Navigation Semantica --}}
+        <x-pub_theme::blocks.navigation.breadcrumb 
         <x-pub_theme::blocks.navigation.breadcrumb 
             :items="[
                 ['url' => route('home'), 'text' => 'Home'],
@@ -170,6 +173,7 @@
 
     {{-- Footer Istituzionale AGID-Compliant --}}
     <x-slot name="footer">
+        <x-pub_theme::blocks.navigation.footer-institutional 
         <x-pub_theme::blocks.navigation.footer-institutional 
             :enteName="config('app.name', 'Ente Pubblico')"
             :enteDescription="config('app.tagline', 'Servizi digitali per i cittadini')"
