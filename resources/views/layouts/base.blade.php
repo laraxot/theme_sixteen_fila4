@@ -20,8 +20,11 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+<<<<<<< HEAD
         <!-- Font Awesome for icon classes used in theme (fas/fa-*) -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkfGw1ZrYJ24lF+qvQ4qzC2Q8Q2G3Kf0QfQwY2Z6YvGZrj4qk5j8V+KQw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+=======
+>>>>>>> a3dca9d (.)
         @filamentStyles
         @vite(['resources/css/app.css'], 'themes/Sixteen')
 

@@ -12,6 +12,7 @@
     "homepage": "https://github.com/laraxot/theme_sixteen_fila3",
     "license": "MIT",
     "require": {
+<<<<<<< HEAD
         "filament/filament": "^4.0",
         "filament/support": "^4.0",
         "filament/forms": "^4.0",
@@ -20,6 +21,8 @@
         "filament/widgets": "^4.0",
         "filament/notifications": "^4.0",
         "filament/infolists": "^4.0"
+=======
+>>>>>>> a3dca9d (.)
     },
     "authors": [
         {
@@ -28,6 +31,14 @@
             "role": "Developer"
         }
     ],
+<<<<<<< HEAD
+=======
+    "require": {
+        "filament/filament": "^3.4",
+        "filament/tables": "^3.4",
+        "filament/forms": "^3.4"
+    },
+>>>>>>> a3dca9d (.)
     "extra": {
         "laravel": {
             "providers": [
