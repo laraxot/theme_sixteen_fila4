@@ -28,6 +28,11 @@
             "role": "Developer"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Themes\\Sixteen\\": "src/"
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [
