@@ -1,5 +1,15 @@
 # Tema Sixteen - Bootstrap Italia per Laravel/Tailwind
 
+## 📌 Policy documentazione (importante)
+
+Questa cartella contiene sia documenti canonici sia documenti legacy.
+
+- **Naming**: i file in `docs/` devono essere in **lowercase**, con unica eccezione `README.md`.
+- **No date**: evitare date nei nomi dei file `.md`.
+- **Link**: usare sempre link **relativi** (mai path assoluti tipo `/var/www/...`).
+
+I file storici con nomi **MAIUSCOLI** o con **date** nel filename sono considerati legacy e verranno migrati in modo controllato (rinomini + aggiornamento riferimenti) per evitare rotture di link.
+
 ## 🎯 Panoramica del Progetto
 
 Il tema Sixteen è un'implementazione completa delle **Linee Guida AGID per il Design della PA Italiana** utilizzando **Laravel**, **Filament** e **Tailwind CSS**. Il tema fornisce una migrazione moderna da Bootstrap Italia, mantenendo la piena conformità alle specifiche AGID con un'architettura più flessibile e performante.
