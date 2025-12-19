@@ -23,6 +23,16 @@ Il tema Sixteen implementa:
 - Sistema di navigazione
 - Dashboard personalizzabile
 
+### 🔐 Authentication & Auth Widgets
+- [LoginWidget Form Data Binding](./auth/login-widget-form-binding.md) - Fix e pattern per form data binding
+
+### 📧 Mail Layouts
+- [Christmas Email Template Implementation](./christmas-email-template-implementation.md) - Implementazione template email natalizio
+- [Christmas Email Layout](./christmas-email-layout.md) - Documentazione dettagliata template natalizio
+- [Template Base](../resources/mail-layouts/base.html) - Template email di base
+- [Template Natalizio](../resources/mail-layouts/christmas.html) - Template festivo con decorazioni natalizie e banner chiusura studio (24 Dic - 7 Gen)
+- [Mail Layouts Natale](./mail-layouts-natale.md) - Template natalizio esteso con animazioni e decorazioni
+
 ### 📊 Module Statistics
 
 - **Total Docs**: 162 files
