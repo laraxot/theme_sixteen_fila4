@@ -159,14 +159,32 @@ This template is intended for use during the Christmas season (typically Decembe
 ## Related Files
 
 - `base.html` - Base template that provided the structure
+- `christmas-elegant.html` - Template natalizio elegante con neve e stelle
+- `christmas-festive.html` - Template natalizio festoso con luci animate
 - `SpatieEmail.php` - Class that uses the theme's mail layouts
+
+## Template Disponibili
+
+### christmas-elegant.html - Elegante
+- Stile raffinato e professionale
+- Background notturno elegante
+- 15 snowflakes + 8 stelle animate
+- Font serif (Georgia)
+- Ideale per comunicazioni ufficiali
+
+### christmas-festive.html - Festoso
+- Stile allegro e vivace
+- Background festivo rosso-verde
+- 20 snowflakes + 20 luci animate
+- Font sans-serif (Arial)
+- Ideale per newsletter e auguri informali
 
 ## Future Enhancements
 
 ### Potential Improvements
-- **Snow Animation**: Could add actual falling snow effect
+- **Background Images**: Aggiungere immagini di sfondo natalizie (data URI)
 - **More Themes**: Additional seasonal variations
-- **Interactive Elements**: Holiday-themed interactive components
+- **Interactive Elements**: Holiday-themed interactive components (limitato da email client support)
 
 ---
 
