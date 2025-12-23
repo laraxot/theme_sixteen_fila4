@@ -7,9 +7,12 @@
         "dev": "vite",
         "build": "vite build",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
         "build:analyze": "vite build --mode analyze",
         "build:production": "vite build --mode production",
         "build:filament": "vite build --mode filament",
@@ -104,6 +107,7 @@
         "@popperjs/core": "^2.11.8",
         "bootstrap-italia": "^2.16.0"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
         "preview": "vite preview",
@@ -127,5 +131,7 @@
         "vite": "^6.0.11"
 >>>>>>> origin/develop
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
     }
 }

@@ -5,9 +5,12 @@ declare(strict_types=1);
 namespace Themes\Sixteen\Events;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use InvalidArgumentException;
 =======
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
 use Illuminate\Foundation\Events\Dispatchable;
 use Themes\Sixteen\Services\MenuBuilder;
 
@@ -38,10 +41,14 @@ class BuildingSixteenMenu
             'footer' => $this->menuBuilder->addFooter($items),
             'footer_bar' => $this->menuBuilder->addFooterBar($items),
 <<<<<<< HEAD
+<<<<<<< HEAD
             default => throw new InvalidArgumentException("Unknown menu location: {$this->location}")
 =======
             default => throw new \InvalidArgumentException("Unknown menu location: {$this->location}")
 >>>>>>> c8b07ab (.)
+=======
+            default => throw new \InvalidArgumentException("Unknown menu location: {$this->location}")
+>>>>>>> 0eb3291 (.)
         };
     }
 

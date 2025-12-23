@@ -3,9 +3,12 @@
 namespace Themes\Sixteen\Http\Livewire\Appointment;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Exception;
 =======
 >>>>>>> c8b07ab (.)
+=======
+>>>>>>> 0eb3291 (.)
 use Livewire\{Component, WithPagination};
 use Illuminate\Support\Facades\{Auth, DB};
 use Themes\Sixteen\Models\{Appointment, Service, Office, Citizen};
@@ -298,10 +301,14 @@ class CreateAppointment extends Component
         if (!$office->isSlotAvailable($this->appointmentDate, $this->selectedSlot['start'])) {
             $this->addError('selectedSlot', 'Questo slot orario non è più disponibile.');
 <<<<<<< HEAD
+<<<<<<< HEAD
             throw new Exception('Slot non disponibile');
 =======
             throw new \Exception('Slot non disponibile');
 >>>>>>> c8b07ab (.)
+=======
+            throw new \Exception('Slot non disponibile');
+>>>>>>> 0eb3291 (.)
         }
     }
 
