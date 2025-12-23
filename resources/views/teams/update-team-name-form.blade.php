@@ -1,4 +1,5 @@
 <x-form-section submit="updateTeamName">
+<x-form-section submit="updateTeamName">
     <x-slot name="title">
         {{ __('Team Name') }}
     </x-slot>
@@ -10,6 +11,7 @@
     <x-slot name="form">
         <!-- Team Owner Information -->
         <div class="col-span-6">
+            <x-label value="{{ __('Team Owner') }}" />
             <x-label value="{{ __('Team Owner') }}" />
 
             <div class="flex items-center mt-2">
@@ -27,11 +29,15 @@
             <x-label for="name" value="{{ __('Team Name') }}" />
 
             <x-input id="name"
+            <x-label for="name" value="{{ __('Team Name') }}" />
+
+            <x-input id="name"
                         type="text"
                         class="mt-1 block w-full"
                         wire:model="state.name"
                         :disabled="! Gate::check('update', $team)" />
 
+            <x-input-error for="name" class="mt-2" />
             <x-input-error for="name" class="mt-2" />
         </div>
     </x-slot>
