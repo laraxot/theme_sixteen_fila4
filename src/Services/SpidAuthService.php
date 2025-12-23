@@ -4,10 +4,13 @@ declare(strict_types=1);
 
 namespace Themes\Sixteen\Services;
 
+<<<<<<< HEAD
 use InvalidArgumentException;
 use Exception;
 use DOMDocument;
 use DOMXPath;
+=======
+>>>>>>> c8b07ab (.)
 use Illuminate\Support\Facades\{Config, Log, Session, Cache};
 use Illuminate\Http\{Request, RedirectResponse};
 use Illuminate\Support\Collection;
@@ -80,7 +83,11 @@ class SpidAuthService
     public function getLoginUrl(string $provider, int $level = 2, ?string $returnUrl = null): string
     {
         if (!isset($this->providers[$provider])) {
+<<<<<<< HEAD
             throw new InvalidArgumentException("Provider SPID '{$provider}' non supportato");
+=======
+            throw new \InvalidArgumentException("Provider SPID '{$provider}' non supportato");
+>>>>>>> c8b07ab (.)
         }
 
         $providerConfig = $this->providers[$provider];
@@ -107,7 +114,11 @@ class SpidAuthService
     public function getLogoutUrl(string $provider, string $nameId, string $sessionIndex): string
     {
         if (!isset($this->providers[$provider])) {
+<<<<<<< HEAD
             throw new InvalidArgumentException("Provider SPID '{$provider}' non supportato");
+=======
+            throw new \InvalidArgumentException("Provider SPID '{$provider}' non supportato");
+>>>>>>> c8b07ab (.)
         }
 
         $providerConfig = $this->providers[$provider];
@@ -133,6 +144,7 @@ class SpidAuthService
         $relayState = $request->input('RelayState');
 
         if (!$samlResponse) {
+<<<<<<< HEAD
             throw new Exception('SAMLResponse mancante');
         }
 
@@ -142,6 +154,17 @@ class SpidAuthService
 
         $decodedResponse = base64_decode($samlResponse);
         $responseDoc = new DOMDocument();
+=======
+            throw new \Exception('SAMLResponse mancante');
+        }
+
+        if (!$relayState || $relayState !== Session::get('spid.request_id')) {
+            throw new \Exception('RelayState non valido');
+        }
+
+        $decodedResponse = base64_decode($samlResponse);
+        $responseDoc = new \DOMDocument();
+>>>>>>> c8b07ab (.)
         $responseDoc->loadXML($decodedResponse);
 
         // Valida la signature
@@ -273,28 +296,46 @@ class SpidAuthService
     /**
      * Valida la response SAML
      */
+<<<<<<< HEAD
     protected function validateSamlResponse(DOMDocument $responseDoc): void
+=======
+    protected function validateSamlResponse(\DOMDocument $responseDoc): void
+>>>>>>> c8b07ab (.)
     {
         // Implementazione della validazione signature
         // In produzione usare librerie come xmlseclibs per validazione completa
         
+<<<<<<< HEAD
         $xpath = new DOMXPath($responseDoc);
+=======
+        $xpath = new \DOMXPath($responseDoc);
+>>>>>>> c8b07ab (.)
         $xpath->registerNamespace('samlp', 'urn:oasis:names:tc:SAML:2.0:protocol');
         $xpath->registerNamespace('saml', 'urn:oasis:names:tc:SAML:2.0:assertion');
 
         // Verifica che la response sia successful
         $statusCode = $xpath->query('//samlp:StatusCode/@Value');
         if ($statusCode->length === 0 || $statusCode->item(0)->nodeValue !== 'urn:oasis:names:tc:SAML:2.0:status:Success') {
+<<<<<<< HEAD
             throw new Exception('SPID authentication failed');
+=======
+            throw new \Exception('SPID authentication failed');
+>>>>>>> c8b07ab (.)
         }
     }
 
     /**
      * Estrae gli attributi utente dalla response SAML
      */
+<<<<<<< HEAD
     protected function extractUserAttributes(DOMDocument $responseDoc): array
     {
         $xpath = new DOMXPath($responseDoc);
+=======
+    protected function extractUserAttributes(\DOMDocument $responseDoc): array
+    {
+        $xpath = new \DOMXPath($responseDoc);
+>>>>>>> c8b07ab (.)
         $xpath->registerNamespace('saml', 'urn:oasis:names:tc:SAML:2.0:assertion');
 
         $attributes = [];
