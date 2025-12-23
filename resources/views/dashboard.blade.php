@@ -8,18 +8,10 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
-<<<<<<< HEAD
-<<<<<<< HEAD
                 {{--  
                 <x-welcome />
                 --}}
                 Welcome to the dashboard
-=======
-                <x-welcome />
->>>>>>> c8b07ab (.)
-=======
-                <x-welcome />
->>>>>>> 0eb3291 (.)
             </div>
         </div>
     </div>

@@ -4,13 +4,6 @@ declare(strict_types=1);
 
 namespace Themes\Sixteen\Services;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Exception;
-=======
->>>>>>> c8b07ab (.)
-=======
->>>>>>> 0eb3291 (.)
 use Illuminate\Support\Facades\{Config, Log, Session, Http};
 use Illuminate\Http\{Request, RedirectResponse};
 
@@ -98,38 +91,16 @@ class CieAuthService
 
         // Verifica errori
         if ($error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            throw new Exception('CIE authentication error: ' . $error);
-=======
             throw new \Exception('CIE authentication error: ' . $error);
->>>>>>> c8b07ab (.)
-=======
-            throw new \Exception('CIE authentication error: ' . $error);
->>>>>>> 0eb3291 (.)
         }
 
         // Verifica lo state
         if (!$state || $state !== Session::get('cie.state')) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            throw new Exception('State parameter mismatch');
-        }
-
-        if (!$code) {
-            throw new Exception('Authorization code missing');
-=======
-=======
->>>>>>> 0eb3291 (.)
             throw new \Exception('State parameter mismatch');
         }
 
         if (!$code) {
             throw new \Exception('Authorization code missing');
-<<<<<<< HEAD
->>>>>>> c8b07ab (.)
-=======
->>>>>>> 0eb3291 (.)
         }
 
         // Scambia il code per un access token
@@ -166,15 +137,7 @@ class CieAuthService
         ]);
 
         if (!$response->successful()) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            throw new Exception('Token exchange failed: ' . $response->body());
-=======
             throw new \Exception('Token exchange failed: ' . $response->body());
->>>>>>> c8b07ab (.)
-=======
-            throw new \Exception('Token exchange failed: ' . $response->body());
->>>>>>> 0eb3291 (.)
         }
 
         return $response->json();
@@ -189,15 +152,7 @@ class CieAuthService
             ->get($this->baseUrl . '/oidc/userinfo');
 
         if (!$response->successful()) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            throw new Exception('UserInfo request failed: ' . $response->body());
-=======
             throw new \Exception('UserInfo request failed: ' . $response->body());
->>>>>>> c8b07ab (.)
-=======
-            throw new \Exception('UserInfo request failed: ' . $response->body());
->>>>>>> 0eb3291 (.)
         }
 
         return $response->json();
@@ -212,15 +167,7 @@ class CieAuthService
         $parts = explode('.', $idToken);
         
         if (count($parts) !== 3) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            throw new Exception('Invalid JWT format');
-=======
             throw new \Exception('Invalid JWT format');
->>>>>>> c8b07ab (.)
-=======
-            throw new \Exception('Invalid JWT format');
->>>>>>> 0eb3291 (.)
         }
 
         // Decodifica header e payload
@@ -229,54 +176,22 @@ class CieAuthService
 
         // Verifica il nonce
         if (!isset($payload['nonce']) || $payload['nonce'] !== Session::get('cie.nonce')) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            throw new Exception('Nonce verification failed');
-=======
             throw new \Exception('Nonce verification failed');
->>>>>>> c8b07ab (.)
-=======
-            throw new \Exception('Nonce verification failed');
->>>>>>> 0eb3291 (.)
         }
 
         // Verifica l'audience
         if (!isset($payload['aud']) || $payload['aud'] !== $this->clientId) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            throw new Exception('Audience verification failed');
-=======
             throw new \Exception('Audience verification failed');
->>>>>>> c8b07ab (.)
-=======
-            throw new \Exception('Audience verification failed');
->>>>>>> 0eb3291 (.)
         }
 
         // Verifica l'issuer
         if (!isset($payload['iss']) || $payload['iss'] !== $this->baseUrl) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            throw new Exception('Issuer verification failed');
-=======
             throw new \Exception('Issuer verification failed');
->>>>>>> c8b07ab (.)
-=======
-            throw new \Exception('Issuer verification failed');
->>>>>>> 0eb3291 (.)
         }
 
         // Verifica la scadenza
         if (!isset($payload['exp']) || $payload['exp'] < time()) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            throw new Exception('Token expired');
-=======
             throw new \Exception('Token expired');
->>>>>>> c8b07ab (.)
-=======
-            throw new \Exception('Token expired');
->>>>>>> 0eb3291 (.)
         }
 
         return $payload;
@@ -384,15 +299,7 @@ class CieAuthService
                     'client_id' => $this->clientId,
                     'client_secret' => $this->clientSecret,
                 ]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-            } catch (Exception $e) {
-=======
             } catch (\Exception $e) {
->>>>>>> c8b07ab (.)
-=======
-            } catch (\Exception $e) {
->>>>>>> 0eb3291 (.)
                 Log::warning('CIE token revocation failed', ['error' => $e->getMessage()]);
             }
         }
@@ -451,15 +358,7 @@ class CieAuthService
 
                 return $tokenData;
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
-        } catch (Exception $e) {
-=======
         } catch (\Exception $e) {
->>>>>>> c8b07ab (.)
-=======
-        } catch (\Exception $e) {
->>>>>>> 0eb3291 (.)
             Log::warning('CIE token refresh failed', ['error' => $e->getMessage()]);
         }
 
