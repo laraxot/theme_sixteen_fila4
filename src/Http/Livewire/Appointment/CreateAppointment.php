@@ -2,15 +2,17 @@
 
 namespace Themes\Sixteen\Http\Livewire\Appointment;
 
-<<<<<<< HEAD
-use Exception;
-=======
->>>>>>> a3dca9d (.)
-use Livewire\{Component, WithPagination};
-use Illuminate\Support\Facades\{Auth, DB};
-use Themes\Sixteen\Models\{Appointment, Service, Office, Citizen};
-use Themes\Sixteen\Rules\AppointmentAvailability;
 use Carbon\Carbon;
+use Exception;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Livewire\Component;
+use Livewire\WithPagination;
+use Themes\Sixteen\Models\Appointment;
+use Themes\Sixteen\Models\Citizen;
+use Themes\Sixteen\Models\Office;
+use Themes\Sixteen\Models\Service;
+use Themes\Sixteen\Rules\AppointmentAvailability;
 
 /**
  * Componente Livewire per creazione appuntamento multi-step
@@ -22,15 +24,19 @@ class CreateAppointment extends Component
 
     // Step tracking
     public $currentStep = 1;
+
     public $totalSteps = 6;
 
     // Step 1: Selezione servizio
     public $serviceId;
+
     public $officeId;
+
     public $purpose;
 
     // Step 2: Selezione data
     public $appointmentDate;
+
     public $availableSlots = [];
 
     // Step 3: Selezione orario
@@ -38,12 +44,16 @@ class CreateAppointment extends Component
 
     // Step 4: Dati richiedente
     public $isSelf = true;
+
     public $citizenId;
+
     public $citizenData = [];
 
     // Step 5: Dettagli aggiuntivi
     public $notes;
+
     public $requiredDocuments = [];
+
     public $emergencyContact;
 
     // Step 6: Riepilogo
@@ -51,7 +61,9 @@ class CreateAppointment extends Component
 
     // Data and services
     public $services = [];
+
     public $offices = [];
+
     public $availableDates = [];
 
     protected $queryString = ['currentStep'];
@@ -60,7 +72,7 @@ class CreateAppointment extends Component
         'serviceSelected' => 'loadOffices',
         'officeSelected' => 'loadAvailableDates',
         'dateSelected' => 'loadAvailableSlots',
-        'slotSelected' => 'proceedToStep4'
+        'slotSelected' => 'proceedToStep4',
     ];
 
     public function mount()
@@ -75,7 +87,7 @@ class CreateAppointment extends Component
             'codice_fiscale' => 'Codice Fiscale',
             'documento_riconoscimento' => 'Documento di Riconoscimento',
             'autocertificazione' => 'Autocertificazione',
-            'altro' => 'Altro Documento'
+            'altro' => 'Altro Documento',
         ];
     }
 
@@ -89,7 +101,7 @@ class CreateAppointment extends Component
 
     public function getStepTitle()
     {
-        return match($this->currentStep) {
+        return match ($this->currentStep) {
             1 => 'Selezione Servizio e Ufficio',
             2 => 'Selezione Data',
             3 => 'Selezione Orario',
@@ -149,7 +161,7 @@ class CreateAppointment extends Component
     // Step 4: Citizen data
     public function toggleSelfBooking()
     {
-        $this->isSelf = !$this->isSelf;
+        $this->isSelf = ! $this->isSelf;
         if ($this->isSelf) {
             $this->citizenId = null;
             $this->citizenData = [];
@@ -241,7 +253,7 @@ class CreateAppointment extends Component
     // Validation rules
     protected function rules()
     {
-        return match($this->currentStep) {
+        return match ($this->currentStep) {
             1 => [
                 'serviceId' => 'required|exists:services,id',
                 'officeId' => 'required|exists:offices,id',
@@ -265,7 +277,7 @@ class CreateAppointment extends Component
             5 => [
                 'notes' => 'nullable|string|max:1000',
                 'requiredDocuments' => 'array',
-                'requiredDocuments.*' => 'in:' . implode(',', array_keys($this->availableDocuments)),
+                'requiredDocuments.*' => 'in:'.implode(',', array_keys($this->availableDocuments)),
                 'emergencyContact' => 'nullable|string|max:200',
             ],
             6 => [
@@ -287,7 +299,7 @@ class CreateAppointment extends Component
     {
         $this->validate([
             'requiredDocuments' => 'array',
-            'requiredDocuments.*' => 'in:' . implode(',', array_keys($this->availableDocuments)),
+            'requiredDocuments.*' => 'in:'.implode(',', array_keys($this->availableDocuments)),
         ]);
     }
 
@@ -295,15 +307,10 @@ class CreateAppointment extends Component
     {
         // Additional validation for final confirmation
         $office = Office::find($this->officeId);
-        if (!$office->isSlotAvailable($this->appointmentDate, $this->selectedSlot['start'])) {
+        if (! $office->isSlotAvailable($this->appointmentDate, $this->selectedSlot['start'])) {
             $this->addError('selectedSlot', 'Questo slot orario non è più disponibile.');
-<<<<<<< HEAD
             throw new Exception('Slot non disponibile');
             throw new Exception('Slot non disponibile');
-=======
-            throw new \Exception('Slot non disponibile');
-            throw new \Exception('Slot non disponibile');
->>>>>>> a3dca9d (.)
         }
     }
 
@@ -320,15 +327,15 @@ class CreateAppointment extends Component
 
     public function getSelectedDateFormattedProperty()
     {
-        return $this->appointmentDate 
+        return $this->appointmentDate
             ? Carbon::parse($this->appointmentDate)->translatedFormat('l d F Y')
             : null;
     }
 
     public function getSelectedTimeFormattedProperty()
     {
-        return $this->selectedSlot 
-            ? Carbon::parse($this->selectedSlot['start'])->format('H:i') . ' - ' . 
+        return $this->selectedSlot
+            ? Carbon::parse($this->selectedSlot['start'])->format('H:i').' - '.
               Carbon::parse($this->selectedSlot['end'])->format('H:i')
             : null;
     }

@@ -4,28 +4,28 @@ declare(strict_types=1);
 
 namespace Themes\Sixteen\Services;
 
-<<<<<<< HEAD
-use InvalidArgumentException;
-use Exception;
 use DOMDocument;
 use DOMXPath;
-=======
->>>>>>> a3dca9d (.)
-use Illuminate\Support\Facades\{Config, Log, Session, Cache};
-use Illuminate\Http\{Request, RedirectResponse};
-use Illuminate\Support\Collection;
+use Exception;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Session;
+use InvalidArgumentException;
 
 /**
  * Servizio per l'autenticazione SPID
- * 
+ *
  * Implementa il protocollo SAML 2.0 per l'integrazione con i provider SPID
  * secondo le specifiche AGID per l'autenticazione nelle PA
  */
 class SpidAuthService
 {
     protected array $providers = [];
+
     protected string $entityId;
+
     protected string $assertionConsumerServiceUrl;
+
     protected string $singleLogoutServiceUrl;
 
     public function __construct()
@@ -82,19 +82,14 @@ class SpidAuthService
      */
     public function getLoginUrl(string $provider, int $level = 2, ?string $returnUrl = null): string
     {
-        if (!isset($this->providers[$provider])) {
-<<<<<<< HEAD
+        if (! isset($this->providers[$provider])) {
             throw new InvalidArgumentException("Provider SPID '{$provider}' non supportato");
             throw new InvalidArgumentException("Provider SPID '{$provider}' non supportato");
-=======
-            throw new \InvalidArgumentException("Provider SPID '{$provider}' non supportato");
-            throw new \InvalidArgumentException("Provider SPID '{$provider}' non supportato");
->>>>>>> a3dca9d (.)
         }
 
         $providerConfig = $this->providers[$provider];
         $requestId = $this->generateRequestId();
-        
+
         // Salva lo stato della richiesta in sessione
         Session::put('spid.request_id', $requestId);
         Session::put('spid.provider', $provider);
@@ -104,7 +99,7 @@ class SpidAuthService
         $samlRequest = $this->buildSamlAuthRequest($requestId, $providerConfig, $level);
         $encodedRequest = base64_encode(gzdeflate($samlRequest));
 
-        return $providerConfig['sso_url'] . '?' . http_build_query([
+        return $providerConfig['sso_url'].'?'.http_build_query([
             'SAMLRequest' => $encodedRequest,
             'RelayState' => $requestId,
         ]);
@@ -115,25 +110,20 @@ class SpidAuthService
      */
     public function getLogoutUrl(string $provider, string $nameId, string $sessionIndex): string
     {
-        if (!isset($this->providers[$provider])) {
-<<<<<<< HEAD
+        if (! isset($this->providers[$provider])) {
             throw new InvalidArgumentException("Provider SPID '{$provider}' non supportato");
             throw new InvalidArgumentException("Provider SPID '{$provider}' non supportato");
-=======
-            throw new \InvalidArgumentException("Provider SPID '{$provider}' non supportato");
-            throw new \InvalidArgumentException("Provider SPID '{$provider}' non supportato");
->>>>>>> a3dca9d (.)
         }
 
         $providerConfig = $this->providers[$provider];
         $requestId = $this->generateRequestId();
-        
+
         Session::put('spid.logout_request_id', $requestId);
 
         $samlLogoutRequest = $this->buildSamlLogoutRequest($requestId, $nameId, $sessionIndex, $providerConfig);
         $encodedRequest = base64_encode(gzdeflate($samlLogoutRequest));
 
-        return $providerConfig['slo_url'] . '?' . http_build_query([
+        return $providerConfig['slo_url'].'?'.http_build_query([
             'SAMLRequest' => $encodedRequest,
             'RelayState' => $requestId,
         ]);
@@ -147,28 +137,16 @@ class SpidAuthService
         $samlResponse = $request->input('SAMLResponse');
         $relayState = $request->input('RelayState');
 
-        if (!$samlResponse) {
-<<<<<<< HEAD
+        if (! $samlResponse) {
             throw new Exception('SAMLResponse mancante');
         }
 
-        if (!$relayState || $relayState !== Session::get('spid.request_id')) {
+        if (! $relayState || $relayState !== Session::get('spid.request_id')) {
             throw new Exception('RelayState non valido');
         }
 
         $decodedResponse = base64_decode($samlResponse);
-        $responseDoc = new DOMDocument();
-=======
-            throw new \Exception('SAMLResponse mancante');
-        }
-
-        if (!$relayState || $relayState !== Session::get('spid.request_id')) {
-            throw new \Exception('RelayState non valido');
-        }
-
-        $decodedResponse = base64_decode($samlResponse);
-        $responseDoc = new \DOMDocument();
->>>>>>> a3dca9d (.)
+        $responseDoc = new DOMDocument;
         $responseDoc->loadXML($decodedResponse);
 
         // Valida la signature
@@ -191,50 +169,50 @@ class SpidAuthService
      */
     public function getMetadata(): string
     {
-        $metadata = '<?xml version="1.0" encoding="UTF-8"?>' . PHP_EOL;
-        $metadata .= '<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"' . PHP_EOL;
-        $metadata .= '                     entityID="' . htmlspecialchars($this->entityId) . '">' . PHP_EOL;
-        
-        $metadata .= '  <md:SPSSODescriptor AuthnRequestsSigned="true"' . PHP_EOL;
-        $metadata .= '                      WantAssertionsSigned="true"' . PHP_EOL;
-        $metadata .= '                      protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">' . PHP_EOL;
-        
+        $metadata = '<?xml version="1.0" encoding="UTF-8"?>'.PHP_EOL;
+        $metadata .= '<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"'.PHP_EOL;
+        $metadata .= '                     entityID="'.htmlspecialchars($this->entityId).'">'.PHP_EOL;
+
+        $metadata .= '  <md:SPSSODescriptor AuthnRequestsSigned="true"'.PHP_EOL;
+        $metadata .= '                      WantAssertionsSigned="true"'.PHP_EOL;
+        $metadata .= '                      protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">'.PHP_EOL;
+
         // KeyDescriptor per signing
-        $metadata .= '    <md:KeyDescriptor use="signing">' . PHP_EOL;
-        $metadata .= '      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">' . PHP_EOL;
-        $metadata .= '        <ds:X509Data>' . PHP_EOL;
-        $metadata .= '          <ds:X509Certificate>' . $this->getSigningCertificate() . '</ds:X509Certificate>' . PHP_EOL;
-        $metadata .= '        </ds:X509Data>' . PHP_EOL;
-        $metadata .= '      </ds:KeyInfo>' . PHP_EOL;
-        $metadata .= '    </md:KeyDescriptor>' . PHP_EOL;
+        $metadata .= '    <md:KeyDescriptor use="signing">'.PHP_EOL;
+        $metadata .= '      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">'.PHP_EOL;
+        $metadata .= '        <ds:X509Data>'.PHP_EOL;
+        $metadata .= '          <ds:X509Certificate>'.$this->getSigningCertificate().'</ds:X509Certificate>'.PHP_EOL;
+        $metadata .= '        </ds:X509Data>'.PHP_EOL;
+        $metadata .= '      </ds:KeyInfo>'.PHP_EOL;
+        $metadata .= '    </md:KeyDescriptor>'.PHP_EOL;
 
         // Assertion Consumer Service
-        $metadata .= '    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"' . PHP_EOL;
-        $metadata .= '                                 Location="' . htmlspecialchars($this->assertionConsumerServiceUrl) . '"' . PHP_EOL;
-        $metadata .= '                                 index="0" isDefault="true"/>' . PHP_EOL;
+        $metadata .= '    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"'.PHP_EOL;
+        $metadata .= '                                 Location="'.htmlspecialchars($this->assertionConsumerServiceUrl).'"'.PHP_EOL;
+        $metadata .= '                                 index="0" isDefault="true"/>'.PHP_EOL;
 
         // Single Logout Service
-        $metadata .= '    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"' . PHP_EOL;
-        $metadata .= '                           Location="' . htmlspecialchars($this->singleLogoutServiceUrl) . '"/>' . PHP_EOL;
+        $metadata .= '    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"'.PHP_EOL;
+        $metadata .= '                           Location="'.htmlspecialchars($this->singleLogoutServiceUrl).'"/>'.PHP_EOL;
 
         // Attribute consuming service con gli attributi SPID
-        $metadata .= '    <md:AttributeConsumingService index="0">' . PHP_EOL;
-        $metadata .= '      <md:ServiceName xml:lang="it">' . config('app.name') . '</md:ServiceName>' . PHP_EOL;
-        
+        $metadata .= '    <md:AttributeConsumingService index="0">'.PHP_EOL;
+        $metadata .= '      <md:ServiceName xml:lang="it">'.config('app.name').'</md:ServiceName>'.PHP_EOL;
+
         $spidAttributes = [
             'spidCode', 'name', 'familyName', 'placeOfBirth', 'countyOfBirth',
             'dateOfBirth', 'gender', 'companyName', 'registeredOffice',
             'fiscalNumber', 'ivaCode', 'idCard', 'mobilePhone', 'email',
-            'address', 'digitalAddress'
+            'address', 'digitalAddress',
         ];
 
         foreach ($spidAttributes as $attr) {
-            $metadata .= '      <md:RequestedAttribute Name="' . $attr . '" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>' . PHP_EOL;
+            $metadata .= '      <md:RequestedAttribute Name="'.$attr.'" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>'.PHP_EOL;
         }
-        
-        $metadata .= '    </md:AttributeConsumingService>' . PHP_EOL;
-        $metadata .= '  </md:SPSSODescriptor>' . PHP_EOL;
-        $metadata .= '</md:EntityDescriptor>' . PHP_EOL;
+
+        $metadata .= '    </md:AttributeConsumingService>'.PHP_EOL;
+        $metadata .= '  </md:SPSSODescriptor>'.PHP_EOL;
+        $metadata .= '</md:EntityDescriptor>'.PHP_EOL;
 
         return $metadata;
     }
@@ -244,7 +222,7 @@ class SpidAuthService
      */
     protected function generateRequestId(): string
     {
-        return 'req_' . bin2hex(random_bytes(16));
+        return 'req_'.bin2hex(random_bytes(16));
     }
 
     /**
@@ -253,22 +231,22 @@ class SpidAuthService
     protected function buildSamlAuthRequest(string $requestId, array $provider, int $level): string
     {
         $issueInstant = gmdate('Y-m-d\TH:i:s\Z');
-        
-        $request = '<samlp:AuthnRequest xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"' . PHP_EOL;
-        $request .= '                   xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"' . PHP_EOL;
-        $request .= '                   ID="' . $requestId . '"' . PHP_EOL;
-        $request .= '                   Version="2.0"' . PHP_EOL;
-        $request .= '                   IssueInstant="' . $issueInstant . '"' . PHP_EOL;
-        $request .= '                   Destination="' . $provider['sso_url'] . '"' . PHP_EOL;
-        $request .= '                   AssertionConsumerServiceURL="' . $this->assertionConsumerServiceUrl . '"' . PHP_EOL;
-        $request .= '                   AttributeConsumingServiceIndex="0">' . PHP_EOL;
-        
-        $request .= '  <saml:Issuer>' . htmlspecialchars($this->entityId) . '</saml:Issuer>' . PHP_EOL;
-        
-        $request .= '  <samlp:RequestedAuthnContext Comparison="minimum">' . PHP_EOL;
-        $request .= '    <saml:AuthnContextClassRef>https://www.spid.gov.it/SpidL' . $level . '</saml:AuthnContextClassRef>' . PHP_EOL;
-        $request .= '  </samlp:RequestedAuthnContext>' . PHP_EOL;
-        
+
+        $request = '<samlp:AuthnRequest xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"'.PHP_EOL;
+        $request .= '                   xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"'.PHP_EOL;
+        $request .= '                   ID="'.$requestId.'"'.PHP_EOL;
+        $request .= '                   Version="2.0"'.PHP_EOL;
+        $request .= '                   IssueInstant="'.$issueInstant.'"'.PHP_EOL;
+        $request .= '                   Destination="'.$provider['sso_url'].'"'.PHP_EOL;
+        $request .= '                   AssertionConsumerServiceURL="'.$this->assertionConsumerServiceUrl.'"'.PHP_EOL;
+        $request .= '                   AttributeConsumingServiceIndex="0">'.PHP_EOL;
+
+        $request .= '  <saml:Issuer>'.htmlspecialchars($this->entityId).'</saml:Issuer>'.PHP_EOL;
+
+        $request .= '  <samlp:RequestedAuthnContext Comparison="minimum">'.PHP_EOL;
+        $request .= '    <saml:AuthnContextClassRef>https://www.spid.gov.it/SpidL'.$level.'</saml:AuthnContextClassRef>'.PHP_EOL;
+        $request .= '  </samlp:RequestedAuthnContext>'.PHP_EOL;
+
         $request .= '</samlp:AuthnRequest>';
 
         return $request;
@@ -280,18 +258,18 @@ class SpidAuthService
     protected function buildSamlLogoutRequest(string $requestId, string $nameId, string $sessionIndex, array $provider): string
     {
         $issueInstant = gmdate('Y-m-d\TH:i:s\Z');
-        
-        $request = '<samlp:LogoutRequest xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"' . PHP_EOL;
-        $request .= '                    xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"' . PHP_EOL;
-        $request .= '                    ID="' . $requestId . '"' . PHP_EOL;
-        $request .= '                    Version="2.0"' . PHP_EOL;
-        $request .= '                    IssueInstant="' . $issueInstant . '"' . PHP_EOL;
-        $request .= '                    Destination="' . $provider['slo_url'] . '">' . PHP_EOL;
-        
-        $request .= '  <saml:Issuer>' . htmlspecialchars($this->entityId) . '</saml:Issuer>' . PHP_EOL;
-        $request .= '  <saml:NameID Format="urn:oasis:names:tc:SAML:2.0:nameid-format:transient">' . htmlspecialchars($nameId) . '</saml:NameID>' . PHP_EOL;
-        $request .= '  <samlp:SessionIndex>' . htmlspecialchars($sessionIndex) . '</samlp:SessionIndex>' . PHP_EOL;
-        
+
+        $request = '<samlp:LogoutRequest xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"'.PHP_EOL;
+        $request .= '                    xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"'.PHP_EOL;
+        $request .= '                    ID="'.$requestId.'"'.PHP_EOL;
+        $request .= '                    Version="2.0"'.PHP_EOL;
+        $request .= '                    IssueInstant="'.$issueInstant.'"'.PHP_EOL;
+        $request .= '                    Destination="'.$provider['slo_url'].'">'.PHP_EOL;
+
+        $request .= '  <saml:Issuer>'.htmlspecialchars($this->entityId).'</saml:Issuer>'.PHP_EOL;
+        $request .= '  <saml:NameID Format="urn:oasis:names:tc:SAML:2.0:nameid-format:transient">'.htmlspecialchars($nameId).'</saml:NameID>'.PHP_EOL;
+        $request .= '  <samlp:SessionIndex>'.htmlspecialchars($sessionIndex).'</samlp:SessionIndex>'.PHP_EOL;
+
         $request .= '</samlp:LogoutRequest>';
 
         return $request;
@@ -300,46 +278,28 @@ class SpidAuthService
     /**
      * Valida la response SAML
      */
-<<<<<<< HEAD
     protected function validateSamlResponse(DOMDocument $responseDoc): void
-=======
-    protected function validateSamlResponse(\DOMDocument $responseDoc): void
->>>>>>> a3dca9d (.)
     {
         // Implementazione della validazione signature
         // In produzione usare librerie come xmlseclibs per validazione completa
-        
-<<<<<<< HEAD
+
         $xpath = new DOMXPath($responseDoc);
-=======
-        $xpath = new \DOMXPath($responseDoc);
->>>>>>> a3dca9d (.)
         $xpath->registerNamespace('samlp', 'urn:oasis:names:tc:SAML:2.0:protocol');
         $xpath->registerNamespace('saml', 'urn:oasis:names:tc:SAML:2.0:assertion');
 
         // Verifica che la response sia successful
         $statusCode = $xpath->query('//samlp:StatusCode/@Value');
         if ($statusCode->length === 0 || $statusCode->item(0)->nodeValue !== 'urn:oasis:names:tc:SAML:2.0:status:Success') {
-<<<<<<< HEAD
             throw new Exception('SPID authentication failed');
-=======
-            throw new \Exception('SPID authentication failed');
->>>>>>> a3dca9d (.)
         }
     }
 
     /**
      * Estrae gli attributi utente dalla response SAML
      */
-<<<<<<< HEAD
     protected function extractUserAttributes(DOMDocument $responseDoc): array
     {
         $xpath = new DOMXPath($responseDoc);
-=======
-    protected function extractUserAttributes(\DOMDocument $responseDoc): array
-    {
-        $xpath = new \DOMXPath($responseDoc);
->>>>>>> a3dca9d (.)
         $xpath->registerNamespace('saml', 'urn:oasis:names:tc:SAML:2.0:assertion');
 
         $attributes = [];
@@ -349,7 +309,7 @@ class SpidAuthService
         foreach ($attributeNodes as $attributeNode) {
             $name = $attributeNode->getAttribute('Name');
             $valueNodes = $xpath->query('saml:AttributeValue', $attributeNode);
-            
+
             if ($valueNodes->length > 0) {
                 $attributes[$name] = $valueNodes->item(0)->nodeValue;
             }
@@ -397,7 +357,7 @@ class SpidAuthService
      */
     public function getAuthenticatedUser(): ?array
     {
-        if (!$this->isAuthenticated()) {
+        if (! $this->isAuthenticated()) {
             return null;
         }
 

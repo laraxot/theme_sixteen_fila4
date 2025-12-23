@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Themes\Sixteen\Filters;
 
-<<<<<<< HEAD
 use Exception;
-=======
->>>>>>> a3dca9d (.)
 use Illuminate\Support\Facades\Route;
 use Themes\Sixteen\Contracts\MenuFilterInterface;
 
@@ -23,7 +20,7 @@ class HrefMenuFilter implements MenuFilterInterface
         if (isset($item['route'])) {
             $route = $item['route'];
             $parameters = $item['route_parameters'] ?? [];
-            
+
             try {
                 if (Route::has($route)) {
                     $item['url'] = route($route, $parameters);
@@ -33,22 +30,17 @@ class HrefMenuFilter implements MenuFilterInterface
                     if (app()->environment('local', 'development')) {
                         $item['url'] = '#';
                         $item['title'] = "Route '{$route}' not found";
-                        $item['class'] = ($item['class'] ?? '') . ' text-danger';
+                        $item['class'] = ($item['class'] ?? '').' text-danger';
                     } else {
                         return false;
                     }
                 }
-<<<<<<< HEAD
             } catch (Exception $e) {
             } catch (Exception $e) {
-=======
-            } catch (\Exception $e) {
-            } catch (\Exception $e) {
->>>>>>> a3dca9d (.)
                 if (app()->environment('local', 'development')) {
                     $item['url'] = '#';
-                    $item['title'] = "Error with route '{$route}': " . $e->getMessage();
-                    $item['class'] = ($item['class'] ?? '') . ' text-danger';
+                    $item['title'] = "Error with route '{$route}': ".$e->getMessage();
+                    $item['class'] = ($item['class'] ?? '').' text-danger';
                 } else {
                     return false;
                 }
@@ -56,26 +48,26 @@ class HrefMenuFilter implements MenuFilterInterface
         }
 
         // Assicurati che ci sia un URL
-        if (!isset($item['url']) && $item['type'] !== 'header' && $item['type'] !== 'separator') {
+        if (! isset($item['url']) && $item['type'] !== 'header' && $item['type'] !== 'separator') {
             $item['url'] = '#';
         }
 
         // Aggiungi protocollo se mancante per URL esterni
-        if (isset($item['url']) && 
-            !str_starts_with($item['url'], '#') && 
-            !str_starts_with($item['url'], '/') && 
-            !str_starts_with($item['url'], 'http://') && 
-            !str_starts_with($item['url'], 'https://')) {
-            $item['url'] = 'https://' . $item['url'];
+        if (isset($item['url']) &&
+            ! str_starts_with($item['url'], '#') &&
+            ! str_starts_with($item['url'], '/') &&
+            ! str_starts_with($item['url'], 'http://') &&
+            ! str_starts_with($item['url'], 'https://')) {
+            $item['url'] = 'https://'.$item['url'];
             $item['external'] = true;
         }
 
         // Determina se il link è esterno
-        if (isset($item['url']) && 
+        if (isset($item['url']) &&
             (str_starts_with($item['url'], 'http://') || str_starts_with($item['url'], 'https://'))) {
             $currentDomain = request()->getHost();
             $linkDomain = parse_url($item['url'], PHP_URL_HOST);
-            
+
             if ($linkDomain && $linkDomain !== $currentDomain) {
                 $item['external'] = true;
                 $item['target'] = $item['target'] ?? '_blank';
