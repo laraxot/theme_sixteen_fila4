@@ -1,7 +1,10 @@
 <div>
     <!-- Generate API Token -->
     <x-form-section submit="createApiToken">
+<<<<<<< HEAD
     <x-form-section submit="createApiToken">
+=======
+>>>>>>> bdc7dd6 (.)
         <x-slot name="title">
             {{ __('Create API Token') }}
         </x-slot>
@@ -16,22 +19,31 @@
                 <x-label for="name" value="{{ __('Token Name') }}" />
                 <x-input id="name" type="text" class="mt-1 block w-full" wire:model="createApiTokenForm.name" autofocus />
                 <x-input-error for="name" class="mt-2" />
+<<<<<<< HEAD
                 <x-label for="name" value="{{ __('Token Name') }}" />
                 <x-input id="name" type="text" class="mt-1 block w-full" wire:model="createApiTokenForm.name" autofocus />
                 <x-input-error for="name" class="mt-2" />
+=======
+>>>>>>> bdc7dd6 (.)
             </div>
 
             <!-- Token Permissions -->
             @if (Laravel\Jetstream\Jetstream::hasPermissions())
                 <div class="col-span-6">
                     <x-label for="permissions" value="{{ __('Permissions') }}" />
+<<<<<<< HEAD
                     <x-label for="permissions" value="{{ __('Permissions') }}" />
+=======
+>>>>>>> bdc7dd6 (.)
 
                     <div class="mt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                         @foreach (Laravel\Jetstream\Jetstream::$permissions as $permission)
                             <label class="flex items-center">
                                 <x-checkbox wire:model="createApiTokenForm.permissions" :value="$permission"/>
+<<<<<<< HEAD
                                 <x-checkbox wire:model="createApiTokenForm.permissions" :value="$permission"/>
+=======
+>>>>>>> bdc7dd6 (.)
                                 <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ $permission }}</span>
                             </label>
                         @endforeach
@@ -96,13 +108,19 @@
                     </div>
                 </x-slot>
             </x-action-section>
+<<<<<<< HEAD
             </x-action-section>
+=======
+>>>>>>> bdc7dd6 (.)
         </div>
     @endif
 
     <!-- Token Value Modal -->
     <x-dialog-modal wire:model.live="displayingToken">
+<<<<<<< HEAD
     <x-dialog-modal wire:model.live="displayingToken">
+=======
+>>>>>>> bdc7dd6 (.)
         <x-slot name="title">
             {{ __('API Token') }}
         </x-slot>
@@ -113,7 +131,10 @@
             </div>
 
             <x-input x-ref="plaintextToken" type="text" readonly :value="$plainTextToken"
+<<<<<<< HEAD
             <x-input x-ref="plaintextToken" type="text" readonly :value="$plainTextToken"
+=======
+>>>>>>> bdc7dd6 (.)
                 class="mt-4 bg-gray-100 px-4 py-2 rounded font-mono text-sm text-gray-500 w-full break-all"
                 autofocus autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
                 @showing-token-modal.window="setTimeout(() => $refs.plaintextToken.select(), 250)"
@@ -138,7 +159,10 @@
                 @foreach (Laravel\Jetstream\Jetstream::$permissions as $permission)
                     <label class="flex items-center">
                         <x-checkbox wire:model="updateApiTokenForm.permissions" :value="$permission"/>
+<<<<<<< HEAD
                         <x-checkbox wire:model="updateApiTokenForm.permissions" :value="$permission"/>
+=======
+>>>>>>> bdc7dd6 (.)
                         <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ $permission }}</span>
                     </label>
                 @endforeach

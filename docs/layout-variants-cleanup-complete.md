@@ -97,7 +97,11 @@ name('login');
     </x-slot>
 
     <!-- Login Card AGID-Compliant (Componente Standard) -->
+<<<<<<< HEAD
     <x-pub_theme::forms.login-card 
+=======
+    <x-pub_theme::blocks.forms.login-card 
+>>>>>>> bdc7dd6 (.)
         title="{{ __('auth.login.title') }}"
         subtitle="{{ __('auth.login.description', ['service' => config('app.name')]) }}"
         livewire-component="\Modules\User\Http\Livewire\Auth\Login"
@@ -182,7 +186,13 @@ name('login');
 - [Pulizia Naming AGID](./agid-naming-cleanup-complete.md)
 - [Sistema Blocchi](./blocks-system.md)
 - [Componenti Tema](./components.md)
+<<<<<<< HEAD
 - [Documentazione Root](../../../../project_docs/agid-compliance.md)
+=======
+- [Documentazione Root](../../../docs/agid-compliance.md)
+- [Documentazione Root](../../../../project_docs/agid-compliance.md)
+- [Documentazione Root](../../../docs/agid-compliance.md)
+>>>>>>> bdc7dd6 (.)
 
 ---
 
