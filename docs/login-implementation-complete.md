@@ -275,6 +275,10 @@ $request->validate([
 **Versione**: 1.0  
 **Status**: Fase 1 Completata ✅  
 <<<<<<< HEAD
+<<<<<<< HEAD
 **Prossimo Step**: Fase 2 - Semplificazione View Livewire 
 =======
 >>>>>>> a153bba (.)
+=======
+**Prossimo Step**: Fase 2 - Semplificazione View Livewire 
+>>>>>>> 92783b6 (.)

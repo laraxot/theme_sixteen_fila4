@@ -27,7 +27,10 @@
     <div class="px-6 py-8">
         <!-- Livewire Login Component -->
         @livewire($livewireComponent)
+<<<<<<< HEAD
         @livewire($livewireComponent)
+=======
+>>>>>>> 92783b6 (.)
     </div>
     
     <!-- Footer Card con Assistenza -->
