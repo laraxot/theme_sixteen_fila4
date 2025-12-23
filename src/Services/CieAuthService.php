@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Themes\Sixteen\Services;
 
-<<<<<<< HEAD
-=======
 use Exception;
->>>>>>> 7401ccb (.)
 use Illuminate\Support\Facades\{Config, Log, Session, Http};
 use Illuminate\Http\{Request, RedirectResponse};
 
@@ -95,28 +92,16 @@ class CieAuthService
 
         // Verifica errori
         if ($error) {
-<<<<<<< HEAD
-            throw new \Exception('CIE authentication error: ' . $error);
-=======
             throw new Exception('CIE authentication error: ' . $error);
->>>>>>> 7401ccb (.)
         }
 
         // Verifica lo state
         if (!$state || $state !== Session::get('cie.state')) {
-<<<<<<< HEAD
-            throw new \Exception('State parameter mismatch');
-        }
-
-        if (!$code) {
-            throw new \Exception('Authorization code missing');
-=======
             throw new Exception('State parameter mismatch');
         }
 
         if (!$code) {
             throw new Exception('Authorization code missing');
->>>>>>> 7401ccb (.)
         }
 
         // Scambia il code per un access token
@@ -153,11 +138,7 @@ class CieAuthService
         ]);
 
         if (!$response->successful()) {
-<<<<<<< HEAD
-            throw new \Exception('Token exchange failed: ' . $response->body());
-=======
             throw new Exception('Token exchange failed: ' . $response->body());
->>>>>>> 7401ccb (.)
         }
 
         return $response->json();
@@ -172,11 +153,7 @@ class CieAuthService
             ->get($this->baseUrl . '/oidc/userinfo');
 
         if (!$response->successful()) {
-<<<<<<< HEAD
-            throw new \Exception('UserInfo request failed: ' . $response->body());
-=======
             throw new Exception('UserInfo request failed: ' . $response->body());
->>>>>>> 7401ccb (.)
         }
 
         return $response->json();
@@ -191,11 +168,7 @@ class CieAuthService
         $parts = explode('.', $idToken);
         
         if (count($parts) !== 3) {
-<<<<<<< HEAD
-            throw new \Exception('Invalid JWT format');
-=======
             throw new Exception('Invalid JWT format');
->>>>>>> 7401ccb (.)
         }
 
         // Decodifica header e payload
@@ -204,38 +177,22 @@ class CieAuthService
 
         // Verifica il nonce
         if (!isset($payload['nonce']) || $payload['nonce'] !== Session::get('cie.nonce')) {
-<<<<<<< HEAD
-            throw new \Exception('Nonce verification failed');
-=======
             throw new Exception('Nonce verification failed');
->>>>>>> 7401ccb (.)
         }
 
         // Verifica l'audience
         if (!isset($payload['aud']) || $payload['aud'] !== $this->clientId) {
-<<<<<<< HEAD
-            throw new \Exception('Audience verification failed');
-=======
             throw new Exception('Audience verification failed');
->>>>>>> 7401ccb (.)
         }
 
         // Verifica l'issuer
         if (!isset($payload['iss']) || $payload['iss'] !== $this->baseUrl) {
-<<<<<<< HEAD
-            throw new \Exception('Issuer verification failed');
-=======
             throw new Exception('Issuer verification failed');
->>>>>>> 7401ccb (.)
         }
 
         // Verifica la scadenza
         if (!isset($payload['exp']) || $payload['exp'] < time()) {
-<<<<<<< HEAD
-            throw new \Exception('Token expired');
-=======
             throw new Exception('Token expired');
->>>>>>> 7401ccb (.)
         }
 
         return $payload;
@@ -343,11 +300,7 @@ class CieAuthService
                     'client_id' => $this->clientId,
                     'client_secret' => $this->clientSecret,
                 ]);
-<<<<<<< HEAD
-            } catch (\Exception $e) {
-=======
             } catch (Exception $e) {
->>>>>>> 7401ccb (.)
                 Log::warning('CIE token revocation failed', ['error' => $e->getMessage()]);
             }
         }
@@ -406,11 +359,7 @@ class CieAuthService
 
                 return $tokenData;
             }
-<<<<<<< HEAD
-        } catch (\Exception $e) {
-=======
         } catch (Exception $e) {
->>>>>>> 7401ccb (.)
             Log::warning('CIE token refresh failed', ['error' => $e->getMessage()]);
         }
 
