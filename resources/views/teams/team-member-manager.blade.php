@@ -25,12 +25,6 @@
                         <x-label for="email" value="{{ __('Email') }}" />
                         <x-input id="email" type="email" class="mt-1 block w-full" wire:model="addTeamMemberForm.email" />
                         <x-input-error for="email" class="mt-2" />
-<<<<<<< HEAD
-                        <x-label for="email" value="{{ __('Email') }}" />
-                        <x-input id="email" type="email" class="mt-1 block w-full" wire:model="addTeamMemberForm.email" />
-                        <x-input-error for="email" class="mt-2" />
-=======
->>>>>>> bdc7dd6 (.)
                     </div>
 
                     <!-- Role -->
@@ -38,11 +32,6 @@
                         <div class="col-span-6 lg:col-span-4">
                             <x-label for="role" value="{{ __('Role') }}" />
                             <x-input-error for="role" class="mt-2" />
-<<<<<<< HEAD
-                            <x-label for="role" value="{{ __('Role') }}" />
-                            <x-input-error for="role" class="mt-2" />
-=======
->>>>>>> bdc7dd6 (.)
 
                             <div class="relative z-0 mt-1 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer">
                                 @foreach ($this->roles as $index => $role)
@@ -121,10 +110,6 @@
                     </div>
                 </x-slot>
             </x-action-section>
-<<<<<<< HEAD
-            </x-action-section>
-=======
->>>>>>> bdc7dd6 (.)
         </div>
     @endif
 
@@ -182,19 +167,11 @@
                     </div>
                 </x-slot>
             </x-action-section>
-<<<<<<< HEAD
-            </x-action-section>
-=======
->>>>>>> bdc7dd6 (.)
         </div>
     @endif
 
     <!-- Role Management Modal -->
     <x-dialog-modal wire:model.live="currentlyManagingRole">
-<<<<<<< HEAD
-    <x-dialog-modal wire:model.live="currentlyManagingRole">
-=======
->>>>>>> bdc7dd6 (.)
         <x-slot name="title">
             {{ __('Manage Role') }}
         </x-slot>

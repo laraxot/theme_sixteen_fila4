@@ -11,10 +11,6 @@
                 @livewire('profile.update-profile-information-form')
 
                 <x-section-border />
-<<<<<<< HEAD
-                <x-section-border />
-=======
->>>>>>> bdc7dd6 (.)
             @endif
 
             @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::updatePasswords()))
@@ -23,10 +19,6 @@
                 </div>
 
                 <x-section-border />
-<<<<<<< HEAD
-                <x-section-border />
-=======
->>>>>>> bdc7dd6 (.)
             @endif
 
             @if (Laravel\Fortify\Features::canManageTwoFactorAuthentication())
@@ -35,10 +27,6 @@
                 </div>
 
                 <x-section-border />
-<<<<<<< HEAD
-                <x-section-border />
-=======
->>>>>>> bdc7dd6 (.)
             @endif
 
             <div class="mt-10 sm:mt-0">
@@ -47,10 +35,6 @@
 
             @if (Laravel\Jetstream\Jetstream::hasAccountDeletionFeatures())
                 <x-section-border />
-<<<<<<< HEAD
-                <x-section-border />
-=======
->>>>>>> bdc7dd6 (.)
 
                 <div class="mt-10 sm:mt-0">
                     @livewire('profile.delete-user-form')
