@@ -6,9 +6,13 @@ return [
     'login' => [
         'title' => 'Accesso ai servizi',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 90b9679 (.)
+=======
+
+>>>>>>> 7401ccb (.)
         'description' => 'Inserisci le tue credenziali per accedere a :service',
         'no_account' => 'Non hai un account?',
         'create_account' => 'Registrati',
@@ -16,9 +20,13 @@ return [
         'forgot_password' => 'Password dimenticata?',
         'submit' => 'Accedi',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 90b9679 (.)
+=======
+
+>>>>>>> 7401ccb (.)
         'help' => 'Hai bisogno di aiuto?',
         'email' => 'Indirizzo email',
         'password' => 'Password',
