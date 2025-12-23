@@ -557,8 +557,16 @@ Section::make('Dati Personali')
 - Testo alternativo per immagini
 - Struttura semantica corretta
 
-### Componenti di Accessibilità
-- **[Componenti di Accessibilità](accessibility-components.md)** - Contrast toggle, font size controls, skip links
+### Componenti di Accessibilità e UI
+- **[Componenti di Accessibilità](accessibility-components.md)** - Contrast toggle, font size controls, skip links, notifiche, cookiebar, hero, tab, accordion, bottom-nav, agid.service-card
+- **Toggle Component**: Switch on/off con supporto completo per accessibilità
+- **Notifiche Component**: Sistema di notifiche con supporto per diversi tipi
+- **Cookiebar Component**: Gestione consenso cookie conforme GDPR
+- **Hero Component**: Sezioni principali con supporto per immagini e video
+- **Tab Component**: Navigazione a tab con supporto orizzontale e verticale
+- **Accordion Component**: Contenuti espandibili con navigazione da tastiera
+- **Bottom Navigation Component**: Navigazione mobile-friendly in fondo alla pagina
+- **AGID Service Card Component**: Card di servizi conformi al design system AGID
 - **Alto contrasto**: Toggle per attivare/disattivare l'alto contrasto
 - **Controlli font**: Regolazione della dimensione del testo
 - **Skip links**: Navigazione rapida per screen reader
