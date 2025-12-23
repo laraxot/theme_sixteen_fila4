@@ -38,7 +38,7 @@
             "providers": [
                 "Themes\\Sixteen\\Providers\\ThemeServiceProvider"
             ],
-            "aliases": {}
+"aliases": {}
         }
     },
     "minimum-stability": "dev",
