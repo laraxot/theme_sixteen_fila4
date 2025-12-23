@@ -2,12 +2,9 @@
     <x-authentication-card>
         <x-slot name="logo">
             <x-authentication-card-logo />
-<<<<<<< HEAD
     <x-authentication-card>
         <x-slot name="logo">
             <x-authentication-card-logo />
-=======
->>>>>>> 92783b6 (.)
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
@@ -21,10 +18,7 @@
         @endsession
 
         <x-validation-errors class="mb-4" />
-<<<<<<< HEAD
         <x-validation-errors class="mb-4" />
-=======
->>>>>>> 92783b6 (.)
 
         <form method="POST" action="{{ route('password.email') }}">
             @csrf
