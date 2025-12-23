@@ -307,8 +307,4 @@ class ThemeServiceProvider extends XotBaseThemeServiceProvider
             }
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> bdc7dd6 (.)
